@@ -61,24 +61,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ArbolesHabilidad\Drone.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\IArbol.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\IHoja.cs" />
-    <Compile Include="Assets\Scripts\ArbolesHabilidad\ITGuy.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaCatapulta.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\WeeabooLord.cs" />
     <Compile Include="Assets\Scripts\comienzoPartida.cs" />
-    <Compile Include="Assets\Scripts\primeraCarta.cs" />
-    <Compile Include="Assets\Scripts\primerEstructura.cs" />
+    <Compile Include="Assets\Scripts\Estructuras\catapulta.cs" />
+    <Compile Include="Assets\Scripts\Estructuras\dakimakura.cs" />
+    <Compile Include="Assets\Scripts\Estructuras\mochilaPegajosa.cs" />
+    <Compile Include="Assets\Scripts\lanzador.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>E:/Descargas/NerdsVsSicarios/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/Descargas/NerdsVsSicarios/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/Descargas/NerdsVsSicarios/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/Descargas/NerdsVsSicarios/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>E:/Archivos de Programa/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -258,7 +260,7 @@
       <HintPath>E:/Archivos de Programa/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>E:/Descargas/NerdsVsSicarios/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:/Archivos de Programa/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
