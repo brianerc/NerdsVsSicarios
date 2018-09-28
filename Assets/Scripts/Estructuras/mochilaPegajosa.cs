@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mochilaPegajosa : MonoBehaviour {
+public class MochilaPegajosa : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

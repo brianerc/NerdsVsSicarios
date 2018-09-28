@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IHoja {
-    bool esEstructura();
-    bool esHabilidad();
-    bool mejorarEstructura(IHoja estructura);
-    bool mejorarHabilidad(IHoja habilidad);
-    bool setNivel(int nivel);
-    bool estaAprendida();
-    void aprenderHoja();
-    int getNivel();
-    string getNombre();
-    string getDescripcion();
-    Sprite getImagen();
+    bool EsEstructura();
+    bool EsHabilidad();
+    bool MejorarEstructura(IHoja estructura);
+    bool MejorarHabilidad(IHoja habilidad);
+    bool SetNivel(int nivel);
+    bool EstaAprendida();
+    void AprenderHoja();
+    int GetNivel();
+    string GetNombre();
+    string GetDescripcion();
+    Sprite GetImagen();
 
 }

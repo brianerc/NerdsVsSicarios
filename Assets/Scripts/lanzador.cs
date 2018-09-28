@@ -1,19 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class lanzador : MonoBehaviour {
+public class Lanzador : MonoBehaviour {
     public GameObject estructura;
     private bool estado = false;
     public Grid matriz;
-    private Image unIcono;
 
     // Use this for initialization
-    void Start () {
-
-        string ruta=Application.dataPath + "/Sprites/Lanzadores/" + estructura.name + ".png";
-        unIcono.sprite = (Sprite)Resources.Load<Sprite>(ruta) as Sprite;
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = unIcono.sprite;
+    void Start() {
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Lanzadores/" + estructura.name);
     }
 
     // Update is called once per frame
@@ -29,7 +24,10 @@ public class lanzador : MonoBehaviour {
         {
             if (Physics.Raycast(ray, out hit))
             {
-                estado = true;
+                if (hit.transform.tag == this.gameObject.tag)
+                {
+                    estado = true;
+                }
             }
         }
         if (touch.phase == TouchPhase.Ended && estado)

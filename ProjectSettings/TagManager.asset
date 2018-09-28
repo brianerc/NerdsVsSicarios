@@ -8,6 +8,10 @@ TagManager:
   - Matriz
   - Estructura
   - Piso
+  - Opciones
+  - LanzadorDakimakura
+  - Lanzador Catapulta
+  - LanzadorMochila pegajosa
   layers:
   - Default
   - TransparentFX

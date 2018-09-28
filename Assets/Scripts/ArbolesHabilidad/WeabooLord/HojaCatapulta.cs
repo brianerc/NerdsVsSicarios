@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Catapulta : IHoja {
+public class HojaCatapulta: IHoja {
     private int nivel;
     private string nombre;
     private string descripcion;
@@ -12,59 +12,59 @@ public class Catapulta : IHoja {
     private bool aprendida;
     private GameObject objeto;
     // Use this for initialization
-	public Catapulta (GameObject unObjeto) {
+	public HojaCatapulta (GameObject unObjeto) {
         nivel = 1;
-        nombre = "Drone";
-        descripcion = "Este dispositivo hace poco daño, pero a gran velocidad.";
-        dañoBase = 0.8;
-        cd = 0.7;
+        nombre = "Catapulta";
+        descripcion = "";
+        dañoBase = 2;
+        cd = 2.5;
         vida = 3;
-        aprendida = false;
+        aprendida = true;
         objeto = unObjeto;
 	}
 
-    public bool esEstructura()
+    public bool EsEstructura()
     {
         return true;
     }
-    public bool esHabilidad()
+    public bool EsHabilidad()
     {
         return false;
     }
-    public bool mejorarEstructura(IHoja estructura)
+    public bool MejorarEstructura(IHoja estructura)
     {
         return false;
     }
-    public bool mejorarHabilidad(IHoja habilidad)
+    public bool MejorarHabilidad(IHoja habilidad)
     {
         return false;
     }
-    public bool setNivel(int unNivel)
+    public bool SetNivel(int unNivel)
     {
         nivel = unNivel;
         return unNivel==nivel;
     }
-    public bool estaAprendida()
+    public bool EstaAprendida()
     {
         return aprendida;
     }
-    public void aprenderHoja()
+    public void AprenderHoja()
     {
         aprendida = true;
     }
-    public int getNivel()
+    public int GetNivel()
     {
         return nivel;
     }
-    public string getNombre()
+    public string GetNombre()
     {
         return nombre;
     }
-    public string getDescripcion()
+    public string GetDescripcion()
     {
         return descripcion;
     }
-    public Sprite getImagen()
+    public Sprite GetImagen()
     {
         return null;
     }

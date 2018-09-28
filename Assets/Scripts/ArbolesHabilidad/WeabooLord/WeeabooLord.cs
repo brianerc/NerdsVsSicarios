@@ -1,68 +1,116 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class WeeabooLord : MonoBehaviour, IArbol {
 
-    public IHoja[,] arbol;
+    public IHoja[][] arbol;
     private string nombre;
     private string descripcion;
+    public GameObject catapulta;
+    public GameObject lanzador;
+    public GameObject dakimakura;
+    public GameObject mochilaPegajosa;
+    public float x;
+    public float y;
+    public float z;
 	// Use this for initialization
 	void Start () {
-        arbol = new IHoja[5,3];
-        nombre = "IT Guy";
+        arbol = new IHoja[5][];
+        nombre = "Weeaboo Lord";
         descripcion = "";
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        for (int i = 0; i < arbol.Length; i++)
+        {
+            if (i == 0)
+            {
+                arbol[i] = new IHoja[6];
+            } else
+            {
+                arbol[i] = new IHoja[0];
+            }
+        }
+        InsertarHoja(new HojaCatapulta(catapulta), 0);
+        InsertarHoja(new HojaDakimakura(dakimakura), 0);
+        InsertarHoja(new HojaMochilaPegajosa(mochilaPegajosa), 0);
+        MostrarLanzadores();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
 	}
 
-    public int getCantidadDeNiveles()
+    private void MostrarLanzadores()
     {
-        return arbol.GetLength(1);
+        for (int i =0;i<arbol.Length;i++) {
+            for (int j = 0; j < arbol[i].Length; j++){
+                if(arbol[i][j]==null)
+                {
+                    
+                }
+                else if (arbol[i][j].EsEstructura())
+                {
+                    GameObject nuevoLanzador=Instantiate(lanzador);
+                    GameObject estructura = Resources.Load("Estructuras/"+arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
+                    Lanzador scriptLanzador = nuevoLanzador.GetComponent<Lanzador>();
+                    scriptLanzador.estructura = estructura;
+                    Vector3 posicion;
+                    posicion.x = x;
+                    posicion.y = y;
+                    posicion.z = z;
+                    nuevoLanzador.transform.position=posicion;
+                    ComienzoPartida opciones = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>();
+                    x = x + opciones.separacionLanzadores;
+                    nuevoLanzador.transform.tag = "Lanzador"+arbol[i][j].GetNombre();
+                }
+            }
+        }
     }
-    public int getCantidadDeHojasDelNivel(int nivel)
+
+    public int GetCantidadDeNiveles()
     {
-        return arbol.GetLength(0);
+        return arbol.Length;
     }
-    public bool insertarHoja(IHoja hoja, int nivel)
+    public int GetCantidadDeHojasDelNivel(int nivel)
     {
-        for (int i = 0; i< arbol.GetLength(nivel); i++)
+        return arbol[nivel].Length;
+    }
+    private bool InsertarHoja(IHoja hoja, int nivel)
+    {
+        for (int i = 0; i < arbol[nivel].Length; i++)
         {
-            if (arbol.GetValue(nivel,i)==null)
+            if (arbol[nivel][i] == null)
             {
-                arbol.SetValue(hoja,nivel,i);
+                arbol[nivel][i] = hoja;
                 return true;
             }
         }
         return false;
     }
-    public bool hayEspacioEnElNivel(int nivel)
+    private bool HayEspacioEnElNivel(int nivel)
     {
-        for (int i = 0; i < arbol.GetLength(nivel); i++)
+        for (int i = 0; i < arbol[nivel].Length; i++)
         {
-            if (arbol.GetValue(nivel, i) == null)
+            if (arbol[nivel][i] == null)
             {
                 return true;
             }
         }
         return false;
     }
-    public List<IHoja> getHojas()
+    public List<IHoja> GetHojas()
     {
         return new List<IHoja>();
     }
-    public string getNombre()
+    public string GetNombre()
     {
         return nombre;
     }
-    public string getDescripcion()
+    public string GetDescripcion()
     {
         return descripcion;
     }
-    public Sprite getImagen()
+    public Sprite GetImagen()
     {
         return null;
     }
