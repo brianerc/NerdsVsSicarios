@@ -10,8 +10,9 @@ TagManager:
   - Piso
   - Opciones
   - LanzadorDakimakura
-  - Lanzador Catapulta
   - LanzadorMochila pegajosa
+  - LanzadorCatapulta
+  - Seleccion
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Estructuras
     uniqueID: 476395045
+    locked: 0
+  - name: Selector
+    uniqueID: 1435066395
     locked: 0
