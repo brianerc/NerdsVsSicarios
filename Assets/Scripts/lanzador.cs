@@ -64,7 +64,9 @@ public class Lanzador : MonoBehaviour {
                 else if (hit.transform.tag == "Piso")
                 {
                     estructura.transform.position = ActualizarPosicion(touch);
+                    GameObject.FindGameObjectWithTag("Nerd").GetComponent<Animator>().SetTrigger("invocar");
                     Instantiate(estructura);
+
                 }
                 else
                 {

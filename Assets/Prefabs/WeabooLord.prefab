@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4046326094900756}
   - component: {fileID: 212785419334293622}
   - component: {fileID: 114211835433351406}
+  - component: {fileID: 95211395780426724}
   m_Layer: 0
   m_Name: WeabooLord
-  m_TagString: Untagged
+  m_TagString: Nerd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,12 +36,30 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803862397425472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.26, y: 0.17, z: 4.2336297}
+  m_LocalPosition: {x: -7.57, y: 0.36, z: 4.2336297}
   m_LocalScale: {x: 2.421, y: 2.421, z: 2.421}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95211395780426724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803862397425472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d638e0e5d4961344ab1ddaa27fb197a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114211835433351406
 MonoBehaviour:
   m_ObjectHideFlags: 1
