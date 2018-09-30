@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ComienzoPartida : MonoBehaviour {
     public GameObject jugador;
+    public GameObject jugador2;
     public Grid matriz;
     public IArbol nerd;
     public float separacionLanzadores;
@@ -11,6 +12,7 @@ public class ComienzoPartida : MonoBehaviour {
 	void Start () {
         Instantiate(jugador);
         Instantiate(matriz);
+        Instantiate(jugador2);
 	}
 	
 	// Update is called once per frame
