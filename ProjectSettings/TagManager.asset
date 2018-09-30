@@ -13,6 +13,7 @@ TagManager:
   - LanzadorMochila pegajosa
   - LanzadorCatapulta
   - Seleccion
+  - Nerd
   layers:
   - Default
   - TransparentFX
