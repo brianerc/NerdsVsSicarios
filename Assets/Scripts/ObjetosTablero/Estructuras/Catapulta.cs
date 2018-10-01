@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Catapulta : MonoBehaviour {
+public class Catapulta : Estructura {
 
 	// Use this for initialization
 	void Start () {

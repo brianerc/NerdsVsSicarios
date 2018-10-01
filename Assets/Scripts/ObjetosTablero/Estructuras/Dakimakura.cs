@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dakimakura : MonoBehaviour {
+public class Dakimakura : Estructura {
     private float tiempo;
     private float danoBase;
-    private float vidaBase;
     // Use this for initialization
     void Start()
     {
@@ -17,7 +16,7 @@ public class Dakimakura : MonoBehaviour {
     {
         if (collision.transform.tag == "Sicario")
         {
-            JugadorDeFootballBase enemigo = collision.gameObject.GetComponent<JugadorDeFootballBase>();
+            Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
             if (tiempo <= 0)
             {
                 enemigo.Herir(danoBase);
@@ -25,25 +24,8 @@ public class Dakimakura : MonoBehaviour {
             }
         }
     }
-    public void Herir(float dano)
-    {
-        vidaBase = vidaBase - dano;
-        if (vidaBase <= 0)
-        {
-            Destruir();
-            //this.GetComponent<Animator>().SetTrigger("Destruir");
-        }
-    }
-    // Update is called once per frame
-    void Update () {
-		
-	}
     private void FixedUpdate()
     {
         tiempo = tiempo - Time.deltaTime;
-    }
-    public void Destruir()
-    {
-        Destroy(this.gameObject);
     }
 }

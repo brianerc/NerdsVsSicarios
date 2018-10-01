@@ -6,7 +6,7 @@ public class ComienzoPartida : MonoBehaviour {
     public GameObject jugador;
     public GameObject jugador2;
     public Grid matriz;
-    public IArbol nerd;
+    public Arbol nerd;
     public float separacionLanzadores;
 	// Use this for initialization
 	void Start () {
