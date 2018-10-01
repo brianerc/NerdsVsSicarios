@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Lanzador : MonoBehaviour {
+abstract public class Lanzador : MonoBehaviour {
     public GameObject estructura;
-    private bool estado = false;
+    protected bool estado = false;
     public Grid matriz;
-    private GameObject planoPosicion;
-    private Color verde;
-    private Color rojo;
-    private Color transparente;
+    protected GameObject planoPosicion;
+    protected Color verde;
+    protected Color rojo;
+    protected Color transparente;
     // Use this for initialization
     void Start() {
         CargarSprite();
         verde = new Color(0, 1, 0, 0.5f);
         rojo = new Color(1, 0, 0, 0.5f);
         transparente = new Color(0, 0, 0, 0);
-
     }
 
     // Update is called once per frame
@@ -64,7 +63,7 @@ public class Lanzador : MonoBehaviour {
                 else if (hit.transform.tag == "Piso")
                 {
                     estructura.transform.position = ActualizarPosicion(touch);
-                    GameObject.FindGameObjectWithTag("Nerd").GetComponent<Animator>().SetTrigger("invocar");
+                    AnimarNerd();
                     Instantiate(estructura);
 
                 }
@@ -75,15 +74,9 @@ public class Lanzador : MonoBehaviour {
             }
             Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
         }
-        if (touch.phase == TouchPhase.Canceled)
-        {
-            if(GameObject.FindGameObjectsWithTag("Seleccion")!=null)
-            {
-                Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
-            }
-        }
+        TouchCancelado(touch);
     }
-    private Vector3 ActualizarPosicion(Touch touch)
+    protected Vector3 ActualizarPosicion(Touch touch)
     {
         Vector3 punto = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
         Vector3Int auxiliar = matriz.WorldToCell(punto);
@@ -92,20 +85,18 @@ public class Lanzador : MonoBehaviour {
     }
     private void CargarSprite()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Lanzadores/" + estructura.name);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Lanzadores/" + estructura.name);
     }
-    private void CrearSeleccion(Touch touch)
+    protected void CrearSeleccion(Touch touch)
     {
         planoPosicion = GameObject.CreatePrimitive(PrimitiveType.Cube);
         planoPosicion.transform.position = ActualizarPosicion(touch);
         planoPosicion.tag = "Seleccion";
         Destroy(planoPosicion.GetComponent<BoxCollider>());
         planoPosicion.GetComponent<MeshRenderer>().material = Resources.Load<Material>("Materiales/Selector");
-        //planoPosicion.transform.localScale = new Vector3(1.2f, 1.2f, 0);
-
         planoPosicion.GetComponent<MeshRenderer>().material.color = transparente;
     }
-    private void ActualizarColorSeleccion(GameObject planoPosicion,RaycastHit hit)
+    protected void ActualizarColorSeleccion(GameObject planoPosicion,RaycastHit hit)
     {
         MeshRenderer renderer = planoPosicion.GetComponent<MeshRenderer>();
         renderer.material.color=transparente;
@@ -121,5 +112,19 @@ public class Lanzador : MonoBehaviour {
         {
             renderer.material.color = rojo;
         }
+    }
+    protected void TouchCancelado(Touch touch)
+    {
+        if (touch.phase == TouchPhase.Canceled)
+        {
+            if (GameObject.FindGameObjectsWithTag("Seleccion") != null)
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
+            }
+        }
+    }
+    protected virtual void AnimarNerd()
+    {
+        GameObject.FindGameObjectWithTag("Nerd").GetComponent<Animator>().SetTrigger("invocar");
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Estructuras\Dakimakura.cs" />
     <Compile Include="Assets\Scripts\Estructuras\MochilaPegajosa.cs" />
     <Compile Include="Assets\Scripts\Lanzador.cs" />
+    <Compile Include="Assets\Scripts\LanzadorEstructuras.cs" />
     <Compile Include="Assets\Scripts\LanzadorSicario.cs" />
     <Compile Include="Assets\Scripts\Sicarios\JugadorDeFootballBase.cs" />
     <Reference Include="UnityEditor.StandardEvents">

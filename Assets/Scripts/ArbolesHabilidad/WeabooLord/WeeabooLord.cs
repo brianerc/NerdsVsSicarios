@@ -51,7 +51,7 @@ public class WeeabooLord : MonoBehaviour, IArbol {
                 else if (arbol[i][j].EsEstructura())
                 {
                     GameObject nuevoLanzador=Instantiate(lanzador);
-                    GameObject estructura = Resources.Load("Estructuras/"+arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
+                    GameObject estructura = Resources.Load("Prefabs/Estructuras/"+arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
                     Lanzador scriptLanzador = nuevoLanzador.GetComponent<Lanzador>();
                     scriptLanzador.estructura = estructura;
                     Vector3 posicion;

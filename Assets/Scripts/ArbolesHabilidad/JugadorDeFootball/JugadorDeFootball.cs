@@ -53,9 +53,9 @@ public class JugadorDeFootball : MonoBehaviour, IArbol
                 else if (arbol[i][j].EsEstructura())
                 {
                     GameObject nuevoLanzador = Instantiate(lanzador);
-                    GameObject sicario = Resources.Load("Sicarios/" + arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
+                    GameObject sicario = Resources.Load("Prefabs/Sicarios/" + arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
                     LanzadorSicario scriptLanzador = nuevoLanzador.GetComponent<LanzadorSicario>();
-                    scriptLanzador.sicario = sicario;
+                    scriptLanzador.estructura = sicario;
                     Vector3 posicion;
                     posicion.x = x;
                     posicion.y = y;
