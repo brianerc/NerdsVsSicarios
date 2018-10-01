@@ -4,10 +4,13 @@ using UnityEngine;
 public class JugadorDeFootball : Arbol
 {
     public GameObject jugadorDeFootballBase;
+    public GameObject jugadorDeFootballV1;
+    public GameObject jugadorDeFootballV2;
 
     // Use this for initialization
     protected override void Inicializar()
     {
+        posicionX = (-posicionX);
         arbol = new Hoja[5][];
         nombre = "Jugador de Football";
         descripcion = "";
@@ -15,7 +18,7 @@ public class JugadorDeFootball : Arbol
         {
             if (i == 0)
             {
-                arbol[i] = new Hoja[1];
+                arbol[i] = new Hoja[3];
             }
             else
             {
@@ -23,6 +26,9 @@ public class JugadorDeFootball : Arbol
             }
         }
         InsertarHoja(new HojaJugadorDeFootballBase(jugadorDeFootballBase), 0);
+        InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV1), 0);
+        InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV2), 0);
+
         MostrarLanzadores();
 
     }

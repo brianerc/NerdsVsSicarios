@@ -9,6 +9,7 @@ public class Sicario : ObjetoTablero {
     protected float tiempoParalizado;
     protected Vector3 velocidad;
     protected Vector3 velocidadDetenida;
+    public bool atacando=false;
     public virtual void Paralizar(float tiempoParalizar)
     {
         tiempoParalizado = tiempoParalizar;
@@ -22,8 +23,14 @@ public class Sicario : ObjetoTablero {
             {
                 estructura.Herir(danoBase);
                 tiempo = 1;
+                this.GetComponent<Animator>().SetTrigger("Atacar");
             }
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        this.GetComponent<Animator>().SetTrigger("Detener");
+
     }
     private void FixedUpdate()
     {

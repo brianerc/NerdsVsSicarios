@@ -52,12 +52,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bea8938a70a39646b687f5a15eefbb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorDeFootballBase: {fileID: 1447365570974060, guid: decc658e53149db429037338f0f8dc8a,
-    type: 2}
   lanzador: {fileID: 1114876765337918, guid: 21aa42af7b5714843ae750cfd3021b69, type: 2}
   x: 6.2
   y: -4.2
   z: 0
+  jugadorDeFootballBase: {fileID: 1447365570974060, guid: decc658e53149db429037338f0f8dc8a,
+    type: 2}
+  jugadorDeFootballV1: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e,
+    type: 2}
+  jugadorDeFootballV2: {fileID: 1658163094709632, guid: 74eb599b717d5fd43853f33977ede7df,
+    type: 2}
 --- !u!212 &212892972551825826
 SpriteRenderer:
   m_ObjectHideFlags: 1

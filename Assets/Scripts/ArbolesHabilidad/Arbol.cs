@@ -7,12 +7,13 @@ abstract public class Arbol : MonoBehaviour {
     protected string nombre;
     protected string descripcion;
     public GameObject lanzador;
-
+    protected float posicionX;
     public float x;
     public float y;
     public float z;
     public virtual void Start()
     {
+        posicionX = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>().separacionLanzadores;
         Inicializar();
     }
     protected virtual void MostrarLanzadores()
@@ -36,8 +37,7 @@ abstract public class Arbol : MonoBehaviour {
                     posicion.y = y;
                     posicion.z = z;
                     nuevoLanzador.transform.position = posicion;
-                    ComienzoPartida opciones = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>();
-                    x = x + opciones.separacionLanzadores;
+                    x = x + posicionX;
                     nuevoLanzador.transform.tag = "Lanzador" + arbol[i][j].GetNombre();
                 }
             }

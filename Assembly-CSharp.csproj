@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Hoja.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballBase.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballV1.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballV2.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\JugadorDeFootball.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaCatapulta.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaDakimakura.cs" />
@@ -80,6 +82,8 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\ObjetoTablero.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicario.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV1.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV2.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/BrianERC/Documents/GitHub/NerdsVsSicarios/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
