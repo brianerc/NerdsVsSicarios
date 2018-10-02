@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class HojaJugadorDeFootballV2 : Hoja {
 
-    private double dañoBase;
-    private double cd;
-    private double vida;
-    private GameObject objeto;
-    // Use this for initialization
-    void Start () {
-		
-	}
+    private JugadorDeFootballV2 jugador;
+
     public HojaJugadorDeFootballV2(GameObject unObjeto)
     {
         nivel = 1;
         nombre = "Jugador de Football V2";
         descripcion = "";
-        dañoBase = 2;
-        cd = 2.5;
-        vida = 3;
         aprendida = true;
         objeto = unObjeto;
+        jugador = objeto.GetComponent<JugadorDeFootballV2>();
+        jugador.SetDaño(4);
+        jugador.SetVida(10);
+        jugador.SetTiempo(1);
+        jugador.SetVelocidad(-2f);
+        
     }
     // Update is called once per frame
     void Update () {

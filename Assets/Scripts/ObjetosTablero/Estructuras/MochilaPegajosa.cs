@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MochilaPegajosa : Estructura {
-    private float tiempoParalizar;
+    public float tiempoParalizar;
 	// Use this for initialization
 	void Start () {
-        tiempoParalizar=2;
-        vidaBase = 1;
 	}
 	
 	// Update is called once per frame
@@ -22,5 +20,13 @@ public class MochilaPegajosa : Estructura {
     private void OnTriggerExit(Collider other)
     {
         Destruir();
+    }
+    public void SetTiempoParalizar(float tiempo)
+    {
+        tiempoParalizar = tiempo;
+    }
+    public float GetTiempo()
+    {
+        return tiempoParalizar;
     }
 }

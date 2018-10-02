@@ -26,15 +26,15 @@ public class JugadorDeFootball : Arbol
             }
         }
         InsertarHoja(new HojaJugadorDeFootballBase(jugadorDeFootballBase), 0);
-        InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV1), 0);
-        InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV2), 0);
+        InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV2), 0);
+        InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV1), 0);
 
         MostrarLanzadores();
 
     }
     protected override GameObject CargarLanzador(int i, int j)
     {
-       return Resources.Load("Prefabs/Sicarios/" + arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
+        return arbol[i][j].GetObjeto();
     }
 
 }

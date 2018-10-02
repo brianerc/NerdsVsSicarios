@@ -3,15 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dakimakura : Estructura {
-    private float tiempo;
-    private float danoBase;
+    public float tiempo;
+    public float danoBase;
     // Use this for initialization
-    void Start()
-    {
-        vidaBase = 10;
-        danoBase = 2;
-        tiempo = 1;
-    }
     private void OnCollisionStay(Collision collision)
     {
         if (collision.transform.tag == "Sicario")
@@ -27,5 +21,17 @@ public class Dakimakura : Estructura {
     private void FixedUpdate()
     {
         tiempo = tiempo - Time.deltaTime;
+    }
+    public void SetDanoBase(float dano)
+    {
+        danoBase = dano;
+    }
+    public void SetTiempoAtaque(float unTiempo)
+    {
+        tiempo = unTiempo;
+    }
+    public float GetTiempo()
+    {
+        return danoBase;
     }
 }

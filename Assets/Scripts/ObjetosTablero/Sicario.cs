@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Sicario : ObjetoTablero {
 
-    protected float tiempo;
-    protected float danoBase;
-    protected float tiempoParalizado;
-    protected Vector3 velocidad;
-    protected Vector3 velocidadDetenida;
+    public float tiempoBase;
+    public float tiempo;
+    public float danoBase;
+    public float tiempoParalizado;
+    public Vector3 velocidad;
+    public Vector3 velocidadDetenida = new Vector3(0, 0, 0);
     public bool atacando=false;
     public virtual void Paralizar(float tiempoParalizar)
     {
         tiempoParalizado = tiempoParalizar;
+    }
+    void Start()
+    {
+        this.GetComponent<Rigidbody>().velocity = velocidad;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,7 +27,7 @@ public class Sicario : ObjetoTablero {
             if (tiempo <= 0)
             {
                 estructura.Herir(danoBase);
-                tiempo = 1;
+                tiempo = tiempoBase;
                 this.GetComponent<Animator>().SetTrigger("Atacar");
             }
         }
@@ -44,6 +49,22 @@ public class Sicario : ObjetoTablero {
         {
             this.gameObject.GetComponent<Rigidbody>().velocity = velocidad;
         }
+    }
+    public void SetTiempo(float unTiempo)
+    {
+        tiempoBase = unTiempo;
+        tiempo = tiempoBase;
+    }
+    public void SetDaño(float daño) {
+        danoBase = daño;
+    }
+    public void SetVelocidad(float velocidadX)
+    {
+        velocidad= new Vector3(velocidadX, 0, 0);
+    }
+    public void SetResistenciaParalizacion(float resistencia)
+    {
+        tiempoParalizado = tiempoParalizado * resistencia;
     }
     public void Morir()
     {

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212609189504881128}
   - component: {fileID: 65619087995239844}
   - component: {fileID: 114499553116684416}
+  - component: {fileID: 95252578931141242}
   m_Layer: 0
   m_Name: Dakimakura
   m_TagString: Estructura
@@ -36,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154800813827048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.874418, y: -1.601403, z: -19}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -4.874418, y: -2.9514031, z: -19}
+  m_LocalScale: {x: 3, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,8 +53,26 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.4, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4, y: 0.3, z: 0.2}
+  m_Center: {x: 0, y: -0.04, z: 0}
+--- !u!95 &95252578931141242
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154800813827048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 167f3253062bc89469e520ef8bbe3c21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114499553116684416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,6 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea86f4a65989244e8e8d990e11ad7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempo: 0
+  danoBase: 1
 --- !u!212 &212609189504881128
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -100,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 461bac67247cd754e94a898452e58347, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be8b4e8412567ba48bde0dde7318a4bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

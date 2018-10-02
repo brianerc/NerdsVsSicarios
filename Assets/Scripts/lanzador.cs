@@ -9,9 +9,11 @@ abstract public class Lanzador : MonoBehaviour {
     protected Color verde;
     protected Color rojo;
     protected Color transparente;
+    protected GameObject piso;
     // Use this for initialization
-    void Start() {
+    public virtual void Start() {
         CargarSprite();
+        piso = GameObject.FindGameObjectWithTag("Piso");
         verde = new Color(0, 1, 0, 0.5f);
         rojo = new Color(1, 0, 0, 0.5f);
         transparente = new Color(0, 0, 0, 0);
@@ -64,8 +66,8 @@ abstract public class Lanzador : MonoBehaviour {
                 {
                     estructura.transform.position = ActualizarPosicion(touch);
                     AnimarNerd();
-                    Instantiate(estructura);
-
+                    GameObject nuevaEstructura = estructura;
+                    Instantiate(nuevaEstructura);
                 }
                 else
                 {
@@ -76,7 +78,7 @@ abstract public class Lanzador : MonoBehaviour {
         }
         TouchCancelado(touch);
     }
-    protected Vector3 ActualizarPosicion(Touch touch)
+    protected virtual Vector3 ActualizarPosicion(Touch touch)
     {
         Vector3 punto = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
         Vector3Int auxiliar = matriz.WorldToCell(punto);

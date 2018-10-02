@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65089366573646212}
   m_Layer: 0
   m_Name: LanzadorSicario
-  m_TagString: Carta1
+  m_TagString: LanzadorJugador de Football V1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114876765337918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -4, z: -0.019384904}
+  m_LocalPosition: {x: 3.5999997, y: -4.2, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbe302a744a48a47b7c9469964c5993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sicario: {fileID: 0}
+  estructura: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
 --- !u!212 &212918681512032606
 SpriteRenderer:

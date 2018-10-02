@@ -21,7 +21,7 @@ public class WeeabooLord : Arbol {
                 arbol[i] = new Hoja[0];
             }
         }
-        InsertarHoja(new HojaCatapulta(catapulta), 0);
+       InsertarHoja(new HojaCatapulta(catapulta), 0);
         InsertarHoja(new HojaDakimakura(dakimakura), 0);
         InsertarHoja(new HojaMochilaPegajosa(mochilaPegajosa), 0);
         MostrarLanzadores();
@@ -29,7 +29,7 @@ public class WeeabooLord : Arbol {
 
     protected override GameObject CargarLanzador(int i, int j)
     {
-        return Resources.Load("Prefabs/Estructuras/" + arbol[i][j].GetNombre(), typeof(GameObject)) as GameObject;
+        return arbol[i][j].GetObjeto();
     }
 
 

@@ -5,21 +5,19 @@ using UnityEngine;
 public class HojaJugadorDeFootballBase : Hoja
 {
 
-    private double dañoBase;
-    private double cd;
-    private double vida;
-    private GameObject objeto;
+    private JugadorDeFootballBase jugador;
 
-    // Use this for initialization
     public HojaJugadorDeFootballBase(GameObject unObjeto)
     {
         nivel = 1;
         nombre = "Jugador de Football Base";
         descripcion = "";
-        dañoBase = 2;
-        cd = 2.5;
-        vida = 3;
         aprendida = true;
+        jugador = unObjeto.GetComponent<JugadorDeFootballBase>();
+        jugador.SetDaño(4);
+        jugador.SetVida(10);
+        jugador.SetTiempo(1);
+        jugador.SetVelocidad(-3f);
         objeto = unObjeto;
     }
     public override bool EsEstructura()
