@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212402531080987686}
   - component: {fileID: 65125012424517990}
   - component: {fileID: 114633813041139818}
+  - component: {fileID: 95149282360425142}
   m_Layer: 0
   m_Name: Catapulta
   m_TagString: Estructura
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165174645389886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.874418, y: -0.25140303, z: -19}
+  m_LocalPosition: {x: -4.874418, y: -2.9514031, z: -19}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,6 +55,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95149282360425142
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165174645389886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32851673a343e704386146713fa6a264, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114633813041139818
 MonoBehaviour:
   m_ObjectHideFlags: 1

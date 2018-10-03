@@ -19,7 +19,7 @@ public class MochilaPegajosa : Estructura {
     }
     private void OnTriggerExit(Collider other)
     {
-        Destruir();
+        this.GetComponent<Animator>().SetTrigger("Destruir");
     }
     public void SetTiempoParalizar(float tiempo)
     {
