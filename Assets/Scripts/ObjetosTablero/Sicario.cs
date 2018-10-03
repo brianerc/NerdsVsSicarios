@@ -21,17 +21,24 @@ public class Sicario : ObjetoTablero {
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Estructura")
-        {
-            Estructura estructura = collision.gameObject.GetComponent<Estructura>();
-            if (tiempo <= 0)
-            {
-                estructura.Herir(danoBase);
-                tiempo = tiempoBase;
-                this.GetComponent<Animator>().SetTrigger("Atacar");
-            }
-        }
-    }
+		if (collision.transform.tag == "Estructura")
+		{
+			Debug.Log("COLISION");
+			Estructura estructura = collision.gameObject.GetComponent<Estructura>();
+			if (tiempo <= 0)
+			{
+				Debug.Log("Colisionando con estructura");
+				estructura.Herir(danoBase);
+				tiempo = tiempoBase;
+				this.GetComponent<Animator>().SetTrigger("Atacar");
+			}
+		}
+		else if (collision.transform.tag == "Proyectil_Nerd")
+		{
+			Debug.Log("PROYECTIL NERD");
+		}
+
+	}
     private void OnCollisionExit(Collision collision)
     {
         this.GetComponent<Animator>().SetTrigger("Detener");

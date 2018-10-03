@@ -10,9 +10,10 @@ public class HojaCatapulta: Hoja {
         nivel = 1;
         nombre = "Catapulta";
         descripcion = "";
-        aprendida = true;
-        objeto = unObjeto;
-        catapulta = unObjeto.GetComponent<Catapulta>();
+		//aprendida = true;
+		catapulta = unObjeto.GetComponent<Catapulta>();
+		objeto = unObjeto;
+		catapulta.SetVida(1);
 	}
     public override bool EsEstructura()
     {

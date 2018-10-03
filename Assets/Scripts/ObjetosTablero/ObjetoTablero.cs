@@ -9,9 +9,10 @@ using UnityEngine;
 	public virtual void Herir(float daño)
     {
         vidaBase = vidaBase - daño;
-        if (vidaBase<=0)
+		AnimatorStateInfo stateInfo = this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
+		if (vidaBase<=0)
         {
-            this.GetComponent<Animator>().SetTrigger("Destruir");
+			this.GetComponent<Animator>().SetTrigger("Destruir");
         }
     }
 	// Update is called once per frame
@@ -20,6 +21,7 @@ using UnityEngine;
 	}
     protected virtual void Destruir()
     {
+		Debug.Log("DESTRUIR");
         Destroy(this.gameObject);
     }
     public void SetVida(float vida)

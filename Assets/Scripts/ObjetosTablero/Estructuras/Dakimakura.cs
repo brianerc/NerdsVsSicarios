@@ -22,16 +22,16 @@ public class Dakimakura : Estructura {
     {
         tiempo = tiempo - Time.deltaTime;
     }
-    public void SetDanoBase(float dano)
-    {
-        danoBase = dano;
-    }
-    public void SetTiempoAtaque(float unTiempo)
-    {
-        tiempo = unTiempo;
-    }
-    public float GetTiempo()
-    {
-        return danoBase;
-    }
+    //public void SetDanoBase(float dano)
+    //{
+    //    danoBase = dano;
+    //}
+    //public void SetTiempoAtaque(float unTiempo)
+    //{
+    //    tiempo = unTiempo;
+    //}
+    //public float GetTiempo()
+    //{
+    //    return danoBase;
+    //}
 }
