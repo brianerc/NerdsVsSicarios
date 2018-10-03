@@ -20,13 +20,19 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 		Destroy(gameObject, 3f);
 	}
 
-	private void OnCollisionStay(Collision collision)
+	private void OnTriggerEnter(Collider other)
 	{
-		if (collision.transform.tag == "Sicario")
+		if (other.transform.tag == "Sicario")
 		{
-			Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
+			Debug.Log("Sicario le pego");
+			Sicario enemigo = other.gameObject.GetComponent<Sicario>();
 			enemigo.Herir(danoBase);
+			Destruir();
 		}
 	}
 
+	protected virtual void Destruir()
+	{
+		Destroy(this.gameObject);
+	}
 }

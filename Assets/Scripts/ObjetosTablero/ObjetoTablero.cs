@@ -21,7 +21,6 @@ using UnityEngine;
 	}
     protected virtual void Destruir()
     {
-		Debug.Log("DESTRUIR");
         Destroy(this.gameObject);
     }
     public void SetVida(float vida)

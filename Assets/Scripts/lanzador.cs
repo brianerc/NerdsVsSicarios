@@ -51,6 +51,10 @@ abstract public class Lanzador : MonoBehaviour {
                     GameObject.FindGameObjectWithTag("Seleccion").transform.position = ActualizarPosicion(touch);
                     ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);
                 }
+				if (hit.transform.tag == "Estructura")
+				{
+					ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);
+				}
             }
         }
         if (touch.phase == TouchPhase.Ended && estado)
@@ -112,8 +116,9 @@ abstract public class Lanzador : MonoBehaviour {
         }
         else
         {
-            renderer.material.color = rojo;
-        }
+			renderer.material.color = transparente;
+			//renderer.material.color = rojo;
+		}
     }
     protected void TouchCancelado(Touch touch)
     {

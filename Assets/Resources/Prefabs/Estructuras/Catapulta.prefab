@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempo: 1
   bullet: {fileID: 1585339109019700, guid: 5d99b4dfb90ef2748810fbd8a6d2225c, type: 2}
-  fireRate: 3.5
+  fireRate: 3.45
   nextFire: 1.2
   positionY: 0.5
 --- !u!212 &212402531080987686
