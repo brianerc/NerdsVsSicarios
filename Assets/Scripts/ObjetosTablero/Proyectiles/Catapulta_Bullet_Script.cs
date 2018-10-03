@@ -25,6 +25,7 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 		if (other.transform.tag == "Sicario")
 		{
 			Debug.Log("Sicario le pego");
+			Debug.Log(danoBase);
 			Sicario enemigo = other.gameObject.GetComponent<Sicario>();
 			enemigo.Herir(danoBase);
 			Destruir();

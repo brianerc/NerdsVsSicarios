@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   veltX: 5
-  danoBase: 25
+  danoBase: 1
 --- !u!212 &212412197082320984
 SpriteRenderer:
   m_ObjectHideFlags: 1
