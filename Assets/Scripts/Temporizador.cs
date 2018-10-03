@@ -29,5 +29,6 @@ public class Temporizador : MonoBehaviour {
             SceneManager.LoadScene("Nerd_Victoria", LoadSceneMode.Single);
         }
         if(minutos>=0) GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
+        
     }
 }

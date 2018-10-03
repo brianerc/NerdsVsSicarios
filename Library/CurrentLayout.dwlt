@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 80
+  controlID: 33
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,7 +122,7 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 81
+  controlID: 34
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 82
+  controlID: 35
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 13930
+  m_LastSelectedObjectID: 12456
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,10 +312,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 379
+    x: 2299
     y: 92
-    width: 1145
-    height: 433
+    width: 1147
+    height: 461
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -515,34 +515,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/ObjetosTablero
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/ObjetosTablero
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\BrianERC\Documents\GitHub\NerdsVsSicarios
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: dc2f0000
-    m_LastClickedID: 12252
-    m_ExpandedIDs: 00000000a42f0000dc2f0000263000002c300000c0300000e8300000ec3000002c31000088310000bc310000e631000026320000303200009432000000ca9a3b
+    m_SelectedIDs: 702e0000
+    m_LastClickedID: 11888
+    m_ExpandedIDs: 000000004c2d0000882d0000d22d0000d82d0000702e0000982e00009c2e0000e02e0000402f0000742f00009e2f0000de2f0000e82f00005030000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Sicarios
-      m_OriginalName: Sicarios
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12886
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -556,7 +556,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a42f0000dc2f0000263000002c300000c0300000e8300000ec3000002c31000088310000bc310000e6310000263200003032000094320000
+    m_ExpandedIDs: 000000004c2d0000882d0000d22d0000d82d0000702e0000982e00009c2e0000e02e0000402f0000742f00009e2f0000de2f0000e82f000050300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,9 +672,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba60f8ff
-    m_LastClickedID: -499526
-    m_ExpandedIDs: a461fbffaa61fbff301cfdff361cfdfff053ffff4276ffff867fffff8a87ffff3c95ffff7cf4ffff000000006a360000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 6ef9ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
