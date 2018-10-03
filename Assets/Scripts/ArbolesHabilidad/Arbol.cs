@@ -28,17 +28,15 @@ abstract public class Arbol : MonoBehaviour {
                 }
                 else if (arbol[i][j].EsEstructura())
                 {
-                    GameObject nuevoLanzador = Instantiate(lanzador);
-                    GameObject estructura = CargarLanzador(i, j);
-                    Lanzador scriptLanzador = nuevoLanzador.GetComponent<Lanzador>();
-                    scriptLanzador.estructura = estructura;
+                    lanzador.GetComponent<Lanzador>().estructura = CargarLanzador(i,j);
                     Vector3 posicion;
                     posicion.x = x;
                     posicion.y = y;
                     posicion.z = z;
-                    nuevoLanzador.transform.position = posicion;
+                    lanzador.GetComponent<Lanzador>().transform.position = posicion;
                     x = x + posicionX;
-                    nuevoLanzador.transform.tag = "Lanzador" + arbol[i][j].GetNombre();
+                    lanzador.GetComponent<Lanzador>().transform.tag = "Lanzador" + arbol[i][j].GetNombre();
+                    Instantiate(lanzador);
                 }
             }
         }

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114707207325171624}
   - component: {fileID: 65981466383758590}
   - component: {fileID: 95084664487901280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jugador de Football V2
   m_TagString: Sicario
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1658163094709632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.575582, y: -1.601403, z: -19}
+  m_LocalPosition: {x: 7.2755823, y: -0.25140303, z: -19}
   m_LocalScale: {x: 2.8, y: 2.8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,6 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad44db55ed6a864fbd93e21b4bfdd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempoBase: 1
+  tiempo: 1
+  danoBase: 4
+  tiempoParalizado: 0
+  velocidad: {x: -2, y: 0, z: 0}
+  velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!212 &212906877896100546
 SpriteRenderer:

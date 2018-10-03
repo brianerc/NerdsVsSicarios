@@ -7,6 +7,8 @@ abstract public class Hoja {
     protected bool aprendida;
     protected string nombre;
     protected string descripcion;
+    protected GameObject objeto;
+
     public virtual bool EsEstructura()
     {
         return true;
@@ -52,5 +54,8 @@ abstract public class Hoja {
     {
         return null;
     }
-
+    public GameObject GetObjeto()
+    {
+        return objeto;
+    }
 }

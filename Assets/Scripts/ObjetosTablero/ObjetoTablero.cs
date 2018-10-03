@@ -5,9 +5,7 @@ using UnityEngine;
     abstract public class ObjetoTablero : MonoBehaviour {
     protected float vidaBase;
 	// Use this for initialization
-	void Start () {
-		
-	}
+
 	public virtual void Herir(float daño)
     {
         vidaBase = vidaBase - daño;
@@ -23,5 +21,9 @@ using UnityEngine;
     protected virtual void Destruir()
     {
         Destroy(this.gameObject);
+    }
+    public void SetVida(float vida)
+    {
+        vidaBase = vida;
     }
 }

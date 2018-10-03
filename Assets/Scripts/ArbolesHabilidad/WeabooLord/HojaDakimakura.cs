@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HojaDakimakura : Hoja {
-    private double dañoBase;
-    private double cd;
-    private double vida;
-    private GameObject objeto;
+
+    private Dakimakura dakimakura;
     // Use this for initialization
     public HojaDakimakura(GameObject unObjeto)
     {
         nivel = 1;
         nombre = "Dakimakura";
         descripcion = "";
-        dañoBase = 2;
-        cd = 2.5;
-        vida = 3;
-        aprendida = true;
+        dakimakura = unObjeto.GetComponent<Dakimakura>();
         objeto = unObjeto;
+        dakimakura.SetDanoBase(1);
+        dakimakura.SetVida(25);
+        dakimakura.SetTiempoAtaque(1);
     }
     public override bool EsEstructura()
     {

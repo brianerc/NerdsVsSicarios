@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212785419334293622}
   - component: {fileID: 114211835433351406}
   - component: {fileID: 95211395780426724}
+  - component: {fileID: 65818009646827604}
   m_Layer: 0
   m_Name: WeabooLord
   m_TagString: Nerd
@@ -42,6 +43,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65818009646827604
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803862397425472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5780985, y: 3.4379656, z: 0.2}
+  m_Center: {x: -0.030950924, y: 0.1238042, z: 0}
 --- !u!95 &95211395780426724
 Animator:
   serializedVersion: 3
@@ -71,14 +84,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea125aec6992fe4e8473cb0eaf7d32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catapulta: {fileID: 1611101408992254, guid: d21d093550cd4bc41880df7da300b311, type: 2}
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 2}
-  dakimakura: {fileID: 1780117751942142, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 2}
-  mochilaPegajosa: {fileID: 1100238643210290, guid: 00812be3459be3e46b5888ee6d1c3409,
-    type: 2}
   x: -6.2
   y: -4.2
   z: 0
+  catapulta: {fileID: 1165174645389886, guid: d21d093550cd4bc41880df7da300b311, type: 2}
+  dakimakura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 2}
+  mochilaPegajosa: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409,
+    type: 2}
 --- !u!212 &212785419334293622
 SpriteRenderer:
   m_ObjectHideFlags: 1
