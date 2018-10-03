@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Lanzador.cs" />
     <Compile Include="Assets\Scripts\LanzadorEstructuras.cs" />
     <Compile Include="Assets\Scripts\LanzadorSicario.cs" />
+    <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructura.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Catapulta.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Dakimakura.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV1.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV2.cs" />
-    <Compile Include="Assets\Temporizador.cs" />
+    <Compile Include="Assets\Scripts\Temporizador.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>G:/Mis Documentos/Facultad/Desarrollo de videojuegos/Repositorios/NerdsVsSicarios/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
