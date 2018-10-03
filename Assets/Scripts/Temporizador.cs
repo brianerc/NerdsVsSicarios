@@ -17,12 +17,15 @@ public class Temporizador : MonoBehaviour {
     void FixedUpdate()
     {
         GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
-        //Debug.Log(GetComponent<Text>().text);
         segundos = segundos - Time.deltaTime;
         if (segundos <= 0)
         {
             minutos--;
             segundos = 59;
+        }
+        if(segundos==0 && minutos==0)
+        {
+            Application.LoadLevel("Victoria_Nerd");
         }
     }
 }
