@@ -23,7 +23,6 @@ public class Sicario : ObjetoTablero {
     {
 		if (collision.transform.tag == "Estructura")
 		{
-			Debug.Log("COLISION");
 			Estructura estructura = collision.gameObject.GetComponent<Estructura>();
 			if (tiempo <= 0)
 			{
@@ -33,6 +32,10 @@ public class Sicario : ObjetoTablero {
 				this.GetComponent<Animator>().SetTrigger("Atacar");
 			}
 		}
+        else if(collision.transform.tag=="Nerd")
+        {
+            Debug.Log("Nerd choco");
+        }
 		else if (collision.transform.tag == "Proyectil_Nerd")
 		{
 			Debug.Log("PROYECTIL NERD");
@@ -50,11 +53,11 @@ public class Sicario : ObjetoTablero {
         if (tiempoParalizado > 0)
         {
             tiempoParalizado = tiempoParalizado - Time.deltaTime;
-            this.gameObject.GetComponent<Rigidbody>().velocity = velocidadDetenida;
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidadDetenida;
         }
         else
         {
-            this.gameObject.GetComponent<Rigidbody>().velocity = velocidad;
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidad;
         }
     }
     public void SetTiempo(float unTiempo)

@@ -14,6 +14,7 @@ public class LanzadorSicario : Lanzador
         punto.x = piso.GetComponent<Renderer>().bounds.size.x / 2;
         Vector3Int auxiliar = matriz.WorldToCell(punto);
         punto = matriz.GetCellCenterWorld(auxiliar);
+        punto.z = 0f;
         return punto;
     }
 }

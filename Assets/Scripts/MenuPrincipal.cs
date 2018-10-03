@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
 
@@ -25,9 +26,6 @@ public class MenuPrincipal : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.GetComponent<Text>().text);
-                Debug.Log(hit.transform.tag);
-
                 if (hit.transform.tag == "GameController")
                 {
                     Debug.Log("Toque");
@@ -35,7 +33,7 @@ public class MenuPrincipal : MonoBehaviour
                     switch(hit.transform.GetComponent<Text>().text)
                     {
                         case "Jugar":
-                            Application.LoadLevel("Partida");
+                            SceneManager.LoadScene("Partida",LoadSceneMode.Single);
                             break;
                         case "Opciones":
                             break;
