@@ -143,7 +143,9 @@ MonoBehaviour:
   jugador: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 2}
   jugador2: {fileID: 1542843679540858, guid: 8be2c2f41b648684a8a4d49bccdc4c68, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
-  nerd: {fileID: 0}
+  fondo: {fileID: 1742667024210646, guid: b6213d96d36e6fe41936239adbec9add, type: 2}
+  temporizador: {fileID: 1715549075286476, guid: 129bd7f94188d454d9bcc6862076af00,
+    type: 2}
   separacionLanzadores: 1.3
 --- !u!4 &16208417
 Transform:
