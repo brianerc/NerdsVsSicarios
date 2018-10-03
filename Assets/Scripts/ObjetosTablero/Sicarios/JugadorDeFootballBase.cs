@@ -6,7 +6,7 @@ using UnityEngine;
 public class JugadorDeFootballBase : Sicario {
 	// Use this for initialization
 	void Start () {
-        this.GetComponent<Rigidbody>().velocity = velocidad;
+        this.GetComponent<Rigidbody2D>().velocity = velocidad;
     }
 
 

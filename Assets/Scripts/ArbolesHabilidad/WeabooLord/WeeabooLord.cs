@@ -6,8 +6,11 @@ public class WeeabooLord : Arbol {
     public GameObject dakimakura;
     public GameObject mochilaPegajosa;
     // Use this for initialization
-
     protected override void Inicializar () {
+        vidaBase = 10;
+        danoBase = 2;
+        tiempo = 1;
+        tiempoBase = 1;
         arbol = new Hoja[5][];
         nombre = "Weeaboo Lord";
         descripcion = "";
@@ -31,6 +34,18 @@ public class WeeabooLord : Arbol {
     {
         return arbol[i][j].GetObjeto();
     }
-
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Sicario")
+        {
+            Sicario sicario = collision.gameObject.GetComponent<Sicario>();
+            if (tiempo <= 0)
+            {
+                Debug.Log("Colisionando con estructura");
+                sicario.Herir(danoBase);
+                tiempo = tiempoBase;
+                this.GetComponent<Animator>().SetTrigger("Atacar");
+            }
+        }
+    }
 }

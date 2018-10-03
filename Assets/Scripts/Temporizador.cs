@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Temporizador : MonoBehaviour {
     private int minutos;
     private float segundos;
     // Use this for initialization
     void Start () {
-        minutos = 2;
-        segundos = 59;
+        minutos = 3;
+        segundos = 00;
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
@@ -16,16 +17,18 @@ public class Temporizador : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
         segundos = segundos - Time.deltaTime;
+
         if (segundos <= 0)
         {
             minutos--;
             segundos = 59;
         }
-        if(segundos==0 && minutos==0)
+        if (minutos < 0)
         {
-            Application.LoadLevel("Victoria_Nerd");
+            SceneManager.LoadScene("Nerd_Victoria", LoadSceneMode.Single);
         }
+        if(minutos>=0) GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
+        
     }
 }

@@ -11,8 +11,13 @@ abstract public class Arbol : MonoBehaviour {
     public float x;
     public float y;
     public float z;
+    protected float danoBase;
+    public float vidaBase;
+    protected float tiempo;
+    protected float tiempoBase;
     public virtual void Start()
     {
+        vidaBase = 10;
         posicionX = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>().separacionLanzadores;
         Inicializar();
     }
@@ -96,4 +101,13 @@ abstract public class Arbol : MonoBehaviour {
     {
         return null;
     }
+    public void Herir (float danoBase)
+    {
+        vidaBase = vidaBase - danoBase;
+    }
+    public float GetVida()
+    {
+        return vidaBase;
+    }
+
 }
