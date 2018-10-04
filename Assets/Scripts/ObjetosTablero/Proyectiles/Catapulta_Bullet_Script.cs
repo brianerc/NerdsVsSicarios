@@ -6,27 +6,27 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 
 	public float veltX = 5f;
 	float velY = 0f;
-	Rigidbody rb;
+	Rigidbody2D rb;
 	public float danoBase;
 
 	private void Start()
 	{
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody2D>();
 	}
 
 	private void Update()
 	{
-		rb.velocity = new Vector3(veltX, velY,0);
+		rb.velocity = new Vector2(veltX, velY);
 		Destroy(gameObject, 3f);
 	}
 
-	private void OnTriggerEnter(Collider other)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (other.transform.tag == "Sicario")
+		if (collision.transform.tag == "Sicario")
 		{
 			Debug.Log("Sicario le pego");
 			Debug.Log(danoBase);
-			Sicario enemigo = other.gameObject.GetComponent<Sicario>();
+			Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
 			enemigo.Herir(danoBase);
 			Destruir();
 		}

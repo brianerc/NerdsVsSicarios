@@ -6,7 +6,7 @@ public class Dakimakura : Estructura {
     public float tiempo;
     public float danoBase;
     // Use this for initialization
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.transform.tag == "Sicario")
         {

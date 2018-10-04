@@ -15,7 +15,7 @@ public class MochilaPegajosa : Estructura {
 	}
 	
 	// Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isEffectUsed && other.transform.tag == "Sicario")
         {
