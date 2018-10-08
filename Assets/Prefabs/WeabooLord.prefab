@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803862397425472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.57, y: 0.36, z: 0}
-  m_LocalScale: {x: 2.421, y: 2.421, z: 2.421}
+  m_LocalPosition: {x: -3.55, y: -0.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,7 +87,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 2.64}
+  m_Size: {x: 0.64, y: 3.3}
   m_EdgeRadius: 0
 --- !u!95 &95211395780426724
 Animator:
@@ -119,9 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 2}
-  x: -6.2
-  y: -4.2
+  x: -3.6
+  y: -2
   z: 0
+  vidaBase: 0
   catapulta: {fileID: 1165174645389886, guid: d21d093550cd4bc41880df7da300b311, type: 2}
   dakimakura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 2}
   mochilaPegajosa: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409,

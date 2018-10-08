@@ -7,8 +7,8 @@ public class WeeabooLord : Arbol {
     public GameObject mochilaPegajosa;
     // Use this for initialization
     protected override void Inicializar () {
-        vidaBase = 10;
-        danoBase = 2;
+        vidaBase = 50;
+        danoBase = 5;
         tiempo = 1;
         tiempoBase = 1;
         arbol = new Hoja[5][];
@@ -47,5 +47,23 @@ public class WeeabooLord : Arbol {
                 this.GetComponent<Animator>().SetTrigger("Atacar");
             }
         }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.tag=="Sicario")
+        {
+            tiempo = tiempo - Time.deltaTime;
+            if (tiempo <= 0)
+            {
+                Sicario sicario = collision.gameObject.GetComponent<Sicario>();
+                sicario.Herir(danoBase);
+                tiempo = tiempoBase;
+            }
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        tiempo = tiempoBase;
+
     }
 }

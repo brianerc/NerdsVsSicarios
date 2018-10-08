@@ -96,6 +96,8 @@ abstract public class Lanzador : MonoBehaviour {
     protected void CrearSeleccion(Touch touch)
     {
         planoPosicion = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        Vector3 escala = new Vector3(0.6f, 0.6f, 0);
+        planoPosicion.transform.localScale = escala;
         planoPosicion.transform.position = ActualizarPosicion(touch);
         planoPosicion.tag = "Seleccion";
         Destroy(planoPosicion.GetComponent<BoxCollider>());

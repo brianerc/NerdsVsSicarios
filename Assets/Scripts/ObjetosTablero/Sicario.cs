@@ -22,15 +22,15 @@ public class Sicario : ObjetoTablero {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-		if (collision.transform.tag == "Estructura")
+        this.GetComponent<Animator>().SetTrigger("Atacar");
+        if (collision.transform.tag == "Estructura")
 		{
 			Estructura estructura = collision.gameObject.GetComponent<Estructura>();
-			if (tiempo <= 0)
+            if (tiempo <= 0)
 			{
 				Debug.Log("Colisionando con estructura");
 				estructura.Herir(danoBase);
 				tiempo = tiempoBase;
-				this.GetComponent<Animator>().SetTrigger("Atacar");
 			}
 		}
         else if(collision.transform.tag=="Nerd")
@@ -50,7 +50,7 @@ public class Sicario : ObjetoTablero {
         if (collision.transform.tag == "Estructura")
         {
             Estructura estructura = collision.gameObject.GetComponent<Estructura>();
-            if (tiempo <= 0)
+            if (tiempo <= 0 && vidaBase>0)
             {
                 Debug.Log("Colisionando con estructura");
                 estructura.Herir(danoBase);
@@ -60,21 +60,26 @@ public class Sicario : ObjetoTablero {
         }
         else if (collision.transform.tag == "Nerd")
         {
-            if (tiempo <= 0)
+            if (tiempo <= 0 && vidaBase>0)
             {
             Arbol nerd = collision.gameObject.GetComponent<Arbol>();
             nerd.Herir(danoBase);
+            tiempo = tiempoBase;
             }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         this.GetComponent<Animator>().SetTrigger("Detener");
+        tiempo = 1;
 
     }
     private void FixedUpdate()
     {
-        tiempo = tiempo - Time.deltaTime;
+        if(vidaBase<=0)
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidadDetenida;
+        }
         if (tiempoParalizado > 0)
         {
             tiempoParalizado = tiempoParalizado - Time.deltaTime;

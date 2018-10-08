@@ -10,8 +10,9 @@ public class Dakimakura : Estructura {
     {
         if (collision.transform.tag == "Sicario")
         {
+            tiempo = tiempo - Time.deltaTime;
             Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
-            if (tiempo <= 0)
+            if (tiempo <= 0 && vidaBase>0)
             {
                 enemigo.Herir(danoBase);
                 tiempo = 1;
@@ -20,7 +21,6 @@ public class Dakimakura : Estructura {
     }
     private void FixedUpdate()
     {
-        tiempo = tiempo - Time.deltaTime;
     }
     //public void SetDanoBase(float dano)
     //{
