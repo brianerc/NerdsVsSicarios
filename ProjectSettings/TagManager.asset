@@ -19,6 +19,8 @@ TagManager:
   - LanzadorJugador de Football V1
   - LanzadorJugador de Football V2
   - Proyectil_Nerd
+  - BarraDeVida
+  - JugadorSicario
   layers:
   - Default
   - TransparentFX

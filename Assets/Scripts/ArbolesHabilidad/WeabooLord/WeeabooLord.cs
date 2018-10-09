@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class WeeabooLord : Arbol {
+public class WeeabooLord : ArbolNerd {
     public GameObject catapulta;
     public GameObject dakimakura;
     public GameObject mochilaPegajosa;
@@ -24,7 +24,8 @@ public class WeeabooLord : Arbol {
                 arbol[i] = new Hoja[0];
             }
         }
-       InsertarHoja(new HojaCatapulta(catapulta), 0);
+        energia = 100;
+        InsertarHoja(new HojaCatapulta(catapulta), 0);
         InsertarHoja(new HojaDakimakura(dakimakura), 0);
         InsertarHoja(new HojaMochilaPegajosa(mochilaPegajosa), 0);
         MostrarLanzadores();
@@ -34,36 +35,5 @@ public class WeeabooLord : Arbol {
     {
         return arbol[i][j].GetObjeto();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Sicario")
-        {
-            Sicario sicario = collision.gameObject.GetComponent<Sicario>();
-            if (tiempo <= 0)
-            {
-                Debug.Log("Colisionando con estructura");
-                sicario.Herir(danoBase);
-                tiempo = tiempoBase;
-                this.GetComponent<Animator>().SetTrigger("Atacar");
-            }
-        }
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.transform.tag=="Sicario")
-        {
-            tiempo = tiempo - Time.deltaTime;
-            if (tiempo <= 0)
-            {
-                Sicario sicario = collision.gameObject.GetComponent<Sicario>();
-                sicario.Herir(danoBase);
-                tiempo = tiempoBase;
-            }
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        tiempo = tiempoBase;
 
-    }
 }

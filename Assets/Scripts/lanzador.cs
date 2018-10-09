@@ -10,6 +10,8 @@ abstract public class Lanzador : MonoBehaviour {
     protected Color rojo;
     protected Color transparente;
     protected GameObject piso;
+    public Arbol jugador;
+    protected ObjetoTablero objetoTablero;
     // Use this for initialization
     public virtual void Start() {
         CargarSprite();
@@ -17,6 +19,7 @@ abstract public class Lanzador : MonoBehaviour {
         verde = new Color(0, 1, 0, 0.5f);
         rojo = new Color(1, 0, 0, 0.5f);
         transparente = new Color(0, 0, 0, 0);
+        objetoTablero = estructura.GetComponent<ObjetoTablero>();
     }
 
     // Update is called once per frame
@@ -66,12 +69,9 @@ abstract public class Lanzador : MonoBehaviour {
                 {
                     Debug.Log("No se puede colocar en donde ya hay una estructura");
                 }
-                else if (hit.transform.tag == "Piso")
+                else if (hit.transform.tag == "Piso" )
                 {
-                    estructura.transform.position = ActualizarPosicion(touch);
-                    AnimarNerd();
-                    GameObject nuevaEstructura = estructura;
-                    Instantiate(nuevaEstructura);
+                    ColocarEstructura(touch);
                 }
                 else
                 {
@@ -81,6 +81,17 @@ abstract public class Lanzador : MonoBehaviour {
             Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
         }
         TouchCancelado(touch);
+    }
+    protected void ColocarEstructura(Touch touch)
+    {
+        if (jugador.GetEnergia() >= objetoTablero.GetEnergia())
+        {
+            estructura.transform.position = ActualizarPosicion(touch);
+            AnimarNerd();
+            GameObject nuevaEstructura = estructura;
+            Instantiate(nuevaEstructura);
+            jugador.QuitarEnergia(objetoTablero.GetEnergia());
+        }
     }
     protected virtual Vector3 ActualizarPosicion(Touch touch)
     {

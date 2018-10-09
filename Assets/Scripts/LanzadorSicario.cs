@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class LanzadorSicario : Lanzador
 {
-
+    public override void Start()
+    {
+        base.Start();
+        jugador = GameObject.FindGameObjectWithTag("JugadorSicario").GetComponent<Arbol>();
+    }
     protected override void AnimarNerd()
     {
 

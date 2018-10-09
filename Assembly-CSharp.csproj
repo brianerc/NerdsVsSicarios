@@ -65,6 +65,7 @@
     <Compile Include="Assets\NerdDerrota.cs" />
     <Compile Include="Assets\NerdVictoria.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\ArbolNerd.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Hoja.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballBase.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballV1.cs" />

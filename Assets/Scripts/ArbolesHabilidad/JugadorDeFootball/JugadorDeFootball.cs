@@ -25,6 +25,7 @@ public class JugadorDeFootball : Arbol
                 arbol[i] = new Hoja[0];
             }
         }
+        energia = 100;
         InsertarHoja(new HojaJugadorDeFootballBase(jugadorDeFootballBase), 0);
         InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV2), 0);
         InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV1), 0);

@@ -8,6 +8,7 @@ public class LanzadorEstructuras : Lanzador {
     public override void Start()
     {
         base.Start();
+        jugador = GameObject.FindGameObjectWithTag("Nerd").GetComponent<Arbol>();
         zonaNula = Camera.main.ScreenToWorldPoint(new Vector3(0, 0));
         zonaNula.x = piso.GetComponent<Renderer>().bounds.size.x / 2;
         Vector3Int auxiliar = matriz.WorldToCell(zonaNula);

@@ -4,8 +4,8 @@ using UnityEngine;
 
     abstract public class ObjetoTablero : MonoBehaviour {
     public float vidaBase;
-	// Use this for initialization
-
+    // Use this for initialization
+    protected int costoEnergia;
 	public virtual void Herir(float daño)
     {
         vidaBase = vidaBase - daño;
@@ -14,6 +14,14 @@ using UnityEngine;
         {
 			this.GetComponent<Animator>().SetTrigger("Destruir");
         }
+    }
+    public int GetEnergia()
+    {
+        return costoEnergia;
+    }
+    public void SetCostoEnergia(int energia)
+    {
+        costoEnergia = energia;
     }
 	// Update is called once per frame
 	void Update () {

@@ -15,12 +15,28 @@ abstract public class Arbol : MonoBehaviour {
     public float vidaBase;
     protected float tiempo;
     protected float tiempoBase;
+    protected float vidaInicial;
+    protected int energia;
+    private int energiaMaxima;
     public virtual void Start()
     {
         vidaBase = 10;
         posicionX = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>().separacionLanzadores;
         Inicializar();
+        vidaInicial = vidaBase;
+        energiaMaxima = energia;
     }
+
+    public int GetEnergia()
+    {
+        return energia;
+    }
+
+    public void QuitarEnergia(int cantEnergia)
+    {
+        energia = energia - cantEnergia;
+    }
+
     protected virtual void MostrarLanzadores()
     {
         for (int i = 0; i < arbol.Length; i++)

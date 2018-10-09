@@ -15,6 +15,7 @@ public class HojaMochilaPegajosa : Hoja {
         mochilaPegajosa = unObjeto.GetComponent<MochilaPegajosa>();
         mochilaPegajosa.SetTiempoParalizar(2);
         mochilaPegajosa.SetVida(1);
+        mochilaPegajosa.SetCostoEnergia(50);
     }
     public override bool EsEstructura()
     {

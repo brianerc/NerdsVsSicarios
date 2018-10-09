@@ -13,9 +13,10 @@ public class HojaDakimakura : Hoja {
         descripcion = "";
         dakimakura = unObjeto.GetComponent<Dakimakura>();
         objeto = unObjeto;
-        //dakimakura.SetDanoBase(1);
+        dakimakura.SetDanoBase(1);
         dakimakura.SetVida(25);
-        //dakimakura.SetTiempoAtaque(1);
+        dakimakura.SetTiempoAtaque(1);
+        dakimakura.SetCostoEnergia(75);
     }
     public override bool EsEstructura()
     {

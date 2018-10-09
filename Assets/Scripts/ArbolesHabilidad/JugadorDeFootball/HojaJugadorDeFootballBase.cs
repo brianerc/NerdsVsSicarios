@@ -18,6 +18,7 @@ public class HojaJugadorDeFootballBase : Hoja
         jugador.SetVida(10);
         jugador.SetTiempo(1);
         jugador.SetVelocidad(-3f);
+        jugador.SetCostoEnergia(75);
         objeto = unObjeto;
     }
     public override bool EsEstructura()

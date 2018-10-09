@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaBase: 10
+  costoEnergia: 50
   tiempoBase: 1
   tiempo: 1
   danoBase: 4

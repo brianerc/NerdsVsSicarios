@@ -13,7 +13,8 @@ public class HojaCatapulta: Hoja {
 		//aprendida = true;
 		catapulta = unObjeto.GetComponent<Catapulta>();
 		objeto = unObjeto;
-		catapulta.SetVida(1);
+		catapulta.SetVida(20);
+        catapulta.SetCostoEnergia(25);
 	}
     public override bool EsEstructura()
     {

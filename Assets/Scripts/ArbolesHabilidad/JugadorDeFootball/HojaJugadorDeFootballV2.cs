@@ -18,7 +18,7 @@ public class HojaJugadorDeFootballV2 : Hoja {
         jugador.SetVida(10);
         jugador.SetTiempo(1);
         jugador.SetVelocidad(-2f);
-        
+        jugador.SetCostoEnergia(50);
     }
     // Update is called once per frame
     void Update () {
