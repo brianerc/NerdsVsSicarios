@@ -25,10 +25,13 @@ public class WeeabooLord : ArbolNerd {
             }
         }
         energia = 100;
+        cantidadRegeneracionEnergia = 30;
+        tiempoRegeneracionEnergia = 5;
         InsertarHoja(new HojaCatapulta(catapulta), 0);
         InsertarHoja(new HojaDakimakura(dakimakura), 0);
         InsertarHoja(new HojaMochilaPegajosa(mochilaPegajosa), 0);
         MostrarLanzadores();
+        
     }
 
     protected override GameObject CargarLanzador(int i, int j)

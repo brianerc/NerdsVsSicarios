@@ -9,8 +9,9 @@ public class ComienzoPartida : MonoBehaviour {
     public Grid matriz;
     public GameObject fondo;
     public GameObject temporizador;
+    public GameObject energiaNerd;
+    public GameObject energiaSicario;
     public float separacionLanzadores;
-
 	// Use this for initialization
 	void Start () {
 
@@ -19,6 +20,8 @@ public class ComienzoPartida : MonoBehaviour {
         Instantiate(matriz);
         Instantiate(jugador2);
         Instantiate(temporizador);
+        Instantiate(energiaNerd);
+        Instantiate(energiaSicario);
 	}
 
     // Update is called once per frame

@@ -13,7 +13,8 @@ public class ArbolNerd : Arbol {
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
         estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Perfiles/BarraDeVida");
     }
-    void Update () {
+    override public void Update () {
+        CalcularTiempoEnergia();
         ActualizarVida();
     }
     private void OnCollisionEnter2D(Collision2D collision)

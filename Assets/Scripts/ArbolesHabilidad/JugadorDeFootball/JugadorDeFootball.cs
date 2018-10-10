@@ -26,6 +26,8 @@ public class JugadorDeFootball : Arbol
             }
         }
         energia = 100;
+        cantidadRegeneracionEnergia = 30;
+        tiempoRegeneracionEnergia = 5;
         InsertarHoja(new HojaJugadorDeFootballBase(jugadorDeFootballBase), 0);
         InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV2), 0);
         InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV1), 0);

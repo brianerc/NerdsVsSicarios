@@ -18,6 +18,22 @@ abstract public class Arbol : MonoBehaviour {
     protected float vidaInicial;
     protected int energia;
     private int energiaMaxima;
+    protected float tiempoRegeneracionEnergia;
+    protected int cantidadRegeneracionEnergia;
+    private float tiempoActualRegeneracionEnergia;
+    public virtual void Update()
+    {
+        CalcularTiempoEnergia();
+    }
+    protected void CalcularTiempoEnergia()
+    {
+        tiempoActualRegeneracionEnergia -= Time.deltaTime;
+        if (tiempoActualRegeneracionEnergia <= 0)
+        {
+            RegenerarEnergia();
+            tiempoActualRegeneracionEnergia = tiempoRegeneracionEnergia;
+        }
+    }
     public virtual void Start()
     {
         vidaBase = 10;
@@ -25,8 +41,12 @@ abstract public class Arbol : MonoBehaviour {
         Inicializar();
         vidaInicial = vidaBase;
         energiaMaxima = energia;
+        tiempoActualRegeneracionEnergia = tiempoRegeneracionEnergia;
     }
-
+    public void RegenerarEnergia()
+    {
+        energia += cantidadRegeneracionEnergia;
+    }
     public int GetEnergia()
     {
         return energia;
