@@ -52,98 +52,41 @@ public class ArbolNerd : Arbol {
     void ActualizarVida()
     {
         float porcVida = (vidaBase * 100) / vidaInicial;
-        if (porcVida > 95.5)
+        if (porcVida > 89)
         {
-            barraDeVida.sprite = estados_barraDeVida[23];
+            barraDeVida.sprite = estados_barraDeVida[0];
         }
-        else if (porcVida > 91)
-        {
-            barraDeVida.sprite = estados_barraDeVida[22];
-        }
-        else if (porcVida > 86.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[21];
-        }
-        else if (porcVida > 82)
-        {
-            barraDeVida.sprite = estados_barraDeVida[20];
-        }
-        else if (porcVida > 77.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[19];
-        }
-        else if (porcVida > 92)
-        {
-            barraDeVida.sprite = estados_barraDeVida[18];
-        }
-        else if (porcVida > 73)
-        {
-            barraDeVida.sprite = estados_barraDeVida[17];
-        }
-        else if (porcVida > 68.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[16];
-        }
-        else if (porcVida > 64)
-        {
-            barraDeVida.sprite = estados_barraDeVida[15];
-        }
-        else if (porcVida > 59.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[14];
-        }
-        else if (porcVida > 55)
-        {
-            barraDeVida.sprite = estados_barraDeVida[13];
-        }
-        else if (porcVida > 50.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[12];
-        }
-        else if (porcVida > 46)
-        {
-            barraDeVida.sprite = estados_barraDeVida[11];
-        }
-        else if (porcVida > 41.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[10];
-        }
-        else if (porcVida > 37)
-        {
-            barraDeVida.sprite = estados_barraDeVida[9];
-        }
-        else if (porcVida > 32.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[8];
-        }
-        else if (porcVida > 28)
-        {
-            barraDeVida.sprite = estados_barraDeVida[7];
-        }
-        else if (porcVida > 23.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[6];
-        }
-        else if (porcVida > 19)
-        {
-            barraDeVida.sprite = estados_barraDeVida[5];
-        }
-        else if (porcVida > 14.5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[4];
-        }
-        else if (porcVida > 10)
-        {
-            barraDeVida.sprite = estados_barraDeVida[3];
-        }
-        else if (porcVida > 5)
-        {
-            barraDeVida.sprite = estados_barraDeVida[2];
-        }
-        else
+        else if (porcVida > 77)
         {
             barraDeVida.sprite = estados_barraDeVida[1];
         }
-
+        else if (porcVida > 66)
+        {
+            barraDeVida.sprite = estados_barraDeVida[2];
+        }
+        else if (porcVida > 55)
+        {
+            barraDeVida.sprite = estados_barraDeVida[3];
+        }
+        else if (porcVida > 44)
+        {
+            barraDeVida.sprite = estados_barraDeVida[4];
+        }
+        else if (porcVida > 32)
+        {
+            barraDeVida.sprite = estados_barraDeVida[5];
+        }
+        else if (porcVida > 21)
+        {
+            barraDeVida.sprite = estados_barraDeVida[6];
+        }
+        else if (porcVida > 10)
+        {
+            barraDeVida.sprite = estados_barraDeVida[7];
+        }
+        else
+        {
+            barraDeVida.sprite = estados_barraDeVida[8];
+        }
     }
 }

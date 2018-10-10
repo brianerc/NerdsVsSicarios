@@ -26,21 +26,17 @@ public class MenuPrincipal : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.tag == "GameController")
+                Debug.Log(hit.transform.tag);
+                if (hit.transform.tag == "Jugar")
                 {
-                    Debug.Log("Toque");
-                    Debug.Log(hit.transform.GetComponent<Text>().text);
-                    switch(hit.transform.GetComponent<Text>().text)
-                    {
-                        case "Jugar":
-                            SceneManager.LoadScene("Partida",LoadSceneMode.Single);
-                            break;
-                        case "Opciones":
-                            break;
-                        case "Salir":
-                            Application.Quit();
-                            break;
-                    }
+                    SceneManager.LoadScene("Partida",LoadSceneMode.Single);
+                }
+                else if(hit.transform.tag=="Opciones")
+                {
+
+                } else if(hit.transform.tag=="Salir")
+                {
+                    Application.Quit();
                 }
             }
         }
