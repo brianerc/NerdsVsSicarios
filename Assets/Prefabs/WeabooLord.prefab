@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 2}
   x: -3.6
-  y: -2
+  y: -3.5
   z: 0
   vidaBase: 0
   barraDeVida: {fileID: 0}
