@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4527509426390866}
   - component: {fileID: 212356404374742124}
   m_Layer: 0
-  m_Name: Fondo
+  m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
