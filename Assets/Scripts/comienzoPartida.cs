@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ComienzoPartida : MonoBehaviour {
+    public GameObject fondo;
     public GameObject jugador;
     public GameObject jugador2;
     public Grid matriz;
-    public GameObject fondo;
     public GameObject temporizador;
     public GameObject energiaNerd;
     public GameObject energiaSicario;
