@@ -5,8 +5,10 @@ public class WeeabooLord : ArbolNerd {
     public GameObject catapulta;
     public GameObject dakimakura;
     public GameObject mochilaPegajosa;
+
     // Use this for initialization
     protected override void Inicializar () {
+
         vidaBase = 50;
         danoBase = 5;
         tiempo = 1;

@@ -6,10 +6,12 @@ public class ArbolNerd : Arbol {
 
     public SpriteRenderer barraDeVida;
     public Sprite[] estados_barraDeVida;
+    protected AudioSource sonidoDaño;
     // Update is called once per frame
     private void Start()
     {
         base.Start();
+        sonidoDaño = GetComponent<AudioSource>();
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
         estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Perfiles/BarraDeVida");
     }
@@ -30,6 +32,11 @@ public class ArbolNerd : Arbol {
                 this.GetComponent<Animator>().SetTrigger("Atacar");
             }
         }
+    }
+    public override void Herir(float danoBase)
+    {
+        base.Herir(danoBase);
+        sonidoDaño.Play();
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

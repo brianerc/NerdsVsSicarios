@@ -11,17 +11,23 @@ public class Sicario : ObjetoTablero {
     public Vector3 velocidad;
     public Vector3 velocidadDetenida = new Vector3(0, 0, 0);
     public bool atacando=false;
+    private bool colisiona = false;
+    protected AudioSource sonidoCorrer;
     public virtual void Paralizar(float tiempoParalizar)
     {
+        sonidoCorrer.Stop();
         tiempoParalizado = tiempoParalizar;
     }
     void Start()
     {
+        sonidoCorrer = GetComponent<AudioSource>();
         this.GetComponent<Rigidbody>().velocity = velocidad;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        colisiona = true;
+        sonidoCorrer.Stop();
         this.GetComponent<Animator>().SetTrigger("Atacar");
         if (collision.transform.tag == "Estructura")
 		{
@@ -70,9 +76,10 @@ public class Sicario : ObjetoTablero {
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+        colisiona = false;
         this.GetComponent<Animator>().SetTrigger("Detener");
         tiempo = 1;
-
+        sonidoCorrer.Play();
     }
     private void FixedUpdate()
     {
@@ -87,6 +94,10 @@ public class Sicario : ObjetoTablero {
         }
         else
         {
+            if (!sonidoCorrer.isPlaying && !colisiona)
+            {
+                sonidoCorrer.Play();
+            }
             this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidad;
         }
     }

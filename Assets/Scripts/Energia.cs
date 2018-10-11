@@ -11,6 +11,6 @@ abstract public class Energia : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        texto.text = "E: " + jugador.GetEnergia();
+        texto.text = jugador.GetEnergia().ToString();
 	}
 }

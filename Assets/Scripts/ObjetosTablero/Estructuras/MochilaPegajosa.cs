@@ -8,10 +8,12 @@ public class MochilaPegajosa : Estructura {
 	private bool shouldDestroy;
 	private float timeToDestroy;
 	private bool isEffectUsed;
+    private AudioSource sonidoStun;
 	// Use this for initialization
 	void Start () {
 		shouldDestroy = false;
 		isEffectUsed = false;
+        sonidoStun = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +26,8 @@ public class MochilaPegajosa : Estructura {
             enemigo.Paralizar(tiempoParalizar);
 			shouldDestroy = true;
 			timeToDestroy = Time.time + tiempoParalizar -0.9f;
-		}
+            sonidoStun.Play();
+        }
     }
 
 	private void Update()
