@@ -27,8 +27,7 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 			
 		} 
 	}
-
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.transform.tag == "Sicario")
 		{
@@ -36,15 +35,10 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 			Debug.Log(danoBase);
 			Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
 			enemigo.Herir(danoBase);
-			Destruir();
+			this.transform.localScale = new Vector2(0, 0);
 		}
 	}
-
-	protected virtual void Destruir()
-	{
-		Destroy(this.gameObject);
-	}
-
+	
 	internal void PosicionarInicio(Vector3 bulletPos)
 	{
 		transform.position = bulletPos;

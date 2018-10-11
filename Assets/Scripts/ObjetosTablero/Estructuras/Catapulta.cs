@@ -8,7 +8,7 @@ public class Catapulta : Estructura
 {
 
 	public float tiempo;
-
+	public AudioClip clip;
 	public Catapulta_Bullet_Script bullet;
 	Vector3 bulletPos;
 	public float freqDeDisparo;
@@ -27,6 +27,7 @@ public class Catapulta : Estructura
 	private Catapulta_Bullet_Script bala3;
 	private Grid matriz;
 	private Animator animator;
+
 
 	private void Start()
 	{
@@ -52,7 +53,7 @@ public class Catapulta : Estructura
 	private void FixedUpdate()
 	{
 		tiempo = tiempo - Time.deltaTime;
-		
+
 		Vector3Int auxiliar = matriz.WorldToCell(this.transform.position);
 		if (Filas.HaySicarioEnFila(auxiliar.y))
 		{
@@ -98,6 +99,15 @@ public class Catapulta : Estructura
 
 	private void Destruirse()
 	{
+		//Destroy(bala1.gameObject);
+		//Destroy(bala2.gameObject);
+		//Destroy(bala3.gameObject);
 		Destroy(this.gameObject);
+	}
+
+	private void ReproducirSonido()
+	{
+		AudioSource audio = this.gameObject.GetComponent<AudioSource>();
+		audio.PlayOneShot(audio.clip);
 	}
 }
