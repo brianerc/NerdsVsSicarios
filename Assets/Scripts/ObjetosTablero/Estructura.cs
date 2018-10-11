@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Estructura : ObjetoTablero {
 
-
+	public override bool EsSicario()
+	{
+		return false;
+	}
 }

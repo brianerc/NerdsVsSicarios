@@ -1,23 +1,31 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Catapulta_Bullet_Script : MonoBehaviour {
 
-	public float veltX = 5f;
-	float velY = 0f;
+	public float velocidad = 5f;
 	Rigidbody2D rb;
 	public float danoBase;
+
+	public bool startMoving;
+	public Vector2 velocity;
 
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		startMoving = false;
 	}
 
 	private void Update()
 	{
-		rb.velocity = new Vector2(veltX, velY);
-		Destroy(gameObject, 3f);
+		if (startMoving)
+		{
+			rb.velocity = transform.right * 5f;
+			
+		} 
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -35,5 +43,16 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 	protected virtual void Destruir()
 	{
 		Destroy(this.gameObject);
+	}
+
+	internal void PosicionarInicio(Vector3 bulletPos)
+	{
+		transform.position = bulletPos;
+	}
+
+	public void EmpezarAMoverse()
+	{
+		gameObject.SetActive(true);
+		this.startMoving = true;
 	}
 }

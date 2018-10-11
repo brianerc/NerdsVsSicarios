@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7fc464159f8184db91b9464bd80ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  filaQueSeEncuentra: 0
   estructura: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
   jugador: {fileID: 0}

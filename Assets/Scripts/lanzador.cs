@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 abstract public class Lanzador : MonoBehaviour {
+	public int filaQueSeEncuentra;
     public GameObject estructura;
     protected bool estado = false;
     public Grid matriz;
@@ -88,7 +90,12 @@ abstract public class Lanzador : MonoBehaviour {
         {
             estructura.transform.position = ActualizarPosicion(touch);
             AnimarNerd();
-            GameObject nuevaEstructura = estructura;
+			if (estructura.tag == "Sicario")
+			{
+				Filas.AgregarSicarioAFila(this.filaQueSeEncuentra);
+			}
+
+			GameObject nuevaEstructura = estructura;
             Instantiate(nuevaEstructura);
             jugador.QuitarEnergia(objetoTablero.GetEnergia());
         }
@@ -98,7 +105,7 @@ abstract public class Lanzador : MonoBehaviour {
         Vector3 punto = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
         Vector3Int auxiliar = matriz.WorldToCell(punto);
         punto = matriz.GetCellCenterWorld(auxiliar);
-        return punto;
+		return punto;
     }
     private void CargarSprite()
     {

@@ -21,6 +21,7 @@ TagManager:
   - Proyectil_Nerd
   - BarraDeVida
   - JugadorSicario
+  - Grid
   layers:
   - Default
   - TransparentFX

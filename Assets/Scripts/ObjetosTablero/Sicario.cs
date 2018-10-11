@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,6 +77,7 @@ public class Sicario : ObjetoTablero {
     }
     private void FixedUpdate()
     {
+		
         if(vidaBase<=0)
         {
             this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidadDetenida;
@@ -106,8 +108,9 @@ public class Sicario : ObjetoTablero {
     {
         tiempoParalizado = tiempoParalizado * resistencia;
     }
-    public void Morir()
-    {
-        Destruir();
-    }
+
+	public override bool EsSicario()
+	{
+		return true;
+	}
 }

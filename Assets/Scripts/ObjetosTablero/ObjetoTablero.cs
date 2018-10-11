@@ -1,11 +1,23 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
     abstract public class ObjetoTablero : MonoBehaviour {
-    public float vidaBase;
-    // Use this for initialization
-    protected int costoEnergia;
+
+	public float vidaBase;
+	// Use this for initialization
+	protected int costoEnergia;
+	public Observable observable;
+	public abstract bool EsSicario();
+	public int FilaQueSeEncuentra { get; set; }
+
+	private void Start()
+	{
+		this.observable = new Observable();
+		
+	}
+
 	public virtual void Herir(float daño)
     {
         vidaBase = vidaBase - daño;
@@ -23,12 +35,20 @@ using UnityEngine;
     {
         costoEnergia = energia;
     }
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void Morir()
+	{
+		Destruir();
 	}
-    protected virtual void Destruir()
+
+	protected virtual void Destruir()
     {
+		if (this.gameObject.tag == "Sicario")
+		{
+			Grid matriz = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+			Vector3Int auxiliar = matriz.WorldToCell(this.transform.position);
+			Filas.EliminarSicarioAFila(auxiliar.y);
+		}
         Destroy(this.gameObject);
     }
     public void SetVida(float vida)

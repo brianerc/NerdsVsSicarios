@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4333924670385692}
   - component: {fileID: 212402531080987686}
   - component: {fileID: 114633813041139818}
-  - component: {fileID: 95149282360425142}
   - component: {fileID: 50425813314484462}
   - component: {fileID: 61652217383538296}
+  - component: {fileID: 95246849811530446}
   m_Layer: 0
   m_Name: Catapulta
   m_TagString: Estructura
@@ -89,7 +89,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &95149282360425142
+--- !u!95 &95246849811530446
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -120,10 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaBase: 20
   tiempo: 1
-  bullet: {fileID: 1585339109019700, guid: 5d99b4dfb90ef2748810fbd8a6d2225c, type: 2}
-  fireRate: 3.45
-  nextFire: 1.2
-  positionY: 0.5
+  bullet: {fileID: 114693468712207824, guid: 5d99b4dfb90ef2748810fbd8a6d2225c, type: 2}
+  freqDeDisparo: 3.55
+  siguienteDisparo: 1.2
+  posicionY: 0.8
 --- !u!212 &212402531080987686
 SpriteRenderer:
   m_ObjectHideFlags: 1
