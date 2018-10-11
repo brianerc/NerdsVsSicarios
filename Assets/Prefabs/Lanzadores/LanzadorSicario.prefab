@@ -68,6 +68,7 @@ MonoBehaviour:
   estructura: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
   jugador: {fileID: 0}
+  invocador: {fileID: 1737046815387134, guid: 49fb611a241f3f640ae841edc9a838c7, type: 2}
 --- !u!212 &212918681512032606
 SpriteRenderer:
   m_ObjectHideFlags: 1

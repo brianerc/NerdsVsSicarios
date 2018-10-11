@@ -12,6 +12,7 @@ abstract public class Lanzador : MonoBehaviour {
     protected GameObject piso;
     public Arbol jugador;
     protected ObjetoTablero objetoTablero;
+    public GameObject invocador;
     // Use this for initialization
     public virtual void Start() {
         CargarSprite();
@@ -89,9 +90,21 @@ abstract public class Lanzador : MonoBehaviour {
             estructura.transform.position = ActualizarPosicion(touch);
             AnimarNerd();
             GameObject nuevaEstructura = estructura;
-            Instantiate(nuevaEstructura);
+            InstanciarInvocacion(nuevaEstructura,touch);
+            InstanciarEstructura(nuevaEstructura);
+            //Instantiate(nuevaEstructura);
             jugador.QuitarEnergia(objetoTablero.GetEnergia());
         }
+    }
+    protected virtual void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
+    {
+        invocador.transform.position = ActualizarPosicion(touch);
+        invocador.GetComponent<Invocacion>().estructura = nuevaEstructura;
+        Instantiate(invocador);
+    }
+    protected virtual void InstanciarEstructura(GameObject nuevaEstructura)
+    {
+
     }
     protected virtual Vector3 ActualizarPosicion(Touch touch)
     {

@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Invocacion.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\ArbolNerd.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Hoja.cs" />
