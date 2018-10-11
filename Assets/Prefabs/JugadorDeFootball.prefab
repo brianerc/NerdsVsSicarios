@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lanzador: {fileID: 1114876765337918, guid: 21aa42af7b5714843ae750cfd3021b69, type: 2}
-  x: 3.6
-  y: -3.5
+  x: 5.5
+  y: -3.2
   z: 0
   vidaBase: 0
   jugadorDeFootballBase: {fileID: 1447365570974060, guid: decc658e53149db429037338f0f8dc8a,

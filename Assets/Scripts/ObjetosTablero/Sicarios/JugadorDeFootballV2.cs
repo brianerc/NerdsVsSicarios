@@ -8,8 +8,10 @@ public class JugadorDeFootballV2 : Sicario
 	// Use this for initialization
 	void Start () {
         this.GetComponent<Rigidbody2D>().velocity = velocidad;
-        sonidoCorrer = GetComponent<AudioSource>();
-
+        sonidos = GetComponents<AudioSource>();
+        sonidoCorrer = sonidos[0];
+        sonidoAtacar = sonidos[1];
+        sonidoHerido = sonidos[2];
     }
 
 }

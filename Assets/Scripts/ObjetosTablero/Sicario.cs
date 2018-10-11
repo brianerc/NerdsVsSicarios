@@ -12,7 +12,10 @@ public class Sicario : ObjetoTablero {
     public Vector3 velocidadDetenida = new Vector3(0, 0, 0);
     public bool atacando=false;
     private bool colisiona = false;
+    protected AudioSource[] sonidos;
     protected AudioSource sonidoCorrer;
+    protected AudioSource sonidoAtacar;
+    protected AudioSource sonidoHerido;
     public virtual void Paralizar(float tiempoParalizar)
     {
         sonidoCorrer.Stop();
@@ -36,6 +39,7 @@ public class Sicario : ObjetoTablero {
 			{
 				Debug.Log("Colisionando con estructura");
 				estructura.Herir(danoBase);
+                sonidoAtacar.Play();
 				tiempo = tiempoBase;
 			}
 		}
@@ -43,8 +47,9 @@ public class Sicario : ObjetoTablero {
         {
             Arbol nerd = collision.gameObject.GetComponent<Arbol>();
             nerd.Herir(danoBase);
+            sonidoAtacar.Play();
         }
-		else if (collision.transform.tag == "Proyectil_Nerd")
+        else if (collision.transform.tag == "Proyectil_Nerd")
 		{
 			Debug.Log("PROYECTIL NERD");
 		}
@@ -62,6 +67,7 @@ public class Sicario : ObjetoTablero {
                 estructura.Herir(danoBase);
                 tiempo = tiempoBase;
                 this.GetComponent<Animator>().SetTrigger("Atacar");
+                sonidoAtacar.Play();
             }
         }
         else if (collision.transform.tag == "Nerd")
@@ -71,6 +77,7 @@ public class Sicario : ObjetoTablero {
             Arbol nerd = collision.gameObject.GetComponent<Arbol>();
             nerd.Herir(danoBase);
             tiempo = tiempoBase;
+            sonidoAtacar.Play();
             }
         }
     }
@@ -108,6 +115,11 @@ public class Sicario : ObjetoTablero {
     }
     public void SetDaño(float daño) {
         danoBase = daño;
+    }
+    public override void Herir(float daño)
+    {
+        base.Herir(daño);
+        sonidoHerido.Play();
     }
     public void SetVelocidad(float velocidadX)
     {

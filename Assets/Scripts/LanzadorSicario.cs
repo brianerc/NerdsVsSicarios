@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class LanzadorSicario : Lanzador
 {
+    private AudioSource sonidoInvocacion;
     public override void Start()
     {
         base.Start();
+        sonidoInvocacion = GetComponent<AudioSource>();
         jugador = GameObject.FindGameObjectWithTag("JugadorSicario").GetComponent<Arbol>();
     }
     protected override void AnimarNerd()
@@ -14,6 +16,7 @@ public class LanzadorSicario : Lanzador
     }
     protected override void InstanciarEstructura(GameObject nuevaEstructura)
     {
+        sonidoInvocacion.Play();
         Instantiate(nuevaEstructura);
     }
     protected override void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
