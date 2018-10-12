@@ -62,12 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\catapulta_ataque.cs" />
-    <Compile Include="Assets\Energia.cs" />
-    <Compile Include="Assets\EnergiaNerd.cs" />
-    <Compile Include="Assets\EnergiaSicario.cs" />
-    <Compile Include="Assets\FinalPartida.cs" />
-    <Compile Include="Assets\NerdDerrota.cs" />
-    <Compile Include="Assets\NerdVictoria.cs" />
+    <Compile Include="Assets\Invocacion.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\ArbolNerd.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Hoja.cs" />
@@ -80,10 +75,16 @@
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaMochilaPegajosa.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\WeeabooLord.cs" />
     <Compile Include="Assets\Scripts\ComienzoPartida.cs" />
+    <Compile Include="Assets\Scripts\Energia.cs" />
+    <Compile Include="Assets\Scripts\EnergiaNerd.cs" />
+    <Compile Include="Assets\Scripts\EnergiaSicario.cs" />
+    <Compile Include="Assets\Scripts\FinalPartida.cs" />
     <Compile Include="Assets\Scripts\lanzador.cs" />
     <Compile Include="Assets\Scripts\LanzadorEstructuras.cs" />
     <Compile Include="Assets\Scripts\LanzadorSicario.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
+    <Compile Include="Assets\Scripts\NerdDerrota.cs" />
+    <Compile Include="Assets\Scripts\NerdVictoria.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructura.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Catapulta.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Dakimakura.cs" />
@@ -97,9 +98,9 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV1.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV2.cs" />
+    <Compile Include="Assets\Scripts\SicarioDerrota.cs" />
+    <Compile Include="Assets\Scripts\SicarioVictoria.cs" />
     <Compile Include="Assets\Scripts\Temporizador.cs" />
-    <Compile Include="Assets\SicarioDerrota.cs" />
-    <Compile Include="Assets\SicarioVictoria.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>G:/Mis Documentos/Facultad/Desarrollo de videojuegos/Repositorios/v2/NerdsVsSicarios/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

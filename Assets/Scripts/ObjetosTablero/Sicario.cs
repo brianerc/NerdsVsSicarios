@@ -12,17 +12,26 @@ public class Sicario : ObjetoTablero {
     public Vector3 velocidad;
     public Vector3 velocidadDetenida = new Vector3(0, 0, 0);
     public bool atacando=false;
+    private bool colisiona = false;
+    protected AudioSource[] sonidos;
+    protected AudioSource sonidoCorrer;
+    protected AudioSource sonidoAtacar;
+    protected AudioSource sonidoHerido;
     public virtual void Paralizar(float tiempoParalizar)
     {
+        sonidoCorrer.Stop();
         tiempoParalizado = tiempoParalizar;
     }
     void Start()
     {
+        sonidoCorrer = GetComponent<AudioSource>();
         this.GetComponent<Rigidbody>().velocity = velocidad;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        colisiona = true;
+        sonidoCorrer.Stop();
         this.GetComponent<Animator>().SetTrigger("Atacar");
         if (collision.transform.tag == "Estructura")
 		{
@@ -31,6 +40,7 @@ public class Sicario : ObjetoTablero {
 			{
 				Debug.Log("Colisionando con estructura");
 				estructura.Herir(danoBase);
+                sonidoAtacar.Play();
 				tiempo = tiempoBase;
 			}
 		}
@@ -38,8 +48,9 @@ public class Sicario : ObjetoTablero {
         {
             Arbol nerd = collision.gameObject.GetComponent<Arbol>();
             nerd.Herir(danoBase);
+            sonidoAtacar.Play();
         }
-		else if (collision.transform.tag == "Proyectil_Nerd")
+        else if (collision.transform.tag == "Proyectil_Nerd")
 		{
 			Debug.Log("PROYECTIL NERD");
 		}
@@ -57,6 +68,7 @@ public class Sicario : ObjetoTablero {
                 estructura.Herir(danoBase);
                 tiempo = tiempoBase;
                 this.GetComponent<Animator>().SetTrigger("Atacar");
+                sonidoAtacar.Play();
             }
         }
         else if (collision.transform.tag == "Nerd")
@@ -66,14 +78,16 @@ public class Sicario : ObjetoTablero {
             Arbol nerd = collision.gameObject.GetComponent<Arbol>();
             nerd.Herir(danoBase);
             tiempo = tiempoBase;
+            sonidoAtacar.Play();
             }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+        colisiona = false;
         this.GetComponent<Animator>().SetTrigger("Detener");
         tiempo = 1;
-
+        sonidoCorrer.Play();
     }
     private void FixedUpdate()
     {
@@ -89,6 +103,10 @@ public class Sicario : ObjetoTablero {
         }
         else
         {
+            if (!sonidoCorrer.isPlaying && !colisiona)
+            {
+                sonidoCorrer.Play();
+            }
             this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidad;
         }
     }
@@ -99,6 +117,11 @@ public class Sicario : ObjetoTablero {
     }
     public void SetDaño(float daño) {
         danoBase = daño;
+    }
+    public override void Herir(float daño)
+    {
+        base.Herir(daño);
+        sonidoHerido.Play();
     }
     public void SetVelocidad(float velocidadX)
     {

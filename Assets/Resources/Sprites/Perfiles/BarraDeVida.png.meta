@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: cd163bc80921e1448b0cab648edf1e57
+guid: 2176e6ea4beada643876c3c3d2a7f8f7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BarraDeVida_0
-    21300002: BarraDeVida_1
-    21300004: BarraDeVida_2
-    21300006: BarraDeVida_3
-    21300008: BarraDeVida_4
-    21300010: BarraDeVida_5
-    21300012: BarraDeVida_6
-    21300014: BarraDeVida_7
-    21300016: BarraDeVida_8
-    21300018: BarraDeVida_9
-    21300020: BarraDeVida_10
-    21300022: BarraDeVida_11
-    21300024: BarraDeVida_12
-    21300026: BarraDeVida_13
-    21300028: BarraDeVida_14
-    21300030: BarraDeVida_15
-    21300032: BarraDeVida_16
-    21300034: BarraDeVida_17
-    21300036: BarraDeVida_18
-    21300038: BarraDeVida_19
-    21300040: BarraDeVida_20
-    21300042: BarraDeVida_21
-    21300044: BarraDeVida_22
-    21300046: BarraDeVida_23
+    21300000: Barra_de_Vida_0
+    21300002: Barra_de_Vida_1
+    21300004: Barra_de_Vida_2
+    21300006: Barra_de_Vida_3
+    21300008: Barra_de_Vida_4
+    21300010: Barra_de_Vida_5
+    21300012: Barra_de_Vida_6
+    21300014: Barra_de_Vida_7
+    21300016: Barra_de_Vida_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -130,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BarraDeVida_0
+      name: Barra_de_Vida_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
+        x: 14
+        y: 322
+        width: 165
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,19 +129,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 599ca4997cc4b1b4c8dae7e414872ac0
+      spriteID: 3091b484c27f88645bbbf570ba177ffb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_1
+      name: Barra_de_Vida_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
+        x: 179
+        y: 326
+        width: 165
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48837190ab293d4688dc4ab3ac3ce17
+      spriteID: 2e702c91ae0d4c44cad9a19604c2e15b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_2
+      name: Barra_de_Vida_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
+        x: 345
+        y: 323
+        width: 169
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,19 +169,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d3753f4c4d589c43a44448cfebaa66b
+      spriteID: f4a72e6854d62e34a9e03b0c7127b23c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_3
+      name: Barra_de_Vida_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
+        x: 14
+        y: 167
+        width: 166
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,19 +189,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835ad966023fb19419ff50d62b8280e1
+      spriteID: d5f1d6f55d7c2cc4a84f2fd14f4cf568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_4
+      name: Barra_de_Vida_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
+        x: 182
+        y: 166
+        width: 163
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,19 +209,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da103f6b814fe5b458ce6140f1d3704b
+      spriteID: 9a2acf9c7a1d47f4193efce2039aa1fd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_5
+      name: Barra_de_Vida_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
+        x: 345
+        y: 165
+        width: 172
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,19 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25520d63f7a27444f966d67d1029ba27
+      spriteID: f159f015eeaf01245bcd7fdb261cf7a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_6
+      name: Barra_de_Vida_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 32
-        height: 32
+        x: 15
+        y: 3
+        width: 165
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,319 +249,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a20590fae0f4a479bef589d829e0c7
+      spriteID: 744b8a63fd8705b42935c0c3f007f38f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_7
+      name: Barra_de_Vida_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c6dd79e01f068f49803403acc708c7d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f579ab8e703dea24280ecc1bc3c8959b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d94886870f76f8d4ead2f870ac82136a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_10
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88b75aaaa42834746b81084d59169dce
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_11
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4345db67d10bf2e41ad2da9517125590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79de3f7fbc20b784d95721244a2c5d42
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_13
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02b4fba79868f5f4699da6f020cc907c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 451ab586cf81adb43864d64309dfcd9b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_15
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38e6fa24438b22545a0773e8863b3433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_16
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d49a0478b7c5dbd4dbc6b4641226216b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_17
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24084dea3996adc4fba5e059456c05f0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_18
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7819645a62b2b564c820d8856c491711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_19
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f451ee008b91fc4594d3675d272c4e8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_20
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b835205af572f04ebe626bc2299503d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afa26893228ffc74197b07fc7b4e2487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BarraDeVida_22
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 179
         y: 0
-        width: 32
-        height: 32
+        width: 165
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,19 +269,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65431b87b8b136e45a73218c45b7f852
+      spriteID: c471cc32e4cfa7641af671009cff876c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarraDeVida_23
+      name: Barra_de_Vida_8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 345
+        y: 1
+        width: 168
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3f0300a22fc4bc469b1b56b61ae9965
+      spriteID: 6eca4b938f1d7e646882e051a25a3ce8
       vertices: []
       indices: 
       edges: []
@@ -612,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64c0987e22b401240b018ec1d2459bad
+    spriteID: 71f90426ce993534ab14bb625240f6df
     vertices: []
     indices: 
     edges: []

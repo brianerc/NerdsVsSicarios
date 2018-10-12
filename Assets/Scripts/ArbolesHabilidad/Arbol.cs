@@ -137,7 +137,7 @@ abstract public class Arbol : MonoBehaviour {
     {
         return null;
     }
-    public void Herir (float danoBase)
+    public virtual void Herir (float danoBase)
     {
         vidaBase = vidaBase - danoBase;
     }

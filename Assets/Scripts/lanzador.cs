@@ -14,6 +14,7 @@ abstract public class Lanzador : MonoBehaviour {
     protected GameObject piso;
     public Arbol jugador;
     protected ObjetoTablero objetoTablero;
+    public GameObject invocador;
     // Use this for initialization
     public virtual void Start() {
         CargarSprite();
@@ -94,11 +95,21 @@ abstract public class Lanzador : MonoBehaviour {
 			{
 				Filas.AgregarSicarioAFila(this.filaQueSeEncuentra);
 			}
-
-			GameObject nuevaEstructura = estructura;
-            Instantiate(nuevaEstructura);
+            GameObject nuevaEstructura = estructura;
+            InstanciarInvocacion(nuevaEstructura,touch);
+            InstanciarEstructura(nuevaEstructura);
             jugador.QuitarEnergia(objetoTablero.GetEnergia());
         }
+    }
+    protected virtual void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
+    {
+        invocador.transform.position = ActualizarPosicion(touch);
+        invocador.GetComponent<Invocacion>().estructura = nuevaEstructura;
+        Instantiate(invocador);
+    }
+    protected virtual void InstanciarEstructura(GameObject nuevaEstructura)
+    {
+
     }
     protected virtual Vector3 ActualizarPosicion(Touch touch)
     {
@@ -114,7 +125,7 @@ abstract public class Lanzador : MonoBehaviour {
     protected void CrearSeleccion(Touch touch)
     {
         planoPosicion = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        Vector3 escala = new Vector3(0.6f, 0.6f, 0);
+        Vector3 escala = new Vector3(1, 1, 0);
         planoPosicion.transform.localScale = escala;
         planoPosicion.transform.position = ActualizarPosicion(touch);
         planoPosicion.tag = "Seleccion";

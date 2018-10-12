@@ -22,6 +22,8 @@ TagManager:
   - BarraDeVida
   - JugadorSicario
   - Grid
+  - Jugar
+  - Salir
   layers:
   - Default
   - TransparentFX
