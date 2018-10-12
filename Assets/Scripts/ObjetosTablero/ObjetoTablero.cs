@@ -8,22 +8,22 @@ using UnityEngine;
 	public float vidaBase;
 	// Use this for initialization
 	protected int costoEnergia;
-	public Observable observable;
 	public abstract bool EsSicario();
 	public int FilaQueSeEncuentra { get; set; }
+	private bool muerto;
 
 	private void Start()
 	{
-		this.observable = new Observable();
-		
+		muerto = false;
 	}
 
 	public virtual void Herir(float daño)
     {
         vidaBase = vidaBase - daño;
 		AnimatorStateInfo stateInfo = this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
-		if (vidaBase<=0)
+		if (vidaBase<=0 && !muerto) 
         {
+			muerto = true;
 			this.GetComponent<Animator>().SetTrigger("Destruir");
         }
     }

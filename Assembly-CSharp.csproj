@@ -92,8 +92,6 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\ObjetoTablero.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Catapulta_Bullet_Script.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Filas.cs" />
-    <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Observable.cs" />
-    <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Observer.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicario.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV1.cs" />
