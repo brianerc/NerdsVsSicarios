@@ -79,7 +79,7 @@
     <Compile Include="Assets\Scripts\EnergiaNerd.cs" />
     <Compile Include="Assets\Scripts\EnergiaSicario.cs" />
     <Compile Include="Assets\Scripts\FinalPartida.cs" />
-    <Compile Include="Assets\Scripts\lanzador.cs" />
+    <Compile Include="Assets\Scripts\Lanzador.cs" />
     <Compile Include="Assets\Scripts\LanzadorEstructuras.cs" />
     <Compile Include="Assets\Scripts\LanzadorSicario.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
