@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class ComienzoPartida : MonoBehaviour {
+public class ComienzoPartida : Comenzar {
     public GameObject fondo;
     public GameObject jugador;
     public GameObject jugador2;
@@ -11,7 +11,6 @@ public class ComienzoPartida : MonoBehaviour {
     public GameObject temporizador;
     public GameObject energiaNerd;
     public GameObject energiaSicario;
-    public float separacionLanzadores;
 	// Use this for initialization
 	void Start () {
 

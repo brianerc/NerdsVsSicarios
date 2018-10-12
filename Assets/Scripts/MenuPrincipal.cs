@@ -33,7 +33,11 @@ public class MenuPrincipal : MonoBehaviour
                 else if(hit.transform.tag=="Opciones")
                 {
 
-                } else if(hit.transform.tag=="Salir")
+                } else if (hit.transform.tag == "JugarSolo")
+                {
+                    SceneManager.LoadScene("PartidaSolo", LoadSceneMode.Single);
+                }
+                else if(hit.transform.tag=="Salir")
                 {
                     Application.Quit();
                 }

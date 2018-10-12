@@ -37,7 +37,7 @@ abstract public class Arbol : MonoBehaviour {
     public virtual void Start()
     {
         vidaBase = 10;
-        posicionX = GameObject.FindGameObjectWithTag("Opciones").GetComponent<ComienzoPartida>().separacionLanzadores;
+        posicionX = GameObject.FindGameObjectWithTag("Opciones").GetComponent<Comenzar>().separacionLanzadores;
         Inicializar();
         vidaInicial = vidaBase;
         energiaMaxima = energia;

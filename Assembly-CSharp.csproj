@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Generador.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\ArbolNerd.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Hoja.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaDakimakura.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaMochilaPegajosa.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\WeeabooLord.cs" />
+    <Compile Include="Assets\Scripts\Comenzar.cs" />
+    <Compile Include="Assets\Scripts\ComenzarPartidaSolo.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructura.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Catapulta.cs" />
