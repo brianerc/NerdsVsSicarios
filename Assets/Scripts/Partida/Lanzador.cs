@@ -28,6 +28,7 @@ abstract public class Lanzador : MonoBehaviour {
     // Update is called once per frame
     
     void Update () {
+        CambiarEstado();
         RaycastHit hit;
         if (Input.touchCount < 1)
         {
@@ -39,7 +40,7 @@ abstract public class Lanzador : MonoBehaviour {
         {
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.tag == this.gameObject.tag)
+                if (hit.transform.tag == this.gameObject.tag && EsSeleccionable())
                 {
                     estado = true;
                     CrearSeleccion(touch);
@@ -155,6 +156,26 @@ abstract public class Lanzador : MonoBehaviour {
             {
                 Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
             }
+        }
+    }
+    protected virtual bool EsSeleccionable()
+    {
+        if (jugador.GetEnergia() >= objetoTablero.GetEnergia())
+        {
+            return true;
+        }
+        return false;
+
+    }
+    protected virtual void CambiarEstado()
+    {
+        if (EsSeleccionable())
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name);
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/Desactivados/" + estructura.name);
         }
     }
     protected virtual void AnimarNerd()
