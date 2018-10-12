@@ -24,6 +24,7 @@ TagManager:
   - Grid
   - Jugar
   - Salir
+  - JugarSolo
   layers:
   - Default
   - TransparentFX

@@ -31,8 +31,6 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 	{
 		if (collision.transform.tag == "Sicario")
 		{
-			Debug.Log("Sicario le pego");
-			Debug.Log(danoBase);
 			Sicario enemigo = collision.gameObject.GetComponent<Sicario>();
 			enemigo.Herir(danoBase);
 			this.transform.localScale = new Vector2(0, 0);

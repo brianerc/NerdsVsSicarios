@@ -26,7 +26,6 @@ public class MenuPrincipal : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.tag);
                 if (hit.transform.tag == "Jugar")
                 {
                     SceneManager.LoadScene("Partida",LoadSceneMode.Single);
