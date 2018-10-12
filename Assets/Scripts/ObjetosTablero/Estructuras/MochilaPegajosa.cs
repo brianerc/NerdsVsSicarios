@@ -34,7 +34,6 @@ public class MochilaPegajosa : Estructura {
 	{
 		if (HasToExplode())
 		{
-			Debug.Log("Tiene que explotar");
 			shouldDestroy = false;
 			this.GetComponent<Animator>().SetTrigger("Destruir");
 		}

@@ -26,7 +26,6 @@ public class MenuPrincipal : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.transform.tag);
                 if (hit.transform.tag == "Jugar")
                 {
                     SceneManager.LoadScene("Partida",LoadSceneMode.Single);
@@ -34,7 +33,11 @@ public class MenuPrincipal : MonoBehaviour
                 else if(hit.transform.tag=="Opciones")
                 {
 
-                } else if(hit.transform.tag=="Salir")
+                } else if (hit.transform.tag == "JugarSolo")
+                {
+                    SceneManager.LoadScene("PartidaSolo", LoadSceneMode.Single);
+                }
+                else if(hit.transform.tag=="Salir")
                 {
                     Application.Quit();
                 }

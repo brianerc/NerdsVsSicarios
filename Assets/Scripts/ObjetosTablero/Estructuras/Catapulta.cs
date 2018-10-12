@@ -99,9 +99,9 @@ public class Catapulta : Estructura
 
 	private void Destruirse()
 	{
-		Destroy(bala1.gameObject);
-		Destroy(bala2.gameObject);
-		Destroy(bala3.gameObject);
+		//Destroy(bala1.gameObject);
+		//Destroy(bala2.gameObject);
+		//Destroy(bala3.gameObject);
 		Destroy(this.gameObject);
 	}
 

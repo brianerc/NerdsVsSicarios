@@ -13,7 +13,7 @@ public class ArbolNerd : Arbol {
         base.Start();
         sonidoDaño = GetComponent<AudioSource>();
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
-        estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Perfiles/BarraDeVida");
+        estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Partida/HUD/BarraDeVida");
     }
     override public void Update () {
         CalcularTiempoEnergia();
@@ -26,7 +26,6 @@ public class ArbolNerd : Arbol {
             Sicario sicario = collision.gameObject.GetComponent<Sicario>();
             if (tiempo <= 0)
             {
-                Debug.Log("Colisionando con estructura");
                 sicario.Herir(danoBase);
                 tiempo = tiempoBase;
                 this.GetComponent<Animator>().SetTrigger("Atacar");

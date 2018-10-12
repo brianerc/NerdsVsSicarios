@@ -38,7 +38,6 @@ public class Sicario : ObjetoTablero {
 			Estructura estructura = collision.gameObject.GetComponent<Estructura>();
             if (tiempo <= 0)
 			{
-				Debug.Log("Colisionando con estructura");
 				estructura.Herir(danoBase);
                 sonidoAtacar.Play();
 				tiempo = tiempoBase;
@@ -52,7 +51,6 @@ public class Sicario : ObjetoTablero {
         }
         else if (collision.transform.tag == "Proyectil_Nerd")
 		{
-			Debug.Log("PROYECTIL NERD");
 		}
 
 	}
@@ -64,7 +62,6 @@ public class Sicario : ObjetoTablero {
             Estructura estructura = collision.gameObject.GetComponent<Estructura>();
             if (tiempo <= 0 && vidaBase>0)
             {
-                Debug.Log("Colisionando con estructura");
                 estructura.Herir(danoBase);
                 tiempo = tiempoBase;
                 this.GetComponent<Animator>().SetTrigger("Atacar");
