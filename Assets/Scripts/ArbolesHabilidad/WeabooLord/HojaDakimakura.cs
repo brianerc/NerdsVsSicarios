@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase encargada de mantener la hoja de habilidad del dakimakura. Se espera iterar sobre esta en la 
+/// segunda entrega
+/// </summary>
 public class HojaDakimakura : Hoja {
 
     private Dakimakura dakimakura;
-    // Use this for initialization
-    public HojaDakimakura(GameObject unObjeto)
+
+	public HojaDakimakura(GameObject unObjeto)
     {
         nivel = 1;
         nombre = "Dakimakura";

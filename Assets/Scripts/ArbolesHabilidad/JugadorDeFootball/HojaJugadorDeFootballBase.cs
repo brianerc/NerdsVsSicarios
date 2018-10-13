@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase correspondiente a la hoja de habilidad del jugador de football base. En esta se mantiene 
+/// la logica para el aprendizaje de habilidades y su gestion a medida que el jugador vaya ganando experiencia
+/// </summary>
 public class HojaJugadorDeFootballBase : Hoja
 {
-
     private JugadorDeFootballBase jugador;
 
     public HojaJugadorDeFootballBase(GameObject unObjeto)

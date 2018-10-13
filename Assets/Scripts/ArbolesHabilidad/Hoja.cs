@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase responsables de mantener las hojas de habilidad de los personajes. Iteraremos en la segunda entrega
+/// sobre esta clase. Se espera en la misma mantener la logica al desbloqueo de habilidades y especializacion
+/// de las cartas
+/// </summary>
 abstract public class Hoja {
     protected int nivel;
     protected bool aprendida;

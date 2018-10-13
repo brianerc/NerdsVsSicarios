@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
 
-    // Use this for initialization
     void Start()
     {
-
     }
 
-    // Update is called once per frame
+	/// <summary>
+	/// Logica correspondiente a las seleccion de las distintas opciones del menu principal
+	/// </summary>
     void Update()
     {
         RaycastHit hit;

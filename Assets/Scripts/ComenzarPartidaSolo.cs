@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Especificacion de la clase comenzar para la logica sobre una partida single player
+/// </summary>
 public class ComenzarPartidaSolo : Comenzar {
     public GameObject fondo;
     public GameObject jugador;
     public Grid matriz;
     public GameObject temporizador;
     public GameObject energiaNerd;
-    // Use this for initialization
-    void Start () {
+
+	void Start () {
         Instantiate(fondo);
         Instantiate(jugador);
         Instantiate(matriz);
@@ -18,7 +21,6 @@ public class ComenzarPartidaSolo : Comenzar {
         Instantiate(energiaNerd);
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Arbol>().GetVida() <= 0)
         {

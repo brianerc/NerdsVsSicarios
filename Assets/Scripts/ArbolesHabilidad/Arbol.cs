@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase padre correspondiente al arbol de habilidad. Esta clase es la responsable de gestionar las 
+/// habilidades de los objetos del tablero. Es generica para todos los objetos del tablero. 
+/// Se espera iterar sobre esta logica en la siguiente entrega. 
+/// </summary>
 abstract public class Arbol : MonoBehaviour {
+
     public Hoja[][] arbol;
     protected string nombre;
     protected string descripcion;
@@ -21,7 +27,8 @@ abstract public class Arbol : MonoBehaviour {
     protected float tiempoRegeneracionEnergia;
     protected int cantidadRegeneracionEnergia;
     private float tiempoActualRegeneracionEnergia;
-    public virtual void Update()
+
+	public virtual void Update()
     {
         CalcularTiempoEnergia();
     }

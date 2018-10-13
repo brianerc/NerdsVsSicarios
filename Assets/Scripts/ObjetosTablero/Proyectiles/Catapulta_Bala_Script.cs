@@ -4,29 +4,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Catapulta_Bullet_Script : MonoBehaviour {
+public class Catapulta_Bala_Script : MonoBehaviour {
 
 	public float velocidad = 5f;
 	Rigidbody2D rb;
 	public float danoBase;
-
-	public bool startMoving;
+	public bool empezarAMoverse;
 	public Vector2 velocity;
 
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
-		startMoving = false;
+		empezarAMoverse = false;
 	}
 
 	private void Update()
 	{
-		if (startMoving)
+		if (empezarAMoverse)
 		{
 			rb.velocity = transform.right * 5f;
-			
 		} 
 	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.transform.tag == "Sicario")
@@ -37,6 +36,11 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 		}
 	}
 	
+	/// <summary>
+	/// Cuando corresponda, reutiliza la bala seteandose en la posicion de inicio que es donde 
+	/// se encuentra la catapulta
+	/// </summary>
+	/// <param name="bulletPos"></param>
 	internal void PosicionarInicio(Vector3 bulletPos)
 	{
 		transform.position = bulletPos;
@@ -45,6 +49,6 @@ public class Catapulta_Bullet_Script : MonoBehaviour {
 	public void EmpezarAMoverse()
 	{
 		gameObject.SetActive(true);
-		this.startMoving = true;
+		this.empezarAMoverse = true;
 	}
 }

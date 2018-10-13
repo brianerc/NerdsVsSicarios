@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dakimakura : Estructura {
-    public float tiempo;
+
+	public float tiempo;
     public float danoBase;
     private AudioSource sonidoAtaque;
-    // Use this for initialization
-    private void Start()
+
+	private void Start()
     {
         sonidoAtaque = GetComponent<AudioSource>();
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.transform.tag == "Sicario")
@@ -25,17 +27,21 @@ public class Dakimakura : Estructura {
             }
         }
     }
+
     private void FixedUpdate()
     {
     }
+
     public void SetDanoBase(float dano)
     {
         danoBase = dano;
     }
+
     public void SetTiempoAtaque(float unTiempo)
     {
         tiempo = unTiempo;
     }
+
     public float GetTiempo()
     {
         return danoBase;

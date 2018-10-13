@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.ObjetosTablero.Proyectiles;
 
+/// <summary>
+/// Generador correspondiente al single player. Logica correspondiente a "spawnear" personajes sicarios
+/// para que el nerd pueda jugar y practicar solo.
+/// </summary>
 public class Generador : MonoBehaviour {
+
     public GameObject sicario1;
     public GameObject sicario2;
     public GameObject sicario3;
@@ -16,7 +21,7 @@ public class Generador : MonoBehaviour {
     public int filaQueSeEncuentra;
     public Grid matriz;
     public GeneradorObserver generadorObserver;
-	// Use this for initialization
+
 	void Start () {
         generadorObserver = GameObject.FindGameObjectWithTag("GeneradorObserver").GetComponent<GeneradorObserver>();
         tiempoGeneracionSicario1 = tiempoSicario1;
@@ -25,10 +30,8 @@ public class Generador : MonoBehaviour {
         tiempoSicario1 = Random.Range(tiempoGeneracionSicario1, tiempoGeneracionSicario1 + 10f);
         tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 10f);
         tiempoSicario2 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 10f);
-
     }
 
-    // Update is called once per frame
     void Update () {
         tiempoSicario1 -= Time.deltaTime;
         tiempoSicario2 -= Time.deltaTime;

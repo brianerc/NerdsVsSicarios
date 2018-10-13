@@ -4,50 +4,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MochilaPegajosa : Estructura {
-    public float tiempoParalizar;
-	private bool shouldDestroy;
-	private float timeToDestroy;
-	private bool isEffectUsed;
+
+	public float tiempoParalizar;
+	private bool debeDestruirse;
+	private float tiempoParaDestruirse;
+	private bool fueEfectoUsado; 
     private AudioSource sonidoStun;
-	// Use this for initialization
+
 	void Start () {
-		shouldDestroy = false;
-		isEffectUsed = false;
+		debeDestruirse = false;
+		fueEfectoUsado = false;
         sonidoStun = GetComponent<AudioSource>();
 	}
 	
-	// Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isEffectUsed && other.transform.tag == "Sicario")
+        if (!fueEfectoUsado && other.transform.tag == "Sicario")
         {
-			isEffectUsed = true;
+			fueEfectoUsado = true;
 			Sicario enemigo = other.gameObject.GetComponent<Sicario>();
             enemigo.Paralizar(tiempoParalizar);
-			shouldDestroy = true;
-			timeToDestroy = Time.time + tiempoParalizar -0.9f;
+			debeDestruirse = true;
+			tiempoParaDestruirse = Time.time + tiempoParalizar -0.9f;
             sonidoStun.Play();
         }
     }
 
 	private void Update()
 	{
-		if (HasToExplode())
+		if (TieneQueExplotar())
 		{
-			shouldDestroy = false;
+			debeDestruirse = false;
 			this.GetComponent<Animator>().SetTrigger("Destruir");
 		}
 	}
 
-	private bool HasToExplode()
+	private bool TieneQueExplotar()
 	{
-		return shouldDestroy && Time.time >= timeToDestroy;
+		return debeDestruirse && Time.time >= tiempoParaDestruirse;
 	}
 
-    public void SetTiempoParalizar(float tiempo)
+    public void SetearTiempoParalizar(float tiempo)
     {
         tiempoParalizar = tiempo;
     }
+
     public float GetTiempo()
     {
         return tiempoParalizar;

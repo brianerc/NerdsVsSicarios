@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// Clase correspondiente de gestionar los distintos jugadores de football sicarios
+/// </summary>
 public class JugadorDeFootball : Arbol
 {
     public GameObject jugadorDeFootballBase;
     public GameObject jugadorDeFootballV1;
     public GameObject jugadorDeFootballV2;
 
-    // Use this for initialization
     protected override void Inicializar()
     {
         posicionX = (-posicionX);

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+/// <summary>
+/// MonoBehaviour correspondiente a la escena de final de partida
+/// </summary>
 abstract public class FinalPartida : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
-		
 	}
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.touchCount < 1)

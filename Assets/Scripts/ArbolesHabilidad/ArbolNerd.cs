@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Especificacion del arbol de habilidades de los nerds. Actualmente posee la logica para la vida y 
+/// generacion de energia del personaje nerd.
+/// </summary>
 public class ArbolNerd : Arbol {
 
     public SpriteRenderer barraDeVida;
     public Sprite[] estados_barraDeVida;
     protected AudioSource sonidoDaño;
-    // Update is called once per frame
-    private void Start()
+
+	private void Start()
     {
         base.Start();
         sonidoDaño = GetComponent<AudioSource>();
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
         estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Partida/HUD/BarraDeVida");
     }
-    override public void Update () {
+
+	override public void Update () {
         CalcularTiempoEnergia();
         ActualizarVida();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Sicario")
@@ -53,8 +59,13 @@ public class ArbolNerd : Arbol {
     private void OnCollisionExit2D(Collision2D collision)
     {
         tiempo = tiempoBase;
-
     }
+
+	/// <summary>
+	/// Metodo responsable de gestionar la vida del nerd y los estados en los que se encuentra.
+	/// El juego muestra la barra de vida del nerd conforme esta va bajando. Este metodo es el responsable
+	/// de gestionar estos cambios 
+	/// </summary>
     void ActualizarVida()
     {
         float porcVida = (vidaBase * 100) / vidaInicial;

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class JugadorDeFootballV2 : Sicario
 {
-
-	// Use this for initialization
 	void Start () {
         this.GetComponent<Rigidbody2D>().velocity = velocidad;
         sonidos = GetComponents<AudioSource>();
@@ -13,5 +11,4 @@ public class JugadorDeFootballV2 : Sicario
         sonidoAtacar = sonidos[1];
         sonidoHerido = sonidos[2];
     }
-
 }

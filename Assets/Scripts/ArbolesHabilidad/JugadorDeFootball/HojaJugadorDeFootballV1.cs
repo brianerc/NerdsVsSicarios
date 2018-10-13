@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase correspondiente a la hoja de habilidad del jugador de football v1. En esta se mantiene 
+/// la logica para el aprendizaje de habilidades y su gestion a medida que el jugador vaya ganando experiencia
+/// </summary>
 public class HojaJugadorDeFootballV1 : Hoja {
 
     private JugadorDeFootballV1 jugador;
-    // Use this for initialization
 
     public HojaJugadorDeFootballV1(GameObject unObjeto)
     {
@@ -21,7 +24,7 @@ public class HojaJugadorDeFootballV1 : Hoja {
         objeto = unObjeto;
         jugador.SetCostoEnergia(25);
     }
-    // Update is called once per frame
+
     void Update () {
 		
 	}

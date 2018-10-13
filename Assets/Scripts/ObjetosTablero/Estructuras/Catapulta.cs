@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class Catapulta : Estructura
 {
-
 	public float tiempo;
 	public AudioClip clip;
-	public Catapulta_Bullet_Script bullet;
-	Vector3 bulletPos;
+	public Catapulta_Bala_Script bullet;
+	Vector3 balaPosicion;
 	public float freqDeDisparo;
 	public float siguienteDisparo;
 	public float posicionY;
@@ -19,15 +18,14 @@ public class Catapulta : Estructura
 	private float startTime;
 	private Vector3 posInicial;
 
-	private List<Catapulta_Bullet_Script> bullets;
 	private int balaNum;
 
-	private Catapulta_Bullet_Script bala1;
-	private Catapulta_Bullet_Script bala2;
-	private Catapulta_Bullet_Script bala3;
+	//Se utilizan tres balas las cuales reutilizamos para no tener que estar creando y destruyendo cada una
+	private Catapulta_Bala_Script bala1;
+	private Catapulta_Bala_Script bala2;
+	private Catapulta_Bala_Script bala3;
 	private Grid matriz;
 	private Animator animator;
-
 
 	private void Start()
 	{
@@ -37,13 +35,13 @@ public class Catapulta : Estructura
 		siguienteDisparo = Time.time + siguienteDisparo;
 		vector = new Vector3(1f, posicionY, 0);
 		posInicial = transform.position;
-		this.bullets = new List<Catapulta_Bullet_Script>();
-		bulletPos = transform.position;
-		bulletPos += vector;
+		balaPosicion = transform.position;
+		balaPosicion += vector;
 
-		bala1 = Instantiate(bullet, bulletPos, Quaternion.identity);
-		bala2 = Instantiate(bullet, bulletPos, Quaternion.identity);
-		bala3 = Instantiate(bullet, bulletPos, Quaternion.identity);
+		//Se instancian solo una vez las 3 balas
+		bala1 = Instantiate(bullet, balaPosicion, Quaternion.identity);
+		bala2 = Instantiate(bullet, balaPosicion, Quaternion.identity);
+		bala3 = Instantiate(bullet, balaPosicion, Quaternion.identity);
 
 		bala1.transform.localScale = new Vector2(0, 0);
 		bala2.transform.localScale = new Vector2(0, 0);
@@ -53,7 +51,6 @@ public class Catapulta : Estructura
 	private void FixedUpdate()
 	{
 		tiempo = tiempo - Time.deltaTime;
-
 		Vector3Int auxiliar = matriz.WorldToCell(this.transform.position);
 		if (Filas.HaySicarioEnFila(auxiliar.y))
 		{
@@ -65,36 +62,36 @@ public class Catapulta : Estructura
 		}
 	}
 
+	//Metodo que se llama desde la animacion de la catapulta. Esto es para que la catapulta dispare justo
+	//cuando lo hace en la animacion. De esta forma optimizamos el momento de disparo
 	private void Fire()
 	{
-
 		switch (balaNum)
 		{
 			case 0:
 				bala1.transform.localScale = new Vector2(1, 1);
-				bala1.transform.position = bulletPos;
-				bala1.startMoving = true;
+				bala1.transform.position = balaPosicion;
+				bala1.empezarAMoverse = true;
 				bala1.EmpezarAMoverse();
-				bala1.PosicionarInicio(bulletPos);
+				bala1.PosicionarInicio(balaPosicion);
 				break;
 			case 1:
 				bala2.transform.localScale = new Vector2(1, 1);
-				bala2.transform.position = bulletPos;
+				bala2.transform.position = balaPosicion;
 
-				bala2.startMoving = true;
+				bala2.empezarAMoverse = true;
 				bala2.EmpezarAMoverse();
-				bala2.PosicionarInicio(bulletPos);
+				bala2.PosicionarInicio(balaPosicion);
 				break;
 			case 2:
 				bala3.transform.localScale = new Vector3(1, 1);
-				bala3.transform.position = bulletPos;
-				bala3.startMoving = true;
+				bala3.transform.position = balaPosicion;
+				bala3.empezarAMoverse = true;
 				bala3.EmpezarAMoverse();
-				bala3.PosicionarInicio(bulletPos);
+				bala3.PosicionarInicio(balaPosicion);
 				break;
 		}
 		balaNum = ++balaNum % 2;
-
 	}
 
 	private void Destruirse()

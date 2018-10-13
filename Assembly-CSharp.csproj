@@ -82,7 +82,7 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\Dakimakura.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Estructuras\MochilaPegajosa.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\ObjetoTablero.cs" />
-    <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Catapulta_Bullet_Script.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Catapulta_Bala_Script.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Proyectiles\Filas.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicario.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />

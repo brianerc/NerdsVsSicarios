@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase sobre la jerarquia de comenzar partida. En esta clase se implementan codigo comun a las partidas
+/// sean partidas single player or multiplayer
+/// </summary>
 public abstract class Comenzar : MonoBehaviour {
     public float separacionLanzadores;
-    // Use this for initialization
     void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

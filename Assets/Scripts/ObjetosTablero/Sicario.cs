@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Especificacion del objeto del tablero para todos los game objects correspondientes a los sicarios. 
+/// Esta clase sigue estando sobre la jerarquia de sicarios. Los sicarios especificos especifican esta clase
+/// con sus habilidades particulares correspondientes
+/// </summary>
 public class Sicario : ObjetoTablero {
 
     public float tiempoBase;
@@ -52,8 +57,8 @@ public class Sicario : ObjetoTablero {
         else if (collision.transform.tag == "Proyectil_Nerd")
 		{
 		}
-
 	}
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         tiempo = tiempo - Time.deltaTime;
@@ -79,6 +84,7 @@ public class Sicario : ObjetoTablero {
             }
         }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         colisiona = false;
@@ -86,9 +92,9 @@ public class Sicario : ObjetoTablero {
         tiempo = 1;
         sonidoCorrer.Play();
     }
+
     private void FixedUpdate()
     {
-		
         if(vidaBase<=0)
         {
             this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidadDetenida;
@@ -107,23 +113,41 @@ public class Sicario : ObjetoTablero {
             this.gameObject.GetComponent<Rigidbody2D>().velocity = velocidad;
         }
     }
+
+	/// <summary>
+	/// Funcion encargada de setear el tiempo de frecuencia de golpes
+	/// </summary>
+	/// <param name="unTiempo"></param>
     public void SetTiempo(float unTiempo)
     {
         tiempoBase = unTiempo;
         tiempo = tiempoBase;
     }
+
+	/// <summary>
+	/// Setea la cantidad de daño del sicario
+	/// </summary>
+	/// <param name="daño"></param>
     public void SetDaño(float daño) {
         danoBase = daño;
     }
+
     public override void Herir(float daño)
     {
         base.Herir(daño);
         sonidoHerido.Play();
     }
+
     public void SetVelocidad(float velocidadX)
     {
         velocidad= new Vector3(velocidadX, 0, 0);
     }
+
+	/// <summary>
+	/// Funcion correspondiente a setear la resictencia ante la paralizacion de objetos 
+	/// que paralizan como la mochila pegajoza
+	/// </summary>
+	/// <param name="resistencia"></param>
     public void SetResistenciaParalizacion(float resistencia)
     {
         tiempoParalizado = tiempoParalizado * resistencia;

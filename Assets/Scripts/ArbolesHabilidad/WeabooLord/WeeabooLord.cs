@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// Clase correspondiente al jugador nerd "maestro". Este es el personaje princial de los nerds y en esta 
+/// clase se mantiene la logica correspondiente a el
+/// </summary>
 public class WeeabooLord : ArbolNerd {
     public GameObject catapulta;
     public GameObject dakimakura;
     public GameObject mochilaPegajosa;
 
-    // Use this for initialization
     protected override void Inicializar () {
-
         vidaBase = 50;
         danoBase = 5;
         tiempo = 1;
