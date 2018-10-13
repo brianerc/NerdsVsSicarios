@@ -13,6 +13,7 @@ public class Generador : MonoBehaviour {
     private float tiempoGeneracionSicario1;
     private float tiempoGeneracionSicario2;
     private float tiempoGeneracionSicario3;
+    public int filaQueSeEncuentra;
     public Grid matriz;
     public GeneradorObserver generadorObserver;
 	// Use this for initialization
@@ -48,18 +49,21 @@ public class Generador : MonoBehaviour {
         {
             tiempoSicario1 = Random.Range(tiempoGeneracionSicario1,tiempoGeneracionSicario1+10f);
             Instantiate(sicario1, ActualizarPosicion(), transform.rotation, transform);
+            Filas.AgregarSicarioAFila(filaQueSeEncuentra);
             generadorObserver.generadoSicario1 = true;
         }
         if (tiempoSicario2 <= 0)
         {
             tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 20f);
             Instantiate(sicario2,ActualizarPosicion(),transform.rotation,transform);
+            Filas.AgregarSicarioAFila(this.filaQueSeEncuentra);
             generadorObserver.generadoSicario2 = true;
         }
         if (tiempoSicario3 <= 0)
         {
             tiempoSicario3 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 30f);
             Instantiate(sicario3, ActualizarPosicion(), transform.rotation, transform);
+            Filas.AgregarSicarioAFila(filaQueSeEncuentra);
             generadorObserver.generadoSicario3 = true;
         }
     }
@@ -68,6 +72,7 @@ public class Generador : MonoBehaviour {
         Vector3 punto = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
         Vector3Int auxiliar = matriz.WorldToCell(punto);
         punto = matriz.GetCellCenterWorld(auxiliar);
+        this.filaQueSeEncuentra = auxiliar.y;
         return punto;
     }
 }
