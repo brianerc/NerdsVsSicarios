@@ -25,6 +25,7 @@ TagManager:
   - Jugar
   - Salir
   - JugarSolo
+  - GeneradorObserver
   layers:
   - Default
   - TransparentFX

@@ -14,14 +14,17 @@ public class Generador : MonoBehaviour {
     private float tiempoGeneracionSicario2;
     private float tiempoGeneracionSicario3;
     public Grid matriz;
+    public GeneradorObserver generadorObserver;
 	// Use this for initialization
 	void Start () {
+        generadorObserver = GameObject.FindGameObjectWithTag("GeneradorObserver").GetComponent<GeneradorObserver>();
         tiempoGeneracionSicario1 = tiempoSicario1;
         tiempoGeneracionSicario2 = tiempoSicario2;
         tiempoGeneracionSicario3 = tiempoSicario3;
-        sicario1.transform.position = ActualizarPosicion();
-        sicario2.transform.position = ActualizarPosicion();
-        sicario3.transform.position = ActualizarPosicion();
+        tiempoSicario1 = Random.Range(tiempoGeneracionSicario1, tiempoGeneracionSicario1 + 10f);
+        tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 10f);
+        tiempoSicario2 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 10f);
+
     }
 
     // Update is called once per frame
@@ -29,26 +32,41 @@ public class Generador : MonoBehaviour {
         tiempoSicario1 -= Time.deltaTime;
         tiempoSicario2 -= Time.deltaTime;
         tiempoSicario3 -= Time.deltaTime;
-        if(tiempoSicario1<=0)
+        if (generadorObserver.generadoSicario1)
         {
-            tiempoSicario1 = tiempoGeneracionSicario1;
-            Instantiate(sicario1);
+            tiempoSicario1 = Random.Range(tiempoGeneracionSicario1, tiempoGeneracionSicario1 + 10f);
+        }
+        if (generadorObserver.generadoSicario1)
+        {
+            tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 10f);
+        }
+        if (generadorObserver.generadoSicario1)
+        {
+            tiempoSicario3 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 10f);
+        }
+        if (tiempoSicario1<=0)
+        {
+            tiempoSicario1 = Random.Range(tiempoGeneracionSicario1,tiempoGeneracionSicario1+10f);
+            Instantiate(sicario1, ActualizarPosicion(), transform.rotation, transform);
+            generadorObserver.generadoSicario1 = true;
         }
         if (tiempoSicario2 <= 0)
         {
-            tiempoSicario2 = tiempoGeneracionSicario2;
-            Instantiate(sicario2);
+            tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 20f);
+            Instantiate(sicario2,ActualizarPosicion(),transform.rotation,transform);
+            generadorObserver.generadoSicario2 = true;
         }
         if (tiempoSicario3 <= 0)
         {
-            tiempoSicario3 = tiempoGeneracionSicario3;
-            Instantiate(sicario3);
+            tiempoSicario3 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 30f);
+            Instantiate(sicario3, ActualizarPosicion(), transform.rotation, transform);
+            generadorObserver.generadoSicario3 = true;
         }
     }
     protected virtual Vector3 ActualizarPosicion()
     {
-        Vector3 punto = new Vector3(this.transform.position.x, this.transform.position.y, 0);
-        Vector3Int auxiliar = matriz.WorldToCell(transform.position);
+        Vector3 punto = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+        Vector3Int auxiliar = matriz.WorldToCell(punto);
         punto = matriz.GetCellCenterWorld(auxiliar);
         return punto;
     }
