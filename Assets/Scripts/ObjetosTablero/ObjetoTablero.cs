@@ -8,13 +8,11 @@ using UnityEngine;
 	public float vidaBase;
 	// Use this for initialization
 	protected int costoEnergia;
-	public Observable observable;
 	public abstract bool EsSicario();
 	public int FilaQueSeEncuentra { get; set; }
 
 	private void Start()
 	{
-		this.observable = new Observable();
 		
 	}
 
