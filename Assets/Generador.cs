@@ -37,11 +37,11 @@ public class Generador : MonoBehaviour {
         {
             tiempoSicario1 = Random.Range(tiempoGeneracionSicario1, tiempoGeneracionSicario1 + 10f);
         }
-        if (generadorObserver.generadoSicario1)
+        if (generadorObserver.generadoSicario2)
         {
             tiempoSicario2 = Random.Range(tiempoGeneracionSicario2, tiempoGeneracionSicario2 + 10f);
         }
-        if (generadorObserver.generadoSicario1)
+        if (generadorObserver.generadoSicario3)
         {
             tiempoSicario3 = Random.Range(tiempoGeneracionSicario3, tiempoGeneracionSicario3 + 10f);
         }
