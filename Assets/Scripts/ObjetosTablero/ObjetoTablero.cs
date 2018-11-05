@@ -10,20 +10,21 @@ abstract public class ObjetoTablero : MonoBehaviour
 {
 	public float vidaBase;
 	protected int costoEnergia;
-	public abstract bool EsSicario();
-	public int FilaQueSeEncuentra { get; set; }
+	public int filaQueSeEncuentra { get; set; }
 	private bool muerto;
+    public GameObject objetivo;
+    public float danoBase = 0;
 
-	private void Start()
+    private void Start()
 	{
 		muerto = false;
 	}
 
-	/// <summary>
-	/// Funcion que llaman los objetos del tablero cuando golpean al otro
-	/// </summary>
-	/// <param name="daño"></param>
-	public virtual void Herir(float daño)
+    /// <summary>
+    /// Funcion que llaman los objetos del tablero cuando golpean al otro
+    /// </summary>
+    /// <param name="daño"></param>
+    public virtual void Herir(float daño)
 	{
 		vidaBase = vidaBase - daño;
 		AnimatorStateInfo stateInfo = this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
@@ -41,7 +42,16 @@ abstract public class ObjetoTablero : MonoBehaviour
 	{
 		costoEnergia = energia;
 	}
-
+    public void Atacar()
+    {
+        if (objetivo)
+        {
+            if (objetivo.transform.tag == "Estructura" || objetivo.transform.tag == "Sicario")
+                objetivo.GetComponent<ObjetoTablero>().Herir(this.danoBase);
+            if (objetivo.transform.tag == "Nerd")
+                objetivo.GetComponent<Arbol>().Herir(this.danoBase);
+        }
+    }
 	public void Morir()
 	{
 		Destruir();
