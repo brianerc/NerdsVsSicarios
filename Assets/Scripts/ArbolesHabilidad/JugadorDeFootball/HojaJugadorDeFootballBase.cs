@@ -19,7 +19,6 @@ public class HojaJugadorDeFootballBase : Hoja
         jugador = unObjeto.GetComponent<JugadorDeFootballBase>();
         jugador.SetDaño(4);
         jugador.SetVida(10);
-        jugador.SetTiempo(1);
         jugador.SetVelocidad(-3f);
         jugador.SetCostoEnergia(75);
         objeto = unObjeto;
