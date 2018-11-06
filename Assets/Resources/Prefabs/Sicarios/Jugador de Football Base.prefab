@@ -407,8 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaBase: 10
-  tiempoBase: 1
-  tiempo: 1
+  objetivo: {fileID: 0}
   danoBase: 4
   tiempoParalizado: 0
   velocidad: {x: -3, y: 0, z: 0}

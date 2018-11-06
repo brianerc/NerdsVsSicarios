@@ -166,7 +166,7 @@ Prefab:
         type: 2}
       propertyPath: sicario1
       value: 
-      objectReference: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e,
+      objectReference: {fileID: 1272913883211772, guid: 7a3535d4323969b4788bdb911bad2d4e,
         type: 2}
     - target: {fileID: 114926143280313264, guid: f3af0244e78c1964b9246fe969f6f6c0,
         type: 2}
@@ -425,6 +425,12 @@ Prefab:
       propertyPath: m_Name
       value: Generador1
       objectReference: {fileID: 0}
+    - target: {fileID: 114926143280313264, guid: f3af0244e78c1964b9246fe969f6f6c0,
+        type: 2}
+      propertyPath: sicario1
+      value: 
+      objectReference: {fileID: 1272913883211772, guid: 7a3535d4323969b4788bdb911bad2d4e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3af0244e78c1964b9246fe969f6f6c0, type: 2}
   m_IsPrefabAsset: 0
@@ -638,7 +644,7 @@ Prefab:
         type: 2}
       propertyPath: sicario1
       value: 
-      objectReference: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e,
+      objectReference: {fileID: 1272913883211772, guid: 7a3535d4323969b4788bdb911bad2d4e,
         type: 2}
     - target: {fileID: 114926143280313264, guid: f3af0244e78c1964b9246fe969f6f6c0,
         type: 2}
@@ -731,7 +737,7 @@ Prefab:
         type: 2}
       propertyPath: sicario1
       value: 
-      objectReference: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e,
+      objectReference: {fileID: 1272913883211772, guid: 7a3535d4323969b4788bdb911bad2d4e,
         type: 2}
     - target: {fileID: 114926143280313264, guid: f3af0244e78c1964b9246fe969f6f6c0,
         type: 2}

@@ -70,6 +70,10 @@
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballV1.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\HojaJugadorDeFootballV2.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\JugadorDeFootball\JugadorDeFootball.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\PunkGirl\HojaPunkGirlBase.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\PunkGirl\HojaPunkGirlV1.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\PunkGirl\HojaPunkGirlV2.cs" />
+    <Compile Include="Assets\Scripts\ArbolesHabilidad\PunkGirl\PunkGirl.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaCatapulta.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaDakimakura.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\WeabooLord\HojaMochilaPegajosa.cs" />
@@ -88,6 +92,9 @@
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballBase.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV1.cs" />
     <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\JugadorDeFootballV2.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\PunkGirlBase.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\PunkGirlV1.cs" />
+    <Compile Include="Assets\Scripts\ObjetosTablero\Sicarios\PunkGirlV2.cs" />
     <Compile Include="Assets\Scripts\Partida\ComienzoPartida.cs" />
     <Compile Include="Assets\Scripts\Partida\Energia.cs" />
     <Compile Include="Assets\Scripts\Partida\EnergiaNerd.cs" />
