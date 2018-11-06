@@ -117,18 +117,18 @@ TextureImporter:
       name: Punk Girl Caminata7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 361.3333
-        width: 145.66667
-        height: 180.66667
+        x: 24
+        y: 363
+        width: 50
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f70e0edaa95b5de4183a04c85ed41ac8
+      spriteID: 501a39eb6454314409d2909ec72a77e5
       vertices: []
       indices: 
       edges: []
@@ -137,18 +137,18 @@ TextureImporter:
       name: Punk Girl Caminata6
       rect:
         serializedVersion: 2
-        x: 145
-        y: 361.3333
-        width: 145.66667
-        height: 180.66667
+        x: 185
+        y: 363
+        width: 67
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 174, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d31635252c6dc245a7cedbf42b5edd7
+      spriteID: b8b047c3a8133814cbf0b667f2c611aa
       vertices: []
       indices: 
       edges: []
@@ -157,18 +157,18 @@ TextureImporter:
       name: Punk Girl Caminata5
       rect:
         serializedVersion: 2
-        x: 290
-        y: 361.3333
-        width: 145.66667
-        height: 180.66667
+        x: 365
+        y: 363
+        width: 67
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c238115ec2e55240891e0f8062d3879
+      spriteID: b79d6eb347cbf344fa316d30246c94a0
       vertices: []
       indices: 
       edges: []
@@ -177,18 +177,18 @@ TextureImporter:
       name: Punk Girl Caminata4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 181.33333
-        width: 145.66667
-        height: 180.66667
+        x: 7
+        y: 184
+        width: 62
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9c13f567a5c8642adaeec723793b76
+      spriteID: b67044b072baf1243816faaa360b0e47
       vertices: []
       indices: 
       edges: []
@@ -197,58 +197,18 @@ TextureImporter:
       name: Punk Girl Caminata3
       rect:
         serializedVersion: 2
-        x: 145
-        y: 181.33333
-        width: 145.66667
-        height: 180.66667
+        x: 186
+        y: 184
+        width: 66
+        height: 177
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c83a7b0aa50a004c8095ba0defb61d4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Punk Girl Caminata2
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 181.33333
-        width: 145.66667
-        height: 180.66667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ebba0ae97973f74494b611b18452cdd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Punk Girl Caminata1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 146
-        height: 181
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f532dabc6b6780946b2a27e1564e4326
+      spriteID: 2aa5d6903a84fa442acdbeefe7089b8f
       vertices: []
       indices: 
       edges: []
@@ -257,18 +217,58 @@ TextureImporter:
       name: Punk Girl Caminata0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1.3333282
-        width: 145.66667
-        height: 180.66667
+        x: 179
+        y: 0
+        width: 77
+        height: 183
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34384b48415fc014aaea23ec2bdc9df8
+      spriteID: 7175ff82025c84e45a0eca4b0b01808d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk Girl Caminata2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 184
+        width: 71
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e29938baf650844a8fab35d7ebd9df5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Punk Girl Caminata1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 63
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4c9b7fd6ac43748ac71ab5d8cc0186
       vertices: []
       indices: 
       edges: []
