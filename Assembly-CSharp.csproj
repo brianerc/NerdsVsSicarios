@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BotonCrearUsuario.cs" />
     <Compile Include="Assets\Generador.cs" />
     <Compile Include="Assets\GeneradorObserver.cs" />
     <Compile Include="Assets\Scripts\ArbolesHabilidad\Arbol.cs" />
@@ -93,10 +94,12 @@
     <Compile Include="Assets\Scripts\Partida\EnergiaNerd.cs" />
     <Compile Include="Assets\Scripts\Partida\EnergiaSicario.cs" />
     <Compile Include="Assets\Scripts\Partida\Invocacion.cs" />
+    <Compile Include="Assets\Scripts\Partida\Jugador.cs" />
     <Compile Include="Assets\Scripts\Partida\Lanzador.cs" />
     <Compile Include="Assets\Scripts\Partida\LanzadorEstructuras.cs" />
     <Compile Include="Assets\Scripts\Partida\LanzadorSicario.cs" />
     <Compile Include="Assets\Scripts\Partida\Temporizador.cs" />
+    <Compile Include="Assets\Scripts\UsuarioAcceso.cs" />
     <Compile Include="Assets\Scripts\Victoria-Derrota\FinalPartida.cs" />
     <Compile Include="Assets\Scripts\Victoria-Derrota\NerdDerrota.cs" />
     <Compile Include="Assets\Scripts\Victoria-Derrota\NerdVictoria.cs" />
@@ -290,9 +293,6 @@
     </Reference>
     <Reference Include="Unity.Locator">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>G:/Mis Documentos/Facultad/Desarrollo de videojuegos/Repositorios/v2/NerdsVsSicarios/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
