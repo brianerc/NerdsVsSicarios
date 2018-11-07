@@ -17,9 +17,9 @@ public class LanzadorEstructuras : Lanzador {
         zonaNula = matriz.GetCellCenterWorld(auxiliar);
     }
 
-    protected override Vector3 ActualizarPosicion(Touch touch)
+    protected override Vector2 ActualizarPosicion(Touch touch)
     {
-        Vector3 punto = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
+        Vector2 punto = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
         Vector3Int auxiliar = matriz.WorldToCell(punto);
         punto = matriz.GetCellCenterWorld(auxiliar);
         if (punto.x == zonaNula.x)

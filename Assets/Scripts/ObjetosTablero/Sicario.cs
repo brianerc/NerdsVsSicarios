@@ -32,11 +32,12 @@ public class Sicario : ObjetoTablero {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        colisiona = true;
-        sonidoCorrer.Stop();
-        this.GetComponent<Animator>().SetTrigger("Atacar");
+
         if (collision.transform.tag == "Estructura" || collision.transform.tag == "Nerd")
 		{
+            this.GetComponent<Animator>().SetTrigger("Atacar");
+            colisiona = true;
+            sonidoCorrer.Stop();
             objetivo = collision.gameObject;
         }
 	}

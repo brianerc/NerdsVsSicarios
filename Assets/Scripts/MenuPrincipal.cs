@@ -15,16 +15,18 @@ public class MenuPrincipal : MonoBehaviour
 	/// </summary>
     void Update()
     {
-        RaycastHit hit;
+        RaycastHit2D hit;
         if (Input.touchCount < 1)
         {
             return;
         }
         Touch touch = Input.GetTouch(0);
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+       // Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        Vector2 test = Camera.main.ScreenToWorldPoint(touch.position);
+        hit = Physics2D.Raycast(test, (touch.position));
         if (touch.phase == TouchPhase.Ended)
         {
-            if (Physics.Raycast(ray, out hit))
+            if (hit.collider!=null)
             {
                 if (hit.transform.tag == "Jugar")
                 {
