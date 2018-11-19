@@ -117,7 +117,8 @@ abstract public class Lanzador : MonoBehaviour
     }
     private void CargarSprite()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name + " N" +  estructura.GetComponent<ObjetoTablero>().nivel);
+        Debug.Log("Sprites/Partida/Lanzadores/" + estructura.name + " N" + estructura.GetComponent<ObjetoTablero>().nivel);
     }
     protected void CrearSeleccion(Touch touch)
     {
@@ -170,7 +171,7 @@ abstract public class Lanzador : MonoBehaviour
     {
         if (EsSeleccionable())
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name + " N" + estructura.GetComponent<ObjetoTablero>().nivel);
         }
         else
         {

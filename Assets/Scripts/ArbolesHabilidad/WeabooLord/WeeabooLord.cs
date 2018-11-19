@@ -32,6 +32,9 @@ public class WeeabooLord : ArbolNerd {
         energia = 100;
         cantidadRegeneracionEnergia = 30;
         tiempoRegeneracionEnergia = 5;
+        catapulta.GetComponent<ObjetoTablero>().nivel = 1;
+        dakimakura.GetComponent<ObjetoTablero>().nivel = 1;
+        mochilaPegajosa.GetComponent<ObjetoTablero>().nivel = 1;
         InsertarHoja(new HojaCatapulta(catapulta), 0);
         InsertarHoja(new HojaDakimakura(dakimakura), 0);
         InsertarHoja(new HojaMochilaPegajosa(mochilaPegajosa), 0);

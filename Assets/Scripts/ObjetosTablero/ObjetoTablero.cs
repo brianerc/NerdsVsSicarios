@@ -14,7 +14,7 @@ abstract public class ObjetoTablero : MonoBehaviour
 	private bool muerto;
     public GameObject objetivo;
     public float danoBase = 0;
-
+    public int nivel;
     private void Start()
 	{
 		muerto = false;
