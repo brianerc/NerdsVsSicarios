@@ -26,6 +26,7 @@ TagManager:
   - Salir
   - JugarSolo
   - GeneradorObserver
+  - Cartas
   layers:
   - Default
   - TransparentFX

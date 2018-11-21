@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
-using Assets.Scripts.ServidorDTO;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class UsuarioAcceso : MonoBehaviour
+
+public class UsuarioRegistrar : MonoBehaviour
 {
 
 	public InputField textNombreDeUsuario;
@@ -16,24 +16,9 @@ public class UsuarioAcceso : MonoBehaviour
 	public Text error;
 	public Button boton;
 
-	public void Start()
+	public void volver()
 	{
-		string token = PlayerPrefs.GetString("token");
-		if (token != null && !token.Equals(""))
-		{
-			Debug.Log("Existe token: " + token);
-			SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
-		}
-		else
-		{
-			Debug.Log("No existe token");
-		}
-	}
-
-	public void irAEscenaRegistrarse()
-	{
-
-		SceneManager.LoadScene("UsuarioRegistrar", LoadSceneMode.Single);
+		SceneManager.LoadScene("UsuarioAcceso", LoadSceneMode.Single);
 	}
 
 	public void crearUsuario()
@@ -57,7 +42,7 @@ public class UsuarioAcceso : MonoBehaviour
 
 		byte[] pData = System.Text.Encoding.ASCII.GetBytes(postBodyData.ToCharArray());
 
-		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario/auth", pData, headers);
+		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario", pData, headers);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
@@ -66,7 +51,7 @@ public class UsuarioAcceso : MonoBehaviour
 			error.color = Color.red;
 			if (error.text.Equals("400 Bad Request"))
 			{
-				error.text = "Usuario o contraseña incorrecta";
+				error.text = "Usuario ya existe";
 			}
 			else
 			{
@@ -77,16 +62,8 @@ public class UsuarioAcceso : MonoBehaviour
 		}
 		else
 		{
-			string token = www.text;
-			Debug.Log("Token: " + token);
-			//var resultObj = JsonUtility.FromJson<Autenticacion>(token);
-			if (token != null && !token.Equals(""))
-			{
-				PlayerPrefs.SetString("token", token);
-				error.color = Color.green;
-				error.text = "Usuario ingresado";
-				SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
-			}
+			error.color = Color.green;
+			error.text = "Usuario creado";
 		}
 		boton.enabled = true;
 	}

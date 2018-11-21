@@ -37,7 +37,11 @@ public class MenuPrincipal : MonoBehaviour
                 {
                     SceneManager.LoadScene("PartidaSolo", LoadSceneMode.Single);
                 }
-                else if(hit.transform.tag=="Salir")
+				else if (hit.transform.tag == "Cartas")
+				{
+					SceneManager.LoadScene("Cartas", LoadSceneMode.Single);
+				}
+				else if(hit.transform.tag=="Salir")
                 {
                     Application.Quit();
                 }
