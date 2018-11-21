@@ -15,6 +15,7 @@ abstract public class ObjetoTablero : MonoBehaviour
     public GameObject objetivo;
     public float danoBase = 0;
     public int nivel;
+    public string nombre;
     private void Start()
 	{
 		muerto = false;
@@ -49,7 +50,7 @@ abstract public class ObjetoTablero : MonoBehaviour
             if (objetivo.transform.tag == "Estructura" || objetivo.transform.tag == "Sicario")
                 objetivo.GetComponent<ObjetoTablero>().Herir(this.danoBase);
             if (objetivo.transform.tag == "Nerd")
-                objetivo.GetComponent<Arbol>().Herir(this.danoBase);
+                objetivo.GetComponent<Mazo>().Herir(this.danoBase);
         }
     }
 	public void Morir()

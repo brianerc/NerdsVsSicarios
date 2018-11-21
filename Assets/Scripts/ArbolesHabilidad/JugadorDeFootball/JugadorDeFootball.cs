@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Clase correspondiente de gestionar los distintos jugadores de football sicarios
 /// </summary>
-public class JugadorDeFootball : Arbol
+public class JugadorDeFootball : Mazo
 {
     public GameObject jugadorDeFootballBase;
     public GameObject jugadorDeFootballV1;
@@ -14,33 +14,19 @@ public class JugadorDeFootball : Arbol
     protected override void Inicializar()
     {
         posicionX = (-posicionX);
-        arbol = new Hoja[5][];
         nombre = "Jugador de Football";
         descripcion = "";
-        for (int i = 0; i < arbol.Length; i++)
-        {
-            if (i == 0)
-            {
-                arbol[i] = new Hoja[3];
-            }
-            else
-            {
-                arbol[i] = new Hoja[0];
-            }
-        }
         energia = 100;
         cantidadRegeneracionEnergia = 30;
         tiempoRegeneracionEnergia = 5;
-        InsertarHoja(new HojaJugadorDeFootballBase(jugadorDeFootballBase), 0);
-        InsertarHoja(new HojaJugadorDeFootballV2(jugadorDeFootballV2), 0);
-        InsertarHoja(new HojaJugadorDeFootballV1(jugadorDeFootballV1), 0);
+        mazo = new List<Carta>();
+
+        InsertarCarta(new CartaJugadorDeFootballBase(jugadorDeFootballBase));
+        InsertarCarta(new CartaJugadorDeFootballV2(jugadorDeFootballV2));
+        InsertarCarta(new CartaJugadorDeFootballV1(jugadorDeFootballV1));
 
         MostrarLanzadores();
 
-    }
-    protected override GameObject CargarLanzador(int i, int j)
-    {
-        return arbol[i][j].GetObjeto();
     }
 
 }

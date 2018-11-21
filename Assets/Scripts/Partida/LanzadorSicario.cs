@@ -9,7 +9,7 @@ public class LanzadorSicario : Lanzador
     {
         base.Start();
         sonidoInvocacion = GetComponent<AudioSource>();
-        jugador = GameObject.FindGameObjectWithTag("JugadorSicario").GetComponent<Arbol>();
+        jugador = GameObject.FindGameObjectWithTag("JugadorSicario").GetComponent<Mazo>();
     }
     protected override void AnimarNerd()
     {

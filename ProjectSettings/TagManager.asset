@@ -16,8 +16,6 @@ TagManager:
   - Nerd
   - Sicario
   - LanzadorJugador de Football Base
-  - LanzadorJugador de Football V1
-  - LanzadorJugador de Football V2
   - Proyectil_Nerd
   - BarraDeVida
   - JugadorSicario
@@ -26,6 +24,11 @@ TagManager:
   - Salir
   - JugarSolo
   - GeneradorObserver
+  - LanzadorJugador de Football Estrella
+  - LanzadorJugador de Football Medio
+  - LanzadorPunk Girl Base
+  - LanzadorPunk Girl Medio
+  - LanzadorPunk Girl Estrella
   layers:
   - Default
   - TransparentFX

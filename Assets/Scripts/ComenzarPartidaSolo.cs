@@ -22,7 +22,7 @@ public class ComenzarPartidaSolo : Comenzar {
     }
 	
 	void Update () {
-        if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Arbol>().GetVida() <= 0)
+        if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida() <= 0)
         {
             SceneManager.LoadScene("Nerd_Derrota");
         }

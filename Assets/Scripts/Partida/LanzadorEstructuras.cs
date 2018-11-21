@@ -10,7 +10,7 @@ public class LanzadorEstructuras : Lanzador {
     {
         base.Start();
         sonidoInvocacion = GetComponent<AudioSource>();
-        jugador = GameObject.FindGameObjectWithTag("Nerd").GetComponent<Arbol>();
+        jugador = GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>();
         zonaNula = Camera.main.ScreenToWorldPoint(new Vector3(0, 0));
         zonaNula.x = piso.GetComponent<Renderer>().bounds.size.x / 2;
         Vector3Int auxiliar = matriz.WorldToCell(zonaNula);

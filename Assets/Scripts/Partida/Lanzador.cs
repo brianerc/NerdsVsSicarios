@@ -13,7 +13,7 @@ abstract public class Lanzador : MonoBehaviour
     protected Color rojo;
     protected Color transparente;
     protected GameObject piso;
-    public Arbol jugador;
+    public Mazo jugador;
     protected ObjetoTablero objetoTablero;
     public GameObject invocador;
     // Use this for initialization
@@ -117,8 +117,7 @@ abstract public class Lanzador : MonoBehaviour
     }
     private void CargarSprite()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name + " N" +  estructura.GetComponent<ObjetoTablero>().nivel);
-        Debug.Log("Sprites/Partida/Lanzadores/" + estructura.name + " N" + estructura.GetComponent<ObjetoTablero>().nivel);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.GetComponent<ObjetoTablero>().nombre + " N" +  estructura.GetComponent<ObjetoTablero>().nivel);
     }
     protected void CrearSeleccion(Touch touch)
     {
@@ -171,11 +170,11 @@ abstract public class Lanzador : MonoBehaviour
     {
         if (EsSeleccionable())
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.name + " N" + estructura.GetComponent<ObjetoTablero>().nivel);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + estructura.GetComponent<ObjetoTablero>().nombre + " N" + estructura.GetComponent<ObjetoTablero>().nivel);
         }
         else
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/Desactivados/" + estructura.name);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/Desactivados/" + estructura.GetComponent<ObjetoTablero>().nombre + " ByN N" + estructura.GetComponent<ObjetoTablero>().nivel);
         }
     }
     protected virtual void AnimarNerd()
