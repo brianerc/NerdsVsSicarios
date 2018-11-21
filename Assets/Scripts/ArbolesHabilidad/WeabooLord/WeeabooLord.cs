@@ -6,7 +6,7 @@ using UnityEngine;
 /// Clase correspondiente al jugador nerd "maestro". Este es el personaje princial de los nerds y en esta 
 /// clase se mantiene la logica correspondiente a el
 /// </summary>
-public class WeeabooLord : Mazo {
+public class WeeabooLord : MazoNerd {
     public GameObject catapulta;
     public GameObject dakimakura;
     public GameObject mochilaPegajosa;

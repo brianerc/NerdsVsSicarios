@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 24
+  controlID: 41
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 394
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 25
+  controlID: 42
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 26
+  controlID: 43
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,6 +294,7 @@ MonoBehaviour:
     - {fileID: 1107849160447240922, guid: 415419697104de44d84ba912571df193, type: 2}
     - {fileID: 1107416667017445684, guid: a58015d7586dc4a43bab0890a7219222, type: 2}
     - {fileID: 1107162220076644808, guid: 35276bf5c8349c946b7bdd61133a3868, type: 2}
+    - {fileID: 1107366515023561970, guid: d638e0e5d4961344ab1ddaa27fb197a0, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.47131148
       e01: 0
@@ -359,6 +360,22 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -401,7 +418,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -106824
+  m_LastSelectedObjectID: 13364
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -464,20 +481,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/ArbolesHabilidad/JugadorDeFootball
+    - Assets/Scripts/ArbolesHabilidad/WeabooLord
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/ArbolesHabilidad/JugadorDeFootball
+  - Assets/Scripts/ArbolesHabilidad/WeabooLord
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\BrianERC\Documents\GitHub\NerdsVsSicarios
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 391}
-    m_SelectedIDs: 062c0000
-    m_LastClickedID: 11270
-    m_ExpandedIDs: 00000000ba2a0000c22b0000142c0000202c00002c2c0000122e0000542e0000642e0000f62e0000c2300000f6300000fe30000018310000da310000503200006232000080320000b4320000b2330000a0340000a234000000ca9a3b
+    scrollPos: {x: 0, y: 311}
+    m_SelectedIDs: f62b0000
+    m_LastClickedID: 11254
+    m_ExpandedIDs: 000000007a2a0000822b0000d42b0000e02b0000ec2b0000d22d0000142e0000242e0000b62e000082300000b6300000be300000d83000009a3100001032000022320000403200007432000072330000be350000c035000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -505,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba2a0000c22b0000142c0000202c00002c2c0000122e0000542e0000642e0000f62e0000c2300000f6300000fe30000018310000da310000503200006232000080320000b4320000b2330000a0340000a2340000
+    m_ExpandedIDs: 000000007a2a0000822b0000d42b0000e02b0000ec2b0000d22d0000142e0000242e0000b62e000082300000b6300000be300000d83000009a3100001032000022320000403200007432000072330000be350000c0350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,9 +638,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 82280000
+    m_SelectedIDs: 50300000
     m_LastClickedID: 0
-    m_ExpandedIDs: 16fbffff00000000
+    m_ExpandedIDs: 1afbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

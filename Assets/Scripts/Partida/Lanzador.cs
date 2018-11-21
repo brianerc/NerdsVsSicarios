@@ -51,10 +51,8 @@ abstract public class Lanzador : MonoBehaviour
         }
         if (touch.phase == TouchPhase.Moved && estado)
         {
-            Debug.Log("Se mueve: " + hit.transform.tag);
             if (hit.collider && hit.collider.tag == "Piso")
             {
-                Debug.Log("Entro en piso");
                 GameObject.FindGameObjectWithTag("Seleccion").transform.position = ActualizarPosicion(touch);
             }
             ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);

@@ -409,6 +409,8 @@ MonoBehaviour:
   vidaBase: 10
   objetivo: {fileID: 0}
   danoBase: 4
+  nivel: 1
+  nombre: Jugador de Football Estrella
   tiempoParalizado: 0
   velocidad: {x: -3, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}

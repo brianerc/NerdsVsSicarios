@@ -15,6 +15,7 @@ public class MazoNerd : Mazo {
 	private void Start()
     {
         base.Start();
+        tiempoBase = 1;
         sonidoDaño = GetComponent<AudioSource>();
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
         estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Partida/HUD/BarraDeVida");
