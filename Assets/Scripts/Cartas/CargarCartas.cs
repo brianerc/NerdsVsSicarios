@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Assets.Scripts.ServidorDTO;
 
-public class CargarCartas : MonoBehaviour {
+public class CargarCartas : MonoBehaviour
+{
 
 	public RectTransform myPanel;
 	public GameObject myTextPrefab;
@@ -23,7 +25,9 @@ public class CargarCartas : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-	}	public IEnumerator ObtenerCartas()
+	}
+
+	public IEnumerator ObtenerCartas()
 	{
 		Dictionary<string, string> headers = new Dictionary<string, string>();
 		headers.Add("Content-Type", "application/json");
@@ -56,15 +60,18 @@ public class CargarCartas : MonoBehaviour {
 			CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
 			for (int i = 0; i < resultObj.cartas.Count; i++)
 			{
-				Carta carta = resultObj.cartas[i];
+				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
 				GameObject newText = (GameObject)Instantiate(myTextPrefab);
 				newText.transform.SetParent(myPanel);
 				newText.GetComponent<Text>().text = carta.ToString();
 				myNumber++;
 			}
 		}
-	}	public void volverAlMenuPrincipal()
+	}
+
+	public void volverAlMenuPrincipal()
 	{
-			SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
-	}
+		SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
+	}
+
 }

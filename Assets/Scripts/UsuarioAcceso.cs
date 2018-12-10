@@ -32,7 +32,6 @@ public class UsuarioAcceso : MonoBehaviour
 
 	public void irAEscenaRegistrarse()
 	{
-
 		SceneManager.LoadScene("UsuarioRegistrar", LoadSceneMode.Single);
 	}
 
@@ -50,21 +49,21 @@ public class UsuarioAcceso : MonoBehaviour
 		error.color = Color.black;
 		error.text = "Cargando...";
 		boton.enabled = false;
-		Dictionary<string, string> headers = new Dictionary<string, string>();
-		headers.Add("Content-Type", "application/json");
+		Dictionary<string, string> encabezados = new Dictionary<string, string>();
+		encabezados.Add("Content-Type", "application/json");
 
 		string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
 
 		byte[] pData = System.Text.Encoding.ASCII.GetBytes(postBodyData.ToCharArray());
 
-		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario/auth", pData, headers);
+		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario/auth", pData, encabezados);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
 		{
 			error.text = www.error;
 			error.color = Color.red;
-			if (error.text.Equals("400 Bad Request"))
+			if (error.text.Equals("400 Bad Request") || error.text.Equals("404 Not Found"))
 			{
 				error.text = "Usuario o contraseña incorrecta";
 			}

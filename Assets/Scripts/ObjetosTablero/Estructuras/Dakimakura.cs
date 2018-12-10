@@ -5,7 +5,6 @@ using UnityEngine;
 public class Dakimakura : Estructura {
 
 	public float tiempo;
-    public float danoBase;
     private AudioSource sonidoAtaque;
 
 	private void Start()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 abstract public class Energia : MonoBehaviour {
-    public Arbol jugador;
+    public Mazo jugador;
     protected Text texto;
     // Use this for initialization
 	void Start () {

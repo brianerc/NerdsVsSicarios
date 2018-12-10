@@ -407,9 +407,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaBase: 10
-  tiempoBase: 1
-  tiempo: 1
+  objetivo: {fileID: 0}
   danoBase: 2
+  nivel: 1
+  nombre: Jugador de Football Base
   tiempoParalizado: 0
   velocidad: {x: -4, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}

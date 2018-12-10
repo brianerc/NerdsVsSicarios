@@ -10,9 +10,6 @@ using UnityEngine;
 /// </summary>
 public class Sicario : ObjetoTablero {
 
-    public float tiempoBase;
-    public float tiempo;
-    public float danoBase;
     public float tiempoParalizado;
     public Vector3 velocidad;
     public Vector3 velocidadDetenida = new Vector3(0, 0, 0);
@@ -35,62 +32,23 @@ public class Sicario : ObjetoTablero {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        colisiona = true;
-        sonidoCorrer.Stop();
-        this.GetComponent<Animator>().SetTrigger("Atacar");
-        if (collision.transform.tag == "Estructura")
-		{
-			Estructura estructura = collision.gameObject.GetComponent<Estructura>();
-            if (tiempo <= 0)
-			{
-				estructura.Herir(danoBase);
-                sonidoAtacar.Play();
-				tiempo = tiempoBase;
-			}
-		}
-        else if(collision.transform.tag=="Nerd")
-        {
-            Arbol nerd = collision.gameObject.GetComponent<Arbol>();
-            nerd.Herir(danoBase);
-            sonidoAtacar.Play();
-        }
-        else if (collision.transform.tag == "Proyectil_Nerd")
-		{
-		}
-	}
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        tiempo = tiempo - Time.deltaTime;
-        if (collision.transform.tag == "Estructura")
-        {
-            Estructura estructura = collision.gameObject.GetComponent<Estructura>();
-            if (tiempo <= 0 && vidaBase>0)
-            {
-                estructura.Herir(danoBase);
-                tiempo = tiempoBase;
-                this.GetComponent<Animator>().SetTrigger("Atacar");
-                sonidoAtacar.Play();
-            }
+        if (collision.transform.tag == "Estructura" || collision.transform.tag == "Nerd")
+		{
+            this.GetComponent<Animator>().SetTrigger("Atacar");
+            colisiona = true;
+            sonidoCorrer.Stop();
+            objetivo = collision.gameObject;
         }
-        else if (collision.transform.tag == "Nerd")
-        {
-            if (tiempo <= 0 && vidaBase>0)
-            {
-            Arbol nerd = collision.gameObject.GetComponent<Arbol>();
-            nerd.Herir(danoBase);
-            tiempo = tiempoBase;
-            sonidoAtacar.Play();
-            }
-        }
-    }
+	}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        colisiona = false;
-        this.GetComponent<Animator>().SetTrigger("Detener");
-        tiempo = 1;
-        sonidoCorrer.Play();
+        objetivo = null;
+    }
+    public void SonidoAtacar()
+    {
+        sonidoAtacar.Play();
     }
 
     private void FixedUpdate()
@@ -114,15 +72,6 @@ public class Sicario : ObjetoTablero {
         }
     }
 
-	/// <summary>
-	/// Funcion encargada de setear el tiempo de frecuencia de golpes
-	/// </summary>
-	/// <param name="unTiempo"></param>
-    public void SetTiempo(float unTiempo)
-    {
-        tiempoBase = unTiempo;
-        tiempo = tiempoBase;
-    }
 
 	/// <summary>
 	/// Setea la cantidad de daño del sicario
@@ -152,9 +101,4 @@ public class Sicario : ObjetoTablero {
     {
         tiempoParalizado = tiempoParalizado * resistencia;
     }
-
-	public override bool EsSicario()
-	{
-		return true;
-	}
 }

@@ -6,7 +6,7 @@ public class EnergiaNerd : Energia {
 
 	// Use this for initialization
 	void Start () {
-        jugador = GameObject.FindGameObjectWithTag("Nerd").GetComponent<Arbol>();
+        jugador = GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>();
         texto = this.GetComponent<Text>();
     }
 }

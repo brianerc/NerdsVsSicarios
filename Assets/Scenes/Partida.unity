@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f527cc5bc004e947a282acecbe60b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  separacionLanzadores: 2
   fondo: {fileID: 1875067340228058, guid: b6213d96d36e6fe41936239adbec9add, type: 2}
   jugador: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 2}
   jugador2: {fileID: 1542843679540858, guid: 8be2c2f41b648684a8a4d49bccdc4c68, type: 2}
@@ -151,7 +152,6 @@ MonoBehaviour:
     type: 2}
   energiaSicario: {fileID: 1442976144224032, guid: 21e45a409c5433f449a45c70f99bf22b,
     type: 2}
-  separacionLanzadores: 2
 --- !u!4 &16208417
 Transform:
   m_ObjectHideFlags: 0

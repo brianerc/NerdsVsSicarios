@@ -9,8 +9,14 @@ using UnityEngine;
 /// </summary>
 public class Estructura : ObjetoTablero {
 
-	public override bool EsSicario()
-	{
-		return false;
-	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag=="Sicario")
+            objetivo = collision.gameObject;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        objetivo = null;
+    }
 }
