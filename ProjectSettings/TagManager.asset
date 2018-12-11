@@ -29,6 +29,9 @@ TagManager:
   - LanzadorPunk Girl Base
   - LanzadorPunk Girl Medio
   - LanzadorPunk Girl Estrella
+  - "LanzadorBailar\xEDn Base"
+  - "LanzadorBailar\xEDn Medio"
+  - "LanzadorBailar\xEDn Estrella"
   layers:
   - Default
   - TransparentFX
