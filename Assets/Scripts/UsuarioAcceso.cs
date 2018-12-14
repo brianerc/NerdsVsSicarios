@@ -10,12 +10,12 @@ using UnityEngine.SceneManagement;
 
 public class UsuarioAcceso : MonoBehaviour
 {
-
+    public GameObject transicion;
 	public InputField textNombreDeUsuario;
 	public InputField contrasenia;
 	public Text error;
 	public Button boton;
-
+    private string nombreEscena;
 	public void Start()
 	{
 		string token = PlayerPrefs.GetString("token");
@@ -29,11 +29,17 @@ public class UsuarioAcceso : MonoBehaviour
 			Debug.Log("No existe token");
 		}
 	}
-
-	public void irAEscenaRegistrarse()
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+    }
+    public void irAEscenaRegistrarse()
 	{
-		SceneManager.LoadScene("UsuarioRegistrar", LoadSceneMode.Single);
-	}
+        nombreEscena = "UsuarioRegistrar";
+        StartCoroutine(LoadScene());
+    }
 
 	public void crearUsuario()
 	{
@@ -84,8 +90,9 @@ public class UsuarioAcceso : MonoBehaviour
 				PlayerPrefs.SetString("token", token);
 				error.color = Color.green;
 				error.text = "Usuario ingresado";
-				SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
-			}
+                nombreEscena = "MenuPrincipal";
+                StartCoroutine(LoadScene());
+            }
 		}
 		boton.enabled = true;
 	}

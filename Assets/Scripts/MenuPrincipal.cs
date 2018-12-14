@@ -5,14 +5,20 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
-
+    private string nombreEscena;
+    public GameObject transicion;
     void Start()
     {
     }
-
-	/// <summary>
-	/// Logica correspondiente a las seleccion de las distintas opciones del menu principal
-	/// </summary>
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+    }
+    /// <summary>
+    /// Logica correspondiente a las seleccion de las distintas opciones del menu principal
+    /// </summary>
     void Update()
     {
         RaycastHit2D hit;
@@ -30,24 +36,28 @@ public class MenuPrincipal : MonoBehaviour
             {
                 if (hit.transform.tag == "Jugar")
                 {
-                    SceneManager.LoadScene("Partida",LoadSceneMode.Single);
+                    nombreEscena = "Partida";
+                    StartCoroutine(LoadScene());
                 }
                 else if(hit.transform.tag=="Opciones")
                 {
 
                 } else if (hit.transform.tag == "JugarSolo")
                 {
-                    SceneManager.LoadScene("PartidaSolo", LoadSceneMode.Single);
+                    nombreEscena = "PartidaSolo";
+                    StartCoroutine(LoadScene());
                 }
 				else if (hit.transform.tag == "Cartas")
 				{
-					SceneManager.LoadScene("Cartas", LoadSceneMode.Single);
-				}
+                    nombreEscena = "Cartas";
+                    StartCoroutine(LoadScene());
+                }
 				else if(hit.transform.tag=="Salir")
                 {
 					PlayerPrefs.SetString("token", "");
-					SceneManager.LoadScene("UsuarioAcceso", LoadSceneMode.Single);
-				}
+                    nombreEscena = "UsuarioAcceso";
+                    StartCoroutine(LoadScene());
+                }
 			}
         }
     }

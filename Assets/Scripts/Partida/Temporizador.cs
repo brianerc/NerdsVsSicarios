@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Temporizador : MonoBehaviour {
     private int minutos;
     private float segundos;
+    public GameObject transicion;
+    private string nombreEscena;
     // Use this for initialization
     void Start () {
         minutos = 3;
@@ -13,7 +15,12 @@ public class Temporizador : MonoBehaviour {
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
-
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -26,7 +33,8 @@ public class Temporizador : MonoBehaviour {
         }
         if (minutos < 0)
         {
-            SceneManager.LoadScene("Nerd_Victoria", LoadSceneMode.Single);
+            nombreEscena = "Nerd_Victoria";
+            StartCoroutine(LoadScene());
         }
         if(minutos>=0) GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
         

@@ -12,19 +12,28 @@ public class ComenzarPartidaSolo : Comenzar {
     public Grid matriz;
     public GameObject temporizador;
     public GameObject energiaNerd;
+    public GameObject transicion;
+    private string nombreEscena;
 
 	void Start () {
         Instantiate(fondo);
         Instantiate(jugador);
         Instantiate(matriz);
+        temporizador.GetComponent<Temporizador>().transicion = transicion;
         Instantiate(temporizador);
         Instantiate(energiaNerd);
     }
-	
-	void Update () {
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+    }
+    void Update () {
         if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida() <= 0)
         {
-            SceneManager.LoadScene("Nerd_Derrota");
+            nombreEscena = "Nerd_Derrota";
+            StartCoroutine(LoadScene());
         }
     }
 }

@@ -10,24 +10,34 @@ using UnityEngine.UI;
 
 public class UsuarioRegistrar : MonoBehaviour
 {
-
+    public GameObject transicion;
 	public InputField textNombreDeUsuario;
 	public InputField contrasenia;
 	public Text error;
 	public Button boton;
+    private string nombreEscena;
 
-	public void volver()
+    private void Start()
+    {
+    }
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+    }
+    public void volver()
 	{
-		SceneManager.LoadScene("UsuarioAcceso", LoadSceneMode.Single);
-	}
-
+        nombreEscena = "UsuarioAcceso";
+        StartCoroutine(LoadScene());
+    }
+    
 	public void crearUsuario()
 	{
 
 		string nombreDeUsuario = textNombreDeUsuario.text;
 		string contraseniaTexto = contrasenia.text;
 		StartCoroutine(POST(nombreDeUsuario, contraseniaTexto));
-
 	}
 
 	public IEnumerator POST(string nombreDeUsuario, string contrasenia)
