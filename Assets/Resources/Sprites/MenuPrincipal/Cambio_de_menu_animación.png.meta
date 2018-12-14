@@ -7,11 +7,10 @@ TextureImporter:
     21300004: "Cambio_de_menu_animaci\xF3n_2"
     21300006: "Cambio_de_menu_animaci\xF3n_3"
     21300008: "Cambio_de_menu_animaci\xF3n_4"
-    21300010: "Cambio_de_menu_animaci\xF3n_5"
-    21300012: "Cambio_de_menu_animaci\xF3n_6"
-    21300014: "Cambio_de_menu_animaci\xF3n_7"
-    21300016: "Cambio_de_menu_animaci\xF3n_8"
-    21300018: "Cambio_de_menu_animaci\xF3n_9"
+    21300010: "Cambio_de_menu_animaci\xF3n_6"
+    21300012: "Cambio_de_menu_animaci\xF3n_7"
+    21300014: "Cambio_de_menu_animaci\xF3n_8"
+    21300016: "Cambio_de_menu_animaci\xF3n_9"
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -130,7 +129,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54c9730c29162b34d98712c1a1f3355d
+      spriteID: 8c4fe2cee0ab55749911a6a9ff2f3fda
       vertices: []
       indices: 
       edges: []
@@ -150,7 +149,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecdd1f9b9458169448e5a048085ce9aa
+      spriteID: 4d01c039e2873f44da29a44efafe5312
       vertices: []
       indices: 
       edges: []
@@ -170,7 +169,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf19554bca64c4d48a75698758e942c9
+      spriteID: 47c2d5200c5a5974ca5945b946db3c35
       vertices: []
       indices: 
       edges: []
@@ -182,7 +181,7 @@ TextureImporter:
         x: 4590
         y: 2846
         width: 1288
-        height: 730
+        height: 637
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +189,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1863bafc64574142881dcc54d312f49
+      spriteID: 26a67abe9606aa34eb2f0a8edc1f7822
       vertices: []
       indices: 
       edges: []
@@ -210,7 +209,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed29b373a6ab8c747a42a534d409f1cf
+      spriteID: c0a9d278e64012446b1ba91ad73a0d07
       vertices: []
       indices: 
       edges: []
@@ -219,7 +218,7 @@ TextureImporter:
       name: "Cambio_de_menu_animaci\xF3n_6"
       rect:
         serializedVersion: 2
-        x: 1574
+        x: 1577
         y: 1823
         width: 1290
         height: 730
@@ -230,7 +229,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd2bf66b8577c1f4ca297567196be627
+      spriteID: 20c030a60d50c564ca7c362bea92c292
       vertices: []
       indices: 
       edges: []
@@ -250,7 +249,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10bfc57a6e259c249a20e9a386f93451
+      spriteID: 22b7847317b91b84ebf563804c0d650c
       vertices: []
       indices: 
       edges: []
@@ -270,7 +269,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d4f8bafcb099044fb7c64b8a673f084
+      spriteID: ab585764d5803a04e91b155f9890d7b5
       vertices: []
       indices: 
       edges: []
@@ -279,9 +278,9 @@ TextureImporter:
       name: "Cambio_de_menu_animaci\xF3n_9"
       rect:
         serializedVersion: 2
-        x: 39
-        y: 1165
-        width: 1296
+        x: 42
+        y: 900
+        width: 1293
         height: 730
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -290,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0417098e1724034ba193697a62ae9e7
+      spriteID: 18300869ac312ad4c9c0937c6771575c
       vertices: []
       indices: 
       edges: []
@@ -298,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8105fa04d62e22e4ba4753be9e38816a
+    spriteID: b7ec9c8713c490346aaabb6f79626dbd
     vertices: []
     indices: 
     edges: []
