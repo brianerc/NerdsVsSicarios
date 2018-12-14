@@ -37,7 +37,7 @@ public class CargarCartas : MonoBehaviour
 
 		byte[] pData = null;
 
-		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario/5bf59a9e5cd5fc001855bbc3/carta", pData, headers);
+		WWW www = new WWW("http://35.243.154.34:8090/api/v1/usuario/5bf59a9e5cd5fc001855bbc3/carta", pData, headers);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))

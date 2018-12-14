@@ -38,7 +38,7 @@ namespace Assets.Scripts.ServidorDTO
 
 		public override string ToString()
 		{
-			return "Nombre: " + nombre + " Tipo:  " + tipo + " Daño: " + danio;
+			return nombre + " N" + nivel;
 		}
 	}
 }

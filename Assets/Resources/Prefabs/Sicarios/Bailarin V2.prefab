@@ -406,13 +406,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6eadfdc33e9248959881c406ba57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 12
+  vidaBase: 10
   objetivo: {fileID: 0}
-  danoBase: 1
+  danoBase: 4
   nivel: 1
-  nombre: 
+  nombre: "Bailar\xEDn Base"
   tiempoParalizado: 0
-  velocidad: {x: -4, y: 0, z: 0}
+  velocidad: {x: -2, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!212 &212042779564758314

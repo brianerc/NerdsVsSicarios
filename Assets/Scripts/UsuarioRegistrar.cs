@@ -42,7 +42,7 @@ public class UsuarioRegistrar : MonoBehaviour
 
 		byte[] pData = System.Text.Encoding.ASCII.GetBytes(postBodyData.ToCharArray());
 
-		WWW www = new WWW("http://35.225.13.246:8090/api/v1/usuario", pData, headers);
+		WWW www = new WWW("http://35.243.154.34:8090/api/v1/usuario", pData, headers);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
