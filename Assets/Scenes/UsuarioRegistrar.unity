@@ -1942,6 +1942,7 @@ MonoBehaviour:
   transicion: {fileID: 484371059}
   textNombreDeUsuario: {fileID: 260187731}
   contrasenia: {fileID: 1558293807}
+  contraseniaRepetir: {fileID: 531006101}
   error: {fileID: 786909253}
   boton: {fileID: 1445149570}
 --- !u!1 &1558293805

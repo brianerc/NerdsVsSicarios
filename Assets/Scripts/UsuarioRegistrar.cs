@@ -14,6 +14,7 @@ public class UsuarioRegistrar : MonoBehaviour
     public GameObject transicion;
 	public InputField textNombreDeUsuario;
 	public InputField contrasenia;
+	public InputField contraseniaRepetir;
 	public Text error;
 	public Button boton;
     private string nombreEscena;
@@ -38,14 +39,24 @@ public class UsuarioRegistrar : MonoBehaviour
 
 		string nombreDeUsuario = textNombreDeUsuario.text;
 		string contraseniaTexto = contrasenia.text;
-		StartCoroutine(POST(nombreDeUsuario, contraseniaTexto));
+		string contraseniaRepetirTexto = contraseniaRepetir.text;
+		if (!contraseniaTexto.Equals(contraseniaRepetirTexto))
+		{
+			error.color = Color.red;
+			error.text = "Contraseñas no coinciden";
+		}
+		else
+		{
+			StartCoroutine(IngresarUsuario(nombreDeUsuario, contraseniaTexto));
+		}
+		
 	}
 
-	public IEnumerator POST(string nombreDeUsuario, string contrasenia)
+	public IEnumerator IngresarUsuario(string nombreDeUsuario, string contrasenia)
 	{
 		error.color = Color.black;
 		error.text = "Cargando...";
-		boton.enabled = false;
+		boton.interactable = false;
 		WWW www = Acciones.CrearUsuario(nombreDeUsuario, contrasenia);
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
@@ -62,6 +73,7 @@ public class UsuarioRegistrar : MonoBehaviour
 			}
 			Debug.Log(www.error);
 			Debug.Log("EN ERROR");
+			boton.interactable = true;
 		}
 		else
 		{
@@ -69,7 +81,6 @@ public class UsuarioRegistrar : MonoBehaviour
 			error.text = "Usuario creado";
 			yield return IngresarConUsuarioYCotnrasenia(nombreDeUsuario, contrasenia);
 		}
-		boton.enabled = true;
 	}
 
 	private IEnumerator IngresarConUsuarioYCotnrasenia(string nombreDeUsuario, string contrasenia)
@@ -106,5 +117,6 @@ public class UsuarioRegistrar : MonoBehaviour
 				StartCoroutine(LoadScene());
 			}
 		}
+		boton.interactable = true;
 	}
 }
