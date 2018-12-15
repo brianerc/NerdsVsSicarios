@@ -8,20 +8,30 @@ using UnityEngine.SceneManagement;
 /// </summary>
 abstract public class FinalPartida : MonoBehaviour {
 
-	void Start () {
-	}
-
-    void Update()
+    public GameObject transicion;
+    private string nombreEscena;
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(nombreEscena);
+    }
+    private void Update()
     {
         if (Input.touchCount < 1)
         {
             return;
         }
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position), Input.GetTouch(0).position);
+
         Touch touch = Input.GetTouch(0);
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
-        if (touch.phase == TouchPhase.Ended)
+        if (touch.phase == TouchPhase.Began)
         {
-            SceneManager.LoadScene("MenuPrincipal",LoadSceneMode.Single);
+            if (hit.collider && hit.collider.tag == this.gameObject.tag)
+            {
+                nombreEscena = "MenuPrincipal";
+                StartCoroutine(LoadScene());
+            }
         }
     }
 }
