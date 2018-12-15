@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61631960270483772}
   m_Layer: 0
   m_Name: Lanzador
-  m_TagString: LanzadorMochila pegajosa
+  m_TagString: LanzadorDakimakura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filaQueSeEncuentra: 0
-  estructura: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409, type: 2}
+  estructura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
   planoPosicion: {fileID: 0}
   jugador: {fileID: 0}

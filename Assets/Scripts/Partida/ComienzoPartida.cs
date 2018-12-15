@@ -8,7 +8,6 @@ public class ComienzoPartida : Comenzar {
     public GameObject jugador;
     public GameObject jugador2;
     public Grid matriz;
-    public GameObject temporizador;
     public GameObject energiaNerd;
     public GameObject energiaSicario;
     public GameObject transicion;
@@ -19,16 +18,14 @@ public class ComienzoPartida : Comenzar {
         Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(jugador2);
-        temporizador.GetComponent<Temporizador>().transicion = transicion;
-        Instantiate(temporizador);
         Instantiate(energiaNerd);
         Instantiate(energiaSicario);
-	}
+    }
     IEnumerator LoadScene()
     {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(nombreEscena);
     }
     // Update is called once per frame
     private void Update()

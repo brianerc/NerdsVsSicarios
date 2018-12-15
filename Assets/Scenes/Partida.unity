@@ -261,6 +261,111 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &273196795
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 43.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224112005100677284, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114049828658754828, guid: 129bd7f94188d454d9bcc6862076af00,
+        type: 2}
+      propertyPath: transicion
+      value: 
+      objectReference: {fileID: 1122225495}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 129bd7f94188d454d9bcc6862076af00, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

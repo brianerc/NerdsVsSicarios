@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61598594064505720}
   m_Layer: 0
   m_Name: LanzadorSicario
-  m_TagString: "LanzadorBailar\xEDn Medio"
+  m_TagString: "LanzadorBailar\xEDn Base"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filaQueSeEncuentra: 0
-  estructura: {fileID: 1339395037531652, guid: 1c6c1bfa110a4ab4aab93e3c1907d0a5, type: 2}
+  estructura: {fileID: 1261326440413716, guid: 6feab2c22669bd44db292f6a8b8cbe7f, type: 2}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 2}
   planoPosicion: {fileID: 0}
   jugador: {fileID: 0}

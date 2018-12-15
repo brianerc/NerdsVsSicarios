@@ -18,7 +18,7 @@ public class Temporizador : MonoBehaviour {
     IEnumerator LoadScene()
     {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
     }
     // Update is called once per frame

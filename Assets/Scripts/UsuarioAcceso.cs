@@ -32,8 +32,8 @@ public class UsuarioAcceso : MonoBehaviour
     IEnumerator LoadScene()
     {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(nombreEscena);
     }
     public void irAEscenaRegistrarse()
 	{
