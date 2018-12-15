@@ -19,8 +19,6 @@ public class ComenzarPartidaSolo : Comenzar {
         Instantiate(fondo);
         Instantiate(jugador);
         Instantiate(matriz);
-        temporizador.GetComponent<Temporizador>().transicion = transicion;
-        Instantiate(temporizador);
         Instantiate(energiaNerd);
     }
     IEnumerator LoadScene()
