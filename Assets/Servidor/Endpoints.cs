@@ -9,6 +9,7 @@ namespace Assets.Servidor
 	{
 		private static string HOST = "http://35.243.154.34:8090/api/v1/";
 		public static string RegistrarUrl = HOST + "usuario";
-		internal static string IngresarUrl = HOST + "usuario/auth";
+		public static string IngresarUrl = HOST + "usuario/auth";
+		public static string ObtenerCartasUrl = HOST + "usuario/5bf59a9e5cd5fc001855bbc3/carta";
 	}
 }

@@ -19,5 +19,13 @@ namespace Assets.Servidor
 			string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
 			return ApiComunicacion.SolicitudPOST(Endpoints.IngresarUrl, postBodyData, false);
 		}
+
+		internal static WWW CargarCartas()
+		{
+			
+			Dictionary<string, string> headers = new Dictionary<string, string>();
+			headers.Add("Content-Type", "application/json");
+			return ApiComunicacion.SolicitudGET(Endpoints.ObtenerCartasUrl, headers, true);
+		}
 	}
 }

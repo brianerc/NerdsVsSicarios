@@ -18,9 +18,11 @@ namespace Assets.Servidor
 			return new WWW(uri, pData, headers);
 		}
 
-		internal static WWW SolicitudPOST(object ingresarUrl, string postBodyData, bool v)
+		internal static WWW SolicitudGET(string uri, Dictionary<string, string> headers, bool userToken)
 		{
-			throw new NotImplementedException();
+			string token = PlayerPrefs.GetString("token");
+			headers.Add("token", token);
+			return new WWW(uri, null, headers);
 		}
 	}
 }
