@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Assets.Scripts.ServidorDTO;
 using UnityEngine.SceneManagement;
+using Assets.Servidor;
 
 public class UsuarioAcceso : MonoBehaviour
 {
@@ -55,14 +56,8 @@ public class UsuarioAcceso : MonoBehaviour
 		error.color = Color.black;
 		error.text = "Cargando...";
 		boton.enabled = false;
-		Dictionary<string, string> encabezados = new Dictionary<string, string>();
-		encabezados.Add("Content-Type", "application/json");
 
-		string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
-
-		byte[] pData = System.Text.Encoding.ASCII.GetBytes(postBodyData.ToCharArray());
-
-		WWW www = new WWW("http://35.243.154.34:8090/api/v1/usuario/auth", pData, encabezados);
+		WWW www = Acciones.IngresarConUsuario(nombreDeUsuario, contrasenia);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
