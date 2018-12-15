@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a61c9d796e0d0e44cb91225737fab82f
+guid: a832cca728bd8834b9a2de1b11915c2a
 TextureImporter:
   fileIDToRecycleName:
     21300000: Catapulta Muriendo_0
@@ -123,14 +123,14 @@ TextureImporter:
         y: 730
         width: 165
         height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8ee144ed9d43d84eb3f0a036aed7513
+      spriteID: c18ab9d2c85210246828cf9750b38946
       vertices: []
       indices: 
       edges: []
@@ -143,14 +143,14 @@ TextureImporter:
         y: 730
         width: 165
         height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68ac34564c39bd149bea86f7c8570063
+      spriteID: 401ec4e9591802c45b542362158491db
       vertices: []
       indices: 
       edges: []
@@ -163,14 +163,14 @@ TextureImporter:
         y: 730
         width: 165
         height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68a8f1f4865ab274698712fbf0270ef8
+      spriteID: 195724ba98a4eae4499b1bba3bf9381d
       vertices: []
       indices: 
       edges: []
@@ -183,14 +183,14 @@ TextureImporter:
         y: 730
         width: 164
         height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3375b30123c47b42ba7ad5272623017
+      spriteID: ee4f93feedbd5614584dd94f9bf4271d
       vertices: []
       indices: 
       edges: []
@@ -203,14 +203,14 @@ TextureImporter:
         y: 551
         width: 167
         height: 101
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 098e6a809b1f72646a643713f5fa3bba
+      spriteID: 75c998a5e2107434cb1a3075a6879363
       vertices: []
       indices: 
       edges: []
@@ -223,14 +223,14 @@ TextureImporter:
         y: 551
         width: 168
         height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 704245c1cc053694193cde8e92382444
+      spriteID: 6309691ff66938e4bae5342b1cc01b6b
       vertices: []
       indices: 
       edges: []
@@ -243,14 +243,14 @@ TextureImporter:
         y: 551
         width: 168
         height: 79
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49bd91cea397a984b8ee9930634a66f4
+      spriteID: b6b5ff9a209a1a64d81ea94a864a43b2
       vertices: []
       indices: 
       edges: []
@@ -263,14 +263,14 @@ TextureImporter:
         y: 551
         width: 159
         height: 129
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30278dd591d6136469f8a2a63403358a
+      spriteID: 669e2ba52bdad084683af833311187e8
       vertices: []
       indices: 
       edges: []
@@ -279,18 +279,18 @@ TextureImporter:
       name: Catapulta Muriendo_9
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 373
-        width: 156
+        width: 154
         height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd574f98d6e2a5d4dad6574448299ac3
+      spriteID: e6936eb3f9c87b741bb23d951bedc27e
       vertices: []
       indices: 
       edges: []
@@ -299,18 +299,18 @@ TextureImporter:
       name: Catapulta Muriendo_11
       rect:
         serializedVersion: 2
-        x: 178
-        y: 372
-        width: 160
-        height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 183
+        y: 373
+        width: 155
+        height: 148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d679de8c632def4d91378bf5ba2b86a
+      spriteID: d6ca2b61bf79bbc41bf17c2bb2e3c26d
       vertices: []
       indices: 
       edges: []
@@ -323,14 +323,14 @@ TextureImporter:
         y: 373
         width: 154
         height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef3aba64dc312c447806456499d5d563
+      spriteID: 299607309b58a654f87c1af324213e1c
       vertices: []
       indices: 
       edges: []
@@ -343,14 +343,14 @@ TextureImporter:
         y: 373
         width: 153
         height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fda36be2f8ca8574fb62a791de7fabc8
+      spriteID: 41e045d1379d1c441b34b66a516433e9
       vertices: []
       indices: 
       edges: []
@@ -363,14 +363,14 @@ TextureImporter:
         y: 194
         width: 153
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0324e2fcd296c04b87183623f6ff0f9
+      spriteID: 432c4f2f393bf214691b46f4e153a83c
       vertices: []
       indices: 
       edges: []
@@ -383,14 +383,14 @@ TextureImporter:
         y: 194
         width: 154
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf2359294fc1b974c901b17c1b039f70
+      spriteID: c665cc01753fbcf47ac16fda34dbc4e2
       vertices: []
       indices: 
       edges: []
@@ -403,14 +403,14 @@ TextureImporter:
         y: 194
         width: 154
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585345d2f89ee834aa2be2d031f4e3ad
+      spriteID: 8f321c87a68fdae418baabbb0eb01787
       vertices: []
       indices: 
       edges: []
@@ -423,14 +423,14 @@ TextureImporter:
         y: 194
         width: 153
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c8fedee17e03a4fa168c62a071c090
+      spriteID: 2b9b1109881a3f04f98f0b6bc3fcb7ea
       vertices: []
       indices: 
       edges: []
@@ -443,14 +443,14 @@ TextureImporter:
         y: 15
         width: 153
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aa48a6a5a00a5d4f87c19fe4525d60b
+      spriteID: edf91af3268e1ef4aba915173c6dc1e1
       vertices: []
       indices: 
       edges: []
@@ -463,14 +463,14 @@ TextureImporter:
         y: 15
         width: 154
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650ef4df4c8f18e4987f9959318975e4
+      spriteID: 42b744ed9e369174db66ef636790b0aa
       vertices: []
       indices: 
       edges: []
@@ -483,14 +483,14 @@ TextureImporter:
         y: 15
         width: 154
         height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616170c9885f6134685d4cd0fd74599c
+      spriteID: 5b666b80b509ff54ebaa01d2d51d0be1
       vertices: []
       indices: 
       edges: []
@@ -498,7 +498,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a6a06887f7d146747b3fa89722dbfb54
+    spriteID: cc645345b31049d49bb29cf413282096
     vertices: []
     indices: 
     edges: []

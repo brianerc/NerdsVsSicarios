@@ -64,7 +64,7 @@ public class Catapulta : Estructura
 
 	//Metodo que se llama desde la animacion de la catapulta. Esto es para que la catapulta dispare justo
 	//cuando lo hace en la animacion. De esta forma optimizamos el momento de disparo
-	private void Fire()
+	public void Fire()
 	{
 		switch (balaNum)
 		{
