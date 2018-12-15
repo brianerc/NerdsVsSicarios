@@ -8,7 +8,6 @@ public class ComienzoPartida : Comenzar {
     public GameObject jugador;
     public GameObject jugador2;
     public Grid matriz;
-    public GameObject temporizador;
     public GameObject energiaNerd;
     public GameObject energiaSicario;
     public GameObject transicion;
@@ -19,8 +18,6 @@ public class ComienzoPartida : Comenzar {
         Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(jugador2);
-        temporizador.GetComponent<Temporizador>().transicion = transicion;
-        Instantiate(temporizador);
         Instantiate(energiaNerd);
         Instantiate(energiaSicario);
 	}
