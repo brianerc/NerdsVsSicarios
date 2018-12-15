@@ -8,10 +8,10 @@ using Assets.Scripts.ServidorDTO;
 public class CargarCartas : MonoBehaviour
 {
 
-	public RectTransform myPanel;
-	public GameObject myTextPrefab;
-	private int myNumber = 0;
-	private GameObject newText;
+	public RectTransform miPanel;
+	public GameObject spritePrefab;
+	private int miNumero = 0;
+	private GameObject textoNuevo;
 	public Text error;
 
 	// Use this for initialization
@@ -61,10 +61,11 @@ public class CargarCartas : MonoBehaviour
 			for (int i = 0; i < resultObj.cartas.Count; i++)
 			{
 				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
-				GameObject newText = (GameObject)Instantiate(myTextPrefab);
-				newText.transform.SetParent(myPanel);
-				newText.GetComponent<Text>().text = carta.ToString();
-				myNumber++;
+				GameObject nuevoSprite = (GameObject)Instantiate(spritePrefab);
+                nuevoSprite.transform.SetParent(miPanel);
+                nuevoSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + carta.ToString());
+                Debug.Log("Sprites/Partida/Lanzadores/" + carta.ToString());
+                miNumero++;
 			}
 		}
 	}
