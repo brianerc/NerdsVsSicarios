@@ -5,10 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Assets.Scripts.ServidorDTO;
 using Assets.Servidor;
+using System;
 
 public class CargarCartas : MonoBehaviour
 {
-
+    public Dictionary<string,string> idCarta;
 	public RectTransform miScrollPanel;
     public string cartaElegida;
 	public GameObject imagenPrefab;
@@ -23,9 +24,12 @@ public class CargarCartas : MonoBehaviour
     private GameObject cartaMejorada;
     private float tiempoTouch;
     private float tiempoMaximoTouch = 0.7f;
+    bool puedoElegir;
     // Use this for initialization
     void Start()
 	{
+        puedoElegir = false;
+        idCarta = new Dictionary<string, string>();
 		error.text = "";
 		//nextMessage = Time.time + 1f;
 		StartCoroutine(ObtenerCartas());
@@ -61,10 +65,9 @@ public class CargarCartas : MonoBehaviour
             }
             else if (hit.collider && hit.collider.tag == "MejorarCarta")
             {
-                if (cartaElegida != null)
+                if (cartaElegida != null && puedoElegir)
                 {
-                    Debug.Log("Mal");
-                    MostrarMejorarCarta(cartaElegida);
+                    MejorarCarta();
                 }
             }
         }
@@ -95,16 +98,48 @@ public class CargarCartas : MonoBehaviour
             } 
         }
     }
-    private void MostrarMejorarCarta(string nombre) {
+
+    private IEnumerator MejorarCarta()
+    {
+        WWW www = Acciones.SubirDeNivelCarta(cartaElegida);
+        yield return www;
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            error.text = www.error;
+            error.color = Color.red;
+            if (error.text.Equals("400 Bad Request"))
+            {
+                error.text = "No se pudo mejorar la carta";
+            }
+            else
+            {
+                error.text = "Error con el servidor";
+            }
+            Debug.Log(www.error);
+            Debug.Log("EN ERROR");
+        }
+        else
+        {
+            MostrarElegirCarta();
+        }
+    }
+
+    private void MostrarMejorarCarta(string nombre)
+    {
+        
         miScrollPanel.gameObject.SetActive(false);
         flechaDerecha.SetActive(false);
         flechaIzquierda.SetActive(false);
         panelMejorar.gameObject.SetActive(true);
-        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas cerrado");
-        cartaAMejorar.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + nombre);
+        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas cerrado");
+        cartaAMejorar.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
         cartaAMejorar.name = nombre;
-        cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + nombre);
+        int nivel = int.Parse(nombre.Substring(nombre.Length - 1)) + 1;
+        string nombreBase = nombre.Substring(0, nombre.Length - 1);
+        nombre = nombreBase + nivel;
+        cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
         cartaMejorada.name = nombre;
+        cartaElegida = nombre.Substring(nombre.Length - 2);
     }
     private void MostrarElegirCarta()
     {
@@ -143,12 +178,13 @@ public class CargarCartas : MonoBehaviour
 				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
 				GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
                 nuevoSprite.transform.SetParent(miScrollPanel);
-                nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + carta.ToString());
+                nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + carta.ToString());
                 nuevoSprite.name = carta.ToString();
                 nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
                 nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
                 xPosicion = xPosicion + 110;
                 miNumero++;
+                idCarta.Add(carta.nombre_completo, carta._id);
 			}
 		}
 	}
@@ -157,5 +193,9 @@ public class CargarCartas : MonoBehaviour
 	{
 		SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
 	}
+    public void CargarUsuario()
+    {
+        int exp = ManejadorUsuario.ObtenerUsuario().nivel;
+    }
 
 }
