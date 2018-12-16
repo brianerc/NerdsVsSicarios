@@ -14,5 +14,6 @@ namespace Assets.Servidor
 		public static string SubirDeNivelUrl = HOST + "/usuario/5c15685ffa79dd5c30f74616/nivel";
 		public static string SubirDeNivelCartaUrl = HOST + "usuario/5c1570c36a98361c780b4b34/carta/";
 		public static string ObtenerUsuarioUrl = HOST + "usuario/5c1570c36a98361c780b4b34";
+		public static string CambiarPuntos = HOST + "usuario/5c1570c36a98361c780b4b34/puntos";
 	}
 }

@@ -45,5 +45,11 @@ namespace Assets.Servidor
 			string postCuerpo = null;
 			return ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
 		}
+
+		internal static WWW CambiarPuntos(int puntos)
+		{
+			string postCuerpo = "{\"puntos\":\"" + puntos + "\"}";
+			return ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, false);
+		}
 	}
 }

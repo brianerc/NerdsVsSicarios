@@ -605,6 +605,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transicion: {fileID: 1977958477}
+  jugadorWeabooLord: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+    type: 3}
+  jugadorItguyLord: {fileID: 0}
+  jugadorEmoLord: {fileID: 0}
 --- !u!1 &1588645438
 GameObject:
   m_ObjectHideFlags: 0
