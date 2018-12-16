@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.ServidorDTO
+namespace Assets.Servidor.ServidorDTO
 {
 	[Serializable]
-	public class CartaDTO
+	class UsuarioDTO
 	{
 		public bool exito;
-		public List<Carta> cartas;
+		public Usuario usuario;
 	}
 
 	[Serializable]
-	public class Carta
+	class Usuario
+	{
+		public string _id;
+		public int nivel;
+		public string nombreusuario;
+		public string contrasenia;
+		public List<CartaUsuario> cartas;
+	}
+
+	[Serializable]
+	public class CartaUsuario
 	{
 		public bool aprendida;
 		public string _id;
@@ -26,20 +36,5 @@ namespace Assets.Scripts.ServidorDTO
 		public int costo_para_desbloquear;
 		public int velocidad;
 		public int limite_nivel;
-
-		public override bool Equals(object obj)
-		{
-			return base.Equals(obj);
-		}
-
-		public override int GetHashCode()
-		{
-			return base.GetHashCode();
-		}
-
-		public override string ToString()
-		{
-			return nombre + " N" + nivel;
-		}
 	}
 }

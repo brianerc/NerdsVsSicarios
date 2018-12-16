@@ -14,18 +14,36 @@ namespace Assets.Servidor
 			return ApiComunicacion.SolicitudPOST(Endpoints.RegistrarUrl, postBodyData, false);
 		}
 
-		internal static WWW IngresarConUsuario(string nombreDeUsuario, string contrasenia)
+		internal static WWW ObtenerInformacionUsuario()
 		{
-			string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
-			return ApiComunicacion.SolicitudPOST(Endpoints.IngresarUrl, postBodyData, false);
+			Dictionary<string, string> headers = new Dictionary<string, string>();
+			headers.Add("Content-Type", "application/json");
+			return ApiComunicacion.SolicitudGET(Endpoints.ObtenerUsuarioUrl, headers, true);
 		}
 
+		internal static WWW IngresarConUsuario(string nombreDeUsuario, string contrasenia)
+		{
+			string postCuerpo = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
+			return ApiComunicacion.SolicitudPOST(Endpoints.IngresarUrl, postCuerpo, false);
+		}
+
+		internal static WWW SubirDeNivel()
+		{
+			string postBodyData = null;
+			return ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelUrl, postBodyData, true);
+		}
+		
 		internal static WWW CargarCartas()
 		{
-			
 			Dictionary<string, string> headers = new Dictionary<string, string>();
 			headers.Add("Content-Type", "application/json");
 			return ApiComunicacion.SolicitudGET(Endpoints.ObtenerCartasUrl, headers, true);
+		}
+
+		internal static WWW SubirDeNivelCarta(string cartaId)
+		{
+			string postCuerpo = null;
+			return ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
 		}
 	}
 }

@@ -12,9 +12,20 @@ namespace Assets.Servidor
 		{
 			Dictionary<string, string> headers = new Dictionary<string, string>();
 			headers.Add("Content-Type", "application/json");
-
-			byte[] pData = System.Text.Encoding.ASCII.GetBytes(cuerpo.ToCharArray());
-
+			if (userToken)
+			{
+				string token = PlayerPrefs.GetString("token");
+				headers.Add("token", token);
+			}
+			byte[] pData;
+			if (cuerpo != null)
+			{
+				pData = System.Text.Encoding.ASCII.GetBytes(cuerpo.ToCharArray());
+			}
+			else
+			{
+				pData = null;
+			}
 			return new WWW(uri, pData, headers);
 		}
 

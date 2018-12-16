@@ -38,7 +38,7 @@ public class CargarCartas : MonoBehaviour
 			error.color = Color.red;
 			if (error.text.Equals("400 Bad Request"))
 			{
-				error.text = "Usuario o contraseña incorrecta";
+				error.text = "No se pudo obtener cartas";
 			}
 			else
 			{
