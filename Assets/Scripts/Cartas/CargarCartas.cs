@@ -25,6 +25,7 @@ public class CargarCartas : MonoBehaviour
     private float tiempoTouch;
     private float tiempoMaximoTouch = 0.7f;
     bool puedoElegir;
+    int exp;
     // Use this for initialization
     void Start()
 	{
@@ -42,6 +43,7 @@ public class CargarCartas : MonoBehaviour
         panelMejorar.gameObject.SetActive(false);
         flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
         flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
+        CargarExperiencia();
     }
 	// Update is called once per frame
 	void Update()
@@ -137,9 +139,21 @@ public class CargarCartas : MonoBehaviour
         int nivel = int.Parse(nombre.Substring(nombre.Length - 1)) + 1;
         string nombreBase = nombre.Substring(0, nombre.Length - 1);
         nombre = nombreBase + nivel;
-        cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
-        cartaMejorada.name = nombre;
-        cartaElegida = nombre.Substring(nombre.Length - 2);
+        if (nivel < 5) {
+            cartaMejorada.SetActive(true);
+            cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
+            cartaMejorada.name = nombre;
+            cartaElegida = nombre.Substring(nombre.Length - 2);
+            if (exp > 0)
+            {
+
+            }
+        } else
+        {
+            cartaMejorada.SetActive(false);
+
+        }
+
     }
     private void MostrarElegirCarta()
     {
@@ -193,9 +207,9 @@ public class CargarCartas : MonoBehaviour
 	{
 		SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
 	}
-    public void CargarUsuario()
+    public void CargarExperiencia()
     {
-        int exp = ManejadorUsuario.ObtenerUsuario().nivel;
+        exp = ManejadorUsuario.ObtenerUsuario().puntos;
     }
 
 }
