@@ -6,26 +6,26 @@ using System.Text;
 namespace Assets.Scripts.ServidorDTO
 {
 	[Serializable]
-	class CartaDTO
+	public class CartaDTO
 	{
 		public bool exito;
 		public List<Carta> cartas;
-
-	
 	}
 
 	[Serializable]
-	class Carta
+	public class Carta
 	{
-		public int nivel;
 		public bool aprendida;
 		public string _id;
+
+		public int nivel;
 		public string tipo;
 		public string nombre;
+		public string nombre_completo;
 		public int danio;
-		public int costoParaDesbloquear;
+		public int costo_para_desbloquear;
 		public int velocidad;
-        public string nombre_completo;
+		public int limite_nivel;
 
 		public override bool Equals(object obj)
 		{
@@ -39,7 +39,7 @@ namespace Assets.Scripts.ServidorDTO
 
 		public override string ToString()
 		{
-			return nombre_completo + " N" + nivel;
+			return nombre + " N" + nivel;
 		}
 	}
 }
