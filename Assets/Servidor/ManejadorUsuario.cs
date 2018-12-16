@@ -1,4 +1,5 @@
-﻿using Assets.Servidor.ServidorDTO;
+﻿using Assets.Scripts.ServidorDTO;
+using Assets.Servidor.ServidorDTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,9 +12,11 @@ namespace Assets.Servidor
 	class ManejadorUsuario
 	{
 		private static Usuario usuario = null;
+		public static List<Assets.Scripts.ServidorDTO.Carta> cartasUsuario = null;
 
 		public static IEnumerator CargarUsuario()
 		{
+			Debug.Log("Cargando usuario");
 			if (usuario == null)
 			{
 				WWW www = Acciones.ObtenerInformacionUsuario();

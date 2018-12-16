@@ -11,6 +11,7 @@ public class MenuPrincipal : MonoBehaviour
 	private string nombreEscena;
 	public GameObject transicion;
 	private bool primeraPrueba = false;
+
 	void Start()
 	{
 		string token = PlayerPrefs.GetString("token");
@@ -40,16 +41,16 @@ public class MenuPrincipal : MonoBehaviour
 	void Update()
 	{
 		Usuario usuario = ManejadorUsuario.ObtenerUsuario();
-		//if (usuario != null)
-		//{
-		//	//Debug.Log(usuario._id);
-		//	//if (!primeraPrueba)
-		//	//{
-		//	//	primeraPrueba = true;
-		//	//	NivelesCartas niv = new NivelesCartas();
-		//	//	niv.SubirDeNivelCarta(usuario.cartas[0]._id);
-		//	//}
-		//}
+		if (usuario != null)
+		{
+			Debug.Log(usuario._id);
+			//if (!primeraPrueba)
+			//{
+			//	primeraPrueba = true;
+			//	NivelesCartas niv = new NivelesCartas();
+			//	niv.SubirDeNivelCarta(usuario.cartas[0]._id);
+			//}
+		}
 		RaycastHit2D hit;
 		if (Input.touchCount < 1)
 		{
