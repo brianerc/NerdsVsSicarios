@@ -39,7 +39,7 @@ namespace Assets.Scripts.ServidorDTO
 
 		public override string ToString()
 		{
-			return nombre + " N" + nivel;
+			return nombre_completo + " N" + nivel;
 		}
 	}
 }
