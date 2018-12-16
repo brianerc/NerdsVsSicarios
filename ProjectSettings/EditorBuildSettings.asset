@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 9951872504c4b52438d2a9bff054a1ab
+  - enabled: 1
+    path: Assets/Scenes/Partida.unity
+    guid: 5f39d91488b9cac4ba38b7a377083554
+  - enabled: 1
+    path: Assets/Scenes/Nerd_Victoria.unity
+    guid: 8b6b3b2e05de3a74fa9225fb6987310e
+  - enabled: 1
+    path: Assets/Scenes/Nerd_Derrota.unity
+    guid: 78410700174e7094c9d9342df32c0bd7
+  - enabled: 1
+    path: Assets/Scenes/Sicario_Derrota.unity
+    guid: ef9f5dc0dfac42f4693bc45fbb5d9151
+  - enabled: 1
+    path: Assets/Scenes/Sicario_Victoria.unity
+    guid: e784cb5ea274e86409b4af79af1460be
+  - enabled: 1
+    path: Assets/Scenes/PartidaSolo.unity
+    guid: c068d5a24fb0c55419fb707e953da05c
+  - enabled: 1
+    path: Assets/Scenes/UsuarioAcceso.unity
+    guid: c5970820821acb24ab25301d63c6b816
+  - enabled: 1
+    path: Assets/Scenes/UsuarioRegistrar.unity
+    guid: 49bb3dae31841824f88a7cf4ce0fe290
+  - enabled: 1
+    path: Assets/Scenes/Cartas.unity
+    guid: a38b6e2173f778748b1513505f18e7cc
+  m_configObjects: {}
