@@ -16,20 +16,19 @@ public class CargarCartas : MonoBehaviour
 	public Text error;
     public float xPosicion =    50;
     public float yPosicion =    50;
-    private string tagSeleccionado;
-    bool elegido;
     public RectTransform panelMejorar;
     private GameObject flechaDerecha;
     private GameObject flechaIzquierda;
     private GameObject cartaAMejorar;
     private GameObject cartaMejorada;
+    private float tiempoTouch;
+    private float tiempoMaximoTouch = 0.7f;
     // Use this for initialization
     void Start()
 	{
 		error.text = "";
 		//nextMessage = Time.time + 1f;
 		StartCoroutine(ObtenerCartas());
-        elegido = false;
         cartaAMejorar = (GameObject)Instantiate(imagenPrefab);
         cartaAMejorar.transform.SetParent(panelMejorar);
         cartaAMejorar.transform.localPosition = new Vector2(xPosicion, yPosicion);
@@ -50,45 +49,50 @@ public class CargarCartas : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position), Input.GetTouch(0).position);
 
         Touch touch = Input.GetTouch(0);
-        if (touch.phase == TouchPhase.Moved)
-        {
-            if (hit.collider && tagSeleccionado != hit.collider.tag)
-            {
-                elegido = false;
-            } 
-        }
         if (touch.phase == TouchPhase.Began)
         {
-            if (hit.collider )
+            if (hit.collider && hit.collider.tag.Contains("Lanzador"))
             {
-                elegido = true;
-                tagSeleccionado = hit.collider.tag;
+                tiempoTouch = 0;
             }
-            else
+            else if (hit.collider && hit.collider.tag == "MostrarCartas")
             {
-                elegido = false;
-                tagSeleccionado = "";
+                MostrarElegirCarta();
+            }
+            else if (hit.collider && hit.collider.tag == "MejorarCarta")
+            {
+                if (cartaElegida != null)
+                {
+                    Debug.Log("Mal");
+                    MostrarMejorarCarta(cartaElegida);
+                }
             }
         }
+        if (touch.phase == TouchPhase.Moved)
+        {
+            tiempoTouch = 0;
+        }
+        if (touch.phase == TouchPhase.Stationary)
+        {
+            if (hit.collider && hit.collider.tag.Contains("Lanzador") && tiempoTouch< tiempoMaximoTouch)
+            {
+                tiempoTouch=tiempoTouch +Time.deltaTime;
+            } else if(hit.collider&&hit.collider.tag.Contains("Lanzador"))
+            {
+                MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
+            }
+        }
+  
         if (touch.phase == TouchPhase.Ended)
         {
-            if (hit.collider && hit.collider.tag.Contains("Lanzador" ) && elegido)
+            if (hit.collider && hit.collider.tag.Contains("Lanzador" ) && tiempoTouch>tiempoMaximoTouch)
             {
                 MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
             }
             else if(hit.collider && hit.collider.tag.Contains("Lanzador"))
             {
                 cartaElegida = GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name;
-            } else if(hit.collider && hit.collider.tag=="MostrarCartas")
-            {
-                MostrarElegirCarta();
-            } else if(hit.collider && hit.collider.tag == "MejorarCarta")
-            {
-                if (cartaElegida != null)
-                {
-                    MostrarMejorarCarta(cartaElegida);
-                }
-            }
+            } 
         }
     }
     private void MostrarMejorarCarta(string nombre) {
