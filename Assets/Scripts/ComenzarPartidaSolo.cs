@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ComenzarPartidaSolo : Comenzar {
     public GameObject fondo;
-    public GameObject jugador;
+    public static GameObject jugador;
     public Grid matriz;
     public GameObject energiaNerd;
     public GameObject transicion;
@@ -16,7 +16,7 @@ public class ComenzarPartidaSolo : Comenzar {
 
 	void Start () {
         Instantiate(fondo);
-        Instantiate(jugador);
+		Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(energiaNerd);
     }

@@ -7,6 +7,10 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 {
 	private string nombreEscena;
 	public GameObject transicion;
+	public GameObject jugadorWeabooLord;
+	public GameObject jugadorItguyLord;
+	public GameObject jugadorEmoLord;
+
 
 	IEnumerator LoadScene()
 	{
@@ -32,7 +36,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 			{
 				if (hit.transform.name == "WeabooLord")
 				{
-					
+					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
 					nombreEscena = "PartidaSolo";
 					StartCoroutine(LoadScene());
 				}
