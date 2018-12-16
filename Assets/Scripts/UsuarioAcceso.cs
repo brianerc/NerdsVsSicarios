@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Assets.Scripts.ServidorDTO;
 using UnityEngine.SceneManagement;
+using Assets.Servidor;
 
 public class UsuarioAcceso : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class UsuarioAcceso : MonoBehaviour
 	public Text error;
 	public Button boton;
     private string nombreEscena;
+
 	public void Start()
 	{
 		string token = PlayerPrefs.GetString("token");
@@ -29,17 +31,17 @@ public class UsuarioAcceso : MonoBehaviour
 			Debug.Log("No existe token");
 		}
 	}
-    IEnumerator LoadScene()
-    {
-        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadSceneAsync(nombreEscena);
-    }
-    public void irAEscenaRegistrarse()
+	IEnumerator LoadScene()
 	{
-        nombreEscena = "UsuarioRegistrar";
-        StartCoroutine(LoadScene());
-    }
+		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+		yield return new WaitForSeconds(1.0f);
+		SceneManager.LoadSceneAsync(nombreEscena);
+	}
+	public void irAEscenaRegistrarse()
+	{
+		nombreEscena = "UsuarioRegistrar";
+		StartCoroutine(LoadScene());
+	}
 
 	public void crearUsuario()
 	{
@@ -55,14 +57,8 @@ public class UsuarioAcceso : MonoBehaviour
 		error.color = Color.black;
 		error.text = "Cargando...";
 		boton.enabled = false;
-		Dictionary<string, string> encabezados = new Dictionary<string, string>();
-		encabezados.Add("Content-Type", "application/json");
 
-		string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
-
-		byte[] pData = System.Text.Encoding.ASCII.GetBytes(postBodyData.ToCharArray());
-
-		WWW www = new WWW("http://35.243.154.34:8090/api/v1/usuario/auth", pData, encabezados);
+		WWW www = Acciones.IngresarConUsuario(nombreDeUsuario, contrasenia);
 
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
@@ -90,9 +86,9 @@ public class UsuarioAcceso : MonoBehaviour
 				PlayerPrefs.SetString("token", token);
 				error.color = Color.green;
 				error.text = "Usuario ingresado";
-                nombreEscena = "MenuPrincipal";
-                StartCoroutine(LoadScene());
-            }
+				nombreEscena = "MenuPrincipal";
+				StartCoroutine(LoadScene());
+			}
 		}
 		boton.enabled = true;
 	}
