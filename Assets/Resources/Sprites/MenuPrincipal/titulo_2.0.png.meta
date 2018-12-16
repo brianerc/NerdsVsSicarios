@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8735c36e43ae0745b2f5002d83706ef
+guid: 0d8eb21973dff3342bad71bf7f391f0c
 TextureImporter:
   fileIDToRecycleName:
     21300000: titulo_2.0_0
@@ -83,7 +83,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
-    buildTarget: iPhone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +94,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -111,10 +111,10 @@ TextureImporter:
       name: titulo_2.0_0
       rect:
         serializedVersion: 2
-        x: 168
-        y: 324
-        width: 575
-        height: 396
+        x: 52
+        y: 100
+        width: 178
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,7 +122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 142dbd56d32a0524ca18024b3fcec9ad
+      spriteID: f268483698cc2124db1d71e724699ed1
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: titulo_2.0_1
       rect:
         serializedVersion: 2
-        x: 1031
-        y: 324
-        width: 575
-        height: 396
+        x: 318
+        y: 100
+        width: 178
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68df0ae8dfe19db4faa8bea4ed661361
+      spriteID: 1641b658b87d7024e8d57b6b5c7fde16
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 34f69ff7e7adc95458e4886774202928
+    spriteID: f04374966e955074e8fe742f8eb260af
     vertices: []
     indices: 
     edges: []

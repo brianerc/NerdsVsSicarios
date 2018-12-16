@@ -20,7 +20,7 @@ public class ComienzoPartida : Comenzar {
         Instantiate(jugador2);
         Instantiate(energiaNerd);
         Instantiate(energiaSicario);
-	}
+    }
     IEnumerator LoadScene()
     {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");

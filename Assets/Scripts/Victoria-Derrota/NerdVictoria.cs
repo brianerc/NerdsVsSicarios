@@ -10,5 +10,4 @@ using UnityEngine.SceneManagement;
 public class NerdVictoria : FinalPartida
 {
 
-
 }

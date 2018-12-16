@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053286752566452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6025004, y: -1.7175, z: 0}
+  m_LocalPosition: {x: 5.6025004, y: -0.77250004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -408,9 +408,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaBase: 10
   objetivo: {fileID: 0}
-  danoBase: 2
+  danoBase: 4
   nivel: 1
-  nombre: 
+  nombre: "Bailar\xEDn Estrella"
   tiempoParalizado: 0
   velocidad: {x: -2, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}

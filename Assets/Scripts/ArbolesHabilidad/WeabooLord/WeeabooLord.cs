@@ -24,8 +24,8 @@ public class WeeabooLord : MazoNerd {
         dakimakura.GetComponent<ObjetoTablero>().nivel = 1;
         mochilaPegajosa.GetComponent<ObjetoTablero>().nivel = 1;
         InsertarCarta(new CartaCatapulta(catapulta));
-        InsertarCarta(new CartaDakimakura(dakimakura));
         InsertarCarta(new CartaMochilaPegajosa(mochilaPegajosa));
+        InsertarCarta(new CartaDakimakura(dakimakura));
         MostrarLanzadores();
         
     }

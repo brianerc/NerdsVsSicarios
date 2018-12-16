@@ -10,7 +10,6 @@ public class ComenzarPartidaSolo : Comenzar {
     public GameObject fondo;
     public GameObject jugador;
     public Grid matriz;
-    public GameObject temporizador;
     public GameObject energiaNerd;
     public GameObject transicion;
     private string nombreEscena;

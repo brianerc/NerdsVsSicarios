@@ -7,16 +7,17 @@ using UnityEngine.SceneManagement;
 /// MonoBehaviour correspondiente a la escena de final de partida
 /// </summary>
 abstract public class FinalPartida : MonoBehaviour {
-
     public GameObject transicion;
     private string nombreEscena;
+    void Start () {
+	}
     IEnumerator LoadScene()
     {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadSceneAsync(nombreEscena);
     }
-    private void Update()
+    void Update()
     {
         if (Input.touchCount < 1)
         {
@@ -27,11 +28,9 @@ abstract public class FinalPartida : MonoBehaviour {
         Touch touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
         {
-            if (hit.collider && hit.collider.tag == this.gameObject.tag)
-            {
                 nombreEscena = "MenuPrincipal";
                 StartCoroutine(LoadScene());
-            }
         }
     }
 }
+

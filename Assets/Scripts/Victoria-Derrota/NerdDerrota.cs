@@ -8,5 +8,5 @@ using UnityEngine.SceneManagement;
 /// lo correspondiente para aumentar el arbol de habilidad del mismo 
 /// </summary>
 public class NerdDerrota : FinalPartida {
-
+  
 }

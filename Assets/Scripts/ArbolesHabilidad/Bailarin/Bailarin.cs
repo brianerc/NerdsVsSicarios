@@ -18,10 +18,10 @@ public class Bailarin : Mazo
         cantidadRegeneracionEnergia = 30;
         tiempoRegeneracionEnergia = 5;
         mazo = new List<Carta>();
-
         InsertarCarta(new CartaBailarinBase(bailarinBase));
-        InsertarCarta(new CartaBailarinV2(bailarinV2));
         InsertarCarta(new CartaBailarinV1(bailarinV1));
+        InsertarCarta(new CartaBailarinV2(bailarinV2));
+
 
         MostrarLanzadores();
 
