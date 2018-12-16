@@ -32,6 +32,17 @@ TagManager:
   - "LanzadorBailar\xEDn Base"
   - "LanzadorBailar\xEDn Medio"
   - "LanzadorBailar\xEDn Estrella"
+  - LanzadorPunk Girl Media
+  - LanzadorDrone 2.0 Idle
+  - LanzadorDrone Idle
+  - LanzadorMochila cierra
+  - LanzadorMochila Honda
+  - LanzadorMochila Mina
+  - Flecha
+  - FlechaDerecha
+  - FlechaIzquierda
+  - MejorarCarta
+  - MostrarCartas
   layers:
   - Default
   - TransparentFX

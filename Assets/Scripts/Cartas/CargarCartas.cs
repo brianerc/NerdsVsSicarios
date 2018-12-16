@@ -8,15 +8,20 @@ using Assets.Scripts.ServidorDTO;
 public class CargarCartas : MonoBehaviour
 {
 
-	public RectTransform miPanel;
+	public RectTransform miScrollPanel;
+    public string cartaElegida;
 	public GameObject imagenPrefab;
 	private int miNumero = 0;
-	private GameObject textoNuevo;
 	public Text error;
     public float xPosicion =    50;
     public float yPosicion =    50;
     private string tagSeleccionado;
     bool elegido;
+    public RectTransform panelMejorar;
+    private GameObject flechaDerecha;
+    private GameObject flechaIzquierda;
+    private GameObject cartaAMejorar;
+    private GameObject cartaMejorada;
     // Use this for initialization
     void Start()
 	{
@@ -24,7 +29,16 @@ public class CargarCartas : MonoBehaviour
 		//nextMessage = Time.time + 1f;
 		StartCoroutine(ObtenerCartas());
         elegido = false;
-	}
+        cartaAMejorar = (GameObject)Instantiate(imagenPrefab);
+        cartaAMejorar.transform.SetParent(panelMejorar);
+        cartaAMejorar.transform.localPosition = new Vector2(xPosicion, yPosicion);
+        cartaMejorada = (GameObject)Instantiate(imagenPrefab);
+        cartaMejorada.transform.SetParent(panelMejorar);
+        cartaMejorada.transform.localPosition = new Vector2(xPosicion+210, yPosicion);
+        panelMejorar.gameObject.SetActive(false);
+        flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
+        flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
+    }
 	// Update is called once per frame
 	void Update()
 	{
@@ -59,12 +73,45 @@ public class CargarCartas : MonoBehaviour
         {
             if (hit.collider && hit.collider.tag.Contains("Lanzador" ) && elegido)
             {
-                miPanel.gameObject.SetActive(false);
+                MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
+            }
+            else if(hit.collider && hit.collider.tag.Contains("Lanzador"))
+            {
+                cartaElegida = GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name;
+            } else if(hit.collider && hit.collider.tag=="MostrarCartas")
+            {
+                MostrarElegirCarta();
+            } else if(hit.collider && hit.collider.tag == "MejorarCarta")
+            {
+                if (cartaElegida != null)
+                {
+                    MostrarMejorarCarta(cartaElegida);
+                }
             }
         }
     }
+    private void MostrarMejorarCarta(string nombre) {
+        miScrollPanel.gameObject.SetActive(false);
+        flechaDerecha.SetActive(false);
+        flechaIzquierda.SetActive(false);
+        panelMejorar.gameObject.SetActive(true);
+        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas cerrado");
+        cartaAMejorar.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + nombre);
+        cartaAMejorar.name = nombre;
+        cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + nombre);
+        cartaMejorada.name = nombre;
+    }
+    private void MostrarElegirCarta()
+    {
+        
+        miScrollPanel.gameObject.SetActive(true);
+        flechaDerecha.SetActive(true);
+        flechaIzquierda.SetActive(true);
+        panelMejorar.gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas abierto");
 
-	public IEnumerator ObtenerCartas()
+    }
+    public IEnumerator ObtenerCartas()
 	{
 		Dictionary<string, string> headers = new Dictionary<string, string>();
 		headers.Add("Content-Type", "application/json");
@@ -99,8 +146,9 @@ public class CargarCartas : MonoBehaviour
 			{
 				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
 				GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
-                nuevoSprite.transform.SetParent(miPanel);
+                nuevoSprite.transform.SetParent(miScrollPanel);
                 nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + carta.ToString());
+                nuevoSprite.name = carta.ToString();
                 nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
                 nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
                 xPosicion = xPosicion + 110;
