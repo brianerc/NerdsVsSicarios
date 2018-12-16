@@ -13,15 +13,27 @@ public class MenuPrincipal : MonoBehaviour
 	private bool primeraPrueba = false;
 	void Start()
 	{
-		StartCoroutine(ManejadorUsuario.CargarUsuario());
+		string token = PlayerPrefs.GetString("token");
+		if (token == null || token.Equals(""))
+		{
+			Debug.Log("Existe token, validandolo...");
+			SceneManager.LoadScene("UsuarioAcceso", LoadSceneMode.Single);
+		}
+		else
+		{
+			StartCoroutine(ManejadorUsuario.CargarUsuario());
+		}
 	}
 
 	IEnumerator LoadScene()
 	{
 		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
 		yield return new WaitForSeconds(1.0f);
+		Debug.Log(nombreEscena);
+
 		SceneManager.LoadSceneAsync(nombreEscena);
 	}
+
 	/// <summary>
 	/// Logica correspondiente a las seleccion de las distintas opciones del menu principal
 	/// </summary>
@@ -62,7 +74,8 @@ public class MenuPrincipal : MonoBehaviour
 				}
 				else if (hit.transform.tag == "JugarSolo")
 				{
-					nombreEscena = "PartidaSolo";
+					Debug.Log("Jugar solo...");
+					nombreEscena = "SeleccionNerd";
 					StartCoroutine(LoadScene());
 				}
 				else if (hit.transform.tag == "Cartas")
