@@ -13,9 +13,10 @@ public class CargarCartas : MonoBehaviour
 	private int miNumero = 0;
 	private GameObject textoNuevo;
 	public Text error;
-
-	// Use this for initialization
-	void Start()
+    public float xPosicion =0;
+    public float yPosicion = 0;
+    // Use this for initialization
+    void Start()
 	{
 		error.text = "";
 		//nextMessage = Time.time + 1f;
@@ -64,7 +65,8 @@ public class CargarCartas : MonoBehaviour
 				GameObject nuevoSprite = (GameObject)Instantiate(spritePrefab);
                 nuevoSprite.transform.SetParent(miPanel);
                 nuevoSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + carta.ToString());
-                Debug.Log("Sprites/Partida/Lanzadores/" + carta.ToString());
+                nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
+                xPosicion = xPosicion + 110;
                 miNumero++;
 			}
 		}
