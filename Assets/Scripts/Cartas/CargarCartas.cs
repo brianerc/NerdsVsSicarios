@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Assets.Scripts.ServidorDTO;
-using Assets.Servidor;
 
 public class CargarCartas : MonoBehaviour
 {
@@ -118,7 +117,16 @@ public class CargarCartas : MonoBehaviour
     }
     public IEnumerator ObtenerCartas()
 	{
-		WWW www = Acciones.CargarCartas();
+		Dictionary<string, string> headers = new Dictionary<string, string>();
+		headers.Add("Content-Type", "application/json");
+		string token = PlayerPrefs.GetString("token");
+
+		headers.Add("token", token);
+
+		byte[] pData = null;
+
+		WWW www = new WWW("http://35.243.154.34:8090/api/v1/usuario/5bf59a9e5cd5fc001855bbc3/carta", pData, headers);
+
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
 		{
@@ -126,7 +134,7 @@ public class CargarCartas : MonoBehaviour
 			error.color = Color.red;
 			if (error.text.Equals("400 Bad Request"))
 			{
-				error.text = "No se pudo obtener cartas";
+				error.text = "Usuario o contraseña incorrecta";
 			}
 			else
 			{
