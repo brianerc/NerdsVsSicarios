@@ -25,6 +25,7 @@ namespace Assets.Scripts.ServidorDTO
 		public int danio;
 		public int costoParaDesbloquear;
 		public int velocidad;
+        public string nombre_completo;
 
 		public override bool Equals(object obj)
 		{
@@ -38,7 +39,7 @@ namespace Assets.Scripts.ServidorDTO
 
 		public override string ToString()
 		{
-			return nombre + " N" + nivel;
+			return nombre_completo + " N" + nivel;
 		}
 	}
 }
