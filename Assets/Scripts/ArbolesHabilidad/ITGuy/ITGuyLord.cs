@@ -9,7 +9,7 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 	class ITGuyLord : MazoNerd
 	{
 		public GameObject droneElectrico;
-		public GameObject dakimakura;
+		public GameObject droneVentilador;
 		public GameObject mochilaPegajosa;
 
 		protected override void Inicializar()
@@ -23,11 +23,11 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 			cantidadRegeneracionEnergia = 30;
 			tiempoRegeneracionEnergia = 5;
 			droneElectrico.GetComponent<ObjetoTablero>().nivel = 1;
-			dakimakura.GetComponent<ObjetoTablero>().nivel = 1;
+			droneVentilador.GetComponent<ObjetoTablero>().nivel = 1;
 			mochilaPegajosa.GetComponent<ObjetoTablero>().nivel = 1;
 			InsertarCarta(new CartaDroneElectrico(droneElectrico));
 			InsertarCarta(new CartaMochilaPegajosa(mochilaPegajosa));
-			InsertarCarta(new CartaDakimakura(dakimakura));
+			InsertarCarta(new CartaDroneVentilador(droneVentilador));
 			MostrarLanzadores();
 
 		}
