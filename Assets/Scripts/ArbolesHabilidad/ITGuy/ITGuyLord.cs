@@ -10,7 +10,7 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 	{
 		public GameObject droneElectrico;
 		public GameObject droneVentilador;
-		public GameObject mochilaPegajosa;
+		public GameObject droneVolador;
 
 		protected override void Inicializar()
 		{
@@ -24,9 +24,9 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 			tiempoRegeneracionEnergia = 5;
 			droneElectrico.GetComponent<ObjetoTablero>().nivel = 1;
 			droneVentilador.GetComponent<ObjetoTablero>().nivel = 1;
-			mochilaPegajosa.GetComponent<ObjetoTablero>().nivel = 1;
+			droneVolador.GetComponent<ObjetoTablero>().nivel = 1;
 			InsertarCarta(new CartaDroneElectrico(droneElectrico));
-			InsertarCarta(new CartaMochilaPegajosa(mochilaPegajosa));
+			InsertarCarta(new CartaDroneVolador(droneVolador));
 			InsertarCarta(new CartaDroneVentilador(droneVentilador));
 			MostrarLanzadores();
 

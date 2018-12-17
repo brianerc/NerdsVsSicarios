@@ -58,6 +58,7 @@ TagManager:
   - N10
   - MostrarInformacion
   - Zona
+  - LanzadorDrone 3.0 Idle
   - Generador
   layers:
   - Default
