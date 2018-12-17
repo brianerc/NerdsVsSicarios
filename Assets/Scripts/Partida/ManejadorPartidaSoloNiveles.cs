@@ -36,6 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
 		{
 			//Devuelve el usuario con su nivel actualizado 
 			UsuarioDTO resultObj = JsonUtility.FromJson<UsuarioDTO>(www.text);
+			ManejadorUsuario.CargarUsuario();
 		}
 	}
 }

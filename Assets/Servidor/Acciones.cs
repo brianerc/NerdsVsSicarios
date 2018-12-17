@@ -24,13 +24,17 @@ namespace Assets.Servidor
 		internal static WWW IngresarConUsuario(string nombreDeUsuario, string contrasenia)
 		{
 			string postCuerpo = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
-			return ApiComunicacion.SolicitudPOST(Endpoints.IngresarUrl, postCuerpo, false);
+			var www = ApiComunicacion.SolicitudPOST(Endpoints.IngresarUrl, postCuerpo, false);
+			Debug.Log("Cargando Usuario");
+			return www;
 		}
 
 		internal static WWW SubirDeNivel()
 		{
 			string postBodyData = null;
-			return ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelUrl, postBodyData, true);
+			var www = ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelUrl, postBodyData, true);
+			ManejadorUsuario.CargarUsuario();
+			return www;
 		}
 		
 		internal static WWW CargarCartas()
@@ -43,13 +47,28 @@ namespace Assets.Servidor
 		internal static WWW SubirDeNivelCarta(string cartaId)
 		{
 			string postCuerpo = null;
-			return ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
+			var www = ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
+			return www;
 		}
 
 		internal static WWW CambiarPuntos(int puntos)
 		{
 			string postCuerpo = "{\"puntos\":\"" + puntos + "\"}";
-			return ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, false);
+			var www = ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, false);
+			return www;
+		}
+
+		public static int ObtenerPuntosNecesariosSegunIdCarta(string id)
+		{
+			List<Assets.Scripts.ServidorDTO.Carta> cartas = ManejadorUsuario.cartasUsuario;
+			foreach (var item in cartas)
+			{
+				if (item._id.Equals(id))
+				{
+					return item.costo_para_desbloquear;
+				}
+			}
+			return -1;
 		}
 	}
 }

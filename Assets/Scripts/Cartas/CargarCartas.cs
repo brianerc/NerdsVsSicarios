@@ -210,6 +210,7 @@ public class CargarCartas : MonoBehaviour
 		else
 		{
 			CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
+			ManejadorUsuario.cartasUsuario = resultObj.cartas;
 			for (int i = 0; i < resultObj.cartas.Count; i++)
 			{
 				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
