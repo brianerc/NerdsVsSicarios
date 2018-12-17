@@ -21,7 +21,8 @@ MonoBehaviour:
   estados_barraDeVida: []
   droneElectrico: {fileID: 1154800813827048, guid: d5d2247307370d149809edc581365d5f,
     type: 3}
-  dakimakura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 3}
+  droneVentilador: {fileID: 1154800813827048, guid: e62372dc9567ce043a996af67b182de5,
+    type: 3}
   mochilaPegajosa: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409,
     type: 3}
 --- !u!1001 &1822102912082922134
@@ -34,6 +35,16 @@ PrefabInstance:
     - target: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_Name
       value: ITGuyLord
+      objectReference: {fileID: 0}
+    - target: {fileID: 95211395780426724, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3c2bd70e04d3fb9419c66347ab87c17f, type: 2}
+    - target: {fileID: 82511473203009344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4046326094900756, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -79,17 +90,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212785419334293622, guid: 60e0cba97dab9164f9f167eee87d7fe6,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6c9375dba32e12844b007aba5517c15f,
-        type: 3}
-    - target: {fileID: 95211395780426724, guid: 60e0cba97dab9164f9f167eee87d7fe6,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3c2bd70e04d3fb9419c66347ab87c17f, type: 2}
     - target: {fileID: 61840569947883590, guid: 60e0cba97dab9164f9f167eee87d7fe6,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -100,11 +100,12 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.64
       objectReference: {fileID: 0}
-    - target: {fileID: 82511473203009344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+    - target: {fileID: 212785419334293622, guid: 60e0cba97dab9164f9f167eee87d7fe6,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c9375dba32e12844b007aba5517c15f,
+        type: 3}
     - target: {fileID: 4268228474482360, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.067
