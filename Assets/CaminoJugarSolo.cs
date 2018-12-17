@@ -5,6 +5,7 @@ using Assets.Servidor;
 using Assets.Servidor.ServidorDTO;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CaminoJugarSolo : MonoBehaviour
 {
@@ -13,15 +14,21 @@ public class CaminoJugarSolo : MonoBehaviour
     public Text error;
     bool posicionElegida = false;
     private int premio;
+    private string zona;
+    private string nombreEscena;
+    public GameObject transicion;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(CargarNivelActual());
-        nivelElegido = nivelJugador;
-        MostrarInformacion();
-        GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
-    }
 
+    }
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(nombreEscena);
+    }
     private void CalcularPremio()
     {
         premio = nivelElegido * 3 / 2;
@@ -30,7 +37,21 @@ public class CaminoJugarSolo : MonoBehaviour
     {
         CalcularPremio();
         GameObject.FindGameObjectWithTag("MostrarInformacion").GetComponent<Text>().text = "Reward: " + premio;
-        GameObject.FindGameObjectWithTag("Zona").GetComponent<Text>().text = "Zone: " + premio;
+        if(nivelElegido<0 && nivelElegido<3)
+        {
+            zona = "Arcade";
+        } else if(nivelElegido>2 && nivelElegido<7)
+        {
+            zona = "Backstreet";
+        } else if (nivelElegido >7 && nivelElegido<10)
+        {
+            zona = "Park";
+        } else
+        {
+            zona = "Boss Level";
+        }
+        GameObject.FindGameObjectWithTag("Zona").GetComponent<Text>().text = "Zone: " + zona;
+
     }
 
     private IEnumerator CargarNivelActual()
@@ -56,10 +77,20 @@ public class CaminoJugarSolo : MonoBehaviour
         {
             Usuario resultObj = JsonUtility.FromJson<Usuario>(www.text);
             nivelJugador=resultObj.nivel;
+            nivelElegido = nivelJugador;
+            MostrarInformacion();
+            GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
         }
     }
 
     // Update is called once per frame
+    private void Jugar()
+    {
+        ComenzarPartidaSolo.cantidadExp = premio;
+        ComenzarPartidaSolo.zona = zona;
+        nombreEscena = "PartidaSolo";
+        StartCoroutine(LoadScene());
+    }
     void Update()
     {
         RaycastHit2D hit;
@@ -76,21 +107,30 @@ public class CaminoJugarSolo : MonoBehaviour
             {
                 if(hit.collider.tag=="Finish")
                 {
+                    nombreEscena = "MenuPrincipal";
+                    StartCoroutine(LoadScene());
+                } else if(hit.collider.tag=="Jugar")
+                {
+                    Jugar();
+                }
+                try {
+                    if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && int.Parse(hit.collider.name) != nivelElegido)
+                    {
+                        posicionElegida = false;
+                        MostrarInformacion();
+                    }
+                    else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && posicionElegida)
+                    {
+                        Jugar();
+                    }
+                    else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador)
+                    {
+                        GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
+                        posicionElegida = true;
+                    }
+                } catch
+                {
 
-                }
-                if(int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && int.Parse(hit.collider.name) !=nivelElegido)
-                {
-                    posicionElegida = false;
-                    MostrarInformacion();
-                }
-                else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && posicionElegida)
-                {
-                    //JUGAR
-                }
-                else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador)
-                {
-                    GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
-                    posicionElegida = true;
                 }
             }
         }

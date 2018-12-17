@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ComenzarPartidaSolo : Comenzar {
     public static int cantidadExp;
+    public static string zona;
     public GameObject fondo;
     //public static GameObject jugador;
 	public GameObject jugador;
