@@ -17,7 +17,6 @@ public class CaminoJugarSolo : MonoBehaviour
     void Start()
     {
         StartCoroutine(CargarNivelActual());
-
         nivelElegido = nivelJugador;
         MostrarInformacion();
         GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
@@ -36,7 +35,6 @@ public class CaminoJugarSolo : MonoBehaviour
 
     private IEnumerator CargarNivelActual()
     {
-        StartCoroutine(ManejadorUsuario.CargarUsuario());
         WWW www = Acciones.ObtenerInformacionUsuario();
         yield return www;
         if (!string.IsNullOrEmpty(www.error))
@@ -56,9 +54,8 @@ public class CaminoJugarSolo : MonoBehaviour
         }
         else
         {
-            UsuarioDTO resultObj = JsonUtility.FromJson<UsuarioDTO>(www.text);
-            nivelJugador=resultObj.usuario.nivel;
-
+            Usuario resultObj = JsonUtility.FromJson<Usuario>(www.text);
+            nivelJugador=resultObj.nivel;
         }
     }
 
