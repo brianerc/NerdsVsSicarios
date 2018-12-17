@@ -9,5 +9,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class NerdVictoria : FinalPartida
 {
-
+    private void Start()
+    {
+        GanarPuntos();
+    }
 }

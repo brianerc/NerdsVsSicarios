@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Assets.Scripts.ServidorDTO;
+using Assets.Servidor;
 /// <summary>
 /// MonoBehaviour correspondiente a la escena de final de partida
 /// </summary>
 abstract public class FinalPartida : MonoBehaviour {
     public GameObject transicion;
+    public static int cantidadExp;
     private string nombreEscena;
     void Start () {
 	}
@@ -16,6 +18,10 @@ abstract public class FinalPartida : MonoBehaviour {
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadSceneAsync(nombreEscena);
+    }
+    public void GanarPuntos()
+    {
+        StartCoroutine(Acciones.CambiarPuntos(cantidadExp));
     }
     void Update()
     {

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 /// Especificacion de la clase comenzar para la logica sobre una partida single player
 /// </summary>
 public class ComenzarPartidaSolo : Comenzar {
+    public static int cantidadExp;
     public GameObject fondo;
     //public static GameObject jugador;
 	public GameObject jugador;
@@ -20,6 +21,7 @@ public class ComenzarPartidaSolo : Comenzar {
 		Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(energiaNerd);
+        NerdVictoria.cantidadExp = cantidadExp;
     }
     IEnumerator LoadScene()
     {
