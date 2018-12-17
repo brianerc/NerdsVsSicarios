@@ -27,13 +27,14 @@ public class ComenzarPartidaSolo : Comenzar {
     public GameObject punkGirlBase;
     public GameObject punkGirlMedia;
     public GameObject punkGirlEstrella;
+    private float vidaOriginal;
     void Start () {
         Instantiate(fondo);
 		Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(energiaNerd);
         NerdVictoria.cantidadExp = cantidadExp;
-
+        vidaOriginal = jugador.GetComponent<Mazo>().GetVida();
         CargarGeneradores();
 
 
@@ -47,6 +48,7 @@ public class ComenzarPartidaSolo : Comenzar {
     void Update () {
         if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida() <= 0)
         {
+            GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().vidaBase =vidaOriginal;
             nombreEscena = "Nerd_Derrota";
             StartCoroutine(LoadScene());
         }

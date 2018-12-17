@@ -97,6 +97,15 @@ public class CaminoJugarSolo : MonoBehaviour
             avatar.transform.position = posiciones[nivelJugador];
             destino = nivelJugador;
             posicionObjetivo = posiciones[nivelJugador];
+            for (int i = 1; i < 11; i++)
+            {
+                if(nivelJugador<i)
+                {
+                    GameObject imagen = GameObject.FindGameObjectWithTag("N" + i);
+                    imagen.tag = "Bloqueado";
+                    imagen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/casilla_bloqueada");
+                }
+            }
         }
     }
 
@@ -106,7 +115,7 @@ public class CaminoJugarSolo : MonoBehaviour
         ComenzarPartidaSolo.cantidadExp = premio;
         ComenzarPartidaSolo.zona = zona;
         ComenzarPartidaSolo.nivel = nivelElegido;
-        nombreEscena = "PartidaSolo";
+        nombreEscena = "SeleccionNerd";
         StartCoroutine(LoadScene());
     }
     void Update()

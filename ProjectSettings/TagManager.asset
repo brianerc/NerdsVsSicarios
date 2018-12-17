@@ -60,6 +60,7 @@ TagManager:
   - Zona
   - LanzadorDrone 3.0 Idle
   - Generador
+  - Bloqueado
   layers:
   - Default
   - TransparentFX
