@@ -8,7 +8,7 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 {
 	class ITGuyLord : MazoNerd
 	{
-		public GameObject catapulta;
+		public GameObject droneElectrico;
 		public GameObject dakimakura;
 		public GameObject mochilaPegajosa;
 
@@ -22,10 +22,10 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 			energia = 100;
 			cantidadRegeneracionEnergia = 30;
 			tiempoRegeneracionEnergia = 5;
-			catapulta.GetComponent<ObjetoTablero>().nivel = 1;
+			droneElectrico.GetComponent<ObjetoTablero>().nivel = 1;
 			dakimakura.GetComponent<ObjetoTablero>().nivel = 1;
 			mochilaPegajosa.GetComponent<ObjetoTablero>().nivel = 1;
-			InsertarCarta(new CartaCatapulta(catapulta));
+			InsertarCarta(new CartaDroneElectrico(droneElectrico));
 			InsertarCarta(new CartaMochilaPegajosa(mochilaPegajosa));
 			InsertarCarta(new CartaDakimakura(dakimakura));
 			MostrarLanzadores();

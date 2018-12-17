@@ -28,16 +28,16 @@ public class MazoNerd : Mazo {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Sicario")
-        {
-            Sicario sicario = collision.gameObject.GetComponent<Sicario>();
-            if (tiempo <= 0)
-            {
-                sicario.Herir(danoBase);
-                tiempo = tiempoBase;
-                this.GetComponent<Animator>().SetTrigger("Atacar");
-            }
-        }
+		if (collision.transform.tag == "Sicario")
+		{
+			Sicario sicario = collision.gameObject.GetComponent<Sicario>();
+			if (tiempo <= 0)
+			{
+				sicario.Herir(danoBase);
+				tiempo = tiempoBase;
+				this.GetComponent<Animator>().SetTrigger("Atacar");
+			}
+		}
     }
     public override void Herir(float danoBase)
     {

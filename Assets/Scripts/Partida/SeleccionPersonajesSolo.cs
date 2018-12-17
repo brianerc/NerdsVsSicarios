@@ -36,7 +36,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 			{
 				if (hit.transform.name == "WeabooLord")
 				{
-					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
+					//ComenzarPartidaSolo.jugador = jugadorWeabooLord;
 					nombreEscena = "PartidaSolo";
 					StartCoroutine(LoadScene());
 				}

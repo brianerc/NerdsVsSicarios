@@ -8,8 +8,9 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ComenzarPartidaSolo : Comenzar {
     public GameObject fondo;
-    public static GameObject jugador;
-    public Grid matriz;
+    //public static GameObject jugador;
+	public GameObject jugador;
+	public Grid matriz;
     public GameObject energiaNerd;
     public GameObject transicion;
     private string nombreEscena;
