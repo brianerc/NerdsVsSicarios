@@ -18,8 +18,6 @@ public class CaminoJugarSolo : MonoBehaviour
     {
         StartCoroutine(CargarNivelActual());
 
-        StartCoroutine(ManejadorUsuario.ObtenerUsuario)
-
         nivelElegido = nivelJugador;
         MostrarInformacion();
         GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
