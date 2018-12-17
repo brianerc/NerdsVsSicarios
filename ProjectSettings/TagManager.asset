@@ -58,6 +58,7 @@ TagManager:
   - N10
   - MostrarInformacion
   - Zona
+  - LanzadorDrone 3.0 Idle
   layers:
   - Default
   - TransparentFX

@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 59fdcf757693fe54dacc84c21b9c4e9e
+guid: 7f57b50186e531a4b8cf835c6f3f3f85
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Atacando_0
-    21300002: Atacando_1
-    21300004: Atacando_2
-    21300006: Atacando_3
-    21300008: Atacando_4
-    21300010: Atacando_5
-    21300012: Atacando_6
-    21300014: Atacando_7
-    21300016: Atacando_8
-    21300018: Atacando_9
-    21300020: Atacando_10
-    21300022: Atacando_11
+    21300000: Drones Muriendo_0
+    21300002: Drones Muriendo_1
+    21300004: Drones Muriendo_2
+    21300006: Drones Muriendo_3
+    21300008: Drones Muriendo_4
+    21300010: Drones Muriendo_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -107,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Atacando_0
+      name: Drones Muriendo_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 557
-        width: 87
-        height: 64
+        x: 346
+        y: 563
+        width: 95
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +115,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a393cc322a8e44a934d8fcde51ddb4
+      spriteID: fba8799adad44404ba8f899e01081a66
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atacando_1
+      name: Drones Muriendo_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 557
-        width: 86
-        height: 64
+        x: 540
+        y: 519
+        width: 211
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,19 +135,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298ad704eaa653d4fa01438d4211fe48
+      spriteID: 78be53b2a10128948adde30beb8114a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atacando_2
+      name: Drones Muriendo_2
       rect:
         serializedVersion: 2
-        x: 365
-        y: 554
-        width: 87
-        height: 64
+        x: 11
+        y: 225
+        width: 255
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 976573034de52cd4e962737f55c6dbce
+      spriteID: 34b55f5511736ac4c95ce7c3bda4957e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atacando_3
+      name: Drones Muriendo_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 375
-        width: 87
-        height: 64
+        x: 270
+        y: 253
+        width: 247
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,19 +175,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d744186828ea9f84ba0491965ccc5b55
+      spriteID: 41d5c71606627d44695195e2df19af82
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atacando_4
+      name: Drones Muriendo_4
       rect:
         serializedVersion: 2
-        x: 186
-        y: 372
-        width: 86
-        height: 64
+        x: 529
+        y: 249
+        width: 241
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77792a9819437c409f5df8f95077ac8
+      spriteID: 67691ca608ae11a4babe04f5ac1d676d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atacando_5
+      name: Drones Muriendo_5
       rect:
         serializedVersion: 2
-        x: 365
-        y: 372
-        width: 87
-        height: 64
+        x: 2
+        y: 7
+        width: 266
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,127 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a9dad8233ef9e4aa289954c6c6cf07
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_6
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 190
-        width: 87
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9dd4009bd92b7049b0f26bdc2613e74
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_7
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 190
-        width: 86
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eaf115584b155a044b2276a4d8f53e87
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_8
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 190
-        width: 87
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a380f8952eed9f349926783318349d6b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_9
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 14
-        width: 87
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4325df89f50c8d74e8aa60d99bc6f1d0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_10
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 14
-        width: 86
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb89f3b62c84d494298437f8028106d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atacando_11
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 17
-        width: 87
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 992ccbf32977d0641ab857a90405c27a
+      spriteID: 89a2f372db13f8d458c555effc9874c0
       vertices: []
       indices: 
       edges: []
@@ -349,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8b722ed2b1e96b940b6a7bbc7714ddd1
+    spriteID: 0873e0e5e2e5ce84b8a1359132bf8b90
     vertices: []
     indices: 
     edges: []

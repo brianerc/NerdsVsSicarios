@@ -258,9 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36daf65c161a38b4e833425095ef4d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 10
+  vidaBase: 25
   objetivo: {fileID: 0}
-  danoBase: 10
-  nivel: 0
+  danoBase: 1
+  nivel: 1
   nombre: Drone 3.0 Idle
-  tiempo: 0
+  tiempo: 1

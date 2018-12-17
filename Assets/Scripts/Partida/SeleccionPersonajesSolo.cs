@@ -36,17 +36,19 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 			{
 				if (hit.transform.name == "WeabooLord")
 				{
-					//ComenzarPartidaSolo.jugador = jugadorWeabooLord;
+					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
 					nombreEscena = "PartidaSolo";
 					StartCoroutine(LoadScene());
 				}
 				else if (hit.transform.name == "ItguyLord")
 				{
+					ComenzarPartidaSolo.jugador = jugadorItguyLord;
 					nombreEscena = "PartidaSolo";
 					StartCoroutine(LoadScene());
 				}
 				else if (hit.transform.name == "EmoLord")
 				{
+					ComenzarPartidaSolo.jugador = jugadorEmoLord;
 					nombreEscena = "PartidaSolo";
 					StartCoroutine(LoadScene());
 				}
