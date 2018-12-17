@@ -63,7 +63,8 @@ public class CargarCartas : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-	{
+    { 
+
         if (Input.touchCount < 1)
         {
             return;
@@ -116,6 +117,8 @@ public class CargarCartas : MonoBehaviour
             } 
         }
     }
+
+ 
 
     private IEnumerator MejorarCarta()
     {

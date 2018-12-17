@@ -58,6 +58,7 @@ TagManager:
   - N10
   - MostrarInformacion
   - Zona
+  - Generador
   layers:
   - Default
   - TransparentFX
