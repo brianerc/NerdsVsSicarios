@@ -85,7 +85,7 @@ public class CargarCartas : MonoBehaviour
             {
                 if (cartaElegida != null && puedoElegir)
                 {
-                    MejorarCarta();
+                    StartCoroutine(MejorarCarta());
                 }
             }
         }
