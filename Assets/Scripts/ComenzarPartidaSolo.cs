@@ -12,7 +12,6 @@ public class ComenzarPartidaSolo : Comenzar {
     public GameObject fondo;
     public static int nivel;
     //public static GameObject jugador;
-	public GameObject jugador;
     public static GameObject jugador;
 	//public GameObject jugador;
 	public Grid matriz;
