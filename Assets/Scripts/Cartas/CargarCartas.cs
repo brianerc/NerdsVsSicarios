@@ -10,6 +10,7 @@ using System;
 public class CargarCartas : MonoBehaviour
 {
     public Dictionary<string,string> idCarta;
+    public Dictionary<string, int> puntosRequeridos;
 	public RectTransform miScrollPanel;
     public string cartaElegida;
 	public GameObject imagenPrefab;
@@ -26,11 +27,23 @@ public class CargarCartas : MonoBehaviour
     private float tiempoMaximoTouch = 0.7f;
     bool puedoElegir;
     int exp;
+    public GameObject mostrarCosto;
+    public GameObject transicion;
+    private string nombreEscena;
+
+
+    IEnumerator LoadScene()
+    {
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadSceneAsync(nombreEscena);
+    }
     // Use this for initialization
     void Start()
 	{
         puedoElegir = false;
         idCarta = new Dictionary<string, string>();
+        puntosRequeridos = new Dictionary<string, int>();
 		error.text = "";
 		//nextMessage = Time.time + 1f;
 		StartCoroutine(ObtenerCartas());
@@ -44,9 +57,12 @@ public class CargarCartas : MonoBehaviour
         flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
         flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
         CargarExperiencia();
+        GameObject.FindGameObjectWithTag("MostrarExp").GetComponent<Text>().text = "Tienes " + exp +" puntos de EXP";
+        GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level_up_ByN");
+
     }
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
 	{
         if (Input.touchCount < 1)
         {
@@ -128,7 +144,6 @@ public class CargarCartas : MonoBehaviour
 
     private void MostrarMejorarCarta(string nombre)
     {
-        
         miScrollPanel.gameObject.SetActive(false);
         flechaDerecha.SetActive(false);
         flechaIzquierda.SetActive(false);
@@ -143,10 +158,18 @@ public class CargarCartas : MonoBehaviour
             cartaMejorada.SetActive(true);
             cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
             cartaMejorada.name = nombre;
-            cartaElegida = nombre.Substring(nombre.Length - 2);
-            if (exp > 0)
+            cartaElegida = nombre.Substring(0,nombre.Length - 3);
+            Debug.Log(cartaElegida);
+            mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] + "EXP";
+            if (exp >  puntosRequeridos[cartaElegida])
             {
-
+                puedoElegir = true;
+                GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level up");
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level_up_ByN");
+                puedoElegir = false;
             }
         } else
         {
@@ -199,14 +222,16 @@ public class CargarCartas : MonoBehaviour
                 xPosicion = xPosicion + 110;
                 miNumero++;
                 idCarta.Add(carta.nombre_completo, carta._id);
+                puntosRequeridos.Add(carta.nombre_completo, carta.costo_para_desbloquear);
 			}
 		}
 	}
 
-	public void volverAlMenuPrincipal()
+	public void VolverAlMenuPrincipal()
 	{
-		SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
-	}
+        nombreEscena = "MenuPrincipal";
+        StartCoroutine(LoadScene());
+    }
     public void CargarExperiencia()
     {
         exp = ManejadorUsuario.ObtenerUsuario().puntos;

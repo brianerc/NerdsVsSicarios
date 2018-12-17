@@ -43,6 +43,9 @@ TagManager:
   - FlechaIzquierda
   - MejorarCarta
   - MostrarCartas
+  - Cartas
+  - MostrarCostoExp
+  - MostrarExp
   layers:
   - Default
   - TransparentFX
