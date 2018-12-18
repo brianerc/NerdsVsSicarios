@@ -18,7 +18,7 @@ namespace Assets.Scripts.ArbolesHabilidad.EmoLord
 			descripcion = "";
 			mochilaExplosiva = unObjeto.GetComponent<MochilaExplosiva>();
 			objeto = unObjeto;
-			mochilaExplosiva.SetDanoBase(1);
+			mochilaExplosiva.SetDanoBase(100);
 			mochilaExplosiva.SetVida(25);
 			mochilaExplosiva.SetTiempoAtaque(1);
 			mochilaExplosiva.SetCostoEnergia(75);

@@ -609,7 +609,8 @@ MonoBehaviour:
     type: 3}
   jugadorItguyLord: {fileID: 1823676836413201878, guid: 55f918f7baf319042894a2d6a15b928a,
     type: 3}
-  jugadorEmoLord: {fileID: 0}
+  jugadorEmoLord: {fileID: 1823676836413201878, guid: 2ff8a02123ed55e499af8d4f2983b75f,
+    type: 3}
 --- !u!1 &1588645438
 GameObject:
   m_ObjectHideFlags: 0

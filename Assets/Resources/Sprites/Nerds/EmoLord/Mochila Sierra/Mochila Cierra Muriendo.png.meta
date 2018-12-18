@@ -1,7 +1,27 @@
 fileFormatVersion: 2
 guid: a014c0f7f3756c24a9c656769622e55e
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Mochila Cierra Muriendo_0
+    21300002: Mochila Cierra Muriendo_1
+    21300004: Mochila Cierra Muriendo_2
+    21300006: Mochila Cierra Muriendo_3
+    21300008: Mochila Cierra Muriendo_4
+    21300010: Mochila Cierra Muriendo_5
+    21300012: Mochila Cierra Muriendo_6
+    21300014: Mochila Cierra Muriendo_7
+    21300016: Mochila Cierra Muriendo_8
+    21300018: Mochila Cierra Muriendo_9
+    21300020: Mochila Cierra Muriendo_10
+    21300022: Mochila Cierra Muriendo_12
+    21300024: Mochila Cierra Muriendo_21
+    21300026: Mochila Cierra Muriendo_22
+    21300028: Mochila Cierra Muriendo_24
+    21300030: Mochila Cierra Muriendo_25
+    21300032: Mochila Cierra Muriendo_26
+    21300034: Mochila Cierra Muriendo_28
+    21300036: Mochila Cierra Muriendo_29
+    21300038: Mochila Cierra Muriendo_30
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +60,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +89,431 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 790
+        width: 113
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e586e09af0395448ae7d882fbc78268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 790
+        width: 118
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4eade2e0b527445886022ef8a7cc49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_2
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 790
+        width: 115
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d36a88508597343801123421bb2528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 790
+        width: 123
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4715221d4819dde4e9a9437d0706eebf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 605
+        width: 128
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29ec837504bfba40adbe2e9d84b1170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 605
+        width: 121
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc863ad2827cd041854d6aaff3c3ca0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 605
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60575ee367a23f4da06bb946b3a6961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_7
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 605
+        width: 139
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d9f9441672f0647b68e4dbe6b0a5a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 415
+        width: 145
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ee59fb821bb8648a02d5315127e01e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 415
+        width: 138
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31b6338bc7d9a148ae58f871d629553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_10
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 415
+        width: 148
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21972717d7ed1e14d8cca43be80ec14c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_12
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 407
+        width: 159
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc94c4fad62c1ea449bb82a4110a90c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_21
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 407
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab5aafd857e0d443abfb7837f944606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 211
+        width: 164
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e900383e035b8141ad00bbee7e54e0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_24
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 229
+        width: 89
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd0982bcecab364aab601d28257e33c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_25
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 229
+        width: 90
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7beaaa03d5e210d4096f52f5ec5c6742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_26
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 229
+        width: 93
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d981bb9ea765bb6488d60b970a55d559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 39
+        width: 90
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e924d698a068f4c83fd807baa609a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 39
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fa379e01f13bf41b0c29c21b48cf2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Cierra Muriendo_30
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 39
+        width: 90
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a4e169f5f4f61489c2c77e011caa97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

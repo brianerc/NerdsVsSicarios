@@ -9,19 +9,17 @@ namespace Assets.Scripts.ArbolesHabilidad.EmoLord
 {
 	class CartaMochilaHonda : Carta
 	{
-		private MochilaHonda mochilaSierra;
+		private MochilaHonda mochilaHonda;
 
 		public CartaMochilaHonda(GameObject unObjeto)
 		{
 			nivel = 1;
 			nombre = "Mochila Honda";
 			descripcion = "";
-			mochilaSierra = unObjeto.GetComponent<MochilaHonda>();
+			mochilaHonda = unObjeto.GetComponent<MochilaHonda>();
 			objeto = unObjeto;
-			mochilaSierra.SetDanoBase(1);
-			mochilaSierra.SetVida(25);
-			mochilaSierra.SetTiempoAtaque(1);
-			mochilaSierra.SetCostoEnergia(75);
+			mochilaHonda.SetVida(25);
+			mochilaHonda.SetCostoEnergia(75);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
 		}

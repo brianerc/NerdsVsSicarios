@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 4928458851813272}
   - component: {fileID: 212412197082320984}
   - component: {fileID: 95497496948220408}
+  - component: {fileID: 114693468712207824}
   - component: {fileID: 61630551259350806}
   - component: {fileID: 50374766656099544}
-  - component: {fileID: 8081859944680132824}
+  - component: {fileID: 4987696236458376361}
   m_Layer: 0
-  m_Name: Proyectil_DroneVolador
+  m_Name: Proyectil_DroneVolador 1
   m_TagString: Proyectil_Nerd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +103,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114693468712207824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585339109019700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edaf35783ccbe5a4c8f6c24fa76f6c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 5
+  danoBase: 4
+  empezarAMoverse: 0
+  velocity: {x: 0, y: 0}
 --- !u!61 &61630551259350806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +166,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8081859944680132824
+--- !u!114 &4987696236458376361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,10 +175,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1585339109019700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a583be9e84c13a6438b0f46977412b31, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf02f1ea9061045a7e57e8e7a598d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  danoBase: 4
+  danoBase: 0
   empezarAMoverse: 0
   velocity: {x: 0, y: 0}
