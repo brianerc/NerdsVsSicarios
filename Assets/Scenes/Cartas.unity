@@ -190,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &188159273
 BoxCollider2D:
@@ -258,7 +258,7 @@ RectTransform:
   - {fileID: 2131130110}
   - {fileID: 338039483}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
   yPosicion: 130
   panelMejorar: {fileID: 1253682324}
   mostrarCosto: {fileID: 459488731}
-  transicion: {fileID: 697642518}
+  transicion: {fileID: 1415426829}
 --- !u!114 &264592115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421810236
 GameObject:
@@ -765,8 +765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160.2, y: -136}
-  m_SizeDelta: {x: 141.5, y: 30}
+  m_AnchoredPosition: {x: -199.7, y: -143.8}
+  m_SizeDelta: {x: 105.3, y: 23.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474681033
 MonoBehaviour:
@@ -997,12 +997,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5d0f56e1e86734a9a4921e430ed1f0, type: 3}
---- !u!1 &697642518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1161168021909378, guid: 2b5d0f56e1e86734a9a4921e430ed1f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 697642517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &771269157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1.375}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &771269160
 BoxCollider2D:
@@ -1533,6 +1527,12 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!1 &1415426829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1619737576406912, guid: 2b5d0f56e1e86734a9a4921e430ed1f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 697642517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1509342697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1.124}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797186972
 GameObject:
@@ -1664,7 +1664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1692,7 +1692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971708765
 GameObject:
@@ -1771,7 +1771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131130109
 GameObject:
