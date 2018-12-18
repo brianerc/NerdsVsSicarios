@@ -1746,7 +1746,7 @@ GameObject:
   - component: {fileID: 1624678459}
   - component: {fileID: 1624678458}
   m_Layer: 0
-  m_Name: Fondo_aventura
+  m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2218,7 +2218,7 @@ GameObject:
   - component: {fileID: 2055638055}
   - component: {fileID: 2055638057}
   m_Layer: 0
-  m_Name: nerd_avatar
+  m_Name: Avatar
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

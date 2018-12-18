@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 0d8eb21973dff3342bad71bf7f391f0c
+guid: 0384f944ecd69bb48b53a2f08b41cc31
 TextureImporter:
   fileIDToRecycleName:
     21300000: titulo_2.0_0
     21300002: titulo_2.0_1
+    21300004: titulo_2.0_2
+    21300006: titulo_2.0_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -111,10 +113,10 @@ TextureImporter:
       name: titulo_2.0_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 100
-        width: 178
-        height: 122
+        x: 306
+        y: 327
+        width: 568
+        height: 393
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f268483698cc2124db1d71e724699ed1
+      spriteID: cccae68feb667424bbcbb7450570a6ad
       vertices: []
       indices: 
       edges: []
@@ -131,10 +133,10 @@ TextureImporter:
       name: titulo_2.0_1
       rect:
         serializedVersion: 2
-        x: 318
-        y: 100
-        width: 178
-        height: 122
+        x: 1247
+        y: 327
+        width: 568
+        height: 393
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,7 +144,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1641b658b87d7024e8d57b6b5c7fde16
+      spriteID: a09c9f884e97eba448c25d7c7a4c83e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_2.0_2
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 327
+        width: 568
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2194de7c617c72749a1e28c51a624c9e
       vertices: []
       indices: 
       edges: []
@@ -150,7 +172,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f04374966e955074e8fe742f8eb260af
+    spriteID: f4e18ec362bdc88419100dd9fc0e546c
     vertices: []
     indices: 
     edges: []
