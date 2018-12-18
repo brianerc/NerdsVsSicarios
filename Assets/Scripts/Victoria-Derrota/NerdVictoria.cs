@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-/// <summary>
-/// Logica correspondiente a cuando el nerd obtiene la victoria. En la mismas se implementara 
-/// lo correspondiente para aumentar el arbol de habilidad del mismo 
-/// </summary>
+using UnityEngine.UI;
 public class NerdVictoria : FinalPartida
 {
     private void Start()
     {
+        GameObject.FindGameObjectWithTag("MostrarInformacion").GetComponent<Text>().text = "You win " + ComenzarPartidaSolo.cantidadExp + "EXP";
         GanarPuntos();
     }
 }

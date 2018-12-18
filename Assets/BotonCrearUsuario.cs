@@ -10,7 +10,7 @@ public class BotonCrearUsuario : MonoBehaviour {
 	public InputField textNombreDeUsuario;
 	public InputField contrasenia;
 
-	public void crearUsuario()
+	public void CrearUsuario()
 	{
 		Debug.Log("PRESIONADO");
 		string nombreDeUsuario = textNombreDeUsuario.text;

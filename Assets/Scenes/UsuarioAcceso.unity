@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 114973845960940414, guid: e93a39aba8f5b4c4e83a8e7a6239f326,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: crearUsuario
+      value: Ingresar
       objectReference: {fileID: 0}
     - target: {fileID: 114973845960940414, guid: e93a39aba8f5b4c4e83a8e7a6239f326,
         type: 2}
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1127179213}
-        m_MethodName: irAEscenaRegistrarse
+        m_MethodName: IrAEscenaRegistrarse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1495,7 +1495,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1445149573}
-        m_MethodName: crearUsuario
+        m_MethodName: Ingresar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

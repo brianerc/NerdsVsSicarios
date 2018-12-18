@@ -37,13 +37,13 @@ public class UsuarioAcceso : MonoBehaviour
 		yield return new WaitForSeconds(1.0f);
 		SceneManager.LoadSceneAsync(nombreEscena);
 	}
-	public void irAEscenaRegistrarse()
+	public void IrAEscenaRegistrarse()
 	{
 		nombreEscena = "UsuarioRegistrar";
 		StartCoroutine(LoadScene());
 	}
 
-	public void crearUsuario()
+	public void Ingresar()
 	{
 
 		string nombreDeUsuario = textNombreDeUsuario.text;

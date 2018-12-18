@@ -57,7 +57,7 @@ public class CargarCartas : MonoBehaviour
         flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
         flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
         CargarExperiencia();
-        GameObject.FindGameObjectWithTag("MostrarExp").GetComponent<Text>().text = "Tienes " + exp +" puntos de EXP";
+        GameObject.FindGameObjectWithTag("MostrarExp").GetComponent<Text>().text = "You have " + exp + "EXP";
         GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level_up_ByN");
 
     }
