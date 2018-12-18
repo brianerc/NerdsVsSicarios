@@ -45,7 +45,7 @@ public class CaminoJugarSolo : MonoBehaviour
     }
     private void CalcularPremio()
     {
-        premio = nivelElegido * 3 / 2;
+        premio = nivelElegido * 5 / 2;
     }
     private void MostrarInformacion()
     {
