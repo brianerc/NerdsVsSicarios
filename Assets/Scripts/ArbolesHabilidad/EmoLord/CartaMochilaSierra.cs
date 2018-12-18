@@ -21,7 +21,7 @@ namespace Assets.Scripts.ArbolesHabilidad.EmoLord
 			mochilaSierra.SetDanoBase(1);
 			mochilaSierra.SetVida(25);
 			mochilaSierra.SetTiempoAtaque(1);
-			mochilaSierra.SetCostoEnergia(75);
+			mochilaSierra.SetCostoEnergia(25);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
 		}

@@ -114,18 +114,18 @@ TextureImporter:
       name: menu_fondo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1297
-        width: 1280
-        height: 720
+        x: 139
+        y: 1590
+        width: 1286
+        height: 806
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941d384a5d15282498ba2c3ffe137fa5
+      spriteID: 682bf38603a02624290d83be1120c877
       vertices: []
       indices: 
       edges: []
@@ -134,18 +134,18 @@ TextureImporter:
       name: menu_fondo_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 131
-        width: 1280
-        height: 720
+        x: 1523
+        y: 1588
+        width: 1286
+        height: 808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30cab6ef444c89e44aa80907d40ee82f
+      spriteID: 44ed9f38988e11646ba9f3af060bfb31
       vertices: []
       indices: 
       edges: []
@@ -154,18 +154,18 @@ TextureImporter:
       name: menu_fondo_2
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 1297
-        width: 1280
-        height: 720
+        x: 2908
+        y: 1588
+        width: 1284
+        height: 808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5924a90b4430f454881555d41dd75f98
+      spriteID: 3f9f48012fe11614f8f28ea8667800ce
       vertices: []
       indices: 
       edges: []
@@ -174,18 +174,18 @@ TextureImporter:
       name: menu_fondo_3
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 131
-        width: 1280
-        height: 720
+        x: 139
+        y: 568
+        width: 1286
+        height: 808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd72e003a55ca534b8fdeb60ec6ac4bf
+      spriteID: 566ae74a0ab76b349aed463afa091f10
       vertices: []
       indices: 
       edges: []
@@ -194,18 +194,18 @@ TextureImporter:
       name: menu_fondo_4
       rect:
         serializedVersion: 2
-        x: 2841
-        y: 1297
-        width: 1280
-        height: 720
+        x: 1523
+        y: 568
+        width: 1286
+        height: 808
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07fe86b764674a74686611407deb3688
+      spriteID: e6618a1acae085140bad94488c7e0925
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ff3f8be75beb06c4ba4fe60b47391d45
+    spriteID: 71422e4feda2d3a4990c66f35396d398
     vertices: []
     indices: 
     edges: []

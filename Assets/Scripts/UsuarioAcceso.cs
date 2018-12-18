@@ -31,16 +31,15 @@ public class UsuarioAcceso : MonoBehaviour
 			Debug.Log("No existe token");
 		}
 	}
-	IEnumerator LoadScene()
-	{
-		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-		yield return new WaitForSeconds(1.0f);
-		SceneManager.LoadSceneAsync(nombreEscena);
-	}
-	public void IrAEscenaRegistrarse()
+    private void LoadScene()
+    {
+        Transicion.nombreEscena = nombreEscena;
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+    }
+    public void IrAEscenaRegistrarse()
 	{
 		nombreEscena = "UsuarioRegistrar";
-		StartCoroutine(LoadScene());
+		LoadScene();
 	}
 
 	public void Ingresar()
@@ -87,7 +86,7 @@ public class UsuarioAcceso : MonoBehaviour
 				error.color = Color.green;
 				error.text = "Usuario ingresado";
 				nombreEscena = "MenuPrincipal";
-				StartCoroutine(LoadScene());
+				LoadScene();
 			}
 		}
 		boton.enabled = true;

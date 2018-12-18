@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 44a8b8a81dd6061448fb1ed962414960, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0e5cbe5d17e5a6408ada79b6c2a522d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bcad0232bd8279848a320aafb131b9c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d5c6cf82e93b174ca9c0bbee4e94ca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1664,7 +1664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.6
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

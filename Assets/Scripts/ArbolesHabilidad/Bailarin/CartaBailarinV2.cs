@@ -18,7 +18,7 @@ public class CartaBailarinV2 : Carta
         bailarinV2.SetDaño(4);
         bailarinV2.SetVida(10);
         bailarinV2.SetVelocidad(-2f);
-        bailarinV2.SetCostoEnergia(50);
+        bailarinV2.SetCostoEnergia(25);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
     }

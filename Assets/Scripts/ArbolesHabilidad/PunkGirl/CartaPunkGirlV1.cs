@@ -17,7 +17,7 @@ public class CartaPunkGirlV1 : Carta {
         punkGirl.SetDaño(4);
         punkGirl.SetVida(10);
         punkGirl.SetVelocidad(-2f);
-        punkGirl.SetCostoEnergia(50);
+        punkGirl.SetCostoEnergia(25);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
     }

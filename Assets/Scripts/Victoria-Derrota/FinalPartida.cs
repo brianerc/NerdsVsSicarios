@@ -10,11 +10,10 @@ abstract public class FinalPartida : MonoBehaviour {
     private string nombreEscena;
     void Start () {
 	}
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadSceneAsync(nombreEscena);
     }
     public void GanarPuntos()
     {
@@ -32,7 +31,7 @@ abstract public class FinalPartida : MonoBehaviour {
         if (touch.phase == TouchPhase.Began)
         {
                 nombreEscena = "MenuPrincipal";
-                StartCoroutine(LoadScene());
+                LoadScene();
         }
     }
 }

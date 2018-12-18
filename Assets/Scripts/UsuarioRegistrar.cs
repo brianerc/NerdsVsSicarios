@@ -23,16 +23,15 @@ public class UsuarioRegistrar : MonoBehaviour
     {
     }
 
-	IEnumerator LoadScene()
-	{
-		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-		yield return new WaitForSeconds(1.0f);
-		SceneManager.LoadSceneAsync(nombreEscena);
-	}
-	public void volver()
+    private void LoadScene()
+    {
+        Transicion.nombreEscena = nombreEscena;
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+    }
+    public void volver()
 	{
 		nombreEscena = "UsuarioAcceso";
-		StartCoroutine(LoadScene());
+		LoadScene();
 	}
 
 	public void CrearUsuario()
@@ -115,7 +114,7 @@ public class UsuarioRegistrar : MonoBehaviour
 				error.color = Color.green;
 				error.text = "Usuario ingresado";
 				nombreEscena = "MenuPrincipal";
-				StartCoroutine(LoadScene());
+				LoadScene();
 			}
 		}
 		boton.interactable = true;

@@ -32,11 +32,10 @@ public class CargarCartas : MonoBehaviour
     private string nombreEscena;
 
 
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadSceneAsync(nombreEscena);
     }
     // Use this for initialization
     void Start()
@@ -234,7 +233,7 @@ public class CargarCartas : MonoBehaviour
 	public void VolverAlMenuPrincipal()
 	{
         nombreEscena = "MenuPrincipal";
-        StartCoroutine(LoadScene());
+        LoadScene();
     }
     public void CargarExperiencia()
     {

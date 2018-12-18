@@ -21,7 +21,7 @@ namespace Assets.Scripts.ArbolesHabilidad.EmoLord
 			mochilaExplosiva.SetDanoBase(100);
 			mochilaExplosiva.SetVida(25);
 			mochilaExplosiva.SetTiempoAtaque(1);
-			mochilaExplosiva.SetCostoEnergia(75);
+			mochilaExplosiva.SetCostoEnergia(50);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
 		}

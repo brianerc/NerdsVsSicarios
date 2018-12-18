@@ -20,7 +20,7 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 			droneElectrico.SetDanoBase(1);
 			droneElectrico.SetVida(25);
 			droneElectrico.SetTiempoAtaque(1);
-			droneElectrico.SetCostoEnergia(75);
+			droneElectrico.SetCostoEnergia(50);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
 		}

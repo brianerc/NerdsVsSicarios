@@ -16,6 +16,7 @@ abstract public class Lanzador : MonoBehaviour
     public Mazo jugador;
     protected ObjetoTablero objetoTablero;
     public GameObject invocador;
+    public SpriteRenderer spriteEstructura;
     // Use this for initialization
     public virtual void Start()
     {
@@ -25,6 +26,8 @@ abstract public class Lanzador : MonoBehaviour
         rojo = new Color(1, 0, 0, 1);
         transparente = new Color(0, 0, 0, 0);
         objetoTablero = estructura.GetComponent<ObjetoTablero>();
+        planoPosicion = GameObject.FindGameObjectWithTag("Seleccion");
+        spriteEstructura = estructura.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -76,7 +79,6 @@ abstract public class Lanzador : MonoBehaviour
                 Debug.Log("No se puede colocar fuera de la matriz: " + hit.collider.tag);
             }
 
-            Destroy(GameObject.FindGameObjectWithTag("Seleccion"));
         }
         TouchCancelado(touch);
     }
@@ -94,6 +96,8 @@ abstract public class Lanzador : MonoBehaviour
             InstanciarInvocacion(nuevaEstructura, touch);
             InstanciarEstructura(nuevaEstructura);
             jugador.QuitarEnergia(objetoTablero.GetEnergia());
+            planoPosicion.GetComponent<SpriteRenderer>().sprite = null;
+            planoPosicion.transform.position.Set(0, 0,0);
         }
     }
     protected virtual void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
@@ -119,30 +123,25 @@ abstract public class Lanzador : MonoBehaviour
     }
     protected void CrearSeleccion(Touch touch)
     {
-        planoPosicion = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        Vector3 escala = new Vector3(1, 1, 0);
-        planoPosicion.transform.localScale = escala;
         planoPosicion.transform.position = ActualizarPosicion(touch);
-        planoPosicion.tag = "Seleccion";
-        Destroy(planoPosicion.GetComponent<BoxCollider>());
-        planoPosicion.GetComponent<MeshRenderer>().material = Resources.Load<Material>("Materiales/Selector");
-        planoPosicion.GetComponent<MeshRenderer>().material.color = transparente;
     }
     protected void ActualizarColorSeleccion(GameObject planoPosicion, RaycastHit2D hit)
     {
-        MeshRenderer renderer = planoPosicion.GetComponent<MeshRenderer>();
-        renderer.material.color = transparente;
+        SpriteRenderer sprite = planoPosicion.GetComponent<SpriteRenderer>();
+        sprite.sprite = null;
         if (hit.collider && hit.collider.tag == estructura.tag)
         {
-            renderer.material.color = rojo;
+            sprite.sprite = spriteEstructura.sprite;
+            sprite.color = new Color32(165, 25, 0, 150);
         }
         else if (hit.collider && hit.collider.tag == "Piso")
         {
-            renderer.material.color = verde;
+            sprite.sprite = spriteEstructura.sprite;
+            sprite.color = new Color32(45, 150,45, 150);
         }
         else
         {
-            renderer.material.color = transparente;
+            sprite.sprite = null;
         }
     }
     protected void TouchCancelado(Touch touch)

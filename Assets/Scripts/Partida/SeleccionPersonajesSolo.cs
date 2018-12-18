@@ -12,14 +12,13 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 	public GameObject jugadorEmoLord;
 
 
-	IEnumerator LoadScene()
-	{
-		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-		yield return new WaitForSeconds(1.0f);
-		SceneManager.LoadSceneAsync(nombreEscena);
-	}
+    private void LoadScene()
+    {
+        Transicion.nombreEscena = nombreEscena;
+        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+    }
 
-	void Update()
+    void Update()
 	{
 		
 		RaycastHit2D hit;
@@ -38,19 +37,19 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 				{
 					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
 					nombreEscena = "PartidaSolo";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 				else if (hit.transform.name == "ItguyLord")
 				{
 					ComenzarPartidaSolo.jugador = jugadorItguyLord;
 					nombreEscena = "PartidaSolo";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 				else if (hit.transform.name == "EmoLord")
 				{
 					ComenzarPartidaSolo.jugador = jugadorEmoLord;
 					nombreEscena = "PartidaSolo";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 			}
 		}

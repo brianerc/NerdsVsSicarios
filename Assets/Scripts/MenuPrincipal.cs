@@ -26,13 +26,10 @@ public class MenuPrincipal : MonoBehaviour
 		}
 	}
 
-	IEnumerator LoadScene()
+	private void LoadScene()
 	{
 		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-		yield return new WaitForSeconds(1.0f);
-		Debug.Log(nombreEscena);
-
-		SceneManager.LoadSceneAsync(nombreEscena);
+        Transicion.nombreEscena = nombreEscena;
 	}
 
 	/// <summary>
@@ -67,7 +64,7 @@ public class MenuPrincipal : MonoBehaviour
 				if (hit.transform.tag == "Jugar")
 				{
 					nombreEscena = "Partida";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 				else if (hit.transform.tag == "Opciones")
 				{
@@ -77,18 +74,18 @@ public class MenuPrincipal : MonoBehaviour
 				{
 					Debug.Log("Jugar solo...");
 					nombreEscena = "Camino";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 				else if (hit.transform.tag == "Cartas")
 				{
 					nombreEscena = "Cartas";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 				else if (hit.transform.tag == "Salir")
 				{
 					PlayerPrefs.SetString("token", "");
 					nombreEscena = "UsuarioAcceso";
-					StartCoroutine(LoadScene());
+					LoadScene();
 				}
 			}
 		}

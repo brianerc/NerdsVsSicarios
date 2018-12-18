@@ -37,11 +37,10 @@ public class CaminoJugarSolo : MonoBehaviour
         StartCoroutine(CargarNivelActual());
 
     }
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadSceneAsync(nombreEscena);
     }
     private void CalcularPremio()
     {
@@ -106,6 +105,7 @@ public class CaminoJugarSolo : MonoBehaviour
                     imagen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/casilla_bloqueada");
                 }
             }
+            MostrarInformacion();
         }
     }
 
@@ -116,7 +116,7 @@ public class CaminoJugarSolo : MonoBehaviour
         ComenzarPartidaSolo.zona = zona;
         ComenzarPartidaSolo.nivel = nivelElegido;
         nombreEscena = "SeleccionNerd";
-        StartCoroutine(LoadScene());
+       LoadScene();
     }
     void Update()
     {
@@ -145,7 +145,7 @@ public class CaminoJugarSolo : MonoBehaviour
                 if(hit.collider.tag=="Finish")
                 {
                     nombreEscena = "MenuPrincipal";
-                    StartCoroutine(LoadScene());
+                    LoadScene();
                 } else if(hit.collider.tag=="Jugar")
                 {
                     Jugar();
@@ -185,6 +185,7 @@ public class CaminoJugarSolo : MonoBehaviour
             {
                 destino = posicionDelAvatar - 1;
             }
+            avatar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/nerd avatar");
         }
     }
 
@@ -192,6 +193,22 @@ public class CaminoJugarSolo : MonoBehaviour
     private void MoverADestino()
     {
         avatar.transform.position = Vector2.MoveTowards(avatar.transform.position, posiciones[destino],velocidadAvatar);
+        if(avatar.transform.position.y<posiciones[destino].y)
+        {
+            avatar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/nerd avatar espalda");
+        }
+        else if(avatar.transform.position.y>posiciones[destino].x)
+        {
+            avatar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/nerd avatar");
+        }
+        if (avatar.transform.position.x < posiciones[destino].x)
+        {
+            avatar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/nerd avatar derecha");
+        }
+        else if (avatar.transform.position.x > posiciones[destino].x)
+        {
+            avatar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/nerd avatar izquierda");
+        }
         posicionDelAvatar = destino;
     }
 

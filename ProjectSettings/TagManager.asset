@@ -61,6 +61,7 @@ TagManager:
   - LanzadorDrone 3.0 Idle
   - Generador
   - Bloqueado
+  - Fondo
   layers:
   - Default
   - TransparentFX

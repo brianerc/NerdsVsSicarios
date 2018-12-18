@@ -27,6 +27,7 @@ public class ComenzarPartidaSolo : Comenzar {
     public GameObject punkGirlEstrella;
     private float vidaOriginal;
     void Start () {
+
         Instantiate(fondo);
 		Instantiate(jugador);
         Instantiate(matriz);
@@ -34,21 +35,39 @@ public class ComenzarPartidaSolo : Comenzar {
         NerdVictoria.cantidadExp = cantidadExp;
         vidaOriginal = jugador.GetComponent<Mazo>().GetVida();
         CargarGeneradores();
-
+        if (zona == "Backstreet")
+        {
+            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Callejon");
+            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Callejon");
+        }
+        if (zona == "Park")
+        {
+            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
+            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
+        }
+        if (zona == "Arcade")
+        {
+            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
+            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
+        }
+        if (zona == "Boss Level")
+        {
+            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
+            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
+        }
 
     }
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadSceneAsync(nombreEscena);
     }
     void Update () {
         if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida() <= 0)
         {
             GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().vidaBase =vidaOriginal;
             nombreEscena = "Nerd_Derrota";
-            StartCoroutine(LoadScene());
+            LoadScene();
         }
     }
 

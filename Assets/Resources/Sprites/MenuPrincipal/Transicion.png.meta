@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f4f26f7d26c8ce4f8e7dc39c7d888f1
+guid: f50538b63ea77144f8c2847057b5baa2
 TextureImporter:
   fileIDToRecycleName:
     21300000: Transicion_0
@@ -9,8 +9,6 @@ TextureImporter:
     21300008: Transicion_4
     21300010: Transicion_5
     21300012: Transicion_6
-    21300014: Transicion_7
-    21300016: Transicion_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -69,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -80,7 +78,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,7 +89,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -102,7 +100,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: WebGL
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -118,18 +116,18 @@ TextureImporter:
       name: Transicion_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 2849
-        width: 1280
-        height: 720
+        x: 188
+        y: 1489
+        width: 1291
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa3704599f7cf814e87444368bf0df3e
+      spriteID: 596da20f543d9754c8ddd04480f402f8
       vertices: []
       indices: 
       edges: []
@@ -138,18 +136,18 @@ TextureImporter:
       name: Transicion_1
       rect:
         serializedVersion: 2
-        x: 1581
-        y: 2849
-        width: 1280
-        height: 720
+        x: 2078
+        y: 1489
+        width: 1289
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ead67b33e5c4dc4ca81a3d3cc204e60
+      spriteID: 48bdc36f121ab0e4a83a5312243e2f3f
       vertices: []
       indices: 
       edges: []
@@ -158,18 +156,18 @@ TextureImporter:
       name: Transicion_2
       rect:
         serializedVersion: 2
-        x: 3115
-        y: 2849
-        width: 1280
-        height: 720
+        x: 3819
+        y: 1489
+        width: 1289
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c09ee31d1c7c814181b733c614bf7d7
+      spriteID: 7e30f79c66e166f42831f00d2d2b8a62
       vertices: []
       indices: 
       edges: []
@@ -178,18 +176,18 @@ TextureImporter:
       name: Transicion_3
       rect:
         serializedVersion: 2
-        x: 4593
-        y: 2849
-        width: 1280
-        height: 720
+        x: 5560
+        y: 1489
+        width: 1288
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d551ca3b03506d4591dc7b8906a28ae
+      spriteID: a849be829c1114e4cad898908f8d32bf
       vertices: []
       indices: 
       edges: []
@@ -198,18 +196,18 @@ TextureImporter:
       name: Transicion_4
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1830
-        width: 1280
-        height: 720
+        x: 187
+        y: 269
+        width: 1292
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e1b19e7d9209a478df6c3c38dc17fe
+      spriteID: eb8119305586cad47a4be55cedc82ca0
       vertices: []
       indices: 
       edges: []
@@ -218,18 +216,18 @@ TextureImporter:
       name: Transicion_5
       rect:
         serializedVersion: 2
-        x: 1581
-        y: 1830
-        width: 1280
-        height: 720
+        x: 2078
+        y: 269
+        width: 1289
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e632316137ac8e5489ae5601cc16e075
+      spriteID: 37f284b6751415346a229557ca453045
       vertices: []
       indices: 
       edges: []
@@ -238,58 +236,18 @@ TextureImporter:
       name: Transicion_6
       rect:
         serializedVersion: 2
-        x: 3115
-        y: 1830
-        width: 1280
-        height: 720
+        x: 3819
+        y: 269
+        width: 1289
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b0a076479e1a05498b49b57bae4ccd0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Transicion_7
-      rect:
-        serializedVersion: 2
-        x: 4649
-        y: 1830
-        width: 1280
-        height: 720
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d497b3026ff8844fa8e7cd986a70ddc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Transicion_8
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 906
-        width: 1280
-        height: 720
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3776c4daa33ef604ca21a49c1297b82b
+      spriteID: 1eae7538a6b95a8439ce6fa260b5cb64
       vertices: []
       indices: 
       edges: []
@@ -297,7 +255,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 306d8f5f286984945995af09f0b2d37a
+    spriteID: ffe5f86ab56903146b4168b732119b52
     vertices: []
     indices: 
     edges: []
