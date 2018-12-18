@@ -237,12 +237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5d0f56e1e86734a9a4921e430ed1f0, type: 3}
---- !u!1 &184924355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1161168021909378, guid: 2b5d0f56e1e86734a9a4921e430ed1f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 184924354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &541691903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,7 +491,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -525,7 +519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1365461580
 PrefabInstance:
@@ -628,7 +622,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transicion
       value: 
-      objectReference: {fileID: 184924355}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 129bd7f94188d454d9bcc6862076af00, type: 3}
 --- !u!1001 &1487568193
@@ -1058,6 +1052,12 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3af0244e78c1964b9246fe969f6f6c0, type: 3}
+--- !u!1 &1909104852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1619737576406912, guid: 2b5d0f56e1e86734a9a4921e430ed1f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 184924354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1921806400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1743009972166948, guid: f3af0244e78c1964b9246fe969f6f6c0,
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 3}
   energiaNerd: {fileID: 1207737820366036, guid: 3201d287cc6b7f943a3757a05279004d,
     type: 3}
-  transicion: {fileID: 184924355}
+  transicion: {fileID: 1909104852}
   jugadorDeFootballBase: {fileID: 1465779085546880, guid: 0002ce08cb72fd146912c6e8dbb9390e,
     type: 3}
   jugadorDeFootballMedio: {fileID: 1658163094709632, guid: 74eb599b717d5fd43853f33977ede7df,
@@ -1178,7 +1178,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1976404647
 AudioSource:
