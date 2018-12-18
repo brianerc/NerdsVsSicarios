@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d759b2aa14f680d43b0a8b633fbe5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transicion: {fileID: 0}
+  transicion: {fileID: 955740884025579592}
   textNombreDeUsuario: {fileID: 865845215}
   contrasenia: {fileID: 1558293807}
   error: {fileID: 786909253}
