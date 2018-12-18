@@ -427,7 +427,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.542489, y: 2.718387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -438,7 +438,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.8, y: 8}
+  m_Size: {x: 1.8624935, y: 1.955587}
   m_EdgeRadius: 0
 --- !u!212 &940353011
 SpriteRenderer:
@@ -533,7 +533,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.765765, y: 0.3997626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -544,7 +544,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.8, y: 8}
+  m_Size: {x: 1.8784823, y: 1.955585}
   m_EdgeRadius: 0
 --- !u!212 &1391974319
 SpriteRenderer:
@@ -706,7 +706,8 @@ MonoBehaviour:
   transicion: {fileID: 1977958477}
   jugadorWeabooLord: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6,
     type: 3}
-  jugadorItguyLord: {fileID: 0}
+  jugadorItguyLord: {fileID: 1823676836413201878, guid: 55f918f7baf319042894a2d6a15b928a,
+    type: 3}
   jugadorEmoLord: {fileID: 0}
 --- !u!1 &1588645438
 GameObject:
@@ -818,7 +819,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -5.045005, y: 2.7103934}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -829,7 +830,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.8, y: 8}
+  m_Size: {x: 1.8465042, y: 2.0035563}
   m_EdgeRadius: 0
 --- !u!212 &1856264859
 SpriteRenderer:
