@@ -35,7 +35,7 @@ public class UsuarioRegistrar : MonoBehaviour
 		StartCoroutine(LoadScene());
 	}
 
-	public void crearUsuario()
+	public void CrearUsuario()
 	{
 
 		string nombreDeUsuario = textNombreDeUsuario.text;

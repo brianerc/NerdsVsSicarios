@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cartas.unity
     guid: a38b6e2173f778748b1513505f18e7cc
+  - enabled: 1
+    path: Assets/Scenes/Camino.unity
+    guid: 02922eb8a40904149807f921f88b4c5d
   m_configObjects: {}

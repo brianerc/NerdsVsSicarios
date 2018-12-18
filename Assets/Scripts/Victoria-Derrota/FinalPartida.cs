@@ -4,9 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.Scripts.ServidorDTO;
 using Assets.Servidor;
-/// <summary>
-/// MonoBehaviour correspondiente a la escena de final de partida
-/// </summary>
 abstract public class FinalPartida : MonoBehaviour {
     public GameObject transicion;
     public static int cantidadExp;
