@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15a3cf893222e084286255e1a9ef1b7c
+guid: 05a09aad4fbf06b45b335eabcdaf9cff
 TextureImporter:
   fileIDToRecycleName:
     21300000: menu_fondo_0
@@ -114,18 +114,18 @@ TextureImporter:
       name: menu_fondo_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 678
-        width: 512
-        height: 288
+        x: 0
+        y: 1297
+        width: 1280
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6959611921baca43bf3ac8b2ae94537
+      spriteID: 941d384a5d15282498ba2c3ffe137fa5
       vertices: []
       indices: 
       edges: []
@@ -134,18 +134,18 @@ TextureImporter:
       name: menu_fondo_1
       rect:
         serializedVersion: 2
-        x: 657
-        y: 678
-        width: 512
-        height: 288
+        x: 0
+        y: 131
+        width: 1280
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5089e9a5b1e4edb4c8fc10b31ac65b1b
+      spriteID: 30cab6ef444c89e44aa80907d40ee82f
       vertices: []
       indices: 
       edges: []
@@ -154,18 +154,18 @@ TextureImporter:
       name: menu_fondo_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 351
-        width: 512
-        height: 288
+        x: 1421
+        y: 1297
+        width: 1280
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6357d61551910c943a615893f776329c
+      spriteID: 5924a90b4430f454881555d41dd75f98
       vertices: []
       indices: 
       edges: []
@@ -174,18 +174,18 @@ TextureImporter:
       name: menu_fondo_3
       rect:
         serializedVersion: 2
-        x: 657
-        y: 351
-        width: 512
-        height: 288
+        x: 1421
+        y: 131
+        width: 1280
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf22eafcc635fd14cba6bcecfe7c381d
+      spriteID: dd72e003a55ca534b8fdeb60ec6ac4bf
       vertices: []
       indices: 
       edges: []
@@ -194,18 +194,18 @@ TextureImporter:
       name: menu_fondo_4
       rect:
         serializedVersion: 2
-        x: 99
-        y: 27
-        width: 512
-        height: 288
+        x: 2841
+        y: 1297
+        width: 1280
+        height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e78b91ab252828499b776cd3e19d8fb
+      spriteID: 07fe86b764674a74686611407deb3688
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 67a97595c293b3d4c81f1f08926fd03b
+    spriteID: ff3f8be75beb06c4ba4fe60b47391d45
     vertices: []
     indices: 
     edges: []

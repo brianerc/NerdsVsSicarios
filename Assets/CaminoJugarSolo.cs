@@ -17,9 +17,23 @@ public class CaminoJugarSolo : MonoBehaviour
     private string zona;
     private string nombreEscena;
     public GameObject transicion;
+    private GameObject avatar;
     // Start is called before the first frame update
+    private Vector3[] posiciones;
+    private int posicionDelAvatar;
+    private float velocidadAvatar = 0.2f;
+    private int destino;
+    private Vector3 posicionObjetivo;
+    bool llegoDestino;
     void Start()
     {
+        llegoDestino = true;
+        posiciones = new Vector3[11];
+        for (int i = 1; i < 11; i++)
+        {
+            posiciones[i] = GameObject.FindGameObjectWithTag("N" + i).transform.position;
+        }
+        avatar = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(CargarNivelActual());
 
     }
@@ -37,13 +51,13 @@ public class CaminoJugarSolo : MonoBehaviour
     {
         CalcularPremio();
         GameObject.FindGameObjectWithTag("MostrarInformacion").GetComponent<Text>().text = "Reward: " + premio;
-        if(nivelElegido<0 && nivelElegido<3)
+        if(nivelElegido>0 && nivelElegido<3)
         {
             zona = "Arcade";
         } else if(nivelElegido>2 && nivelElegido<7)
         {
             zona = "Backstreet";
-        } else if (nivelElegido >7 && nivelElegido<10)
+        } else if (nivelElegido >6 && nivelElegido<10)
         {
             zona = "Park";
         } else
@@ -78,8 +92,20 @@ public class CaminoJugarSolo : MonoBehaviour
             Usuario resultObj = JsonUtility.FromJson<Usuario>(www.text);
             nivelJugador=resultObj.nivel;
             nivelElegido = nivelJugador;
+            posicionDelAvatar = nivelElegido;
             MostrarInformacion();
-            GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
+            avatar.transform.position = posiciones[nivelJugador];
+            destino = nivelJugador;
+            posicionObjetivo = posiciones[nivelJugador];
+            for (int i = 1; i < 11; i++)
+            {
+                if(nivelJugador<i)
+                {
+                    GameObject imagen = GameObject.FindGameObjectWithTag("N" + i);
+                    imagen.tag = "Bloqueado";
+                    imagen.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/CaminoSinglePlayer/casilla_bloqueada");
+                }
+            }
         }
     }
 
@@ -88,11 +114,22 @@ public class CaminoJugarSolo : MonoBehaviour
     {
         ComenzarPartidaSolo.cantidadExp = premio;
         ComenzarPartidaSolo.zona = zona;
-        nombreEscena = "PartidaSolo";
+        ComenzarPartidaSolo.nivel = nivelElegido;
+        nombreEscena = "SeleccionNerd";
         StartCoroutine(LoadScene());
     }
     void Update()
     {
+        MoverSiguientePosicion();
+        MoverADestino();
+        if (avatar.transform.position == posiciones[destino])
+        {
+            llegoDestino = true;
+        }
+        else
+        {
+            llegoDestino = false;
+        }
         RaycastHit2D hit;
         if (Input.touchCount < 1)
         {
@@ -114,19 +151,19 @@ public class CaminoJugarSolo : MonoBehaviour
                     Jugar();
                 }
                 try {
-                    if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && int.Parse(hit.collider.name) != nivelElegido)
+                    if (hit.collider.tag.Contains("N"))
                     {
-                        posicionElegida = false;
-                        MostrarInformacion();
-                    }
-                    else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador && posicionElegida)
-                    {
-                        Jugar();
-                    }
-                    else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador)
-                    {
-                        GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("N" + nivelJugador).transform.position;
-                        posicionElegida = true;
+                        if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador + 1 && int.Parse(hit.collider.name) != nivelElegido)
+                        {
+                            nivelElegido = int.Parse(hit.collider.name);
+                            MostrarInformacion();
+
+                        }
+                        else if (int.Parse(hit.collider.name) > 0 && int.Parse(hit.collider.name) < nivelJugador + 1 )
+                        {
+                            Jugar();
+                        }
+                
                     }
                 } catch
                 {
@@ -135,4 +172,27 @@ public class CaminoJugarSolo : MonoBehaviour
             }
         }
     }
+
+    private void MoverSiguientePosicion()
+    {
+        if (llegoDestino)
+        {
+            if (nivelElegido > posicionDelAvatar)
+            {
+                destino = posicionDelAvatar + 1;
+            }
+            else if (nivelElegido < posicionDelAvatar)
+            {
+                destino = posicionDelAvatar - 1;
+            }
+        }
+    }
+
+
+    private void MoverADestino()
+    {
+        avatar.transform.position = Vector2.MoveTowards(avatar.transform.position, posiciones[destino],velocidadAvatar);
+        posicionDelAvatar = destino;
+    }
+
 }

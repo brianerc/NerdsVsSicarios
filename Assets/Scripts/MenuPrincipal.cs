@@ -76,7 +76,7 @@ public class MenuPrincipal : MonoBehaviour
 				else if (hit.transform.tag == "JugarSolo")
 				{
 					Debug.Log("Jugar solo...");
-					nombreEscena = "SeleccionNerd";
+					nombreEscena = "Camino";
 					StartCoroutine(LoadScene());
 				}
 				else if (hit.transform.tag == "Cartas")
