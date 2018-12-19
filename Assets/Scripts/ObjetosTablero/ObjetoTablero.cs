@@ -16,6 +16,8 @@ abstract public class ObjetoTablero : MonoBehaviour
 	public float danoBase = 0;
 	public int nivel;
 	public string nombre;
+	public AudioSource muerteSonido;
+
 	private void Start()
 	{
 		muerto = false;
@@ -69,6 +71,15 @@ abstract public class ObjetoTablero : MonoBehaviour
 			}
 		}
 	}
+
+	public void EmpezarAMorirse()
+	{
+		if (muerteSonido != null)
+		{
+			muerteSonido.Play();
+		}
+	}
+
 	public void Morir()
 	{
 		Destruir();

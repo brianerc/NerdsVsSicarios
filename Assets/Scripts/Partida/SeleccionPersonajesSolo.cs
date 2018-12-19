@@ -10,7 +10,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 	public GameObject jugadorWeabooLord;
 	public GameObject jugadorItguyLord;
 	public GameObject jugadorEmoLord;
-
+	public AudioSource seleccionMenu;
 
     private void LoadScene()
     {
@@ -35,24 +35,28 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 			{
 				if (hit.transform.name == "WeabooLord")
 				{
+					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
 					nombreEscena = "PartidaSolo";
 					LoadScene();
 				}
 				else if (hit.transform.name == "ItguyLord")
 				{
+					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorItguyLord;
 					nombreEscena = "PartidaSolo";
 					LoadScene();
 				}
 				else if (hit.transform.name == "EmoLord")
 				{
+					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorEmoLord;
 					nombreEscena = "PartidaSolo";
 					LoadScene();
 				} else if(hit.transform.name=="Salir")
                 {
-                    nombreEscena = "MenuPrincipal";
+					seleccionMenu.Play();
+					nombreEscena = "MenuPrincipal";
                     LoadScene();
                 }
 			}
