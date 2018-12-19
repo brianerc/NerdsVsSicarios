@@ -12,7 +12,6 @@ public class CaminoJugarSolo : MonoBehaviour
     private int nivelJugador;
     private int nivelElegido;
     public Text error;
-    bool posicionElegida = false;
     private int premio;
     private string zona;
     private string nombreEscena;
@@ -23,17 +22,21 @@ public class CaminoJugarSolo : MonoBehaviour
     private int posicionDelAvatar;
     private float velocidadAvatar = 0.2f;
     private int destino;
-    private Vector3 posicionObjetivo;
     bool llegoDestino;
+    private bool cargoNivel = false;
     void Start()
     {
-        llegoDestino = true;
         posiciones = new Vector3[11];
         for (int i = 1; i < 11; i++)
         {
             posiciones[i] = GameObject.FindGameObjectWithTag("N" + i).transform.position;
         }
         avatar = GameObject.FindGameObjectWithTag("Player");
+        posicionDelAvatar = 1;
+        destino = 1;
+        avatar.transform.position = posiciones[posicionDelAvatar];
+        nivelJugador = 1;
+        nivelElegido = 1;
         StartCoroutine(CargarNivelActual());
 
     }
@@ -91,11 +94,7 @@ public class CaminoJugarSolo : MonoBehaviour
             Usuario resultObj = JsonUtility.FromJson<Usuario>(www.text);
             nivelJugador=resultObj.nivel;
             nivelElegido = nivelJugador;
-            posicionDelAvatar = nivelElegido;
             MostrarInformacion();
-            avatar.transform.position = posiciones[nivelJugador];
-            destino = nivelJugador;
-            posicionObjetivo = posiciones[nivelJugador];
             for (int i = 1; i < 11; i++)
             {
                 if(nivelJugador<i)
@@ -107,6 +106,7 @@ public class CaminoJugarSolo : MonoBehaviour
             }
             MostrarInformacion();
         }
+        cargoNivel = true;
     }
 
     // Update is called once per frame
@@ -122,16 +122,20 @@ public class CaminoJugarSolo : MonoBehaviour
     }
     void Update()
     {
-        MoverSiguientePosicion();
-        MoverADestino();
-        if (avatar.transform.position == posiciones[destino])
+        if(cargoNivel)
         {
-            llegoDestino = true;
+            MoverSiguientePosicion();
+            MoverADestino();
+            if (avatar.transform.position == posiciones[destino])
+            {
+                llegoDestino = true;
+            }
+            else
+            {
+                llegoDestino = false;
+            }
         }
-        else
-        {
-            llegoDestino = false;
-        }
+
         RaycastHit2D hit;
         if (Input.touchCount < 1)
         {

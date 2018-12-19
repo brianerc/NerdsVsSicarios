@@ -33,25 +33,26 @@ public class ComenzarPartidaSolo : Comenzar {
         Instantiate(energiaNerd);
         NerdVictoria.cantidadExp = cantidadExp;
         vidaOriginal = jugador.GetComponent<Mazo>().GetVida();
+        
         CargarGeneradores();
         if (zona == "Backstreet")
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Callejon");
+            GameObject.FindGameObjectWithTag("Fondo").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Callejon");
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Callejon");
         }
         if (zona == "Park")
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
+            GameObject.FindGameObjectWithTag("Fondo").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
         }
         if (zona == "Arcade")
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
+            GameObject.FindGameObjectWithTag("Fondo").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
         }
         if (zona == "Boss Level")
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Mansion");
+            GameObject.FindGameObjectWithTag("Fondo").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Mansion");
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Mansion");
         }
 

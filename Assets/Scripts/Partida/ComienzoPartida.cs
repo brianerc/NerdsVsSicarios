@@ -23,24 +23,25 @@ public class ComienzoPartida : Comenzar {
         Instantiate(energiaNerd);
         Instantiate(energiaSicario);
         vidaOriginal = jugador.GetComponent<Mazo>().GetVida();
-
+        SpriteRenderer spriteFondo = GameObject.FindGameObjectWithTag("Fondo").GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteBarrera = GameObject.Find("Barricada").GetComponent<SpriteRenderer>();
         int numero = Random.Range(1, 3);
        
         if(numero==1)
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
-            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
+            spriteFondo.sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
+            spriteBarrera.sprite= Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
         }
         else if (numero == 2)
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Callejon");
-            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Callejon");
+            spriteFondo.sprite = Resources.Load<Sprite>("Sprites/Partida/Callejon");
+            spriteBarrera.sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Callejon");
 
         }
         else 
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
-            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
+            spriteFondo.sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
+            spriteBarrera.sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
         }
     }
     private void LoadScene()

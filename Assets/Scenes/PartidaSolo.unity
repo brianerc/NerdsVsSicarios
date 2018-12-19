@@ -761,7 +761,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sicario2
       value: 
-      objectReference: {fileID: 1261326440413716, guid: 6feab2c22669bd44db292f6a8b8cbe7f,
+      objectReference: {fileID: 1261326440413716, guid: 876c08e0fa455534e87b2a9ad7f3b98a,
         type: 3}
     - target: {fileID: 114926143280313264, guid: f3af0244e78c1964b9246fe969f6f6c0,
         type: 3}
@@ -1235,7 +1235,7 @@ MonoBehaviour:
     type: 3}
   bailarinBase: {fileID: 1053286752566452, guid: 25508196a75f06247a7b35ed78fa8443,
     type: 3}
-  bailarinMedio: {fileID: 1261326440413716, guid: 6feab2c22669bd44db292f6a8b8cbe7f,
+  bailarinMedio: {fileID: 1261326440413716, guid: 876c08e0fa455534e87b2a9ad7f3b98a,
     type: 3}
   bailarinEstrella: {fileID: 1339395037531652, guid: 1c6c1bfa110a4ab4aab93e3c1907d0a5,
     type: 3}
