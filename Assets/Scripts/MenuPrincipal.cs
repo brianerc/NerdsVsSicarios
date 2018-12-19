@@ -23,7 +23,7 @@ public class MenuPrincipal : MonoBehaviour
 		else
 		{
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
-
+			StartCoroutine(ManejadorUsuario.CargarCartas());
 			//Borrar despues de leer
 			StartCoroutine(CambiarPuntos(20));
 		}
@@ -32,7 +32,7 @@ public class MenuPrincipal : MonoBehaviour
 	//Borrar despues de leer
 	public IEnumerator CambiarPuntos(int puntos)
 	{
-		WWW www = Acciones.SubirDeNivelCarta("5c16db52c3dad600331c49dd");
+		WWW www = Acciones.SubirDeNivel();
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
 		{
@@ -60,7 +60,7 @@ public class MenuPrincipal : MonoBehaviour
 		Usuario usuario = ManejadorUsuario.ObtenerUsuario();
 		if (usuario != null)
 		{
-			Debug.Log(usuario._id);
+			//Debug.Log(usuario._id);
 			//if (!primeraPrueba)
 			//{
 			//	primeraPrueba = true;
