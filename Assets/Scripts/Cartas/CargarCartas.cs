@@ -140,7 +140,9 @@ public class CargarCartas : MonoBehaviour
         }
         else
         {
-            MostrarElegirCarta();
+			StartCoroutine(ManejadorUsuario.CargarUsuario());
+			StartCoroutine(ManejadorUsuario.CargarCartas());
+			MostrarElegirCarta();
         }
     }
 

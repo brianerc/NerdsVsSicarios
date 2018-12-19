@@ -34,6 +34,8 @@ abstract public class FinalPartida : MonoBehaviour {
 		{
 			Debug.Log("EXITO: ");
 			Debug.Log(www.text);
+			StartCoroutine(ManejadorUsuario.CargarUsuario());
+			StartCoroutine(ManejadorUsuario.CargarCartas());
 		}
 	}
 
