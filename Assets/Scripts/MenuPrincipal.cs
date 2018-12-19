@@ -23,6 +23,26 @@ public class MenuPrincipal : MonoBehaviour
 		else
 		{
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
+
+			//Borrar despues de leer
+			StartCoroutine(CambiarPuntos(20));
+		}
+	}
+
+	//Borrar despues de leer
+	public IEnumerator CambiarPuntos(int puntos)
+	{
+		WWW www = Acciones.CambiarPuntos(puntos);
+		yield return www;
+		if (!string.IsNullOrEmpty(www.error))
+		{
+			Debug.Log(www.error);
+			Debug.Log("EN ERROR");
+		}
+		else
+		{
+			Debug.Log("EXITO: ");
+			Debug.Log(www.text);
 		}
 	}
 

@@ -55,7 +55,7 @@ namespace Assets.Servidor
 		internal static WWW CambiarPuntos(int puntos)
 		{
 			string postCuerpo = "{\"puntos\":\"" + puntos + "\"}";
-			var www = ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, false);
+			var www = ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, true);
             ManejadorUsuario.CargarUsuario();
 			return www;
 		}
