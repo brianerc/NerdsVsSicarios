@@ -3,6 +3,17 @@ guid: e675d5f91b5ce174fb66656f50b358d0
 TextureImporter:
   fileIDToRecycleName:
     21300000: IT_Guy_Tirando_0
+    21300002: IT_Guy_Tirando_1
+    21300004: IT_Guy_Tirando_2
+    21300006: IT_Guy_Tirando_3
+    21300008: IT_Guy_Tirando_4
+    21300010: IT_Guy_Tirando_5
+    21300012: IT_Guy_Tirando_6
+    21300014: IT_Guy_Tirando_7
+    21300016: IT_Guy_Tirando_8
+    21300018: IT_Guy_Tirando_9
+    21300020: IT_Guy_Tirando_10
+    21300022: IT_Guy_Tirando_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -99,10 +110,10 @@ TextureImporter:
       name: IT_Guy_Tirando_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 741
+        x: 60
+        y: 582
+        width: 59
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +121,227 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30dd7155f8821c84f8c2751c8af1f656
+      spriteID: 13e9c40f162a78d49afaa9f6686dd7be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 582
+        width: 123
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87b8c80e513a7546be4852b98ae3590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 582
+        width: 109
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db7d506a4a8fb24ca86902822615ad4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 395
+        width: 134
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d98fad424f29a24b9b09375edeae4fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 395
+        width: 109
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e831fec28737e944188c5549191d4da5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_5
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 395
+        width: 109
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4f192f7d231df488f041c062bc1bed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 207
+        width: 109
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98377f48effd9646bb7ef2c654a3f7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_7
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 207
+        width: 120
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d34835ea3db9440ae68b947528084a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 207
+        width: 67
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a9ed9899da0b4448f5f6cf882017a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 15
+        width: 67
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddd8de8c02ca7349b95cac64d27a7af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_10
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 15
+        width: 59
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9e96d895553934c9ab5e941fc526f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Tirando_11
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 15
+        width: 59
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1460c1e077ede4daef74d1cdecc10f
       vertices: []
       indices: 
       edges: []

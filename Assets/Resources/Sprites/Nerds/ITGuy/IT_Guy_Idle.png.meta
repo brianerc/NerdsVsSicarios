@@ -7,6 +7,8 @@ TextureImporter:
     21300004: IT_Guy_Idle_2
     21300006: IT_Guy_Idle_3
     21300008: IT_Guy_Idle_4
+    21300010: IT_Guy_Idle_5
+    21300012: IT_Guy_Idle_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -103,10 +105,10 @@ TextureImporter:
       name: IT_Guy_Idle_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 128
-        width: 21
-        height: 64
+        x: 5
+        y: 385
+        width: 59
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,7 +116,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c58b5d50895c7a4e8f0a6aad020b244
+      spriteID: 3708524c6268752499fc01e40e5ad47e
       vertices: []
       indices: 
       edges: []
@@ -123,10 +125,10 @@ TextureImporter:
       name: IT_Guy_Idle_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 128
-        width: 21
-        height: 64
+        x: 184
+        y: 385
+        width: 58
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c03b68eeb8ff814483205fd91b08a2a
+      spriteID: 2b0ea28068ca8e340989556a137b8043
       vertices: []
       indices: 
       edges: []
@@ -143,10 +145,10 @@ TextureImporter:
       name: IT_Guy_Idle_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 64
-        width: 21
-        height: 128
+        x: 363
+        y: 385
+        width: 58
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +156,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0874c974b568a74283fd61c45ae20bb
+      spriteID: 1ad32d857237c5d4eabf6bfdc612a1ce
       vertices: []
       indices: 
       edges: []
@@ -163,10 +165,10 @@ TextureImporter:
       name: IT_Guy_Idle_3
       rect:
         serializedVersion: 2
-        x: 21
-        y: 0
-        width: 21
-        height: 127
+        x: 5
+        y: 199
+        width: 59
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +176,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e36dd2cb3e91e24c91a888e15c0de0c
+      spriteID: 80ff2baecf18f1c43b70c19e10f62c87
       vertices: []
       indices: 
       edges: []
@@ -183,10 +185,10 @@ TextureImporter:
       name: IT_Guy_Idle_4
       rect:
         serializedVersion: 2
-        x: 85
-        y: 64
-        width: 21
-        height: 63
+        x: 184
+        y: 199
+        width: 58
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +196,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34bbad422311dd54cb7ad89c80b71c08
+      spriteID: 9058b4a0cc7705f4bbcdf5884476f8ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 199
+        width: 58
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77a4938e65c97f4c9459d0d44b9c402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IT_Guy_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 11
+        width: 59
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd176c7df390d2458da8a8e8f4914d9
       vertices: []
       indices: 
       edges: []
