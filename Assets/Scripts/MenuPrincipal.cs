@@ -23,11 +23,8 @@ public class MenuPrincipal : MonoBehaviour
 		{
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
 			StartCoroutine(ManejadorUsuario.CargarCartas());
-			//Borrar despues de leer
 		}
 	}
-
-
 
 	private void LoadScene()
 	{
