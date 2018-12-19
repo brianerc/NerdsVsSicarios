@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

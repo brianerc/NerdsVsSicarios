@@ -13,8 +13,8 @@ public class Temporizador : MonoBehaviour {
     protected bool termino = false;
     // Use this for initialization
     void Start () {
-        minutos = 10;
-        segundos = 3;
+        minutos = 3;
+        segundos = 0;
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
@@ -38,10 +38,9 @@ public class Temporizador : MonoBehaviour {
             if (minutos < 0)
             {
                 nombreEscena = "Nerd_Victoria";
-                if (ComenzarPartidaSolo.nivel != -1 && ComenzarPartidaSolo.nivel == ComenzarPartidaSolo.nivelJugador && ComenzarPartidaSolo.nivel!=10)
+                if (ComenzarPartidaSolo.nivel > 0 && ComenzarPartidaSolo.nivel == ComenzarPartidaSolo.nivelJugador && ComenzarPartidaSolo.nivel!=10)
                 {
                     StartCoroutine(SubirDeNivel());
-
                 }
                 termino = true;
                 LoadScene();

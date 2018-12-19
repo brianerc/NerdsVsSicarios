@@ -1,12 +1,10 @@
-﻿using Assets.Scripts.ObjetosTablero.Estructuras;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ArbolesHabilidad.EmoLord
-{
+
 	class CartaMochilaSierra : Carta
 	{
 		private MochilaSierra mochilaSierra;
@@ -30,4 +28,4 @@ namespace Assets.Scripts.ArbolesHabilidad.EmoLord
 			return true;
 		}
 	}
-}
+

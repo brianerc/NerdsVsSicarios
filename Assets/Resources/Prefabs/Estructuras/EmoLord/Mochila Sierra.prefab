@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaBase: 25
-  objetivo: {fileID: 0}
+  objetivos: []
   danoBase: 1
   nivel: 1
   nombre: Mochila cierra

@@ -11,8 +11,7 @@ using System.Text;
 /// se agregarian en esta misma clase ya que es la responsable de gestionar las filas y los objetos 
 /// del tablero que se encuentran en la misma
 /// </summary>
-namespace Assets.Scripts.ObjetosTablero.Proyectiles
-{
+
 	class Filas
 	{
 		public static Dictionary<float, int> SicariosEnFilas = new Dictionary<float, int>();
@@ -47,4 +46,4 @@ namespace Assets.Scripts.ObjetosTablero.Proyectiles
 			SicariosEnFilas[y]--;
 		}
 	}
-}
+

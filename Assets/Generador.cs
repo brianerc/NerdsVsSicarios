@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.ObjetosTablero.Proyectiles;
 
 /// <summary>
 /// Generador correspondiente al single player. Logica correspondiente a "spawnear" personajes sicarios

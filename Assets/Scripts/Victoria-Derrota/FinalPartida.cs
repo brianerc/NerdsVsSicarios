@@ -9,7 +9,8 @@ abstract public class FinalPartida : MonoBehaviour {
     public static int cantidadExp;
     private string nombreEscena;
     void Start () {
-	}
+        ComenzarPartidaSolo.nivel = -1;
+    }
     private void LoadScene()
     {
         Transicion.nombreEscena = nombreEscena;
