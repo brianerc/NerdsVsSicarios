@@ -33,6 +33,22 @@ namespace Assets.Servidor
 			}
 		}
 
+		public static IEnumerator CargarCartas()
+		{
+			Debug.Log("Cargando cartas");
+			WWW www = Acciones.CargarCartas();
+			yield return www;
+			if (www.error != null)
+			{
+				PlayerPrefs.DeleteKey("token");
+			}
+			else
+			{
+				CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
+				cartasUsuario = resultObj.cartas;
+			}
+		}
+
 		public static Usuario ObtenerUsuario()
 		{
 			return usuario;

@@ -22,7 +22,11 @@ public class MenuPrincipal : MonoBehaviour
 		else
 		{
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
-
+			StartCoroutine(ManejadorUsuario.CargarCartas());
+			//Borrar despues de leer
+			StartCoroutine(CambiarPuntos(20));
+		}
+	}
 
 		}
 	}
@@ -42,7 +46,7 @@ public class MenuPrincipal : MonoBehaviour
 		Usuario usuario = ManejadorUsuario.ObtenerUsuario();
 		if (usuario != null)
 		{
-			Debug.Log(usuario._id);
+			//Debug.Log(usuario._id);
 			//if (!primeraPrueba)
 			//{
 			//	primeraPrueba = true;
