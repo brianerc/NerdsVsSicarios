@@ -24,12 +24,9 @@ public class MenuPrincipal : MonoBehaviour
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
 			StartCoroutine(ManejadorUsuario.CargarCartas());
 			//Borrar despues de leer
-			StartCoroutine(CambiarPuntos(20));
 		}
 	}
 
-		}
-	}
 
 
 	private void LoadScene()
