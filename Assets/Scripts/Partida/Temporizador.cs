@@ -41,7 +41,6 @@ public class Temporizador : MonoBehaviour {
                 if (ComenzarPartidaSolo.nivel > 0 && ComenzarPartidaSolo.nivel == ComenzarPartidaSolo.nivelJugador && ComenzarPartidaSolo.nivel!=10)
                 {
                     StartCoroutine(SubirDeNivel());
-                    ComenzarPartidaSolo.nivel = -1;
                 }
                 termino = true;
                 LoadScene();

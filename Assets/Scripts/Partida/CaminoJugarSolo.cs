@@ -31,6 +31,7 @@ public class CaminoJugarSolo : MonoBehaviour
         {
             posiciones[i] = GameObject.FindGameObjectWithTag("N" + i).transform.position;
         }
+        ComenzarPartidaSolo.nivel = -1;
         avatar = GameObject.FindGameObjectWithTag("Player");
         posicionDelAvatar = 1;
         destino = 1;
