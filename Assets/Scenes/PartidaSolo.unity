@@ -701,7 +701,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transicion
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1909104852}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 129bd7f94188d454d9bcc6862076af00, type: 3}
 --- !u!1001 &1487568193

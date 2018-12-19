@@ -11,15 +11,14 @@ public class Temporizador : MonoBehaviour {
     // Use this for initialization
     void Start () {
         minutos = 3;
-        segundos = 00;
+        segundos = 0;
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -34,7 +33,7 @@ public class Temporizador : MonoBehaviour {
         if (minutos < 0)
         {
             nombreEscena = "Nerd_Victoria";
-            StartCoroutine(LoadScene());
+            LoadScene();
         }
         if(minutos>=0) GetComponent<Text>().text = minutos + ":" + Mathf.RoundToInt(segundos);
         

@@ -50,7 +50,11 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 					ComenzarPartidaSolo.jugador = jugadorEmoLord;
 					nombreEscena = "PartidaSolo";
 					LoadScene();
-				}
+				} else if(hit.transform.name=="Salir")
+                {
+                    nombreEscena = "MenuPrincipal";
+                    LoadScene();
+                }
 			}
 		}
 	}
