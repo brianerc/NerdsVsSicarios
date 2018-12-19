@@ -94,12 +94,13 @@ public class Catapulta : Estructura
 		balaNum = ++balaNum % 2;
 	}
 
-	private void Destruirse()
+	new 
+	public void Morir()
 	{
+		base.Morir();
 		Destroy(bala1.gameObject);
 		Destroy(bala2.gameObject);
 		Destroy(bala3.gameObject);
-		Destroy(this.gameObject);
 	}
 
 	private void ReproducirSonido()
