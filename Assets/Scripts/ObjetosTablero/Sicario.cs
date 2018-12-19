@@ -38,14 +38,18 @@ public class Sicario : ObjetoTablero {
             this.GetComponent<Animator>().SetTrigger("Atacar");
             colisiona = true;
             sonidoCorrer.Stop();
-            objetivo = collision.gameObject;
+			if (objetivos == null) {
+				objetivos = new List<GameObject>();
+			}
+            objetivos.Add(collision.gameObject);
         }
 	}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        objetivo = null;
-    }
+        objetivos = null;
+		this.GetComponent<Animator>().SetTrigger("Detener");
+	}
     public void SonidoAtacar()
     {
         sonidoAtacar.Play();

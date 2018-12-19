@@ -13,7 +13,11 @@ public class Estructura : ObjetoTablero {
     {
 		if (collision.transform.tag == "Sicario")
 		{
-			objetivo = collision.gameObject;
+			if (objetivos == null)
+			{
+				objetivos = new List<GameObject>();
+			}
+			objetivos.Add(collision.gameObject);
 			int cantEnemigos = this.GetComponent<Animator>().GetInteger("cant_enemigos");
 			this.GetComponent<Animator>().SetInteger("cant_enemigos", cantEnemigos + 1);
 		}
@@ -26,6 +30,6 @@ public class Estructura : ObjetoTablero {
 			int cantEnemigos = this.GetComponent<Animator>().GetInteger("cant_enemigos");
 			this.GetComponent<Animator>().SetInteger("cant_enemigos", cantEnemigos - 1);
 		}
-		objetivo = null;
+		objetivos = null;
     }
 }
