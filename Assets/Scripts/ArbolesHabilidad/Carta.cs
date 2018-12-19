@@ -12,6 +12,7 @@ abstract public class Carta {
     protected bool aprendida;
     protected string nombre;
     protected string descripcion;
+    protected int vida;
     protected GameObject objeto;
 
     public virtual bool EsEstructura()
@@ -62,5 +63,13 @@ abstract public class Carta {
     public GameObject GetObjeto()
     {
         return objeto;
+    }
+    public void SetVida(float nuevaVida)
+    {
+        objeto.GetComponent<ObjetoTablero>().SetVida(nuevaVida);
+    }
+    public void SetDano(float dano)
+    {
+        objeto.GetComponent<ObjetoTablero>().danoBase=dano;
     }
 }

@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.ArbolesHabilidad.EmoLord;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,6 +25,5 @@ public class EmoLord : MazoNerd
 		InsertarCarta(new CartaMochilaHonda(mochilaHonda));
 		InsertarCarta(new CartaMochilaExplosiva(mochilaExplosiva));
 		MostrarLanzadores();
-
 	}
 }

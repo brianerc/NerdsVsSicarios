@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ObjetosTablero.Estructuras
-{
+
 	public class EstructuraComportamientoComun : Estructura
 	{
 		public float tiempo;
@@ -35,4 +34,4 @@ namespace Assets.Scripts.ObjetosTablero.Estructuras
 			return danoBase;
 		}
 	}
-}
+

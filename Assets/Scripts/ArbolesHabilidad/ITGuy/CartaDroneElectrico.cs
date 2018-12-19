@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ArbolesHabilidad.ITGuy
-{
+
 	class CartaDroneElectrico : Carta
 	{
 		private DroneElectrico droneElectrico;
@@ -29,4 +28,4 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 			return true;
 		}
 	}
-}
+

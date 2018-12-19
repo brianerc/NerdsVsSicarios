@@ -1,12 +1,10 @@
-﻿using Assets.Scripts.ObjetosTablero.Proyectiles;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ObjetosTablero.Estructuras
-{
+
 	class MochilaHonda : Estructura
 	{
 		public float tiempo;
@@ -113,4 +111,4 @@ namespace Assets.Scripts.ObjetosTablero.Estructuras
 			audio.PlayOneShot(audio.clip);
 		}
 	}
-}
+

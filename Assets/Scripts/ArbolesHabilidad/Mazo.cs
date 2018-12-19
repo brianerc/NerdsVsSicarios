@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.ServidorDTO;
+using Assets.Servidor;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,6 +78,8 @@ abstract public class Mazo : MonoBehaviour {
             lanzador.GetComponent<Lanzador>().transform.position = posicion;
             x = x + posicionX;
             lanzador.GetComponent<Lanzador>().transform.tag = "Lanzador" + carta.GetNombre();
+            lanzador.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Lanzadores/" + carta.GetNombre() + " N" + carta.GetNivel());
+            Debug.Log(carta.GetNombre() + " N" + carta.GetNivel());
             Instantiate(lanzador);
         }
     }
@@ -91,12 +95,34 @@ abstract public class Mazo : MonoBehaviour {
     {
         try {
             mazo.Add(carta);
+
             return true;
         } catch
         {
             return false;
         }
     }
+
+    public IEnumerator cargarEstadisticas(Carta carta)
+    {
+        WWW www = Acciones.CargarCartas();
+        yield return www;
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            Debug.Log("EN ERROR");
+        }
+        else
+        {
+            CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
+            ManejadorUsuario.cartasUsuario = resultObj.cartas;
+            for (int i = 0; i < resultObj.cartas.Count; i++)
+            {
+
+            }
+         }
+    }
+
     public string GetNombre()
     {
         return nombre;

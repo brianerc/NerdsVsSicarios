@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ObjetosTablero.Proyectiles
-{
+
 	public class BalaNerd : MonoBehaviour
 	{
 		public float velocidad = 5f;
@@ -54,4 +53,4 @@ namespace Assets.Scripts.ObjetosTablero.Proyectiles
 			this.empezarAMoverse = true;
 		}
 	}
-}
+

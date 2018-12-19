@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.ArbolesHabilidad.ITGuy
-{
 	class ITGuyLord : MazoNerd
 	{
 		public GameObject droneElectrico;
@@ -32,4 +30,3 @@ namespace Assets.Scripts.ArbolesHabilidad.ITGuy
 
 		}
 	}
-}
