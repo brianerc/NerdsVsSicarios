@@ -51,8 +51,8 @@ public class ComenzarPartidaSolo : Comenzar {
         }
         if (zona == "Boss Level")
         {
-            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Arcade");
-            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Arcade");
+            fondo.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Mansion");
+            GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Mansion");
         }
 
     }

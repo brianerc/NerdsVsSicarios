@@ -99,5 +99,5 @@ MonoBehaviour:
   vidaBase: 0
   bailarinBase: {fileID: 1339395037531652, guid: 1c6c1bfa110a4ab4aab93e3c1907d0a5,
     type: 3}
-  bailarinV1: {fileID: 1261326440413716, guid: 6feab2c22669bd44db292f6a8b8cbe7f, type: 3}
+  bailarinV1: {fileID: 1261326440413716, guid: 876c08e0fa455534e87b2a9ad7f3b98a, type: 3}
   bailarinV2: {fileID: 1053286752566452, guid: 25508196a75f06247a7b35ed78fa8443, type: 3}

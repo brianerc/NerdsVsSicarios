@@ -30,6 +30,7 @@ public class CargarCartas : MonoBehaviour
     public GameObject mostrarCosto;
     public GameObject transicion;
     private string nombreEscena;
+    private bool cargandoCartas = false;
 
 
     private void LoadScene()
@@ -44,6 +45,7 @@ public class CargarCartas : MonoBehaviour
         idCarta = new Dictionary<string, string>();
         puntosRequeridos = new Dictionary<string, int>();
 		error.text = "";
+        cartaElegida = "";
 		//nextMessage = Time.time + 1f;
 		StartCoroutine(ObtenerCartas());
         cartaAMejorar = (GameObject)Instantiate(imagenPrefab);
@@ -56,14 +58,16 @@ public class CargarCartas : MonoBehaviour
         flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
         flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
         CargarExperiencia();
-        GameObject.FindGameObjectWithTag("MostrarExp").GetComponent<Text>().text = "You have " + exp + "EXP";
         GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level_up_ByN");
 
     }
     // Update is called once per frame
     void Update()
     { 
-
+        if(cargandoCartas)
+        {
+            StartCoroutine(ObtenerCartas());
+        }
         if (Input.touchCount < 1)
         {
             return;
@@ -79,7 +83,10 @@ public class CargarCartas : MonoBehaviour
             }
             else if (hit.collider && hit.collider.tag == "MostrarCartas")
             {
-                MostrarElegirCarta();
+                if (cartaElegida!="")
+                {
+                    MostrarElegirCarta();
+                }
             }
             else if (hit.collider && hit.collider.tag == "MejorarCarta")
             {
@@ -140,9 +147,8 @@ public class CargarCartas : MonoBehaviour
         }
         else
         {
-			StartCoroutine(ManejadorUsuario.CargarUsuario());
-			StartCoroutine(ManejadorUsuario.CargarCartas());
 			MostrarElegirCarta();
+            ActualizarDatos();
         }
     }
 
@@ -184,53 +190,79 @@ public class CargarCartas : MonoBehaviour
     }
     private void MostrarElegirCarta()
     {
-        
+        cartaElegida = "";
         miScrollPanel.gameObject.SetActive(true);
         flechaDerecha.SetActive(true);
         flechaIzquierda.SetActive(true);
+        DestruirCartas();
         panelMejorar.gameObject.SetActive(false);
         GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas abierto");
+    }
 
+  
+    public void DestruirCartas()
+    {
+        foreach (GameObject carta in GameObject.FindObjectsOfType<GameObject>())
+        {
+            if(carta.transform.tag.Contains("Lanzador"))
+            {
+                Destroy(carta);                
+            }
+        }
+        idCarta.Clear();
+        puntosRequeridos.Clear();
+    }
+    public void ActualizarDatos()
+    {
+        StartCoroutine(ManejadorUsuario.CargarUsuario());
+        StartCoroutine(ManejadorUsuario.CargarCartas());
+        cargandoCartas = true;
     }
     public IEnumerator ObtenerCartas()
 	{
-		WWW www = Acciones.CargarCartas();
-		yield return www;
-		if (!string.IsNullOrEmpty(www.error))
-		{
-			error.text = www.error;
-			error.color = Color.red;
-			if (error.text.Equals("400 Bad Request"))
-			{
-				error.text = "No se pudo obtener cartas";
-			}
-			else
-			{
-				error.text = "Error con el servidor";
-			}
-			Debug.Log(www.error);
-			Debug.Log("EN ERROR");
-		}
-		else
-		{
-			CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
-			ManejadorUsuario.cartasUsuario = resultObj.cartas;
-			for (int i = 0; i < resultObj.cartas.Count; i++)
-			{
-				Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
-				GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
-                nuevoSprite.transform.SetParent(miScrollPanel);
-                nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + carta.ToString());
-                nuevoSprite.name = carta.ToString();
-                nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
-                nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
-                xPosicion = xPosicion + 110;
-                miNumero++;
-                idCarta.Add(carta.nombre_completo, carta._id);
-                puntosRequeridos.Add(carta.nombre_completo, carta.costo_para_desbloquear);
-			}
-		}
-	}
+        if(ManejadorUsuario.cargoCartas && ManejadorUsuario.cargoUsuario)
+        {
+            cargandoCartas = false;
+            WWW www = Acciones.CargarCartas();
+            yield return www;
+            if (!string.IsNullOrEmpty(www.error))
+            {
+                error.text = www.error;
+                error.color = Color.red;
+                if (error.text.Equals("400 Bad Request"))
+                {
+                    error.text = "No se pudo obtener cartas";
+                }
+                else
+                {
+                    error.text = "Error con el servidor";
+                }
+                Debug.Log(www.error);
+                Debug.Log("EN ERROR");
+            }
+            else
+            {
+                CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
+                ManejadorUsuario.cartasUsuario = resultObj.cartas;
+                for (int i = 0; i < resultObj.cartas.Count; i++)
+                {
+                    Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
+                    GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
+                    nuevoSprite.transform.SetParent(miScrollPanel);
+                    nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + carta.ToString());
+                    nuevoSprite.name = carta.ToString();
+                    nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
+                    nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
+                    xPosicion = xPosicion + 110;
+                    miNumero++;
+                    idCarta.Add(carta.nombre_completo, carta._id);
+                    puntosRequeridos.Add(carta.nombre_completo, carta.costo_para_desbloquear);
+                }
+                CargarExperiencia();
+            }
+        }
+
+    }
 
 	public void VolverAlMenuPrincipal()
 	{
@@ -240,6 +272,7 @@ public class CargarCartas : MonoBehaviour
     public void CargarExperiencia()
     {
         exp = ManejadorUsuario.ObtenerUsuario().puntos;
+        GameObject.FindGameObjectWithTag("MostrarExp").GetComponent<Text>().text = "You have " + exp + "EXP";
     }
 
 }

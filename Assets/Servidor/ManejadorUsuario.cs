@@ -13,9 +13,12 @@ namespace Assets.Servidor
 	{
 		private static Usuario usuario = null;
 		public static List<Assets.Scripts.ServidorDTO.Carta> cartasUsuario = null;
-
+        public static bool cargoUsuario = false;
+        public static bool cargoCartas = false;
 		public static IEnumerator CargarUsuario()
 		{
+            cargoUsuario = false;
+            usuario = null;
 			Debug.Log("Cargando usuario");
 			if (usuario == null)
 			{
@@ -31,10 +34,12 @@ namespace Assets.Servidor
 					Debug.Log(usuario._id);
 				}
 			}
+            cargoUsuario = true;
 		}
 
 		public static IEnumerator CargarCartas()
 		{
+            cargoCartas = false;
 			Debug.Log("Cargando cartas");
 			WWW www = Acciones.CargarCartas();
 			yield return www;
@@ -47,6 +52,7 @@ namespace Assets.Servidor
 				CartaDTO resultObj = JsonUtility.FromJson<CartaDTO>(www.text);
 				cartasUsuario = resultObj.cartas;
 			}
+            cargoCartas = true;
 		}
 
 		public static Usuario ObtenerUsuario()

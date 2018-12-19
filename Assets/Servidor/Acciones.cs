@@ -8,6 +8,8 @@ namespace Assets.Servidor
 {
 	class Acciones
 	{
+        public static bool cargoCartas=true;
+        public static bool cargoUsuario = false;
 		internal static WWW CrearUsuario(string nombreDeUsuario, string contrasenia)
 		{
 			string postBodyData = "{\"nombreusuario\":\"" + nombreDeUsuario + "\" , \"contrasenia\": \"" + contrasenia + "\"}";
@@ -39,6 +41,7 @@ namespace Assets.Servidor
 		
 		internal static WWW CargarCartas()
 		{
+
 			Dictionary<string, string> headers = new Dictionary<string, string>();
 			headers.Add("Content-Type", "application/json");
 			return ApiComunicacion.SolicitudGET(Endpoints.ObtenerCartasUrl, headers, true);
@@ -48,7 +51,6 @@ namespace Assets.Servidor
 		{
 			string postCuerpo = null;
 			var www = ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
-            ManejadorUsuario.CargarUsuario();
 			return www;
 		}
 
@@ -56,7 +58,6 @@ namespace Assets.Servidor
 		{
 			string postCuerpo = "{\"puntos\":\"" + puntos + "\"}";
 			var www = ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, true);
-            ManejadorUsuario.CargarUsuario();
 			return www;
 		}
 
