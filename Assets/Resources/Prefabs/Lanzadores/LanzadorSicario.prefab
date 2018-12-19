@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 61598594064505720}
   m_Layer: 10
   m_Name: LanzadorSicario
-  m_TagString: LanzadorPunk Girl Base
+  m_TagString: "LanzadorBailar\xEDn Base"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filaQueSeEncuentra: 0
-  estructura: {fileID: 1740136020151212, guid: a25c9afac1cd01d4a99a434b83c99581, type: 3}
+  estructura: {fileID: 1053286752566452, guid: 25508196a75f06247a7b35ed78fa8443, type: 3}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 3}
   planoPosicion: {fileID: 0}
   jugador: {fileID: 0}

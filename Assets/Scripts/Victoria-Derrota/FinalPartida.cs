@@ -17,7 +17,22 @@ abstract public class FinalPartida : MonoBehaviour {
     }
     public void GanarPuntos()
     {
-        StartCoroutine(Acciones.CambiarPuntos(cantidadExp));
+        StartCoroutine(CambiarPuntos(cantidadExp));
+    }
+    public IEnumerator CambiarPuntos(int puntos)
+    {
+        WWW www = Acciones.CambiarPuntos(puntos);
+        yield return www;
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            Debug.Log("EN ERROR");
+        }
+        else
+        {
+            Debug.Log("EXITO: ");
+            Debug.Log(www.text);
+        }
     }
     void Update()
     {

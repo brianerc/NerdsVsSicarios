@@ -121,7 +121,7 @@ public class CargarCartas : MonoBehaviour
 
     private IEnumerator MejorarCarta()
     {
-        WWW www = Acciones.SubirDeNivelCarta(cartaElegida);
+        WWW www = Acciones.SubirDeNivelCarta(idCarta[cartaElegida]);
         yield return www;
         if (!string.IsNullOrEmpty(www.error))
         {

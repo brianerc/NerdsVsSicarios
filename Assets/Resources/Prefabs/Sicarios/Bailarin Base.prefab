@@ -456,7 +456,7 @@ MonoBehaviour:
   objetivo: {fileID: 0}
   danoBase: 4
   nivel: 1
-  nombre: 
+  nombre: "Bailar\xEDn Estrella"
   tiempoParalizado: 0
   velocidad: {x: -2, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}

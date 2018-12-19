@@ -13,8 +13,8 @@ public class Temporizador : MonoBehaviour {
     protected bool termino = false;
     // Use this for initialization
     void Start () {
-        minutos = 3;
-        segundos = 0;
+        minutos = 0;
+        segundos = 3;
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
@@ -38,9 +38,9 @@ public class Temporizador : MonoBehaviour {
             if (minutos < 0)
             {
                 nombreEscena = "Nerd_Victoria";
-                if (ComenzarPartidaSolo.nivel != -1 && ComenzarPartidaSolo.nivel == ComenzarPartidaSolo.nivelJugador)
+                if (ComenzarPartidaSolo.nivel != -1 && ComenzarPartidaSolo.nivel == ComenzarPartidaSolo.nivelJugador && ComenzarPartidaSolo.nivel!=10)
                 {
-                    StartCoroutine(Acciones.SubirDeNivel());
+                    StartCoroutine(SubirDeNivel());
 
                 }
                 termino = true;
@@ -50,5 +50,21 @@ public class Temporizador : MonoBehaviour {
 
         }
 
+    }
+    public IEnumerator SubirDeNivel()
+    {
+        WWW www = Acciones.SubirDeNivel();
+        yield return www;
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            Debug.Log("EN ERROR");
+        }
+        else
+        {
+            Debug.Log("EXITO: ");
+            Debug.Log(www.text);
+
+        }
     }
 }
