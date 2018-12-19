@@ -24,25 +24,6 @@ public class MenuPrincipal : MonoBehaviour
 		{
 			StartCoroutine(ManejadorUsuario.CargarUsuario());
 			StartCoroutine(ManejadorUsuario.CargarCartas());
-			//Borrar despues de leer
-			StartCoroutine(CambiarPuntos(20));
-		}
-	}
-
-	//Borrar despues de leer
-	public IEnumerator CambiarPuntos(int puntos)
-	{
-		WWW www = Acciones.SubirDeNivel();
-		yield return www;
-		if (!string.IsNullOrEmpty(www.error))
-		{
-			Debug.Log(www.error);
-			Debug.Log("EN ERROR");
-		}
-		else
-		{
-			Debug.Log("EXITO: ");
-			Debug.Log(www.text);
 		}
 	}
 
