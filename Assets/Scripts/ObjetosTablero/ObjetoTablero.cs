@@ -12,20 +12,20 @@ abstract public class ObjetoTablero : MonoBehaviour
 	protected int costoEnergia;
 	public int filaQueSeEncuentra { get; set; }
 	private bool muerto;
-    public GameObject objetivo;
-    public float danoBase = 0;
-    public int nivel;
-    public string nombre;
-    private void Start()
+	public List<GameObject> objetivos;
+	public float danoBase = 0;
+	public int nivel;
+	public string nombre;
+	private void Start()
 	{
 		muerto = false;
 	}
 
-    /// <summary>
-    /// Funcion que llaman los objetos del tablero cuando golpean al otro
-    /// </summary>
-    /// <param name="daño"></param>
-    public virtual void Herir(float daño)
+	/// <summary>
+	/// Funcion que llaman los objetos del tablero cuando golpean al otro
+	/// </summary>
+	/// <param name="daño"></param>
+	public virtual void Herir(float daño)
 	{
 		vidaBase = vidaBase - daño;
 		AnimatorStateInfo stateInfo = this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
@@ -43,16 +43,32 @@ abstract public class ObjetoTablero : MonoBehaviour
 	{
 		costoEnergia = energia;
 	}
-    public void Atacar()
-    {
-        if (objetivo)
-        {
-            if (objetivo.transform.tag == "Estructura" || objetivo.transform.tag == "Sicario")
-                objetivo.GetComponent<ObjetoTablero>().Herir(this.danoBase);
-            if (objetivo.transform.tag == "Nerd")
-                objetivo.GetComponent<Mazo>().Herir(this.danoBase);
-        }
-    }
+	public void Atacar()
+	{
+		if (objetivos != null && objetivos.Count > 0)
+		{
+			GameObject objetivo = objetivos[0];
+			while (objetivo == null && objetivos.Count > 0)
+			{
+				objetivos.RemoveAt(0);
+				if (objetivos.Count > 0)
+				{
+					objetivo = objetivos[0];
+				}
+				else
+				{
+					objetivo = null;
+				}
+			}
+			if (objetivo != null)
+			{
+				if (objetivo.transform.tag == "Estructura" || objetivo.transform.tag == "Sicario")
+					objetivo.GetComponent<ObjetoTablero>().Herir(this.danoBase);
+				if (objetivo.transform.tag == "Nerd")
+					objetivo.GetComponent<Mazo>().Herir(this.danoBase);
+			}
+		}
+	}
 	public void Morir()
 	{
 		Destruir();
