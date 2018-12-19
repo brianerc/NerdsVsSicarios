@@ -24,7 +24,8 @@ namespace Assets.Servidor
 			}
 			else
 			{
-				pData = null;
+				var packetToSend = JsonUtility.ToJson(string.Empty);
+				pData = Encoding.UTF8.GetBytes(packetToSend);
 			}
 			return new WWW(uri, pData, headers);
 		}
