@@ -32,7 +32,7 @@ public class MenuPrincipal : MonoBehaviour
 	//Borrar despues de leer
 	public IEnumerator CambiarPuntos(int puntos)
 	{
-		WWW www = Acciones.SubirDeNivel();
+		WWW www = Acciones.SubirDeNivelCarta("5c16db52c3dad600331c49dd");
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
 		{
