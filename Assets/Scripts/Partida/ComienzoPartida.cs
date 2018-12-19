@@ -12,14 +12,18 @@ public class ComienzoPartida : Comenzar {
     public GameObject energiaSicario;
     public GameObject transicion;
     private string nombreEscena;
-	// Use this for initialization
-	void Start () {
+    private float vidaOriginal;
+
+    // Use this for initialization
+    void Start () {
         Instantiate(fondo);
         Instantiate(jugador);
         Instantiate(matriz);
         Instantiate(jugador2);
         Instantiate(energiaNerd);
         Instantiate(energiaSicario);
+        vidaOriginal = jugador.GetComponent<Mazo>().GetVida();
+
         int numero = Random.Range(1, 3);
        
         if(numero==1)
@@ -39,19 +43,19 @@ public class ComienzoPartida : Comenzar {
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
         }
     }
-    IEnumerator LoadScene()
+    private void LoadScene()
     {
+        Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadSceneAsync(nombreEscena);
     }
     // Update is called once per frame
     private void Update()
     {
-        if(GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida()<=0)
+        if (GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().GetVida() <= 0)
         {
+            GameObject.FindGameObjectWithTag("Nerd").GetComponent<Mazo>().vidaBase = vidaOriginal;
             nombreEscena = "Nerd_Derrota";
-            StartCoroutine(LoadScene());
+            LoadScene();
         }
     }
 }

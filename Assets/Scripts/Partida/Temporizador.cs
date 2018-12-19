@@ -13,8 +13,8 @@ public class Temporizador : MonoBehaviour {
     protected bool termino = false;
     // Use this for initialization
     void Start () {
-        minutos = 0;
-        segundos = 3;
+        minutos = 3;
+        segundos = 0;
         this.GetComponent<Text>().text = minutos + ":" + segundos;
 
     }
