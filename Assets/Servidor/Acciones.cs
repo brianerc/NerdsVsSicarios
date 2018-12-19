@@ -48,6 +48,7 @@ namespace Assets.Servidor
 		{
 			string postCuerpo = null;
 			var www = ApiComunicacion.SolicitudPOST(Endpoints.SubirDeNivelCartaUrl + cartaId, postCuerpo, true);
+            ManejadorUsuario.CargarUsuario();
 			return www;
 		}
 
@@ -55,6 +56,7 @@ namespace Assets.Servidor
 		{
 			string postCuerpo = "{\"puntos\":\"" + puntos + "\"}";
 			var www = ApiComunicacion.SolicitudPOST(Endpoints.CambiarPuntos, postCuerpo, false);
+            ManejadorUsuario.CargarUsuario();
 			return www;
 		}
 

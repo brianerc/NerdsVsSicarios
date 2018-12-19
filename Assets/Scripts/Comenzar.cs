@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public abstract class Comenzar : MonoBehaviour {
     public float separacionLanzadores;
+    public static int nivel=-1;
+    public static int nivelJugador = -1;
+
     void Start () {
 		
 	}

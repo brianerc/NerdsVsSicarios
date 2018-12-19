@@ -115,6 +115,8 @@ public class CaminoJugarSolo : MonoBehaviour
         ComenzarPartidaSolo.cantidadExp = premio;
         ComenzarPartidaSolo.zona = zona;
         ComenzarPartidaSolo.nivel = nivelElegido;
+        ComenzarPartidaSolo.nivelJugador = nivelJugador;
+        FinalPartida.cantidadExp = premio;
         nombreEscena = "SeleccionNerd";
        LoadScene();
     }

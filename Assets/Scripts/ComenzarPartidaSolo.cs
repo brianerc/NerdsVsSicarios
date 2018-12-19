@@ -10,7 +10,6 @@ public class ComenzarPartidaSolo : Comenzar {
     public static int cantidadExp;
     public static string zona;
     public GameObject fondo;
-    public static int nivel;
     public static GameObject jugador;
 	public Grid matriz;
     public GameObject energiaNerd;
