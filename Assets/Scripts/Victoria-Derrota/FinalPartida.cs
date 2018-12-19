@@ -15,6 +15,7 @@ abstract public class FinalPartida : MonoBehaviour {
         Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");
     }
+
     public void GanarPuntos()
     {
         StartCoroutine(CambiarPuntos(cantidadExp));
