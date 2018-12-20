@@ -15,7 +15,7 @@ using UnityEngine;
 			descripcion = "";
 			droneVolador = unObjeto.GetComponent<DroneVolador>();
 			objeto = unObjeto;
-			droneVolador.SetCostoEnergia(75);
+			droneVolador.SetCostoEnergia(25);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
 		}
