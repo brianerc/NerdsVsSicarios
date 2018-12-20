@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344a0ea78c11f4b48b235d275ec383c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 35
+  vidaBase: 100
   objetivos: []
-  danoBase: 100
+  danoBase: 35
   nivel: 1
   nombre: Jugador de Football Estrella
   muerteSonido: {fileID: 2837616747810107732}
