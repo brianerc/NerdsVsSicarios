@@ -14,8 +14,8 @@ using UnityEngine;
 		{
             factorMultiplicacionDano = 2;
             factorMultiplicacionVida = 2;
-			vidaBase = 50;
-			danoBase = 5;
+			vidaBase = 800;
+			danoBase = 25;
 			tiempo = 1;
 			tiempoBase = 1;
 			mazo = new List<Carta>();

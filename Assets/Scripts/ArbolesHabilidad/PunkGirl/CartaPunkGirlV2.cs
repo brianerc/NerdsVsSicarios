@@ -13,7 +13,6 @@ public class CartaPunkGirlV2 : Carta {
         aprendida = true;
         objeto = unObjeto;
         punkGirl = objeto.GetComponent<PunkGirlV2>();
-        punkGirl.SetVelocidad(-2f);
         punkGirl.SetCostoEnergia(50);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;

@@ -100,15 +100,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf27edab0a458984b8c8f24337643cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 10
+  vidaBase: 20
   objetivos: []
-  danoBase: 2
+  danoBase: 60
   nivel: 1
   nombre: Jugador de Football Base
   muerteSonido: {fileID: 4081984183140525473}
   ataqueSonido: {fileID: 1131090239553536926}
   tiempoParalizado: 0
-  velocidad: {x: -4, y: 0, z: 0}
+  velocidad: {x: -3, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!95 &95017527141936746

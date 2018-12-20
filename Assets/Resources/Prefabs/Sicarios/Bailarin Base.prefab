@@ -452,12 +452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adcc275c0856e341afc5ab4da38f27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 50
+  vidaBase: 65
   objetivos: []
-  danoBase: 20
+  danoBase: 70
   nivel: 1
   nombre: "Bailar\xEDn Estrella"
   muerteSonido: {fileID: 0}
+  ataqueSonido: {fileID: 0}
   tiempoParalizado: 0
   velocidad: {x: -2, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}

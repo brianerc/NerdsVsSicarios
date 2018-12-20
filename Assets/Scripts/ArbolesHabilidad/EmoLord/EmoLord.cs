@@ -12,9 +12,9 @@ public class EmoLord : MazoNerd
 	{
         factorMultiplicacionDano = 3;
         factorMultiplicacionVida = 1;
-        vidaBase = 50;
+        vidaBase = 500;
 		nombre = "emo";
-		danoBase = 5;
+		danoBase = 50;
 		tiempo = 1;
 		tiempoBase = 1;
 		mazo = new List<Carta>();

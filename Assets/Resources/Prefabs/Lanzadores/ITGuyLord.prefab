@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a2ff5cfc040a84eabe1b1f37c3a868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombre: 
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 3}
   x: -5.5
   y: -3.2
   z: 0
-  vidaBase: 0
+  vidaBase: 800
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
+  sonidoInvocar: {fileID: 0}
   droneElectrico: {fileID: 1154800813827048, guid: d5d2247307370d149809edc581365d5f,
     type: 3}
   droneVentilador: {fileID: 1154800813827048, guid: e62372dc9567ce043a996af67b182de5,
@@ -91,6 +93,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3c2bd70e04d3fb9419c66347ab87c17f, type: 2}
+    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4268228474482360, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -109,14 +119,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114211835433351406, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}

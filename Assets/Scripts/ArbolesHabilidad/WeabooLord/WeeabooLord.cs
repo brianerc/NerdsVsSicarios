@@ -14,8 +14,8 @@ public class WeeabooLord : MazoNerd {
     protected override void Inicializar () {
         factorMultiplicacionDano = 1;
         factorMultiplicacionVida = 3;
-        vidaBase = 50;
-        danoBase = 5;
+        vidaBase = 1000;
+        danoBase = 15;
         tiempo = 1;
         tiempoBase = 1;
         mazo = new List<Carta>();

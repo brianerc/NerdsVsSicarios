@@ -12,7 +12,7 @@ abstract public class ObjetoTablero : MonoBehaviour
 	public int filaQueSeEncuentra { get; set; }
 	private bool muerto;
 	public List<GameObject> objetivos;
-	public float danoBase = 0;
+	public float danoBase;
 	public int nivel;
 	public string nombre;
 	public AudioSource muerteSonido;

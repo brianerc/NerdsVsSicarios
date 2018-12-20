@@ -108,11 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63336e00a40751a48a408cb24251462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombre: 
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 3}
   x: -5.5
   y: -3.2
   z: 0
-  vidaBase: 0
+  vidaBase: 500
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
   sonidoInvocar: {fileID: 1299621039759340935}
@@ -188,6 +189,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2e4c194263c61644a98c5ebde21b3b9b, type: 2}
+    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4268228474482360, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -195,6 +204,16 @@ PrefabInstance:
     - target: {fileID: 4268228474482360, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 212716069266495344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212716069266495344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212870281173395780, guid: 60e0cba97dab9164f9f167eee87d7fe6,
         type: 3}
@@ -206,24 +225,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742902183039574, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212716069266495344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 212716069266495344, guid: 60e0cba97dab9164f9f167eee87d7fe6,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114211835433351406, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
