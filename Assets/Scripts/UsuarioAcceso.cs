@@ -17,6 +17,7 @@ public class UsuarioAcceso : MonoBehaviour
 	public Text error;
 	public Button boton;
     private string nombreEscena;
+	public AudioSource sonidoSeleccion;
 
 	public void Start()
 	{
@@ -38,13 +39,14 @@ public class UsuarioAcceso : MonoBehaviour
     }
     public void IrAEscenaRegistrarse()
 	{
+		sonidoSeleccion.Play();
 		nombreEscena = "UsuarioRegistrar";
 		LoadScene();
 	}
 
 	public void Ingresar()
 	{
-
+		sonidoSeleccion.Play();
 		string nombreDeUsuario = textNombreDeUsuario.text;
 		string contraseniaTexto = contrasenia.text;
 		StartCoroutine(POST(nombreDeUsuario, contraseniaTexto));
