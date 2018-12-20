@@ -25,8 +25,9 @@ public class EmoLord : MazoNerd
 		mochilaHonda.GetComponent<ObjetoTablero>().nivel = 1;
 		mochilaExplosiva.GetComponent<ObjetoTablero>().nivel = 1;
 		InsertarCarta(new CartaMochilaSierra(mochilaSierra));
-		InsertarCarta(new CartaMochilaHonda(mochilaHonda));
 		InsertarCarta(new CartaMochilaExplosiva(mochilaExplosiva));
-		MostrarLanzadores();
+        InsertarCarta(new CartaMochilaHonda(mochilaHonda));
+
+        MostrarLanzadores();
 	}
 }
