@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: c3980ad186c0867489958d2229cf1e86
+guid: 93bd51174d9fd8d409bace909fa31023
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Mochila Pegajosa Muriendo_0
-    21300002: Mochila Pegajosa Muriendo_1
-    21300004: Mochila Pegajosa Muriendo_2
-    21300006: Mochila Pegajosa Muriendo_3
-    21300008: Mochila Pegajosa Muriendo_4
-    21300010: Mochila Pegajosa Muriendo_5
-    21300012: Mochila Pegajosa Muriendo_6
-    21300014: Mochila Pegajosa Muriendo_7
-    21300016: Mochila Pegajosa Muriendo_8
-    21300018: Mochila Pegajosa Muriendo_9
-    21300020: Mochila Pegajosa Muriendo_10
-    21300022: Mochila Pegajosa Muriendo_11
-    21300024: Mochila Pegajosa Muriendo_12
+    21300000: Mochila Pegajosa Muriendo E Idle_0
+    21300002: Mochila Pegajosa Muriendo E Idle_1
+    21300004: Mochila Pegajosa Muriendo E Idle_2
+    21300006: Mochila Pegajosa Muriendo E Idle_3
+    21300008: Mochila Pegajosa Muriendo E Idle_4
+    21300010: Mochila Pegajosa Muriendo E Idle_5
+    21300012: Mochila Pegajosa Muriendo E Idle_6
+    21300014: Mochila Pegajosa Muriendo E Idle_7
+    21300016: Mochila Pegajosa Muriendo E Idle_8
+    21300018: Mochila Pegajosa Muriendo E Idle_9
+    21300020: Mochila Pegajosa Muriendo E Idle_10
+    21300022: Mochila Pegajosa Muriendo E Idle_11
+    21300024: Mochila Pegajosa Muriendo E Idle_12
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_0
+      name: Mochila Pegajosa Muriendo E Idle_0
       rect:
         serializedVersion: 2
         x: 30
@@ -133,13 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77786c29a1a8d2344a2c1f0278a6d7dd
+      spriteID: b162d73a9a82b3e4b942d34803c4b074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_1
+      name: Mochila Pegajosa Muriendo E Idle_1
       rect:
         serializedVersion: 2
         x: 209
@@ -153,13 +153,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28a733b7c972e984b84351114e7514dd
+      spriteID: f0912542c62b1104782441f82815163e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_2
+      name: Mochila Pegajosa Muriendo E Idle_2
       rect:
         serializedVersion: 2
         x: 382
@@ -173,13 +173,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d45d7251b822d43b4521a6b7424963
+      spriteID: 63fe92279a5bdaa4598af4b5130a12db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_3
+      name: Mochila Pegajosa Muriendo E Idle_3
       rect:
         serializedVersion: 2
         x: 552
@@ -193,13 +193,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b7eebfc16b02a94dbd4ba4a13401c54
+      spriteID: 7860cc517fe390146b51def9aa98e616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_4
+      name: Mochila Pegajosa Muriendo E Idle_4
       rect:
         serializedVersion: 2
         x: 8
@@ -213,13 +213,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90fa28c69b195154ea51e9d8497f20f0
+      spriteID: dce32c8cc61c27143b2525f27d5a6ad9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_5
+      name: Mochila Pegajosa Muriendo E Idle_5
       rect:
         serializedVersion: 2
         x: 187
@@ -233,13 +233,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca5e2461b36b1b44dbdf34d9a82feb86
+      spriteID: 755ee1703ba05c34a9a064cf9ec94b93
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_6
+      name: Mochila Pegajosa Muriendo E Idle_6
       rect:
         serializedVersion: 2
         x: 365
@@ -253,13 +253,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f59199c1e9908945affab7061b2f9c1
+      spriteID: c9f1672fd13731640b77729b8303ce10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_7
+      name: Mochila Pegajosa Muriendo E Idle_7
       rect:
         serializedVersion: 2
         x: 544
@@ -273,13 +273,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b6402579a747944bd988e511b8e1f6
+      spriteID: 06c2052bba3301e43bae9ca514ef8e49
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_8
+      name: Mochila Pegajosa Muriendo E Idle_8
       rect:
         serializedVersion: 2
         x: 8
@@ -293,13 +293,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4ae2f51e7e3db4a9fea8308ecafa06
+      spriteID: 82194e3c11cf1ff48b23c0bde82a585f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_9
+      name: Mochila Pegajosa Muriendo E Idle_9
       rect:
         serializedVersion: 2
         x: 187
@@ -313,13 +313,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 484e3f189f638684bafa4e1fea2b774b
+      spriteID: caa6be6ae9f0d9e47bb4520a77b68b32
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_10
+      name: Mochila Pegajosa Muriendo E Idle_10
       rect:
         serializedVersion: 2
         x: 365
@@ -333,13 +333,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41929c9ba9a17eb45af8a3dbbf316cf3
+      spriteID: b8cb13cbc3a379c4e8762a0e42e00488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_11
+      name: Mochila Pegajosa Muriendo E Idle_11
       rect:
         serializedVersion: 2
         x: 544
@@ -353,16 +353,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f94f71e83fd7d43a9966354a309907
+      spriteID: 0924ca870f4ce7148b12b884eef2be00
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Pegajosa Muriendo_12
+      name: Mochila Pegajosa Muriendo E Idle_12
       rect:
         serializedVersion: 2
-        x: 8
+        x: 9
         y: 4
         width: 145
         height: 64
@@ -373,7 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 829a6e60d2b63c544a559c20fa9f1164
+      spriteID: 6309b5a1816a24b45bc8e5de0b245bd5
       vertices: []
       indices: 
       edges: []
@@ -381,7 +381,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d4cef8730af8f7740982026f742ff833
+    spriteID: 1acca94333c8eb540bb94a891792e4bf
     vertices: []
     indices: 
     edges: []

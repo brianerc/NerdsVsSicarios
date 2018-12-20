@@ -452,11 +452,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c406749559b62f94396685591ac3cb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 10
+  vidaBase: 50
   objetivos: []
-  danoBase: 4
+  danoBase: 20
   nivel: 1
   nombre: "Bailar\xEDn Medio"
+  muerteSonido: {fileID: 0}
   tiempoParalizado: 0
   velocidad: {x: -2, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
