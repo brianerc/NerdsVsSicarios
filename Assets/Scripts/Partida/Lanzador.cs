@@ -16,8 +16,11 @@ abstract public class Lanzador : MonoBehaviour
     protected ObjetoTablero objetoTablero;
     public GameObject invocador;
     public SpriteRenderer spriteEstructura;
-    // Use this for initialization
-    public virtual void Start()
+	private string nombreEscena;
+	public GameObject transicion;
+
+	// Use this for initialization
+	public virtual void Start()
     {
         CargarSprite();
         piso = GameObject.FindGameObjectWithTag("Piso");
@@ -50,7 +53,7 @@ abstract public class Lanzador : MonoBehaviour
                 ActualizarPosicion(touch);
                 ActualizarColorSeleccion(planoPosicion, hit);
             }
-        }
+		}
         else if (touch.phase == TouchPhase.Moved && estado)
         {
                 GameObject.FindGameObjectWithTag("Seleccion").transform.position = ActualizarPosicion(touch);
@@ -63,18 +66,18 @@ abstract public class Lanzador : MonoBehaviour
         {
             estado = false;
 
-            if (hit.collider && hit.collider.tag == estructura.tag)
-            {
-                Debug.Log("No se puede colocar en donde ya hay una estructura");
-            }
-            else if (hit.collider && hit.collider.tag == "Piso")
-            {
-                ColocarEstructura(touch);
-            }
-            else if (hit.collider)
-            {
-                Debug.Log("No se puede colocar fuera de la matriz: " + hit.collider.tag);
-            }
+			if (hit.collider && hit.collider.tag == estructura.tag)
+			{
+				Debug.Log("No se puede colocar en donde ya hay una estructura");
+			}
+			else if (hit.collider && hit.collider.tag == "Piso")
+			{
+				ColocarEstructura(touch);
+			}
+			else if (hit.collider)
+			{
+				Debug.Log("No se puede colocar fuera de la matriz: " + hit.collider.tag);
+			}
             
             Debug.Log("Colider del touch: " + hit.collider.tag);
             Debug.Log("Tag de estructura: " + estructura.tag);
@@ -83,7 +86,14 @@ abstract public class Lanzador : MonoBehaviour
         }
         //TouchCancelado(touch);
     }
-    protected void ColocarEstructura(Touch touch)
+
+	private void LoadScene()
+	{
+		Transicion.nombreEscena = nombreEscena;
+		transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+	}
+
+	protected void ColocarEstructura(Touch touch)
     {
         if (jugador.GetEnergia() >= objetoTablero.GetEnergia())
         {

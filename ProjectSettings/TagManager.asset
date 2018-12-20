@@ -62,6 +62,7 @@ TagManager:
   - Generador
   - Bloqueado
   - Fondo
+  - VolverMenuPrincipal
   layers:
   - Default
   - TransparentFX

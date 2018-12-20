@@ -104,6 +104,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   invocador: {fileID: 1737046815387134, guid: 49fb611a241f3f640ae841edc9a838c7, type: 3}
   spriteEstructura: {fileID: 0}
+  transicion: {fileID: 1619737576406912, guid: 2b5d0f56e1e86734a9a4921e430ed1f0, type: 3}
   invocacionWeaboo: {fileID: 82009147178778902}
   invocacionItGuy: {fileID: 8617424678649099879}
   invocacionEmo: {fileID: 6587179882428435780}
