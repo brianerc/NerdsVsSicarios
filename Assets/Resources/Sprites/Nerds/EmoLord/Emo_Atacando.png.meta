@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 701da71379f41854a83c0423bbf96115
+guid: e226e7f2e51ee4f4cb06d43b44c8e405
 TextureImporter:
   fileIDToRecycleName:
     21300000: Emo_Atacando_0
@@ -103,6 +103,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -110,10 +121,10 @@ TextureImporter:
       name: Emo_Atacando_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 192
-        width: 23
-        height: 64
+        x: 33
+        y: 539
+        width: 64
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 780c94a6ef0a79640a7dcc0538f048c1
+      spriteID: 53f7bf46b475cfb45ba3e9a08fd3de5b
       vertices: []
       indices: 
       edges: []
@@ -130,10 +141,10 @@ TextureImporter:
       name: Emo_Atacando_1
       rect:
         serializedVersion: 2
-        x: 82
-        y: 192
-        width: 35
-        height: 64
+        x: 206
+        y: 539
+        width: 98
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +152,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed68ade578bbe9e4785243b8d0af8068
+      spriteID: cfc2b9076e5fbb748b27dcae101b2c92
       vertices: []
       indices: 
       edges: []
@@ -150,10 +161,10 @@ TextureImporter:
       name: Emo_Atacando_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 192
-        width: 49
-        height: 62
+        x: 362
+        y: 539
+        width: 137
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28104973d7252eb4d887e69cf431727a
+      spriteID: bd052abcb6b42eb488e9375d80cf6193
       vertices: []
       indices: 
       edges: []
@@ -170,10 +181,10 @@ TextureImporter:
       name: Emo_Atacando_3
       rect:
         serializedVersion: 2
-        x: 10
-        y: 128
-        width: 49
-        height: 62
+        x: 5
+        y: 361
+        width: 137
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,7 +192,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d14770a40fc339488582a7f8a7e4aa8
+      spriteID: 3549e8e34b231a247b4035a77795b402
       vertices: []
       indices: 
       edges: []
@@ -190,10 +201,10 @@ TextureImporter:
       name: Emo_Atacando_4
       rect:
         serializedVersion: 2
-        x: 74
-        y: 128
-        width: 49
-        height: 62
+        x: 184
+        y: 361
+        width: 137
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,7 +212,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc87702eebcffa428df6e1f76c63e81
+      spriteID: ed4096fda7c9cbb4eb957c21daba2ff9
       vertices: []
       indices: 
       edges: []
@@ -210,10 +221,10 @@ TextureImporter:
       name: Emo_Atacando_5
       rect:
         serializedVersion: 2
-        x: 138
-        y: 128
-        width: 49
-        height: 62
+        x: 362
+        y: 361
+        width: 137
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f5dc0c6db588647a6bfe28670adce9
+      spriteID: 02fef21f19a8d994aa354287268c5cb8
       vertices: []
       indices: 
       edges: []
@@ -230,10 +241,10 @@ TextureImporter:
       name: Emo_Atacando_6
       rect:
         serializedVersion: 2
-        x: 10
-        y: 64
-        width: 49
-        height: 62
+        x: 5
+        y: 182
+        width: 137
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,7 +252,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bee316558735db4ab329d09a024fb23
+      spriteID: 98362e5a1d37a374a8cd3b3f203df647
       vertices: []
       indices: 
       edges: []
@@ -250,10 +261,10 @@ TextureImporter:
       name: Emo_Atacando_7
       rect:
         serializedVersion: 2
-        x: 74
-        y: 64
-        width: 49
-        height: 62
+        x: 184
+        y: 182
+        width: 137
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,7 +272,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f737df7172f4204bb3a625da8880354
+      spriteID: 8b46c2e1ab0ebef48864be1dea4c3a58
       vertices: []
       indices: 
       edges: []
@@ -270,10 +281,10 @@ TextureImporter:
       name: Emo_Atacando_8
       rect:
         serializedVersion: 2
-        x: 146
-        y: 64
-        width: 35
-        height: 63
+        x: 385
+        y: 182
+        width: 98
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,7 +292,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cceb3f860541fd41ba768f08e346684
+      spriteID: 82810db1d83348b4f9014a4de43eb644
       vertices: []
       indices: 
       edges: []
@@ -290,10 +301,10 @@ TextureImporter:
       name: Emo_Atacando_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 35
-        height: 64
+        x: 27
+        y: 3
+        width: 98
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,7 +312,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a66401fb0d5175640bbfe103cd1d3f4e
+      spriteID: 806887d88fa5ba049bce901a2bbb2c82
       vertices: []
       indices: 
       edges: []
@@ -310,10 +321,10 @@ TextureImporter:
       name: Emo_Atacando_10
       rect:
         serializedVersion: 2
-        x: 82
-        y: 0
-        width: 35
-        height: 64
+        x: 206
+        y: 3
+        width: 98
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,7 +332,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a084b66a223d5f418bbed7db57ae019
+      spriteID: ba63a70375d4039458d71526adcc4739
       vertices: []
       indices: 
       edges: []
@@ -330,10 +341,10 @@ TextureImporter:
       name: Emo_Atacando_11
       rect:
         serializedVersion: 2
-        x: 148
-        y: 0
-        width: 23
-        height: 64
+        x: 390
+        y: 3
+        width: 65
+        height: 179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +352,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aed7e3c9142b6e74f932434428b708dd
+      spriteID: 98107af0439144f4c8849f0de92c31a6
       vertices: []
       indices: 
       edges: []
@@ -349,7 +360,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6bdd8fc06d7d6c94baa27d7104f2ff0e
+    spriteID: cf7454b5c02783542ab7cbce5a1ec192
     vertices: []
     indices: 
     edges: []

@@ -27,8 +27,6 @@ abstract public class Lanzador : MonoBehaviour
         objetoTablero = estructura.GetComponent<ObjetoTablero>();
         planoPosicion = GameObject.FindGameObjectWithTag("Seleccion");
         spriteEstructura = estructura.GetComponent<SpriteRenderer>();
-        Debug.Log(spriteEstructura.sprite.name);
-        Debug.Log(objetoTablero.name);
     }
 
     // Update is called once per frame

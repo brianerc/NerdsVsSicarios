@@ -2,15 +2,15 @@ fileFormatVersion: 2
 guid: 80ce00bc00b49084b8086064f6a18c1e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Mochila Mina Explotando_1
-    21300002: Mochila Mina Explotando_2
-    21300004: Mochila Mina Explotando_3
-    21300006: Mochila Mina Explotando_4
-    21300008: Mochila Mina Explotando_5
-    21300010: Mochila Mina Explotando_6
-    21300012: Mochila Mina Explotando_9
+    21300000: Mochila Mina Explotando_0
+    21300002: Mochila Mina Explotando_1
+    21300004: Mochila Mina Explotando_2
+    21300006: Mochila Mina Explotando_3
+    21300008: Mochila Mina Explotando_4
+    21300010: Mochila Mina Explotando_5
+    21300012: Mochila Mina Explotando_6
     21300014: Mochila Mina Explotando_7
-    21300016: Mochila Mina Explotando_0
+    21300016: Mochila Mina Explotando_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -100,25 +100,56 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mochila Mina Explotando_1
+      name: Mochila Mina Explotando_0
       rect:
         serializedVersion: 2
-        x: 583
-        y: 747
-        width: 158
-        height: 157
+        x: 400
+        y: 745
+        width: 59
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5202b9374b4bda45b10d3d9f37f55d1
+      spriteID: b2abb9b39771546478fe413dd97f2a4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mochila Mina Explotando_1
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 747
+        width: 159
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b0f77e9153aea418eb1575bd666d2e
       vertices: []
       indices: 
       edges: []
@@ -127,18 +158,18 @@ TextureImporter:
       name: Mochila Mina Explotando_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 518
-        width: 200
-        height: 189
+        x: 103
+        y: 517
+        width: 201
+        height: 190
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af7bd1950d3c5bc42b31e08dca5f51a6
+      spriteID: 31f9591d5ab503b43aaa8785caa40900
       vertices: []
       indices: 
       edges: []
@@ -149,16 +180,16 @@ TextureImporter:
         serializedVersion: 2
         x: 337
         y: 518
-        width: 193
-        height: 203
+        width: 194
+        height: 201
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc66ea1a35408004cabbe561fa9b7f04
+      spriteID: 9b1d263ef77a2764da76a771e1352d23
       vertices: []
       indices: 
       edges: []
@@ -167,18 +198,18 @@ TextureImporter:
       name: Mochila Mina Explotando_4
       rect:
         serializedVersion: 2
-        x: 551
+        x: 552
         y: 518
         width: 222
-        height: 203
+        height: 204
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28b825230f2299e48aac8f94dfcaae40
+      spriteID: 0fe89e5484154c24eb99944dd38e1ce3
       vertices: []
       indices: 
       edges: []
@@ -187,18 +218,18 @@ TextureImporter:
       name: Mochila Mina Explotando_5
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 292
-        width: 208
-        height: 200
+        width: 217
+        height: 203
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c5660b9557efd49a2c8e7c27ccb751
+      spriteID: 6502600cd85c77841916b9b1e97e874d
       vertices: []
       indices: 
       edges: []
@@ -208,37 +239,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 329
-        y: 314
-        width: 204
-        height: 178
+        y: 297
+        width: 205
+        height: 198
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c08f1ad6374e5b54a975d99e20e805d0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mochila Mina Explotando_9
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 100
-        width: 207
-        height: 186
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a11e0a1181becc448470c46edf07629
+      spriteID: 45660997109c62047b8802301e03c3a8
       vertices: []
       indices: 
       edges: []
@@ -247,38 +258,38 @@ TextureImporter:
       name: Mochila Mina Explotando_7
       rect:
         serializedVersion: 2
-        x: 559
-        y: 313
-        width: 208
-        height: 180
+        x: 565
+        y: 327
+        width: 194
+        height: 166
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e86f69db49ad644ad45d2ef8f727b9
+      spriteID: 222e32b52108a3d449ed7b8ffc830624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mochila Mina Explotando_0
+      name: Mochila Mina Explotando_8
       rect:
         serializedVersion: 2
-        x: 338
-        y: 743
-        width: 190
-        height: 161
+        x: 112
+        y: 127
+        width: 182
+        height: 145
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afd46f27971d9ce48bb68a976ddf5828
+      spriteID: d1dfb4d7dfd31eb4bb0934b66f51934d
       vertices: []
       indices: 
       edges: []
@@ -286,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bd9ddcbad58ae3144ba1ac0dc6e0d9a8
+    spriteID: 865e6e48c026d3e48938383db5bab544
     vertices: []
     indices: 
     edges: []
