@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -56,11 +57,25 @@ public class ComenzarPartidaSolo : Comenzar {
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Mansion");
         }
 
-		if (nivel % 3 == 0)
+		CargarFondosAudios();
+		
+
+	}
+
+	private void CargarFondosAudios()
+	{
+		if (nivel == 3 || nivel == 4 || nivel == 5)
 		{
 			if (audioFondoBailarines != null)
 			{
 				audioFondoBailarines.Play();
+			}
+		}
+		else if (nivel == 6 || nivel == 7 || nivel == 8)
+		{
+			if (audioFondoPunkGirls != null)
+			{
+				audioFondoPunkGirls.Play();
 			}
 		}
 		else
@@ -70,9 +85,9 @@ public class ComenzarPartidaSolo : Comenzar {
 				audioFondoTrafico.Play();
 			}
 		}
-
 	}
-    private void LoadScene()
+
+	private void LoadScene()
     {
         Transicion.nombreEscena = nombreEscena;
         transicion.GetComponent<Animator>().SetTrigger("Cerrar");

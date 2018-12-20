@@ -44,11 +44,18 @@ public class ComienzoPartida : Comenzar {
             spriteBarrera.sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
         }
 
-		if (nivel % 3 == 0)
+		if (nivel == 3 || nivel == 4 || nivel == 5)
 		{
 			if (audioFondoBailarines != null)
 			{
 				audioFondoBailarines.Play();
+			}
+		}
+		else if (nivel == 6 || nivel == 7 || nivel == 8)
+		{
+			if (audioFondoPunkGirls!= null)
+			{
+				audioFondoPunkGirls.Play();
 			}
 		}
 		else
