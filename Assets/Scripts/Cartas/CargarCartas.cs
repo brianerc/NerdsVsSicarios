@@ -173,7 +173,7 @@ public class CargarCartas : MonoBehaviour
             cartaMejorada.name = nombre;
             cartaElegida = nombre.Substring(0,nombre.Length - 3);
             Debug.Log(cartaElegida);
-            mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] + "EXP";
+            mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] * nivel + "EXP";
             if (exp >  puntosRequeridos[cartaElegida])
             {
                 puedoElegir = true;
