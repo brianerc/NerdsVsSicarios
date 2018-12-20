@@ -64,14 +64,14 @@ public class ComenzarPartidaSolo : Comenzar {
 
 	private void CargarFondosAudios()
 	{
-		if (nivel == 3 || nivel == 4 || nivel == 5)
+		if (nivel == 1 || nivel == 2 || nivel == 3)
 		{
 			if (audioFondoBailarines != null)
 			{
 				audioFondoBailarines.Play();
 			}
 		}
-		else if (nivel == 6 || nivel == 7 || nivel == 8)
+		else if (nivel == 4 || nivel == 5 || nivel == 6)
 		{
 			if (audioFondoPunkGirls != null)
 			{

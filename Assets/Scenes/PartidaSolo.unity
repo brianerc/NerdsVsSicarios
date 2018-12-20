@@ -1238,11 +1238,11 @@ MonoBehaviour:
     type: 3}
   jugadorDeFootballEstrella: {fileID: 1447365570974060, guid: decc658e53149db429037338f0f8dc8a,
     type: 3}
-  bailarinBase: {fileID: 1053286752566452, guid: 25508196a75f06247a7b35ed78fa8443,
+  bailarinBase: {fileID: 1339395037531652, guid: 25508196a75f06247a7b35ed78fa8443,
     type: 3}
   bailarinMedio: {fileID: 1261326440413716, guid: 876c08e0fa455534e87b2a9ad7f3b98a,
     type: 3}
-  bailarinEstrella: {fileID: 1339395037531652, guid: 1c6c1bfa110a4ab4aab93e3c1907d0a5,
+  bailarinEstrella: {fileID: 1053286752566452, guid: 6feab2c22669bd44db292f6a8b8cbe7f,
     type: 3}
   punkGirlBase: {fileID: 1740136020151212, guid: a25c9afac1cd01d4a99a434b83c99581,
     type: 3}
