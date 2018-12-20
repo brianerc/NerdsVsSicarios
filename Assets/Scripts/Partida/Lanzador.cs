@@ -51,17 +51,15 @@ abstract public class Lanzador : MonoBehaviour
                 ActualizarColorSeleccion(planoPosicion, hit);
             }
         }
-        if (touch.phase == TouchPhase.Moved && estado)
+        else if (touch.phase == TouchPhase.Moved && estado)
         {
-            if (hit.collider && hit.collider.tag == "Piso")
-            {
                 GameObject.FindGameObjectWithTag("Seleccion").transform.position = ActualizarPosicion(touch);
-            }
+          
             ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);
-
+            Debug.Log(hit.collider.tag);
 
         }
-        if (touch.phase == TouchPhase.Ended && estado)
+        else if (touch.phase == TouchPhase.Ended && estado)
         {
             estado = false;
 
@@ -77,9 +75,13 @@ abstract public class Lanzador : MonoBehaviour
             {
                 Debug.Log("No se puede colocar fuera de la matriz: " + hit.collider.tag);
             }
-
+            
+            Debug.Log("Colider del touch: " + hit.collider.tag);
+            Debug.Log("Tag de estructura: " + estructura.tag);
+            planoPosicion.GetComponent<SpriteRenderer>().sprite = null;
+            planoPosicion.transform.position.Set(0, 0, 0);
         }
-        TouchCancelado(touch);
+        //TouchCancelado(touch);
     }
     protected void ColocarEstructura(Touch touch)
     {
@@ -95,8 +97,7 @@ abstract public class Lanzador : MonoBehaviour
             InstanciarInvocacion(nuevaEstructura, touch);
             InstanciarEstructura(nuevaEstructura);
             jugador.QuitarEnergia(objetoTablero.GetEnergia());
-            planoPosicion.GetComponent<SpriteRenderer>().sprite = null;
-            planoPosicion.transform.position.Set(0, 0,0);
+
         }
     }
     protected virtual void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
