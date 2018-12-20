@@ -12,6 +12,8 @@ using UnityEngine;
 
 		protected override void Inicializar()
 		{
+            factorMultiplicacionDano = 2;
+            factorMultiplicacionVida = 2;
 			vidaBase = 50;
 			danoBase = 5;
 			tiempo = 1;

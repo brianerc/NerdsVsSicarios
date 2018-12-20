@@ -9,14 +9,11 @@ public class CartaPunkGirlBase : Carta
 
     public CartaPunkGirlBase(GameObject unObjeto)
     {
-        nivel = 1;
         nombre = "Punk Girl Estrella";
         descripcion = "";
         aprendida = true;
         objeto = unObjeto;
         punkGirl = objeto.GetComponent<PunkGirlBase>();
-        punkGirl.SetDaño(4);
-        punkGirl.SetVida(10);
         punkGirl.SetVelocidad(-2f);
         punkGirl.SetCostoEnergia(75);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;

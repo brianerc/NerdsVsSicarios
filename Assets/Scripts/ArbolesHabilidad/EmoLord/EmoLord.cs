@@ -10,7 +10,9 @@ public class EmoLord : MazoNerd
 
 	protected override void Inicializar()
 	{
-		vidaBase = 50;
+        factorMultiplicacionDano = 3;
+        factorMultiplicacionVida = 1;
+        vidaBase = 50;
 		danoBase = 5;
 		tiempo = 1;
 		tiempoBase = 1;

@@ -11,13 +11,10 @@ using UnityEngine;
 
 		public CartaMochilaExplosiva(GameObject unObjeto)
 		{
-			nivel = 1;
 			nombre = "Mochila Mina";
 			descripcion = "";
 			mochilaExplosiva = unObjeto.GetComponent<MochilaExplosiva>();
 			objeto = unObjeto;
-			mochilaExplosiva.SetDanoBase(100);
-			mochilaExplosiva.SetVida(25);
 			mochilaExplosiva.SetTiempoAtaque(1);
 			mochilaExplosiva.SetCostoEnergia(50);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;

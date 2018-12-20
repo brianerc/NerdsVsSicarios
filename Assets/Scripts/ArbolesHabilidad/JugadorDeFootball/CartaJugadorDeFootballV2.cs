@@ -12,14 +12,11 @@ public class CartaJugadorDeFootballV2 : Carta {
 
     public CartaJugadorDeFootballV2(GameObject unObjeto)
     {
-        nivel = 1;
         nombre = "Jugador de Football Medio";
         descripcion = "";
         aprendida = true;
         objeto = unObjeto;
         jugador = objeto.GetComponent<JugadorDeFootballV2>();
-        jugador.SetDaño(4);
-        jugador.SetVida(10);
         jugador.SetVelocidad(-2f);
         jugador.SetCostoEnergia(50);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;

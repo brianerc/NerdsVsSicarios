@@ -12,6 +12,8 @@ public class WeeabooLord : MazoNerd {
     public GameObject mochilaPegajosa;
 
     protected override void Inicializar () {
+        factorMultiplicacionDano = 1;
+        factorMultiplicacionVida = 3;
         vidaBase = 50;
         danoBase = 5;
         tiempo = 1;

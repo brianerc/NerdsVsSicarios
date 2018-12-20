@@ -29,6 +29,8 @@ abstract public class Mazo : MonoBehaviour {
     protected float tiempoRegeneracionEnergia;
     protected int cantidadRegeneracionEnergia;
     private float tiempoActualRegeneracionEnergia;
+    protected int factorMultiplicacionDano;
+    protected int factorMultiplicacionVida;
 
 	public virtual void Update()
     {
@@ -94,8 +96,8 @@ abstract public class Mazo : MonoBehaviour {
     protected bool InsertarCarta(Carta carta)
     {
         try {
+            StartCoroutine(CargarEstadisticas(carta));
             mazo.Add(carta);
-
             return true;
         } catch
         {
@@ -103,7 +105,7 @@ abstract public class Mazo : MonoBehaviour {
         }
     }
 
-    public IEnumerator cargarEstadisticas(Carta carta)
+    public IEnumerator CargarEstadisticas(Carta carta)
     {
         WWW www = Acciones.CargarCartas();
         yield return www;
@@ -118,7 +120,17 @@ abstract public class Mazo : MonoBehaviour {
             ManejadorUsuario.cartasUsuario = resultObj.cartas;
             for (int i = 0; i < resultObj.cartas.Count; i++)
             {
-
+                if(carta.GetNombre()==resultObj.cartas[i].nombre_completo)
+                {
+                    int nuevoNivel = resultObj.cartas[i].nivel;
+                    carta.SetNivel(nuevoNivel);
+                    float nuevaVida = resultObj.cartas[i].vida;
+                    float nuevoDanio = resultObj.cartas[i].danio;
+                    nuevoDanio = nuevoDanio * (1 + (nuevoNivel / 10) * factorMultiplicacionDano);
+                    nuevaVida = nuevaVida * (1 + (nuevoNivel / 10) * factorMultiplicacionVida );
+                    carta.SetDano(nuevoDanio);
+                    carta.SetVida(nuevaVida);
+                }
             }
          }
     }

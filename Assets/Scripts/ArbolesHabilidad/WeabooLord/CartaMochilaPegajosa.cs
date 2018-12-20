@@ -10,14 +10,11 @@ public class CartaMochilaPegajosa : Carta {
     private MochilaPegajosa mochilaPegajosa;
     public CartaMochilaPegajosa(GameObject unObjeto)
     {
-        nivel = 1;
         nombre = "Mochila pegajosa";
         descripcion = "";
         aprendida = true;
         objeto = unObjeto;
         mochilaPegajosa = unObjeto.GetComponent<MochilaPegajosa>();
-        mochilaPegajosa.SetearTiempoParalizar(2);
-        mochilaPegajosa.SetVida(1);
         mochilaPegajosa.SetCostoEnergia(50);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;

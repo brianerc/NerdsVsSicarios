@@ -11,12 +11,10 @@ using UnityEngine;
 
 		public CartaMochilaHonda(GameObject unObjeto)
 		{
-			nivel = 1;
 			nombre = "Mochila Honda";
 			descripcion = "";
 			mochilaHonda = unObjeto.GetComponent<MochilaHonda>();
 			objeto = unObjeto;
-			mochilaHonda.SetVida(25);
 			mochilaHonda.SetCostoEnergia(75);
 			unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
 			unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;

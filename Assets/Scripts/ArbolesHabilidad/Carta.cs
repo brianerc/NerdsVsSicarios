@@ -34,6 +34,7 @@ abstract public class Carta {
     public bool SetNivel(int unNivel)
     {
         nivel = unNivel;
+        objeto.GetComponent<ObjetoTablero>().nivel = unNivel;
         return unNivel == nivel;
     }
     public bool EstaAprendida()

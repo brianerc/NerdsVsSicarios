@@ -15,6 +15,7 @@ public class MochilaPegajosa : Estructura {
 		debeDestruirse = false;
 		fueEfectoUsado = false;
         sonidoStun = GetComponent<AudioSource>();
+        tiempoParalizar = danoBase;
 	}
 	
     private void OnTriggerEnter2D(Collider2D other)

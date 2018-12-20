@@ -47,7 +47,11 @@ public class DroneVolador : Estructura
 		bala1.transform.localScale = new Vector2(0, 0);
 		bala2.transform.localScale = new Vector2(0, 0);
 		bala3.transform.localScale = new Vector2(0, 0);
-	}
+
+        bala1.danoBase = danoBase;
+        bala2.danoBase = danoBase;
+        bala3.danoBase = danoBase;
+    }
 
 	private void FixedUpdate()
 	{

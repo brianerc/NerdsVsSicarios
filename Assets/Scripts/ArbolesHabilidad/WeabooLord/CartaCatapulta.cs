@@ -11,13 +11,10 @@ public class CartaCatapulta: Carta {
     private Catapulta catapulta;
 
 	public CartaCatapulta (GameObject unObjeto) {
-        nivel = 1;
         nombre = "Catapulta";
         descripcion = "";
-		//aprendida = true;
 		catapulta = unObjeto.GetComponent<Catapulta>();
 		objeto = unObjeto;
-		//catapulta.SetVida(20);
         catapulta.SetCostoEnergia(25);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;

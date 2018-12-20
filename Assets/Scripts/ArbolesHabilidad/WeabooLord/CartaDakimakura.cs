@@ -12,13 +12,10 @@ public class CartaDakimakura : Carta {
 
 	public CartaDakimakura(GameObject unObjeto)
     {
-        nivel = 1;
         nombre = "Dakimakura";
         descripcion = "";
         dakimakura = unObjeto.GetComponent<Dakimakura>();
         objeto = unObjeto;
-        dakimakura.SetDanoBase(1);
-        dakimakura.SetVida(25);
         dakimakura.SetTiempoAtaque(1);
         dakimakura.SetCostoEnergia(75);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;

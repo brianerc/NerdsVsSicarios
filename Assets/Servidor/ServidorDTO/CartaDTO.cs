@@ -17,12 +17,12 @@ namespace Assets.Scripts.ServidorDTO
 	{
 		public bool aprendida;
 		public string _id;
-
+        public float vida;
 		public int nivel;
 		public string tipo;
 		public string nombre;
 		public string nombre_completo;
-		public int danio;
+		public float danio;
 		public int costo_para_desbloquear;
 		public int velocidad;
 		public int limite_nivel;
