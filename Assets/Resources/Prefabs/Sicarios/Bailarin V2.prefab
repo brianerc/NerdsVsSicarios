@@ -433,14 +433,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6eadfdc33e9248959881c406ba57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 50
+  vidaBase: 40
   objetivos: []
-  danoBase: 20
+  danoBase: 40
   nivel: 1
   nombre: "Bailar\xEDn Base"
   muerteSonido: {fileID: 0}
+  ataqueSonido: {fileID: 0}
   tiempoParalizado: 0
-  velocidad: {x: -2, y: 0, z: 0}
+  velocidad: {x: -3, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!95 &95461519587528978

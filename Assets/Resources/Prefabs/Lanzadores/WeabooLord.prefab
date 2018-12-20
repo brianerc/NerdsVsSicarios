@@ -362,13 +362,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea125aec6992fe4e8473cb0eaf7d32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombre: 
   lanzador: {fileID: 1550864461524426, guid: 2d770e09dfc77e3429de89fe243c373b, type: 3}
   x: -5.5
   y: -3.2
   z: 0
-  vidaBase: 0
+  vidaBase: 1000
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
+  sonidoInvocar: {fileID: 0}
   catapulta: {fileID: 1165174645389886, guid: d21d093550cd4bc41880df7da300b311, type: 3}
   dakimakura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 3}
   mochilaPegajosa: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409,

@@ -435,15 +435,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8283ba02b18d2ab4f85131eacc1edb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 10
+  vidaBase: 100
   objetivos: []
-  danoBase: 4
+  danoBase: 45
   nivel: 1
   nombre: Punk Girl Estrella
   muerteSonido: {fileID: 156063065940548926}
   ataqueSonido: {fileID: 6845680484573790804}
   tiempoParalizado: 0
-  velocidad: {x: -2, y: 0, z: 0}
+  velocidad: {x: -1.5, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!95 &95086885102692448

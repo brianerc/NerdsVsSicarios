@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410314989237856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0125, y: -0.77250004, z: 0}
+  m_LocalPosition: {x: -3.8474998, y: 0.17249998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4260532608427840}
@@ -97,12 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57e7eebd6e26e4391c0ae7950674c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 50
+  vidaBase: 90
   objetivos: []
-  danoBase: 20
+  danoBase: 30
   nivel: 1
   nombre: Mochila pegajosa
   muerteSonido: {fileID: 0}
+  ataqueSonido: {fileID: 0}
   tiempoParalizar: 2
 --- !u!95 &95488642765140504
 Animator:

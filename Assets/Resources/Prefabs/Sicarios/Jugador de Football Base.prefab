@@ -101,15 +101,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344a0ea78c11f4b48b235d275ec383c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 10
+  vidaBase: 35
   objetivos: []
-  danoBase: 4
+  danoBase: 100
   nivel: 1
   nombre: Jugador de Football Estrella
   muerteSonido: {fileID: 2837616747810107732}
   ataqueSonido: {fileID: 6177907042165242260}
   tiempoParalizado: 0
-  velocidad: {x: -3, y: 0, z: 0}
+  velocidad: {x: -1.5, y: 0, z: 0}
   velocidadDetenida: {x: 0, y: 0, z: 0}
   atacando: 0
 --- !u!95 &95522403203043776

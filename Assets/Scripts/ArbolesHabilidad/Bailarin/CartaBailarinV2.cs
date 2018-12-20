@@ -14,7 +14,6 @@ public class CartaBailarinV2 : Carta
         aprendida = true;
         objeto = unObjeto;
         bailarinV2 = objeto.GetComponent<BailarinV2>();
-        bailarinV2.SetVelocidad(-2f);
         bailarinV2.SetCostoEnergia(25);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;

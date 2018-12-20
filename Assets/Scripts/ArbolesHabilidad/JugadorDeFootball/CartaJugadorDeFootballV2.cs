@@ -17,7 +17,6 @@ public class CartaJugadorDeFootballV2 : Carta {
         aprendida = true;
         objeto = unObjeto;
         jugador = objeto.GetComponent<JugadorDeFootballV2>();
-        jugador.SetVelocidad(-2f);
         jugador.SetCostoEnergia(50);
         unObjeto.GetComponent<ObjetoTablero>().nivel = nivel;
         unObjeto.GetComponent<ObjetoTablero>().nombre = nombre;
