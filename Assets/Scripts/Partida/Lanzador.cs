@@ -41,7 +41,7 @@ abstract public class Lanzador : MonoBehaviour
         {
             return;
         }
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position), Input.GetTouch(0).position);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position),new Vector2(0,0));
 
         Touch touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
@@ -61,11 +61,9 @@ abstract public class Lanzador : MonoBehaviour
             ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);
 			if (hit.collider != null)
 			{
-				Debug.Log(hit.collider.tag);
 			}
 			else
 			{
-				Debug.Log("Hit collider esta en null en lanzador esta en null");
 			}
 
 		}
@@ -85,9 +83,7 @@ abstract public class Lanzador : MonoBehaviour
 			{
 				Debug.Log("No se puede colocar fuera de la matriz: " + hit.collider.tag);
 			}
-            
-            Debug.Log("Colider del touch: " + hit.collider.tag);
-            Debug.Log("Tag de estructura: " + estructura.tag);
+            ;
             planoPosicion.GetComponent<SpriteRenderer>().sprite = null;
             planoPosicion.transform.position.Set(0, 0, 0);
         }
