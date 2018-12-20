@@ -25,10 +25,12 @@ using UnityEngine;
 			droneElectrico.GetComponent<ObjetoTablero>().nivel = 1;
 			droneVentilador.GetComponent<ObjetoTablero>().nivel = 1;
 			droneVolador.GetComponent<ObjetoTablero>().nivel = 1;
-			InsertarCarta(new CartaDroneElectrico(droneElectrico));
+
 			InsertarCarta(new CartaDroneVolador(droneVolador));
-			InsertarCarta(new CartaDroneVentilador(droneVentilador));
-			MostrarLanzadores();
+        InsertarCarta(new CartaDroneElectrico(droneElectrico));
+        InsertarCarta(new CartaDroneVentilador(droneVentilador));
+
+        MostrarLanzadores();
 
 		}
 	}
