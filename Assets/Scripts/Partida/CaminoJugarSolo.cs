@@ -24,6 +24,8 @@ public class CaminoJugarSolo : MonoBehaviour
     private int destino;
     bool llegoDestino;
     private bool cargoNivel = false;
+	public AudioSource seleccionMenu;
+
     void Start()
     {
         posiciones = new Vector3[11];
@@ -113,7 +115,8 @@ public class CaminoJugarSolo : MonoBehaviour
     // Update is called once per frame
     private void Jugar()
     {
-        ComenzarPartidaSolo.cantidadExp = premio;
+		seleccionMenu.Play();
+		ComenzarPartidaSolo.cantidadExp = premio;
         ComenzarPartidaSolo.zona = zona;
         ComenzarPartidaSolo.nivel = nivelElegido;
         ComenzarPartidaSolo.nivelJugador = nivelJugador;
@@ -151,7 +154,8 @@ public class CaminoJugarSolo : MonoBehaviour
             {
                 if(hit.collider.tag=="Finish")
                 {
-                    nombreEscena = "MenuPrincipal";
+					seleccionMenu.Play();
+					nombreEscena = "MenuPrincipal";
                     LoadScene();
                 } else if(hit.collider.tag=="Jugar")
                 {

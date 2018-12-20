@@ -18,6 +18,7 @@ public class UsuarioRegistrar : MonoBehaviour
 	public Text error;
 	public Button boton;
     private string nombreEscena;
+	public AudioSource seleccionMenu;
 
     private void Start()
     {
@@ -30,13 +31,14 @@ public class UsuarioRegistrar : MonoBehaviour
     }
     public void volver()
 	{
+		seleccionMenu.Play();
 		nombreEscena = "UsuarioAcceso";
 		LoadScene();
 	}
 
 	public void CrearUsuario()
 	{
-
+		seleccionMenu.Play();
 		string nombreDeUsuario = textNombreDeUsuario.text;
 		string contraseniaTexto = contrasenia.text;
 		string contraseniaRepetirTexto = contraseniaRepetir.text;
@@ -54,6 +56,7 @@ public class UsuarioRegistrar : MonoBehaviour
 
 	public IEnumerator IngresarUsuario(string nombreDeUsuario, string contrasenia)
 	{
+
 		error.color = Color.black;
 		error.text = "Cargando...";
 		boton.interactable = false;

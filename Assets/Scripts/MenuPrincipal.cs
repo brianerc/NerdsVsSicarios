@@ -10,6 +10,7 @@ public class MenuPrincipal : MonoBehaviour
 {
 	private string nombreEscena;
 	public GameObject transicion;
+	public AudioSource opcionSeleccionada;
 
 	void Start()
 	{
@@ -63,6 +64,7 @@ public class MenuPrincipal : MonoBehaviour
 			{
 				if (hit.transform.tag == "Jugar")
 				{
+					opcionSeleccionada.Play();
 					nombreEscena = "Partida";
 					LoadScene();
 				}
@@ -73,18 +75,21 @@ public class MenuPrincipal : MonoBehaviour
 				else if (hit.transform.tag == "JugarSolo")
 				{
 					Debug.Log("Jugar solo...");
+					opcionSeleccionada.Play();
 					nombreEscena = "Camino";
 					LoadScene();
 				}
 				else if (hit.transform.tag == "Cartas")
 				{
 					nombreEscena = "Cartas";
+					opcionSeleccionada.Play();
 					LoadScene();
 				}
 				else if (hit.transform.tag == "Salir")
 				{
 					PlayerPrefs.SetString("token", "");
 					nombreEscena = "UsuarioAcceso";
+					opcionSeleccionada.Play();
 					LoadScene();
 				}
 			}

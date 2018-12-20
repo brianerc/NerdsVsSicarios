@@ -31,6 +31,7 @@ public class CargarCartas : MonoBehaviour
     public GameObject transicion;
     private string nombreEscena;
     private bool cargandoCartas = false;
+	public AudioSource opcionMenu;
 
 
     private void LoadScene()
@@ -79,18 +80,20 @@ public class CargarCartas : MonoBehaviour
         {
             if (hit.collider && hit.collider.tag.Contains("Lanzador"))
             {
-                tiempoTouch = 0;
+				tiempoTouch = 0;
             }
             else if (hit.collider && hit.collider.tag == "MostrarCartas")
             {
-                if (cartaElegida!="")
+				opcionMenu.Play();
+				if (cartaElegida!="")
                 {
                     MostrarElegirCarta();
                 }
             }
             else if (hit.collider && hit.collider.tag == "MejorarCarta")
             {
-                if (cartaElegida != null && puedoElegir)
+				opcionMenu.Play();
+				if (cartaElegida != null && puedoElegir)
                 {
                     StartCoroutine(MejorarCarta());
                 }
@@ -104,7 +107,7 @@ public class CargarCartas : MonoBehaviour
         {
             if (hit.collider && hit.collider.tag.Contains("Lanzador") && tiempoTouch< tiempoMaximoTouch)
             {
-                tiempoTouch=tiempoTouch +Time.deltaTime;
+				tiempoTouch = tiempoTouch +Time.deltaTime;
             } else if(hit.collider&&hit.collider.tag.Contains("Lanzador"))
             {
                 MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
@@ -266,7 +269,8 @@ public class CargarCartas : MonoBehaviour
 
 	public void VolverAlMenuPrincipal()
 	{
-        nombreEscena = "MenuPrincipal";
+		opcionMenu.Play();
+		nombreEscena = "MenuPrincipal";
         LoadScene();
     }
     public void CargarExperiencia()
