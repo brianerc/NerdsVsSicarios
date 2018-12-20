@@ -20,6 +20,7 @@ public class WeeabooLord : MazoNerd {
         tiempoBase = 1;
         mazo = new List<Carta>();
         energia = 100;
+		nombre = "weaboo";
         cantidadRegeneracionEnergia = 30;
         tiempoRegeneracionEnergia = 5;
         catapulta.GetComponent<ObjetoTablero>().nivel = 1;

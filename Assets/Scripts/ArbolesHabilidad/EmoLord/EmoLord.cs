@@ -13,6 +13,7 @@ public class EmoLord : MazoNerd
         factorMultiplicacionDano = 3;
         factorMultiplicacionVida = 1;
         vidaBase = 50;
+		nombre = "emo";
 		danoBase = 5;
 		tiempo = 1;
 		tiempoBase = 1;

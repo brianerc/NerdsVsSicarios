@@ -12,7 +12,7 @@ using UnityEngine;
 abstract public class Mazo : MonoBehaviour {
 
     public List<Carta> mazo;
-    protected string nombre;
+    public string nombre;
     protected string descripcion;
     public GameObject lanzador;
     protected float posicionX;

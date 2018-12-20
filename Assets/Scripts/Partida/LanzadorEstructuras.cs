@@ -6,7 +6,15 @@ public class LanzadorEstructuras : Lanzador {
 
     private Vector3 zonaNula;
     private AudioSource sonidoInvocacion;
-    public override void Start()
+
+	public AudioSource invocacionWeaboo;
+	public AudioSource invocacionItGuy;
+	public AudioSource invocacionEmo;
+	public AudioSource invocacionGeneral;
+
+	
+
+	public override void Start()
     {
         base.Start();
         sonidoInvocacion = GetComponent<AudioSource>();
@@ -31,7 +39,17 @@ public class LanzadorEstructuras : Lanzador {
     protected override void InstanciarInvocacion(GameObject nuevaEstructura, Touch touch)
     {
         base.InstanciarInvocacion(nuevaEstructura, touch);
-        sonidoInvocacion.Play();
-    }
+		invocacionGeneral.Play();
+		if (jugador.nombre.Equals("weaboo"))
+		{
+			invocacionWeaboo.Play();
+		} else if (jugador.nombre.Equals("emo"))
+		{
+			invocacionEmo.Play();
+		} else if (jugador.nombre.Equals("itguy"))
+		{
+			invocacionItGuy.Play();
+		}
+	}
 
 }

@@ -11,6 +11,7 @@ public class MazoNerd : Mazo {
     public SpriteRenderer barraDeVida;
     public Sprite[] estados_barraDeVida;
     protected AudioSource sonidoDaño;
+	public AudioSource sonidoInvocar;
 
 	private void Start()
     {

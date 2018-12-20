@@ -16,6 +16,7 @@ abstract public class ObjetoTablero : MonoBehaviour
 	public int nivel;
 	public string nombre;
 	public AudioSource muerteSonido;
+	public AudioSource ataqueSonido;
 
 	private void Start()
 	{
@@ -33,6 +34,10 @@ abstract public class ObjetoTablero : MonoBehaviour
 		if (vidaBase <= 0 && !muerto)
 		{
 			muerto = true;
+			if (muerteSonido != null)
+			{
+				muerteSonido.Play();
+			}
 			this.GetComponent<Animator>().SetTrigger("Destruir");
 		}
 	}
@@ -63,19 +68,15 @@ abstract public class ObjetoTablero : MonoBehaviour
 			}
 			if (objetivo != null)
 			{
+				if (ataqueSonido != null)
+				{
+					ataqueSonido.Play();
+				}
 				if (objetivo.transform.tag == "Estructura" || objetivo.transform.tag == "Sicario")
 					objetivo.GetComponent<ObjetoTablero>().Herir(this.danoBase);
 				if (objetivo.transform.tag == "Nerd")
 					objetivo.GetComponent<Mazo>().Herir(this.danoBase);
 			}
-		}
-	}
-
-	public void EmpezarAMorirse()
-	{
-		if (muerteSonido != null)
-		{
-			muerteSonido.Play();
 		}
 	}
 

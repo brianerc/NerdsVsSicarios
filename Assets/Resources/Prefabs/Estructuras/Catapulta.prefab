@@ -101,6 +101,8 @@ MonoBehaviour:
   danoBase: 20
   nivel: 2
   nombre: Catapulta
+  muerteSonido: {fileID: 0}
+  ataqueSonido: {fileID: 0}
   tiempo: 1
   clip: {fileID: 0}
   bullet: {fileID: 114693468712207824, guid: 5d99b4dfb90ef2748810fbd8a6d2225c, type: 3}
