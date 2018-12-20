@@ -13,6 +13,8 @@ public abstract class Comenzar : MonoBehaviour {
 	public AudioSource audioFondoTrafico;
 	public AudioSource audioFondoBailarines;
 	public AudioSource audioFondoPunkGirls;
+	public AudioSource audioFondoDeporte;
+
 
 	void Start () {		
 	}

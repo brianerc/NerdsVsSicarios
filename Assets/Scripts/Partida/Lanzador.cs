@@ -59,9 +59,16 @@ abstract public class Lanzador : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Seleccion").transform.position = ActualizarPosicion(touch);
           
             ActualizarColorSeleccion(GameObject.FindGameObjectWithTag("Seleccion"), hit);
-            Debug.Log(hit.collider.tag);
+			if (hit.collider != null)
+			{
+				Debug.Log(hit.collider.tag);
+			}
+			else
+			{
+				Debug.Log("Hit collider esta en null en lanzador esta en null");
+			}
 
-        }
+		}
         else if (touch.phase == TouchPhase.Ended && estado)
         {
             estado = false;

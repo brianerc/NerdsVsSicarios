@@ -33,12 +33,13 @@ abstract public class ObjetoTablero : MonoBehaviour
 		AnimatorStateInfo stateInfo = this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
 		if (vidaBase <= 0 && !muerto)
 		{
-			muerto = true;
 			if (muerteSonido != null)
 			{
 				muerteSonido.Play();
 			}
 			this.GetComponent<Animator>().SetTrigger("Destruir");
+			muerto = true;
+
 		}
 	}
 	public int GetEnergia()

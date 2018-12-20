@@ -80,9 +80,16 @@ public class ComenzarPartidaSolo : Comenzar {
 		}
 		else
 		{
-			if (audioFondoTrafico != null)
+			if (audioFondoDeporte != null)
 			{
-				audioFondoTrafico.Play();
+				audioFondoDeporte.Play();
+			}
+			else
+			{
+				if (audioFondoTrafico != null)
+				{
+					audioFondoTrafico.Play();
+				}
 			}
 		}
 	}
