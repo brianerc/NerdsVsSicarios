@@ -165,6 +165,7 @@ public class CargarCartas : MonoBehaviour
         cartaAMejorar.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
         cartaAMejorar.name = nombre;
         int nivel = int.Parse(nombre.Substring(nombre.Length - 1)) + 1;
+        int nivelInicial = nivel;
         string nombreBase = nombre.Substring(0, nombre.Length - 1);
         nombre = nombreBase + nivel;
         if (nivel < 5) {
@@ -173,7 +174,7 @@ public class CargarCartas : MonoBehaviour
             cartaMejorada.name = nombre;
             cartaElegida = nombre.Substring(0,nombre.Length - 3);
             Debug.Log(cartaElegida);
-            mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] * nivel + "EXP";
+            mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] * nivelInicial + "EXP";
             if (exp >  puntosRequeridos[cartaElegida])
             {
                 puedoElegir = true;
