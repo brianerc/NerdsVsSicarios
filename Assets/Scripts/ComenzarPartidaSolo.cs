@@ -56,7 +56,22 @@ public class ComenzarPartidaSolo : Comenzar {
             GameObject.Find("Barricada").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Mansion");
         }
 
-    }
+		if (nivel % 3 == 0)
+		{
+			if (audioFondoBailarines != null)
+			{
+				audioFondoBailarines.Play();
+			}
+		}
+		else
+		{
+			if (audioFondoTrafico != null)
+			{
+				audioFondoTrafico.Play();
+			}
+		}
+
+	}
     private void LoadScene()
     {
         Transicion.nombreEscena = nombreEscena;

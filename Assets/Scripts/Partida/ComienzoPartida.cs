@@ -43,7 +43,22 @@ public class ComienzoPartida : Comenzar {
             spriteFondo.sprite = Resources.Load<Sprite>("Sprites/Partida/Parque");
             spriteBarrera.sprite = Resources.Load<Sprite>("Sprites/Partida/Barrera_Parque");
         }
-    }
+
+		if (nivel % 3 == 0)
+		{
+			if (audioFondoBailarines != null)
+			{
+				audioFondoBailarines.Play();
+			}
+		}
+		else
+		{
+			if (audioFondoTrafico != null)
+			{
+				audioFondoTrafico.Play();
+			}
+		}
+	}
     private void LoadScene()
     {
         Transicion.nombreEscena = nombreEscena;

@@ -10,14 +10,14 @@ public class MazoNerd : Mazo {
 
     public SpriteRenderer barraDeVida;
     public Sprite[] estados_barraDeVida;
-    protected AudioSource sonidoDaño;
-	public AudioSource sonidoInvocar;
+    //protected AudioSource sonidoDaño;
+	//public AudioSource sonidoInvocar;
 
 	private void Start()
     {
         base.Start();
         tiempoBase = 1;
-        sonidoDaño = GetComponent<AudioSource>();
+        //sonidoDaño = GetComponent<AudioSource>();
         barraDeVida = GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<SpriteRenderer>();
         estados_barraDeVida = Resources.LoadAll<Sprite>("Sprites/Partida/HUD/BarraDeVida");
     }
@@ -43,7 +43,7 @@ public class MazoNerd : Mazo {
     public override void Herir(float danoBase)
     {
         base.Herir(danoBase);
-        sonidoDaño.Play();
+        //sonidoDaño.Play();
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

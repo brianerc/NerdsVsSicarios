@@ -10,9 +10,11 @@ public abstract class Comenzar : MonoBehaviour {
     public float separacionLanzadores;
     public static int nivel=-1;
     public static int nivelJugador = -1;
+	public AudioSource audioFondoTrafico;
+	public AudioSource audioFondoBailarines;
 
-    void Start () {
-		
+
+	void Start () {		
 	}
 	
 	void Update () {
