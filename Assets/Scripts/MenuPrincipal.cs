@@ -14,6 +14,7 @@ public class MenuPrincipal : MonoBehaviour
 
 	void Start()
 	{
+        ComenzarPartidaSolo.cantidadExp = -1;
 		string token = PlayerPrefs.GetString("token");
 		if (token == null || token.Equals(""))
 		{
