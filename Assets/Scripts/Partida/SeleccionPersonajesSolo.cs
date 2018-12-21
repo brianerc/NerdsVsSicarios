@@ -24,17 +24,22 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 	public GameObject emoCarta1;
 	public GameObject emoCarta2;
 	public GameObject emoCarta3;
+	private bool infoLoaded;
 
 
 	private void Start()
 	{
+		infoLoaded = false;
 		CargarCartas();
 	}
-	private void LoadScene()
-    {
-        Transicion.nombreEscena = nombreEscena;
-        transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-    }
+
+	void LoadScene()
+	{
+		//Transicion.nombreEscena = nombreEscena;
+		//transicion.GetComponent<Animator>().SetTrigger("Cerrar");
+		SceneManager.LoadScene("Loading", LoadSceneMode.Single);
+
+	}
 
 	private void CargarCartas()
 	{
@@ -107,25 +112,29 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 		{
 			if (hit.collider != null)
 			{
+				
 				if (hit.transform.name == "WeabooLord")
 				{
+					Debug.Log("WEABOO");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
-					nombreEscena = "PartidaSolo";
+					nombreEscena = "Loading";
 					LoadScene();
 				}
 				else if (hit.transform.name == "ItguyLord")
 				{
+					Debug.Log("it");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorItguyLord;
-					nombreEscena = "PartidaSolo";
+					nombreEscena = "Loading";
 					LoadScene();
 				}
 				else if (hit.transform.name == "EmoLord")
 				{
+					Debug.Log("emo");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorEmoLord;
-					nombreEscena = "PartidaSolo";
+					nombreEscena = "Loading";
 					LoadScene();
 				} else if(hit.transform.name=="Salir")
                 {
