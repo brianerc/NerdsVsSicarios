@@ -139,7 +139,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 				} else if(hit.transform.name=="Salir")
                 {
 					seleccionMenu.Play();
-					nombreEscena = "MenuPrincipal";
+					nombreEscena = "Camino";
                     LoadScene();
                 }
 			}
