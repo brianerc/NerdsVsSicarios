@@ -11,20 +11,17 @@ public class CargarCartas : MonoBehaviour
 {
     public Dictionary<string,string> idCarta;
     public Dictionary<string, int> puntosRequeridos;
-	public RectTransform miScrollPanel;
     public string cartaElegida;
 	public GameObject imagenPrefab;
 	private int miNumero = 0;
 	public Text error;
-    public float xPosicion =    50;
-    public float yPosicion =    50;
+    public float xPosicion =    -300;
+    public float yPosicion =    0;
     public RectTransform panelMejorar;
-    private GameObject flechaDerecha;
-    private GameObject flechaIzquierda;
+    public RectTransform panelElegirJugador;
+    public RectTransform panelElegirCarta;
     private GameObject cartaAMejorar;
     private GameObject cartaMejorada;
-    private float tiempoTouch;
-    private float tiempoMaximoTouch = 0.7f;
     bool puedoElegir;
     int exp;
     public GameObject mostrarCosto;
@@ -32,8 +29,7 @@ public class CargarCartas : MonoBehaviour
     private string nombreEscena;
     private bool cargandoCartas = false;
 	public AudioSource opcionMenu;
-
-
+    string mazoElegido = "";
     private void LoadScene()
     {
         Transicion.nombreEscena = nombreEscena;
@@ -42,13 +38,13 @@ public class CargarCartas : MonoBehaviour
     // Use this for initialization
     void Start()
 	{
+        panelElegirCarta.gameObject.SetActive(false);
         puedoElegir = false;
         idCarta = new Dictionary<string, string>();
         puntosRequeridos = new Dictionary<string, int>();
 		error.text = "";
         cartaElegida = "";
 		//nextMessage = Time.time + 1f;
-		StartCoroutine(ObtenerCartas());
         cartaAMejorar = (GameObject)Instantiate(imagenPrefab);
         cartaAMejorar.transform.SetParent(panelMejorar);
         cartaAMejorar.transform.localPosition = new Vector2(xPosicion, yPosicion);
@@ -56,18 +52,16 @@ public class CargarCartas : MonoBehaviour
         cartaMejorada.transform.SetParent(panelMejorar);
         cartaMejorada.transform.localPosition = new Vector2(xPosicion+210, yPosicion);
         panelMejorar.gameObject.SetActive(false);
-        flechaIzquierda = GameObject.FindGameObjectWithTag("FlechaIzquierda");
-        flechaDerecha = GameObject.FindGameObjectWithTag("FlechaDerecha");
         CargarExperiencia();
         GameObject.FindGameObjectWithTag("MejorarCarta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/level_up_ByN");
-
+        
     }
     // Update is called once per frame
     void Update()
     { 
         if(cargandoCartas)
         {
-            StartCoroutine(ObtenerCartas());
+            StartCoroutine(ObtenerCartas(mazoElegido));
         }
         if (Input.touchCount < 1)
         {
@@ -80,17 +74,23 @@ public class CargarCartas : MonoBehaviour
         {
             if (hit.collider && hit.collider.tag.Contains("Lanzador"))
             {
-				tiempoTouch = 0;
+                cartaElegida = GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name;
+                MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
             }
-            else if (hit.collider && hit.collider.tag == "MostrarCartas")
+            else if (hit.collider && (hit.collider.name == "Weeaboo" || hit.collider.name == "ITGuy" || hit.collider.name == "Emo"))
             {
 				opcionMenu.Play();
-				if (cartaElegida!="")
-                {
-                    MostrarElegirCarta();
-                }
+                mazoElegido = hit.collider.name;
+                ActualizarDatos();
+                cargandoCartas = true;
+                ObtenerCartas(hit.collider.name);
+            } else if(hit.collider && hit.collider.tag=="MostrarCartas")
+            {
+                DestruirCartas();
+                opcionMenu.Play();
+                MostrarElegirPersonaje();
             }
-            else if (hit.collider && hit.collider.tag == "MejorarCarta")
+            else if (hit.collider &&(hit.collider.tag == "MejorarCarta" || hit.collider.tag=="MostrarCostoExp"))
             {
 				opcionMenu.Play();
 				if (cartaElegida != null && puedoElegir)
@@ -99,35 +99,8 @@ public class CargarCartas : MonoBehaviour
                 }
             }
         }
-        if (touch.phase == TouchPhase.Moved)
-        {
-            tiempoTouch = 0;
-        }
-        if (touch.phase == TouchPhase.Stationary)
-        {
-            if (hit.collider && hit.collider.tag.Contains("Lanzador") && tiempoTouch< tiempoMaximoTouch)
-            {
-				tiempoTouch = tiempoTouch +Time.deltaTime;
-            } else if(hit.collider&&hit.collider.tag.Contains("Lanzador"))
-            {
-                MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
-            }
-        }
-  
-        if (touch.phase == TouchPhase.Ended)
-        {
-            if (hit.collider && hit.collider.tag.Contains("Lanzador" ) && tiempoTouch>tiempoMaximoTouch)
-            {
-                MostrarMejorarCarta(GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name);
-            }
-            else if(hit.collider && hit.collider.tag.Contains("Lanzador"))
-            {
-                cartaElegida = GameObject.FindGameObjectWithTag(hit.collider.tag).GetComponent<Image>().name;
-            } 
-        }
-    }
-
  
+    }
 
     private IEnumerator MejorarCarta()
     {
@@ -150,22 +123,21 @@ public class CargarCartas : MonoBehaviour
         }
         else
         {
-			MostrarElegirCarta();
+			MostrarElegirPersonaje();
             ActualizarDatos();
         }
     }
 
     private void MostrarMejorarCarta(string nombre)
     {
-        miScrollPanel.gameObject.SetActive(false);
-        flechaDerecha.SetActive(false);
-        flechaIzquierda.SetActive(false);
+        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas abierto");
+        panelElegirJugador.gameObject.SetActive(false);
         panelMejorar.gameObject.SetActive(true);
-        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas cerrado");
+        panelElegirCarta.gameObject.SetActive(false);
         cartaAMejorar.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
         cartaAMejorar.name = nombre;
         int nivel = int.Parse(nombre.Substring(nombre.Length - 1)) + 1;
-        int nivelInicial = nivel;
+        int nivelInicial = nivel-1;
         string nombreBase = nombre.Substring(0, nombre.Length - 1);
         nombre = nombreBase + nivel;
         if (nivel < 5) {
@@ -173,7 +145,6 @@ public class CargarCartas : MonoBehaviour
             cartaMejorada.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + nombre);
             cartaMejorada.name = nombre;
             cartaElegida = nombre.Substring(0,nombre.Length - 3);
-            Debug.Log(cartaElegida);
             mostrarCosto.GetComponent<Text>().text = puntosRequeridos[cartaElegida] * nivelInicial + "EXP";
             if (exp >  puntosRequeridos[cartaElegida])
             {
@@ -194,16 +165,29 @@ public class CargarCartas : MonoBehaviour
     }
     private void MostrarElegirCarta()
     {
-        cartaElegida = "";
-        miScrollPanel.gameObject.SetActive(true);
-        flechaDerecha.SetActive(true);
-        flechaIzquierda.SetActive(true);
-        DestruirCartas();
-        panelMejorar.gameObject.SetActive(false);
+        mostrarCosto.GetComponent<Text>().text = "";
+
+        mazoElegido = "";
         GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas abierto");
+        cartaElegida = "";
+        panelElegirCarta.gameObject.SetActive(true);
+        panelMejorar.gameObject.SetActive(false);
+        panelElegirJugador.gameObject.SetActive(false);
+    }
+    private void MostrarElegirPersonaje()
+    {
+        mostrarCosto.GetComponent<Text>().text ="";
+
+        cartaElegida = "";
+        panelElegirCarta.gameObject.SetActive(true);
+        DestruirCartas();
+        panelElegirCarta.gameObject.SetActive(false);
+        panelMejorar.gameObject.SetActive(false);
+        panelElegirJugador.gameObject.SetActive(true);
+        GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas cerrado");
+
     }
 
-  
     public void DestruirCartas()
     {
         foreach (GameObject carta in GameObject.FindObjectsOfType<GameObject>())
@@ -222,12 +206,26 @@ public class CargarCartas : MonoBehaviour
         StartCoroutine(ManejadorUsuario.CargarCartas());
         cargandoCartas = true;
     }
-    public IEnumerator ObtenerCartas()
+    public IEnumerator ObtenerCartas(string mazo)
 	{
+        //Matcheo con bd.
+        if (mazo == "Emo")
+        {
+            mazo = "nerd-punk-girl";
+        } else if(mazo=="ITGuy")
+        {
+            mazo = "nerd-it-guy";
+        } else
+        {
+            mazo = "nerd-weabooLord";
+        }
         if(ManejadorUsuario.cargoCartas && ManejadorUsuario.cargoUsuario)
         {
             cargandoCartas = false;
+            panelElegirJugador.gameObject.SetActive(false);
+            panelElegirCarta.gameObject.SetActive(true);
             WWW www = Acciones.CargarCartas();
+            GameObject.FindGameObjectWithTag("MostrarCartas").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MenuCartas/menu cartas abierto");
             yield return www;
             if (!string.IsNullOrEmpty(www.error))
             {
@@ -250,17 +248,22 @@ public class CargarCartas : MonoBehaviour
                 ManejadorUsuario.cartasUsuario = resultObj.cartas;
                 for (int i = 0; i < resultObj.cartas.Count; i++)
                 {
-                    Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
-                    GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
-                    nuevoSprite.transform.SetParent(miScrollPanel);
-                    nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + carta.ToString());
-                    nuevoSprite.name = carta.ToString();
-                    nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
-                    nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
-                    xPosicion = xPosicion + 110;
-                    miNumero++;
-                    idCarta.Add(carta.nombre_completo, carta._id);
-                    puntosRequeridos.Add(carta.nombre_completo, carta.costo_para_desbloquear);
+                        
+                        Assets.Scripts.ServidorDTO.Carta carta = resultObj.cartas[i];
+                    if (carta.tipo == mazo)
+                        {
+                        GameObject nuevoSprite = (GameObject)Instantiate(imagenPrefab);
+                        nuevoSprite.transform.SetParent(panelElegirCarta);
+                        nuevoSprite.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Partida/MostrarCartas/" + carta.ToString());
+                        nuevoSprite.name = carta.ToString();
+                        nuevoSprite.transform.tag = "Lanzador" + carta.nombre_completo;
+                        xPosicion = xPosicion + 310;
+                        nuevoSprite.transform.localPosition = new Vector2(xPosicion, yPosicion);
+
+                        miNumero++;
+                        idCarta.Add(carta.nombre_completo, carta._id);
+                        puntosRequeridos.Add(carta.nombre_completo, carta.costo_para_desbloquear);
+                    }
                 }
                 CargarExperiencia();
             }
