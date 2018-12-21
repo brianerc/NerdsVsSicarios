@@ -7,7 +7,8 @@ public class NerdVictoria : FinalPartida
 {
     private void Start()
     {
-        GameObject.FindGameObjectWithTag("MostrarInformacion").GetComponent<Text>().text = "You win " + ComenzarPartidaSolo.cantidadExp + "EXP";
+        Debug.Log("Experiencia mj" + ComenzarPartidaSolo.cantidadExp);
+        GameObject.FindGameObjectWithTag("MostrarInformacion").GetComponent<Text>().text = ComenzarPartidaSolo.cantidadExp + "EXP";
         GanarPuntos();
     }
 }
