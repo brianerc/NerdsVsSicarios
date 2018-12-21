@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 73222369975465496}
   m_Layer: 10
   m_Name: Lanzador
-  m_TagString: LanzadorDrone 3.0 Idle
+  m_TagString: LanzadorMochila Honda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filaQueSeEncuentra: 0
-  estructura: {fileID: 1154800813827048, guid: e62372dc9567ce043a996af67b182de5, type: 3}
+  estructura: {fileID: 1165174645389886, guid: 64abf3e7cf946d44fb86acd5ec636522, type: 3}
   matriz: {fileID: 2569400265873179400, guid: 2e16f8e4531c321458927a12dc0444d7, type: 3}
   planoPosicion: {fileID: 0}
   jugador: {fileID: 0}
