@@ -66,7 +66,7 @@ public class MenuPrincipal : MonoBehaviour
 				if (hit.transform.tag == "Jugar")
 				{
 					opcionSeleccionada.Play();
-					nombreEscena = "Partida";
+					nombreEscena = "LoadingMulti";
 					LoadScene();
 				}
 				else if (hit.transform.tag == "Opciones")
