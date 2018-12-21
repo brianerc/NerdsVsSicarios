@@ -37,7 +37,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 	{
 		//Transicion.nombreEscena = nombreEscena;
 		//transicion.GetComponent<Animator>().SetTrigger("Cerrar");
-		SceneManager.LoadScene("Loading", LoadSceneMode.Single);
+		SceneManager.LoadScene(nombreEscena, LoadSceneMode.Single);
 
 	}
 
@@ -118,7 +118,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 					Debug.Log("WEABOO");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
-					nombreEscena = "Loading";
+					nombreEscena = "LoadingSolo";
 					LoadScene();
 				}
 				else if (hit.transform.name == "ItguyLord")
@@ -126,7 +126,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 					Debug.Log("it");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorItguyLord;
-					nombreEscena = "Loading";
+					nombreEscena = "LoadingSolo";
 					LoadScene();
 				}
 				else if (hit.transform.name == "EmoLord")
@@ -134,7 +134,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 					Debug.Log("emo");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorEmoLord;
-					nombreEscena = "Loading";
+					nombreEscena = "LoadingSolo";
 					LoadScene();
 				} else if(hit.transform.name=="Salir")
                 {
