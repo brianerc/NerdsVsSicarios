@@ -18,12 +18,13 @@ abstract public class Lanzador : MonoBehaviour
     public SpriteRenderer spriteEstructura;
 	private string nombreEscena;
 	public GameObject transicion;
-
+    protected string tagDelPiso;
 	// Use this for initialization
 	public virtual void Start()
     {
+        tagDelPiso = "Piso";
         CargarSprite();
-        piso = GameObject.FindGameObjectWithTag("Piso");
+        piso = GameObject.FindGameObjectWithTag(tagDelPiso);
         verde = new Color(0, 1, 0, 1);
         rojo = new Color(1, 0, 0, 1);
         transparente = new Color(0, 0, 0, 0);
@@ -75,7 +76,7 @@ abstract public class Lanzador : MonoBehaviour
 			{
 				Debug.Log("No se puede colocar en donde ya hay una estructura");
 			}
-			else if (hit.collider && hit.collider.tag == "Piso")
+			else if (hit.collider && hit.collider.tag == tagDelPiso)
 			{
 				ColocarEstructura(touch);
 			}
@@ -147,7 +148,7 @@ abstract public class Lanzador : MonoBehaviour
             sprite.sprite = spriteEstructura.sprite;
             sprite.color = new Color32(165, 25, 0, 150);
         }
-        else if (hit.collider && hit.collider.tag == "Piso")
+        else if (hit.collider && hit.collider.tag == tagDelPiso)
         {
             sprite.sprite = spriteEstructura.sprite;
             sprite.color = new Color32(45, 150,45, 150);

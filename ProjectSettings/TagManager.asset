@@ -63,6 +63,7 @@ TagManager:
   - Bloqueado
   - Fondo
   - VolverMenuPrincipal
+  - PisoSicario
   layers:
   - Default
   - TransparentFX
