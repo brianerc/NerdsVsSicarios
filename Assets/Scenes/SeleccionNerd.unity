@@ -225,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -63.29962, y: -252.99756}
+  m_AnchoredPosition: {x: -63.29956, y: -252.99756}
   m_SizeDelta: {x: -238.90015, y: -582.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136574951
@@ -1166,7 +1166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -63.29962, y: -12}
+  m_AnchoredPosition: {x: -63.29956, y: -12}
   m_SizeDelta: {x: -238.90015, y: -582.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171033514
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 1588645440}
   m_Layer: 0
   m_Name: Fondo
-  m_TagString: Salir
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1792,7 +1792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -63.29962, y: 234.60237}
+  m_AnchoredPosition: {x: -63.29956, y: 234.60236}
   m_SizeDelta: {x: -238.9, y: -582.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815149427
