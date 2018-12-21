@@ -116,7 +116,6 @@ MonoBehaviour:
   vidaBase: 500
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
-  sonidoInvocar: {fileID: 1299621039759340935}
   mochilaSierra: {fileID: 1154800813827048, guid: f903151a2a7c0be4e9e33a71435d0cab,
     type: 3}
   mochilaHonda: {fileID: 1165174645389886, guid: 64abf3e7cf946d44fb86acd5ec636522,
@@ -136,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4046326094900756, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4046326094900756, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.y

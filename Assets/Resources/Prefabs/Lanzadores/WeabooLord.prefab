@@ -294,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803862397425472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8, y: 0, z: 0}
+  m_LocalPosition: {x: -5.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4742902183039574}
@@ -370,7 +370,6 @@ MonoBehaviour:
   vidaBase: 1000
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
-  sonidoInvocar: {fileID: 0}
   catapulta: {fileID: 1165174645389886, guid: d21d093550cd4bc41880df7da300b311, type: 3}
   dakimakura: {fileID: 1154800813827048, guid: 7fb1bb92c2f0a4c43ba6590ef9149665, type: 3}
   mochilaPegajosa: {fileID: 1410314989237856, guid: 00812be3459be3e46b5888ee6d1c3409,
