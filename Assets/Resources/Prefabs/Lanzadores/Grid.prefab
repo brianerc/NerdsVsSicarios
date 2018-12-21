@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7604567373753314504}
   m_Layer: 9
   m_Name: Escenario (1)
-  m_TagString: Piso
+  m_TagString: PisoSicario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
