@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad44db55ed6a864fbd93e21b4bfdd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 85
+  vidaBase: 80
   objetivos: []
   danoBase: 35
   nivel: 1

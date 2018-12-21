@@ -454,9 +454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adcc275c0856e341afc5ab4da38f27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 70
+  vidaBase: 40
   objetivos: []
-  danoBase: 65
+  danoBase: 35
   nivel: 1
   nombre: "Bailar\xEDn Estrella"
   muerteSonido: {fileID: 2182253685637316270}
