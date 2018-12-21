@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingMulti.unity
     guid: bb1588016aab2784a9e8355bf609dbae
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: b6ab905800b5d444f8317271b4ec18b9
   m_configObjects: {}

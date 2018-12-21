@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 1401730586}
   m_Layer: 5
   m_Name: Tutorial
-  m_TagString: Opciones
+  m_TagString: Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

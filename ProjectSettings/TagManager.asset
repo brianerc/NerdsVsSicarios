@@ -64,6 +64,7 @@ TagManager:
   - Fondo
   - VolverMenuPrincipal
   - PisoSicario
+  - Tutorial
   layers:
   - Default
   - TransparentFX

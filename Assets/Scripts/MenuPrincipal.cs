@@ -86,6 +86,12 @@ public class MenuPrincipal : MonoBehaviour
 					opcionSeleccionada.Play();
 					LoadScene();
 				}
+				else if (hit.transform.tag == "Tutorial")
+				{
+					nombreEscena = "Tutorial";
+					opcionSeleccionada.Play();
+					LoadScene();
+				}
 				else if (hit.transform.tag == "Salir")
 				{
 					PlayerPrefs.SetString("token", "");
