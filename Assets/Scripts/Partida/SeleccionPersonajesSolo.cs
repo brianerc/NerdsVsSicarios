@@ -118,7 +118,7 @@ public class SeleccionPersonajesSolo : MonoBehaviour
 					Debug.Log("WEABOO");
 					seleccionMenu.Play();
 					ComenzarPartidaSolo.jugador = jugadorWeabooLord;
-					nombreEscena = "Loading";
+					nombreEscena = "LoadingSolo";
 					LoadScene();
 				}
 				else if (hit.transform.name == "ItguyLord")
