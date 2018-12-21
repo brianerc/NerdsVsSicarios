@@ -75,7 +75,7 @@ abstract public class Lanzador : MonoBehaviour
 			{
 				Debug.Log("No se puede colocar en donde ya hay una estructura");
 			}
-			else if (hit.collider && hit.collider.tag == "Piso")
+			else if (hit.collider && (hit.collider.tag == "Piso" || hit.collider.tag == "Proyectil_Nerd"))
 			{
 				ColocarEstructura(touch);
 			}
@@ -147,8 +147,9 @@ abstract public class Lanzador : MonoBehaviour
             sprite.sprite = spriteEstructura.sprite;
             sprite.color = new Color32(165, 25, 0, 150);
         }
-        else if (hit.collider && hit.collider.tag == "Piso")
-        {
+        else if (hit.collider && (hit.collider.tag == "Piso" || hit.collider.tag == "Proyectil_Nerd"))
+
+		{
             sprite.sprite = spriteEstructura.sprite;
             sprite.color = new Color32(45, 150,45, 150);
         }

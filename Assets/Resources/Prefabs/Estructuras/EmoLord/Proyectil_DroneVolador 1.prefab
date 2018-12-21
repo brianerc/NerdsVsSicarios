@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8919650336039571607}
   m_Layer: 0
   m_Name: Proyectil_DroneVolador 1
-  m_TagString: Proyectil_Nerd
+  m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
