@@ -20,7 +20,6 @@ MonoBehaviour:
   vidaBase: 800
   barraDeVida: {fileID: 0}
   estados_barraDeVida: []
-  sonidoInvocar: {fileID: 0}
   droneElectrico: {fileID: 1154800813827048, guid: d5d2247307370d149809edc581365d5f,
     type: 3}
   droneVentilador: {fileID: 1154800813827048, guid: e62372dc9567ce043a996af67b182de5,
@@ -40,7 +39,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4046326094900756, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4046326094900756, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
       propertyPath: m_LocalPosition.y

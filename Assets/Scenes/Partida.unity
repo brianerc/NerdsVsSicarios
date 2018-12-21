@@ -148,6 +148,7 @@ MonoBehaviour:
   audioFondoTrafico: {fileID: 16208418}
   audioFondoBailarines: {fileID: 16208419}
   audioFondoPunkGirls: {fileID: 16208420}
+  audioFondoDeporte: {fileID: 0}
   fondo: {fileID: 1875067340228058, guid: b6213d96d36e6fe41936239adbec9add, type: 3}
   jugador: {fileID: 1803862397425472, guid: 60e0cba97dab9164f9f167eee87d7fe6, type: 3}
   jugador2: {fileID: 1493180925297564, guid: 3560c21f3a185af4890c3c5824056e84, type: 3}

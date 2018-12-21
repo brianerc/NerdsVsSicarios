@@ -34,7 +34,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261326440413716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6025004, y: 0.17249998, z: 0}
+  m_LocalPosition: {x: 3.4535, y: 0.2705, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c406749559b62f94396685591ac3cb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaBase: 55
+  vidaBase: 120
   objetivos: []
   danoBase: 55
   nivel: 1
